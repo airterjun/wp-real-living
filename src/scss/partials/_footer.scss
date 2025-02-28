@@ -1,0 +1,306 @@
+.footer {
+    margin-top: vw(90);
+    padding-top: size(141);
+    padding-bottom: vw(144);
+    border-top: 1px solid #565656;
+
+    @include mobile {
+        margin-top: 0;
+        padding-top: vw(102);
+        padding-bottom: vw(57);
+    }
+
+    .menu {
+        padding: 0;
+        list-style: none;
+
+        li {
+            a {
+                color: #2D2D2D;
+                text-decoration: underline;
+                text-transform: uppercase;
+                transition: opacity .45s ease-in-out;
+
+                @include hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .inner {
+        padding: 0 vw(35);
+        grid-column: 3/11;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .footer__logo {
+            margin-bottom: vw(54);
+
+            @include mobile {
+                margin-bottom: vw(58);
+            }
+
+            svg {
+                width: vw(352);
+                height: vw(81);
+
+                @include mobile {
+                    width: vw(179);
+                    height: vw(40);
+                }
+            }
+        }
+
+        .locations {
+            gap: vw(73);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            @include mobile {
+                display: block;
+            }
+
+            &__item {
+                border-top: 2.5px solid #4B5649;
+
+                @include mobile {
+                    max-width: vw(277);
+                    margin-bottom: vw(30);
+                }
+
+                h3 {
+                    font-size: vw(32);
+                    color: #4B5649;
+                    font-weight: 500;
+                    line-height: vw(40);
+                    margin-top: vw(6);
+                    margin-bottom: vw(17);
+                    text-transform: uppercase;
+                    letter-spacing: vw(5.76);
+
+
+                    @include mobile {
+                        font-size: vw(24);
+                        margin-top: vw(1);
+                        margin-bottom: vw(6);
+                        letter-spacing: vw(5.02);
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    border-color: #5C7E47;
+
+                    h3 {
+                        color: #5C7E47;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    border-color: #5B2528;
+
+                    h3 {
+                        color: #5B2528;
+                    }
+                }
+
+                .wrap {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .address {
+                        font-size: vw(17);
+                        color: #4F4F4F;
+                        line-height: vw(25.39);
+
+                        @include mobile {
+                            font-size: vw(13);
+                            line-height: vw(20);
+                        }
+                    }
+
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            display: flex;
+                            margin-bottom: vw(9);
+
+                            @include mobile {
+                                margin-bottom: vw(2);
+                            }
+                        }
+
+                        a {
+                            gap: vw(6);
+                            display: flex;
+                            font-size: vw(14);
+                            align-items: center;
+                            letter-spacing: vw(0.8);
+
+                            svg {
+                                width: vw(10);
+                                height: vw(10);
+                                flex: 0 0 vw(10);
+
+                                @include mobile {
+                                    flex: 0 0 vw(7.5);
+                                    width: vw(7.5);
+                                    height: vw(7.5);
+                                }
+                            }
+
+                            @include mobile {
+                                font-size: vw(11);
+                                letter-spacing: vw(0.28);
+                                color: #2D2D2D;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.office-menu {
+                margin-top: vw(119);
+
+                @include mobile {
+                    margin-top: vw(20);
+                }
+
+                .locations__item {
+                    border-top: 0;
+
+                    @include mobile {
+                        margin-bottom: vw(48);
+
+                        &:first-child {
+                            margin-bottom: vw(39);
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    a {
+                        font-size: vw(17);
+                        line-height: vw(29);
+                        letter-spacing: vw(0.43);
+                        color: #2D2D2D;
+                    }
+
+                    .office-heading {
+                        color: #333333;
+                        font-size: vw(31);
+                        margin-top: 0;
+                        font-weight: 600;
+                        font-style: italic;
+                        margin-bottom: vw(4);
+                        text-transform: none;
+                        letter-spacing: vw(0.06);
+                        font-family: "utopia-std", serif;
+
+                        @include mobile {
+                            font-size: vw(24);
+                            margin-bottom: 0;
+                            letter-spacing: vw(0.05);
+                        }
+                    }
+
+                    .address {
+                        strong {
+                            display: block;
+                            font-weight: bold;
+                            font-size: vw(18);
+                            color: #4F4F4F;
+                            letter-spacing: vw(.6);
+                            margin-bottom: vw(11);
+                            line-height: vw(27.04);
+
+                            @include mobile {
+                                font-size: vw(14);
+                                margin-bottom: vw(8);
+                                line-height: vw(20.3);
+                            }
+                        }
+                    }
+
+                    h4 {
+                        font-size: vw(23);
+                        color: #2D2D2D;
+                        font-weight: 500;
+                        margin-top: vw(6);
+                        margin-bottom: vw(32);
+                        letter-spacing: vw(5.75);
+
+                        @include mobile {
+                            margin-top: 0;
+                            font-size: vw(17);
+                            letter-spacing: vw(4.25);
+                            margin-bottom: vw(7);
+                        }
+                    }
+                }
+
+                .footer-navigation {
+
+                    ul {
+                        li {
+                            a {
+                                font-size: vw(14);
+                                letter-spacing: vw(0.35);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.footer-copy {
+    border-top: 1px solid #565656;
+
+    .inner {
+        display: flex;
+        height: vw(80);
+        padding: 0 vw(35);
+        grid-column: 3/11;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            font-size: vw(13);
+            line-height: vw(20);
+            padding: vw(27) 0 vw(25);
+            display: block;
+        }
+
+        .website-by {
+            gap: vw(5);
+            display: flex;
+            color: #4F4F4F;
+            font-size: vw(16);
+            line-height: vw(20);
+            color: #4F4F4F;
+
+            @include mobile {
+                font-size: vw(13);
+                line-height: vw(20);
+            }
+
+            a {
+                color: #4F4F4F;
+                text-decoration: underline;
+            }
+        }
+    }
+}

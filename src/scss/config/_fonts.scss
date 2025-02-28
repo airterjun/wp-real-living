@@ -1,0 +1,17 @@
+body {
+    font-weight: 400;
+    font-size: size(16);
+    font-family: "century-gothic", sans-serif;
+
+    @include mobile {
+        font-size: 16px;
+    }
+}
+
+h1,
+.h1 {
+    font-size: size(50);
+    color: #5B5B5B;
+    font-weight: bold;
+    color: rgb(91, 91, 91);
+}

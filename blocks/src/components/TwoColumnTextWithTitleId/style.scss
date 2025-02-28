@@ -1,0 +1,61 @@
+@import "./../../assets//styles/utils/functions";
+
+.two-column-text-title {
+    padding: vw(89) 0;
+
+    &.width-id {
+        position: relative;
+
+        @include mobile {
+            padding-top: vw(98);
+        }
+
+        .header-wrapper {
+            display: flex;
+            position: relative;
+            margin-bottom: vw(53);
+            justify-content: center;
+
+            img {
+                width: vw(52);
+                height: auto;
+            }
+
+            h2 {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                margin-bottom: 0;
+                align-items: center;
+                text-align: center;
+                position: absolute;
+                justify-content: center;
+
+
+                @include mobile {
+                    padding: 0 vw(20);
+
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .grid-inner-wrapper {
+        h2 {
+            margin-bottom: vw(62);
+        }
+
+        .column {
+            gap: vw(32);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

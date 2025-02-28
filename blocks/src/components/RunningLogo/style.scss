@@ -1,0 +1,35 @@
+@import "./../../assets//styles/utils/functions";
+
+.marque {
+    margin: vw(63) 0;
+
+    @include mobile {
+        margin: vw(49) 0;
+    }
+
+    .marque__inner {
+        // display: flex;
+
+        .logo {
+            height: vw(26);
+            display: flex;
+            margin-bottom: vw(33);
+            justify-content: center;
+
+            @include mobile {
+                height: vw(18);
+                margin-bottom: vw(31);
+            }
+
+            svg {
+                flex: 0 0 vw(3523.49);
+                height: vw(26.29);
+
+                @include mobile {
+                    height: vw(25);
+                    flex: 0 0 vw(3263);
+                }
+            }
+        }
+    }
+}

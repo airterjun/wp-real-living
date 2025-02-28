@@ -1,0 +1,148 @@
+@import "./../../assets//styles/utils/functions";
+
+
+.featured-text {
+   overflow: visible;
+   margin-top: vw(158);
+
+   @include mobile {
+      margin-top: vw(61);
+   }
+
+   .grid-inner-wrapper {
+      @include mobile {
+         padding: 0;
+      }
+   }
+
+   .main-title {
+      width: 100%;
+      height: vw(96);
+      display: flex;
+      position: relative;
+      align-items: center;
+      margin-bottom: vw(39);
+      justify-content: center;
+
+      @include mobile {
+         margin-bottom: vw(41);
+      }
+
+      .title {
+         z-index: 2;
+         font-size: vw(42);
+         color: #333333;
+         position: relative;
+         font-style: italic;
+         letter-spacing: vw(-0.5);
+
+         @include mobile {
+            text-align: center;
+            font-size: vw(30) !important;
+            letter-spacing: vw(0.06) !important;
+         }
+      }
+
+      .logo {
+         left: 0;
+         right: 0;
+         z-index: 1;
+         width: vw(52);
+         height: vw(96);
+         margin: 0 auto;
+         position: absolute;
+         transform: translate3d(vw(-6), vw(-2), 0);
+
+         svg {
+            width: vw(52);
+            height: vw(96);
+            opacity: 0.15;
+
+            @include mobile {
+               transform: none;
+            }
+         }
+
+      }
+   }
+
+   .sub-title {
+      margin: 0 auto;
+      color: #2D2D2D;
+      font-size: vw(18);
+      text-align: center;
+      max-width: vw(680);
+      line-height: vw(28);
+      letter-spacing: vw(4.5);
+      text-transform: uppercase;
+
+      @include mobile {
+         font-size: vw(16);
+         line-height: vw(28);
+         letter-spacing: vw(4);
+      }
+   }
+
+   .cards {
+      gap: vw(44);
+      display: grid;
+      margin-top: vw(85);
+      grid-template-columns: repeat(4, 1fr);
+
+      @include mobile {
+         display: block;
+         margin-top: vw(80);
+      }
+
+      .card-item {
+         text-align: center;
+
+         @include mobile {
+            margin: 0 auto;
+            max-width: vw(237);
+            margin-bottom: vw(46);
+            padding-bottom: vw(30);
+         }
+
+         &::before,
+         &::after {
+            display: none;
+
+            @include mobile {
+               left: 0;
+               right: 0;
+               margin: 0 auto;
+               display: block
+            }
+         }
+
+         .title {
+            height: vw(70);
+            display: flex;
+            color: #333333;
+            font-style: italic;
+            font-size: vw(35);
+            align-items: center;
+            line-height: vw(40);
+            justify-content: center;
+            margin-bottom: vw(43);
+            letter-spacing: vw(0.07);
+            font-family: "utopia-std", serif;
+
+            @include mobile {
+               height: auto;
+               margin-bottom: vw(14);
+               font-size: vw(28);
+               line-height: vw(32);
+               letter-spacing: vw(0.06);
+            }
+         }
+
+         .description {
+            font-size: vw(16);
+            color: #5B5B5B;
+            line-height: vw(22);
+         }
+      }
+   }
+}

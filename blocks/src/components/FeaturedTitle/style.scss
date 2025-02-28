@@ -1,0 +1,72 @@
+@import "./../../assets//styles/utils/functions";
+
+.featured-title {
+    margin-top: vw(92);
+
+    @include mobile {
+        margin-top: vw(48);
+        padding-bottom: vw(31);
+        border-bottom: 1px solid #565656;
+    }
+
+    .grid-inner-wrapper {
+        display: flex;
+        position: relative;
+        padding-bottom: vw(42);
+
+        @include mobile {
+            padding: 0;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &:after {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            left: vw(37);
+            right: vw(37);
+            height: vw(1.5);
+            position: absolute;
+            background-color: #565656;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .title {
+            display: flex;
+            flex: 0 0 vw(609);
+            font-size: vw(35);
+            color: #2D2D2D;
+            margin-bottom: 0;
+            align-items: flex-end;
+            text-transform: uppercase;
+            letter-spacing: vw(8.75);
+
+            @include mobile {
+                flex: 0 0 auto;
+                font-size: vw(21);
+                margin-bottom: vw(22);
+                letter-spacing: vw(5.25);
+            }
+        }
+
+        svg {
+            height: auto;
+            width: vw(235);
+            margin-left: vw(5);
+            flex: 0 0 vw(253);
+
+            @include mobile {
+                margin-left: 0;
+                width: vw(300);
+                height: auto;
+                flex: 0 0 auto;
+            }
+        }
+
+    }
+}

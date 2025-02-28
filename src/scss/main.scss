@@ -1,0 +1,220 @@
+@import './../../blocks/src/assets/styles/utils/functions';
+@import './_config';
+@import './plugin/bootstrap';
+//@import './plugin/flickity';
+
+
+:root {
+  --font-avant: "itc-avant-garde-gothic-pro", sans-serif;
+  --font-main: "utopia-std", serif;
+}
+
+/*
+========================
+GENERAL
+========================
+*/
+
+html {
+  // scroll-behavior: smooth;
+  overflow: hidden auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100% !important;
+
+
+  &.lenis-stopped {
+    overflow: hidden !important;
+  }
+}
+
+.grid {
+  gap: vw(12);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include mobile {
+    padding: 0 vw(20);
+    display: block;
+  }
+}
+
+
+
+
+#main-website-wrapper {
+  * {
+    box-sizing: border-box;
+  }
+
+}
+
+body {
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-avant);
+  font-size: vw(16);
+  line-height: vw(22);
+  color: #5B5B5B;
+  background-color: #FFFAF5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+
+h1,
+.h1 {
+  color: #333;
+  line-height: 1.2;
+  font-size: vw(42);
+  letter-spacing: vw(0.08);
+  font-family: var(--font-main);
+
+  @include mobile {
+    font-size: vw(30);
+    letter-spacing: vw(0.06);
+    line-height: normal;
+  }
+}
+
+h2,
+.h2 {
+  color: #333;
+  font-style: italic;
+  font-size: vw(37);
+  margin-bottom: 0;
+  line-height: vw(40);
+  letter-spacing: vw(0.07);
+  font-family: var(--font-main);
+
+  @include mobile {
+    line-height: 1.2;
+  }
+}
+
+a,
+button {
+  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.double-border-bottom {
+  position: relative;
+
+  &::before,
+  &::after {
+    left: 0;
+    content: '';
+    height: vw(1.2);
+    width: vw(130);
+    position: absolute;
+
+    @include mobile {
+      width: 58px;
+      height: 1.6px;
+    }
+  }
+
+
+  &::after {
+    height: vw(1.6);
+    bottom: vw(1.8);
+    background-color: #EEE9E5;
+
+    @include mobile {
+      bottom: 1.8px;
+      height: 1.6px;
+    }
+  }
+
+  &::before {
+    bottom: 0;
+    background-color: #C6C5C6;
+  }
+
+}
+
+main {
+  padding-top: vw(111);
+
+  @include mobile {
+    padding-top: vw(88);
+  }
+}
+
+.grid-inner-wrapper {
+  grid-column: 3/11;
+  padding: 0 vw(37);
+
+  @include mobile {
+    padding: 0 vw(20);
+  }
+}
+
+
+.parallax-image {
+  img {
+    transform: scale(1.2)
+  }
+}
+
+
+.mobile {
+  display: none;
+}
+
+@include mobile {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+
+    &.--fl {
+      display: flex
+    }
+  }
+}
+
+
+.class-padding-top-header {
+  margin-top: vw(110);
+
+  @include mobile {
+    margin-top: vw(80);
+  }
+}
+
+
+input,
+textarea {
+  outline: none
+}
+
+.booking-venue-trigger-list {
+  a {
+    pointer-events: none
+  }
+}
+
+@import './partials/footer';
+@import './partials/header';

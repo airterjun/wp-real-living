@@ -1,0 +1,209 @@
+@import "../../assets/styles/main.scss";
+
+.latest-post {
+    padding: 0 20px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media("<=phone") {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__sub-title {
+
+            text-transform: uppercase;
+            color: rgba(25, 31, 35, 0.8);
+
+        }
+
+        &__title {
+            margin: 0;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__listing {
+
+        & .portfolio {
+            &__filter {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                &__list {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: vw(20);
+                    list-style: none;
+                    padding: 0;
+
+                    @include media("<=phone") {
+                        grid-template-columns: auto;
+                    }
+                }
+            }
+
+            &__list__item {
+                top: 0;
+                left: 0;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                pointer-events: none;
+                border-radius: vw(15);
+
+                &::before {
+                    content: "";
+                    background: linear-gradient(0deg, rgba($c-tertiary, $alpha: 1) 0%, rgba($c-tertiary, $alpha: 0) 70%);
+                    width: 100%;
+                    position: absolute;
+                    height: 100%;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &.active {
+                    opacity: 1;
+                    pointer-events: auto;
+                    position: relative;
+                }
+
+                & .portfolio__featured {
+                    max-height: vw(300);
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 65%;
+                    overflow: hidden;
+                    position: relative;
+                    @include flex-init();
+                    @include justify-content(center);
+                    @include align-items(center);
+
+                    @include media("<=phone") {
+                        max-width: vw(500);
+                        max-height: vw(300);
+                    }
+
+                    & img {
+                        top: 0;
+                        width: 110%;
+                        height: 110%;
+                        object-fit: cover;
+                        position: absolute;
+                        object-position: 50% 50%;
+                        @include trans(0.4s ease-in-out);
+                    }
+                }
+
+                & .portfolio__content {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: $c-text-secondary;
+                    padding: vw(20);
+
+                    &__title {
+                        font-size: vw(25);
+                        font-weight: 700;
+                    }
+
+                    &__more {
+                        margin-top: vw(7);
+                        overflow: hidden;
+                        font-size: vw(18);
+                        position: relative;
+
+                        & .category {
+                            display: block;
+                            @include trans(0.4s ease-in-out);
+                            @include transform(translateY(0%));
+                        }
+
+                        &.uncategorized .button-more {
+                            &>a {
+                                color: $c-text-secondary;
+                                position: relative;
+                                display: inline-block;
+                                font-weight: 400;
+                                @include trans(all 0.4s ease-in-out);
+
+                                &::after {
+                                    content: "";
+                                    width: 0;
+                                    height: vw(1);
+                                    background-color: currentColor;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 110%;
+                                    @include transform(translateY(-50%));
+                                    @include trans(0.4s ease-in-out);
+                                }
+                            }
+                        }
+
+                        &:not(.uncategorized) .button-more {
+                            width: 100%;
+                            position: absolute;
+                            font-weight: 600;
+                            opacity: 0;
+                            left: 0;
+                            @include trans(0.4s ease-in-out);
+                            @include transform(translateY(0%));
+
+                            &>a {
+                                color: $c-text-secondary;
+                                position: relative;
+                                display: inline-block;
+
+                                &::after {
+                                    content: "";
+                                    width: vw(50);
+                                    height: vw(1);
+                                    background-color: currentColor;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: vw(-60);
+                                    @include transform(translateY(-50%));
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    & .portfolio__featured {
+                        & img {
+                            width: 120%;
+                            height: 120%;
+                        }
+                    }
+
+                    & .portfolio__content__more.uncategorized {
+                        & .button-more>a::after {
+                            width: vw(50);
+                            font-weight: 600 !important;
+                        }
+                    }
+
+                    & .portfolio__content__more:not(.uncategorized) {
+                        & .category {
+                            @include transform(translateY(-100%));
+                        }
+
+                        & .button-more {
+                            opacity: 1;
+                            @include transform(translateY(-100%));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@use "sass:math";
+
+:root {
+   --font-base-container: 1920;
+}
+
+
+
+@mixin breakpoint($size) {
+   @media only screen and (max-width: #{$size}px) {
+      @content;
+   }
+}
+
+
+@mixin min-breakpoint($size) {
+   @media only screen and (min-width: #{$size}px) {
+      @content;
+   }
+}
+
+@mixin v-breakpoint($size) {
+   @media only screen and (max-height: #{$size}px) {
+      @content;
+   }
+}
+
+
+@mixin mobile() {
+   @include breakpoint(870) {
+      @content;
+   }
+}
+
+
+@include mobile() {
+   :root {
+      --font-base-container: 375;
+   }
+}
+
+@mixin hover() {
+   @include min-breakpoint(870) {
+      &:hover {
+         @content;
+      }
+   }
+}
+
+
+@function vw($sizeInPx) {
+   @return #{calc($sizeInPx / var(--font-base-container) * 100vw)};
+}

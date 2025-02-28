@@ -1,0 +1,21 @@
+@mixin transition($number) {
+  -webkit-transition: ($number);
+  -moz-transition: ($number);
+  -ms-transition: ($number);
+  -o-transition: ($number);
+  transition: ($number);
+}
+
+@mixin transform($variable) {
+  -webkit-transform: ($variable);
+  -moz-transform: ($variable);
+  -ms-transform: ($variable);
+  -o-transform: ($variable);
+  transform: ($variable);
+}
+
+@mixin fullState {
+  &:hover, &:active, &:focus, &:active:hover, &:active:focus {
+    @content
+  }
+}

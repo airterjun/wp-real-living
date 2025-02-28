@@ -1,0 +1,48 @@
+$primary-font: "Lora", serif;
+$heading-font: $primary-font;
+$container: 1920;
+$innerContainer: 1200;
+
+$mobileBreakPoint: 870;
+
+
+$bodyBackground: #000;
+$orangeColor: #FF7C02;
+$orangeHoverColor: #d46701;
+$greyColor: #4D4E57;
+$headerSize: 97px;
+
+
+$colorPink: #F36A8A;
+$colorDark: #5B5B5B;
+$colorBlue: #159BD4;
+$ease: 0.3s cubic-bezier(.5, 0, .25, 1);
+$transition : 0.7s cubic-bezier(1, 0, .25, 1);
+
+$mobilePadding: 21px;
+
+
+:root {
+    --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+
+
+
+@function size($size) {
+    @return #{calc($size / $container * 100vw)}
+}
+
+
+@function sizeinner($size) {
+    @return #{calc($size / $innerContainer * 100%)}
+}
+
+
+
+$cubic-bezier: cubic-bezier(.19, 1, .22, .95);
+$cubic-bezier-2: cubic-bezier(.7, 0, .2, 1);
+
+@import 'config/color';
+@import 'config/fonts';
+@import "config/global";

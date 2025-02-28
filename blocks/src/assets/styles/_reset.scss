@@ -1,0 +1,27 @@
+span {
+   display: inline-block;
+}
+
+a {
+   color: $c-text-primary;
+   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+span,
+p,
+a {
+   margin: 0;
+   padding: 0;
+}
+
+figure {
+   margin: 0 !important;
+}
+
+html {
+   height: 100%;
+}

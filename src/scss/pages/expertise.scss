@@ -1,0 +1,76 @@
+
+.e-section-2{
+    padding: 116px 0;
+
+    > .wp-block-group{
+        width: 100%;
+        max-width: #{$innerContainer}px;
+        padding: 0 96px;
+        margin: 0 auto;
+        display: grid;
+        gap: 72px;
+        align-items: flex-start;
+        margin-bottom: 90px;
+        grid-template-columns: 325px 1fr;
+
+        @include mobile{
+            padding: 0;
+            display: block !important;
+            margin-bottom: 52px;
+        }
+
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        figure{
+            height: 188px;
+            margin-top: 10px;
+
+            @include mobile{
+                height: auto;
+                padding: 0 22px;
+            }
+
+            img{
+                max-width: unset;
+                width: 100%;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+
+        .wp-block-group{
+            @include mobile{
+                padding-left: 22px;
+            }
+
+            h3{
+                width: 100%;
+                font-weight: 600;
+                font-size: 35px;
+                margin-bottom: 38px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $orangeColor;
+
+                @include mobile{
+                    margin-top: 42px;
+                    font-size: 26px;
+                }
+            }
+
+            p{
+                font-size: 16px;
+                max-width: 445px;
+
+                @include mobile{
+                    padding-right: 22px;
+                    line-height: 22px;
+                    letter-spacing : 0.16px;
+                }
+            }
+        }
+    }
+
+}

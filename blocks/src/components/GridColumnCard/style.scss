@@ -1,0 +1,233 @@
+@import "./../../assets//styles/utils/functions";
+
+
+.grid-col-card {
+    position: relative;
+    margin: vw(96) 0;
+    padding: vw(87) 0;
+    border-top: 1.5px solid #565656;
+    border-bottom: 1.5px solid #565656;
+
+
+    .navigation {
+        z-index: 9;
+        height: auto;
+        top: vw(429);
+        width: 100vw;
+        display: grid;
+        position: absolute;
+        grid-template-columns: repeat(12, 1fr);
+
+        @include mobile {
+            display: none;
+        }
+
+        .prev-next-button {
+            display: flex;
+            width: vw(64);
+            height: vw(64);
+            cursor: pointer;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFAF5;
+
+            &.disabled {
+                display: none;
+            }
+
+            svg {
+                width: vw(19);
+                height: vw(35);
+            }
+
+            &.prev {
+                grid-column: 2/3;
+                margin-left: vw(73);
+                transform: rotate(180deg);
+            }
+
+            &.next {
+                margin-left: vw(4);
+                grid-column: 11/12;
+            }
+        }
+    }
+
+    @include mobile {
+        padding: vw(49) 0;
+        margin: vw(38) 0;
+    }
+
+    .inner {
+        padding: 0 vw(35);
+        grid-column: 3/11;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .group {
+            display: flex;
+
+            @include mobile {
+                overflow-x: scroll;
+                padding-right: vw(20);
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+            }
+
+            .card-wrapper {
+                flex: 0 0 vw(587);
+
+
+                @include mobile {
+                    margin-right: 0;
+                    flex: 0 0 vw(246);
+                    padding-left: vw(20);
+                    scroll-snap-align: start;
+                }
+
+                .header {
+                    margin-bottom: vw(30);
+
+                    @include mobile {
+                        margin-bottom: vw(16);
+                    }
+
+                    h2 {
+                        color: inherit;
+                        font-size: vw(39);
+                        font-weight: 500;
+                        font-style: normal;
+                        margin-bottom: vw(5);
+                        line-height: vw(48.95);
+                        letter-spacing: vw(7.84);
+                        text-transform: uppercase;
+                        font-family: "itc-avant-garde-gothic-pro", sans-serif;
+
+                        @include mobile {
+                            line-height: 1;
+                            font-size: vw(24);
+                            margin-bottom: vw(5);
+                            letter-spacing: vw(5.02);
+
+                        }
+                    }
+
+                    p {
+                        font-size: vw(23);
+                        color: #3D3D3D;
+                        font-style: italic;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        letter-spacing: vw(2.3);
+                        font-family: "utopia-std", serif;
+
+                        @include mobile {
+                            font-size: vw(15);
+                            letter-spacing: vw(1.5);
+                        }
+                    }
+                }
+
+
+                figure {
+                    width: vw(552);
+
+                    @include mobile {
+                        width: 100%;
+                        height: vw(215);
+                    }
+
+                    img {
+                        width: 100%;
+                        height: vw(552);
+                        transform: scale(1.1);
+
+                        @include mobile {
+                            height: vw(215);
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .card__content {
+                    color: #5B5B5B;
+                    margin-top: vw(33);
+
+                    @include mobile {
+                        margin-top: vw(20);
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        max-width: vw(439);
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    font-size: vw(17);
+                    color: #2D2D2D;
+                    margin-top: vw(25);
+                    overflow: hidden;
+                    text-transform: uppercase;
+                    letter-spacing: vw(0.43);
+                    margin-bottom: vw(3);
+
+                    @include mobile {
+                        margin-top: vw(14);
+                    }
+
+                    a {
+                        cursor: pointer;
+                        position: relative;
+                        font-size: vw(17);
+                        color: #2D2D2D;
+                        letter-spacing: vw(0.43);
+
+                        @include mobile {
+                            font-size: vw(14);
+                            letter-spacing: vw(0.35);
+                        }
+
+                        &:after,
+                        &::before {
+                            left: 0;
+                            content: '';
+                            bottom: 0;
+                            width: 100%;
+                            height: vw(1);
+                            position: absolute;
+                            background-color: #2D2D2D;
+                        }
+
+                        &::after {
+                            opacity: 0.2;
+                        }
+
+                        &::before {
+                            transform: scaleX(0);
+                            transform-origin: right;
+                            transition: transform .45s var(--cubic-bezier);
+                        }
+                    }
+
+
+                    &:hover {
+                        a {
+                            &::before {
+                                transform-origin: left;
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
