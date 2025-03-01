@@ -15,7 +15,7 @@
       top: 0;
       height: 100%;
       width: 1.5px;
-      left: vw(328);
+      left: vw(var(--g-outer-padding));
       z-index: 4;
       background-color: #7A7A7A;
    }
@@ -26,9 +26,9 @@
 
    .decor-3 {
       z-index: 2;
-      left: vw(292);
       width: vw(37);
       height: vw(77.6);
+      left: vw(calc(var(--g-outer-padding) - 37));
       background-color: #937D4D;
    }
 

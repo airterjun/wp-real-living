@@ -3,17 +3,33 @@
 
 .full-width-banner {
     width: 100vw;
-    height: vw(338);
-    border-top: 1.5px solid var(--color-green);
+    display: flex;
+    height: vw(463);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-top: 2.5px solid #E5E3DF;
+    border-bottom: 2.5px solid #E5E3DF;
+
+    .title {
+        z-index: 4;
+        color: #414042;
+        color: #414042;
+        position: relative;
+        font-size: vw(48);
+        font-weight: var(--font-extra);
+
+    }
 
 
     figure {
         width: 100vw;
-        height: vw(338);
+        height: vw(463);
+        position: absolute;
 
         img {
             width: 100vw;
-            height: vw(338);
+            height: vw(463);
             object-fit: cover;
 
             @include mobile {

@@ -10,22 +10,26 @@ export const attributes = {
     title: TextSchema,
     detail: TextSchema,
     link: LinkSchmea,
-    background: ImageSchema
+    background: ImageSchema,
+    banner: ImageSchema
 }
 
 export default function (props) {
 
     return (
 
-        <section className="grid banner-contact">
-            <div className="container">
-                <div className="content">
-                    <Text set="title" tag="h2" className="content-a" {...props} />
-                    <Text set="detail" tag="div" className="content-b" {...props} />
-                    <PrimaryButton {...props} />
+        <section className="banner-contact">
+            <Media {...props} set="banner" className="parallax" />
+            <div className="content">
+                <Media {...props} set="background" />
+                <div className="content-a">
+                    <Text set="title" tag="h2" className="content-a-a" {...props} />
+                    <div className="content-a-b">
+                        <Text set="detail" tag="div" className="content-a-b-a" {...props} />
+                        <PrimaryButton {...props} />
+                    </div>
                 </div>
             </div>
-            <Media {...props} set="background" className="parallax" />
         </section>
     )
 }

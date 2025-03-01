@@ -26,6 +26,7 @@ $mobilePadding: 21px;
 :root {
     --g-border: 2.6px solid var(--color-gold);
     --g-padding-container: 84;
+    --g-outer-padding: 330
 }
 
 @function size($size) {

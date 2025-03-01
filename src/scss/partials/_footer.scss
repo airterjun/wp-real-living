@@ -1,0 +1,36 @@
+footer {
+    .logo {
+        display: flex;
+        margin-top: vw(171);
+        margin-bottom: vw(186);
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: vw(548);
+            height: auto;
+        }
+    }
+
+    .footer-content-bottom {
+        display: flex;
+        height: vw(44);
+        color: #58595B;
+        font-weight: 500;
+        font-size: vw(15);
+        align-items: center;
+        background-color: #EDEDED;
+        justify-content: space-between;
+        padding: 0 vw(var(--g-outer-padding));
+        font-family: var(--font-secondary);
+
+
+        &-b {
+            color: #828282;
+
+            a {
+                color: #58595B;
+            }
+        }
+    }
+}
