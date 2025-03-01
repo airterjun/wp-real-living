@@ -1,0 +1,39 @@
+@import "./../../assets//styles/utils/functions";
+
+.banner-contact {
+    width: 100%;
+    display: flex;
+    height: vw(554);
+    align-items: center;
+    position: relative;
+
+    figure {
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        z-index: 3;
+        color: #F7F7F7;
+        position: relative;
+
+        h2 {
+            font-size: vw(43);
+            margin-bottom: vw(37);
+            font-family: var(--font-main-black);
+        }
+
+        &-b {
+            margin-bottom: vw(48);
+        }
+    }
+}

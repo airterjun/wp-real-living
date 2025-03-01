@@ -1,18 +1,23 @@
 
-import "./style/admin.scss";
 import { MediaUpload } from "@wordpress/block-editor";
-import { Button, Icon } from "@wordpress/components";
-import { getBaseModelPath, getModel, getNestedValue, setNestedValue } from "./Libs";
+import { Button } from "@wordpress/components";
+import _ from "lodash";
+import { getBaseModelPath, getModel } from "./Libs";
+import "./style/admin.scss";
 
 export default function Media(props) {
-    const { edit, set, index, attributes, setAttributes, type, className, noDelete, mobile } = props
-    const getValue = getNestedValue(attributes, `${set}.url`)
-    const width = getNestedValue(attributes, `${set}.width`)
-    const height = getNestedValue(attributes, `${set}.height`)
+    const { edit, set, index, attributes, setAttributes, type, className, noDelete, mobile, model } = props
+
+
+    const modelSet = model ? `${model}.${set}` : set
+
+    const getValue = _.get(attributes, `${modelSet}.url`)
+    const width = _.get(attributes, `${modelSet}.width`)
+    const height = _.get(attributes, `${modelSet}.height`)
 
     const renderMedia = () => {
         if (type === 'video') {
-            const videoUrl = getNestedValue(attributes, set);
+            const videoUrl = _.get(attributes, modelSet);
             return (
                 <div className="image-wrapper">
                     <video width="320" height="240" controls src={videoUrl.default || videoUrl} />
@@ -20,32 +25,17 @@ export default function Media(props) {
             )
         } else {
 
-            const mobilePicture = () => {
-                if (mobile) {
-                    const mobileUrl = getNestedValue(attributes, `${mobile}.url`)
-                    return <source media="(max-width: 800px)" srcset={mobileUrl}></source>
-                }
-            }
-
-            return (
-
-                <picture>
-                    {mobilePicture()}
-                    <source media="(min-width: 800px)" srcset={getValue} />
-                    <img src={getValue} width={width} height={height} />
-                </picture>
-
-            )
+            return <img src={getValue} width={width} height={height} />
         }
     }
 
 
     if (edit) {
-        const baseModel = getBaseModelPath(set)
+        const baseModel = getBaseModelPath(modelSet)
         const onSelect = media => {
             const clone = structuredClone(attributes)
 
-            let updateSet = set
+            let updateSet = modelSet
 
             if (clone.isMobile) {
                 updateSet = mobile
@@ -63,9 +53,9 @@ export default function Media(props) {
             } else {
 
                 if (type === 'video') {
-                    setNestedValue(clone, updateSet, media.url)
+                    lodash.set(clone, updateSet, media.url)
                 } else {
-                    setNestedValue(clone, updateSet, media)
+                    lodash.set(clone, updateSet, media)
                 }
 
 
@@ -97,7 +87,7 @@ export default function Media(props) {
                             deleteMedia()
                         }}
                     >
-                        <Icon icon="trash" />
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 7H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 7V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V7" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     </Button>
                 )
             }
@@ -107,7 +97,7 @@ export default function Media(props) {
 
         return (
 
-            <figure className={className}>
+            <figure className={`${className} edit`}>
 
                 <MediaUpload
                     allowedTypes={['image']}

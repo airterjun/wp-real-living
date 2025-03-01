@@ -3,47 +3,13 @@
 .career {
     margin-top: vw(115);
 
-    @include mobile {
-        padding: 0;
-        margin-top: vw(80);
-        padding-bottom: vw(56);
-
-        .grid-inner-wrapper {
-            padding: 0;
-
-            &.header-detail {
-                padding: 0 vw(20);
-            }
-        }
-    }
-
     .header-detail {
         display: flex;
         margin-bottom: vw(102);
         justify-content: space-between;
 
-        @include mobile {
-            display: block;
-            margin-bottom: vw(74);
-        }
-
         .main-title {
-            color: #333333;
             font-style: italic;
-
-            @include mobile {
-                margin-bottom: vw(10);
-                padding-bottom: vw(44);
-            }
-
-            &::before,
-            &::after {
-                display: none;
-
-                @include mobile {
-                    display: block;
-                }
-            }
         }
 
         .main-description {
@@ -59,23 +25,6 @@
         padding: vw(85) 0 vw(77);
         border-bottom: vw(1.5) solid #565656;
 
-        h3 {
-            text-transform: uppercase;
-        }
-
-        @include mobile {
-            padding: vw(49) vw(20) vw(134);
-
-            &:last-child {
-                border-bottom: none;
-                padding-bottom: vw(74);
-
-                .button-apply {
-                    bottom: vw(0);
-                }
-            }
-        }
-
         &:first-child {
             border-top: vw(1.5) solid #565656;
         }
@@ -85,54 +34,22 @@
             top: vw(85);
             display: flex;
             gap: vw(13);
-            cursor: pointer;
             color: #2D2D2D;
             position: absolute;
             font-size: vw(31);
             align-items: center;
             letter-spacing: vw(0.78);
 
-            @include mobile {
-                top: unset;
-                gap: vw(7);
-                left: vw(20);
-                bottom: vw(54)
-            }
-
             .label {
                 padding-bottom: vw(5);
                 text-transform: uppercase;
-                transition: transform .35s ease-in-out;
                 border-bottom: vw(3) solid #2D2D2D;
-
-                @include mobile {
-                    color: #2D2D2D;
-                    font-size: vw(23);
-                    letter-spacing: vw(0.58);
-                    border-bottom: vw(2) solid #2D2D2D;
-                }
             }
 
             svg {
                 width: vw(20);
                 height: vw(20);
                 transform: translateY(vw(-4));
-                transition: transform .35s var(--cubic-bezier);
-
-                @include mobile {
-                    width: vw(15);
-                    height: vw(15);
-                }
-            }
-
-            @include hover {
-                .label {
-                    opacity: 0.8;
-                }
-
-                svg {
-                    transform: translateX(vw(10)) translateY(vw(-4));
-                }
             }
         }
 
@@ -141,17 +58,9 @@
             font-size: vw(32);
             color: #2D2D2D;
             font-weight: 500;
-            line-height: 1.1;
             max-width: vw(600);
             margin-bottom: vw(41);
             letter-spacing: vw(8);
-
-            @include mobile {
-                font-size: vw(25);
-                line-height: vw(31);
-                margin-bottom: vw(20);
-                letter-spacing: vw(6.25);
-            }
         }
 
         .detail {
@@ -162,11 +71,6 @@
             gap: vw(16);
             display: flex;
             margin-top: vw(58);
-
-            @include mobile {
-                gap: vw(15);
-                margin-top: vw(26);
-            }
 
 
             .location {
@@ -180,13 +84,6 @@
                 border-radius: vw(34);
                 letter-spacing: vw(0.33);
                 background-color: rgba(#5B5B5B, 0.07);
-
-                @include mobile {
-                    gap: vw(11);
-                    padding: 0 vw(14);
-                    font-size: vw(12);
-                    letter-spacing: vw(0.3);
-                }
 
                 svg {
                     width: vw(13);

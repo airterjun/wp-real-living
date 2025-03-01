@@ -1,0 +1,97 @@
+@import "./../../assets//styles/utils/functions";
+
+.two-column-card-office {
+    padding: vw(107) 0 vw(107);
+    background-color: #161616;
+
+    .container {
+        color: #FFF;
+
+        h2 {
+            text-align: center;
+        }
+
+        .column {
+            display: flex;
+            margin-top: vw(96);
+            justify-content: space-between;
+
+            &-item {
+                flex: 0 0 vw(517);
+
+                figure {
+                    width: 100%;
+                    height: auto;
+                    border-radius: vw(8);
+
+                    img {
+                        width: 100%;
+                        height: vw(187);
+                        object-fit: cover;
+                        border-radius: vw(8);
+                    }
+                }
+
+                &-a {
+                    padding: vw(32) 0;
+
+                    &-a {
+                        font-size: vw(38);
+                        margin-bottom: vw(24);
+                        font-family: var(--font-main-bold);
+                    }
+
+                    &-b {
+                        color: #F2F2F2;
+                        font-size: vw(25);
+                        margin-bottom: vw(6);
+                        font-family: var(--font-main-bold);
+                    }
+
+                    &-c {
+                        // line-height: 1.41;
+                        font-size: vw(25);
+
+                        span {
+                            &.p {
+                                content: '';
+                                display: block;
+                                padding-bottom: vw(9);
+                            }
+                        }
+                    }
+
+                    &-d {
+                        margin-top: vw(10);
+
+                        &-a {
+                            gap: vw(8);
+                            display: flex;
+                            margin-bottom: vw(5);
+                            font-size: vw(22);
+
+                            &-a {
+                                letter-spacing: vw(-.4);
+                                font-family: var(--font-main-bold);
+                            }
+
+                            &-b {
+                                font-size: vw(22);
+                                color: #C4C4C4;
+
+                                a {
+                                    font-size: vw(22);
+                                    color: #C4C4C4;
+                                }
+                            }
+                        }
+                    }
+
+                    .primary-button {
+                        margin-top: vw(38);
+                    }
+                }
+            }
+        }
+    }
+}

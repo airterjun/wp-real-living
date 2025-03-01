@@ -54,13 +54,13 @@ class NewsletterService
                 'Content-Type' => 'application/json',
             ],
             'body' => json_encode([
-                'username' => 'fleavaApi',
+                'username' => 'nolsisApi',
                 'passwordhash' => 'villa.2022',
                 'channelname' => 'Web',
             ])
         ]);
 
-        $response = json_decode((string)$response->getBody());
+        $response = json_decode((string) $response->getBody());
         $token = $response->data->token;
 
         return $token;
@@ -101,7 +101,7 @@ class NewsletterService
                 ]),
             ]);
 
-            return json_decode((string)$response->getBody());
+            return json_decode((string) $response->getBody());
         } catch (ClientException $e) {
             $statusCode = $e->getResponse()->getStatusCode();
 

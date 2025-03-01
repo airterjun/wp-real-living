@@ -1,0 +1,43 @@
+@import "./../../assets//styles/utils/functions";
+
+
+.dealer-location {
+    padding: vw(92) 0 vw(137);
+
+    .main-title {
+        font-size: vw(40);
+        margin-bottom: vw(70);
+        padding-bottom: vw(6);
+        font-family: var(--font-main-bold);
+        border-bottom: 1.5px solid var(--color-green);
+    }
+
+    .location {
+        gap: vw(103);
+        row-gap: vw(80);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &-item {
+            .title {
+                font-size: vw(32);
+                margin-bottom: vw(16);
+                font-family: var(--font-main-bold);
+            }
+
+            .address {
+                span {
+                    &.p {
+                        content: '';
+                        display: block;
+                        padding-bottom: vw(9);
+                    }
+                }
+            }
+
+            .primary-button {
+                margin-top: vw(23);
+            }
+        }
+    }
+}

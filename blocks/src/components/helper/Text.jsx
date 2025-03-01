@@ -3,18 +3,15 @@ import { TextControl } from '@wordpress/components';
 import { RichText } from '@wordpress/block-editor';
 
 export default function Text(props) {
-    const { edit, attributes, set, setAttributes, className, disabledFormat } = props
+    const { edit, attributes, set, setAttributes, className, disabledFormat, model } = props
+    const setId = model ? `${model}.${set}` : set
     let tag = props.tag
-    let getVal = getNestedValue(attributes, set)
+
+    let getVal = getNestedValue(attributes, setId)
 
     if (!getVal && edit) {
         getVal = !disabledFormat ? "Write here..." : ""
     }
-
-    if (props.multiline) {
-        newLine = props.multiline
-    }
-
     if (!tag) tag = 'p'
 
     if (!edit) {
@@ -25,16 +22,17 @@ export default function Text(props) {
     } else {
 
         const updateContentVal = newVal => {
-            const path = getBaseModelPath(set)
+            const path = getBaseModelPath(setId)
             const copy = structuredClone(attributes)
+
 
 
             const stripHTML = (text) => text.replace(/<\/?[^>]+(>|$)/g, "");
 
             if (disabledFormat) {
-                setNestedValue(copy, set, stripHTML(newVal))
+                setNestedValue(copy, setId, stripHTML(newVal))
             } else {
-                setNestedValue(copy, set, newVal)
+                setNestedValue(copy, setId, newVal.replace(/(<br\s*\/?>\s*){2}/g, '<span class="p"></span>'))
             }
 
             setAttributes({

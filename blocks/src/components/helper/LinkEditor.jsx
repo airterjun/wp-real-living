@@ -16,7 +16,6 @@ export default function LinkEditor(props) {
         setAttributes({
             [path]: copy[path]
         })
-
     }
 
     if (edit) {

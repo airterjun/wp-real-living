@@ -1,43 +1,68 @@
 @import "./../../assets//styles/utils/functions";
 
-.normal-hero-banner {
-    height: vw(602);
-    overflow: hidden;
+.hero-banner {
+    display: grid;
+    grid-template-columns: vw(1125) 1fr;
+    border-bottom: 2.6px solid var(--color-gold);
 
-
-    figure {
+    .content {
         width: 100%;
-        height: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding-left: vw(358);
+        padding-right: vw(100);
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+        .h1 {
+            font-weight: 800;
+            font-size: vw(64);
+            line-height: vw(64.71);
 
-    @include mobile {
-        height: vw(286);
-
-        figure {
-            width: 100%;
-            height: vw(286);
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
         }
 
-        .mobile {
+        &::before {
+            top: 0;
+            right: 0;
+            width: 1px;
+            border-right: var(--g-border);
+            content: '';
+            height: 100%;
+            position: absolute;
+        }
+
+        &:after {
+            top: 0;
+            left: 0;
+            content: '';
             width: 100%;
             height: 100%;
+            position: absolute;
+            background: radial-gradient(circle closest-corner at center,
+                    rgba(255, 255, 255, 1) 52.61%,
+                    rgba(253, 253, 253, 0.81) 62.14%,
+                    rgba(244, 244, 244, 0.7) 67.51%,
+                    rgba(231, 231, 231, 0.61) 71.86%,
+                    rgba(211, 211, 211, 0.53) 75.66%,
+                    rgba(185, 185, 185, 0.46) 79.09%,
+                    rgba(154, 154, 154, 0.4) 82.27%,
+                    rgba(116, 116, 116, 0.34) 85.25%,
+                    rgba(73, 73, 73, 0.28) 88.07%,
+                    rgba(25, 25, 25, 0.22) 90.67%,
+                    rgba(0, 0, 0, 0.2) 91.88%);
+            opacity: 0.9;
+        }
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+
+        &-a {
+            z-index: 9;
+            position: relative;
+
+            &-b {
+                font-weight: 700;
+                font-weight: bold;
+                font-size: vw(31);
+                margin: vw(34) 0 vw(51);
+                color: var(--color-gold);
             }
         }
     }

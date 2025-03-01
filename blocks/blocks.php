@@ -1,11 +1,5 @@
 <?php
-require __DIR__ . '/classes/custom-post-type-widget-blocks.php';
-require __DIR__ . '/classes/image-button.php';
-
 include "dynamic-component/dynamic-component.php";
-
-
-new ImageButton();
 
 
 function website_enqueue_block_editor_assets()
@@ -15,10 +9,12 @@ function website_enqueue_block_editor_assets()
     wp_enqueue_script('lodash');
     wp_enqueue_script(
         'nolsis-block',
-        get_template_directory_uri() . '/dist/nolsis.bundle.js',
+        get_template_directory_uri() . '/dist/block.bundle.js',
         array('wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-block-editor', 'lodash'),
         true
     );
+
+    wp_register_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css');
 }
 
 function website_block_parser($source_block, $parsed_block)
@@ -108,11 +104,6 @@ add_action('init', function () {
         'label' => 'Article',
     ]);
 
-    register_block_style('website/right-image-float', [
-        'name' => 'right-image-float-larger',
-        'label' => 'right-image-float-larger',
-    ]);
-
     register_block_style('core/spacer', [
         'name' => 'spacer-with-pattern',
         'label' => 'With Pattern',
@@ -179,5 +170,8 @@ add_action('enqueue_block_assets', function () {
         array(),
         '1.1.1'
     );
+
+    wp_enqueue_style('custmom-b-admin-style', get_template_directory_uri() . '/dist/block.css', array(), '1.1.0');
+    wp_enqueue_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css', array(), '1.1.0');
 
 });

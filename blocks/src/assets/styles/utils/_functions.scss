@@ -1,10 +1,11 @@
 @use "sass:math";
 
 :root {
-   --font-base-container: 1920;
+   --base-size: 1920;
+   --mobile-browser: 876;
+   --wrapper-padding: 20;
+   --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
 }
-
-
 
 @mixin breakpoint($size) {
    @media only screen and (max-width: #{$size}px) {
@@ -27,7 +28,7 @@
 
 
 @mixin mobile() {
-   @include breakpoint(870) {
+   @include breakpoint(879) {
       @content;
    }
 }
@@ -35,19 +36,25 @@
 
 @include mobile() {
    :root {
-      --font-base-container: 375;
+      --base-size: 376;
+      --wrapper-padding: 20;
    }
 }
 
+
+
 @mixin hover() {
-   @include min-breakpoint(870) {
+   @include min-breakpoint(879) {
       &:hover {
          @content;
       }
    }
 }
 
+@function verticalSize($size, $container) {
+   @return #{calc($size / $container * 100vh)};
+}
 
 @function vw($sizeInPx) {
-   @return #{calc($sizeInPx / var(--font-base-container) * 100vw)};
+   @return #{calc($sizeInPx / var(--base-size) * 100vw)};
 }

@@ -1,0 +1,24 @@
+@import "./../../assets//styles/utils/functions";
+
+
+.full-width-banner {
+    width: 100vw;
+    height: vw(338);
+    border-top: 1.5px solid var(--color-green);
+
+
+    figure {
+        width: 100vw;
+        height: vw(338);
+
+        img {
+            width: 100vw;
+            height: vw(338);
+            object-fit: cover;
+
+            @include mobile {
+                height: 100%;
+            }
+        }
+    }
+}

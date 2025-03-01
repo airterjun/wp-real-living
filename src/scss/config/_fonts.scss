@@ -1,17 +1,24 @@
+:root {
+    --font-main: "proxima-nova", sans-serif;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra: 800;
+}
+
 body {
     font-weight: 400;
-    font-size: size(16);
-    font-family: "century-gothic", sans-serif;
+    font-family: var();
+    font-size: size(22);
 
     @include mobile {
-        font-size: 16px;
+        font-size: vw(14);
     }
 }
 
-h1,
-.h1 {
-    font-size: size(50);
-    color: #5B5B5B;
-    font-weight: bold;
-    color: rgb(91, 91, 91);
+#main-website-wrapper {
+
+    .editor-note {
+        font-family: var(--font-main);
+    }
 }

@@ -1,9 +1,15 @@
 /*
-  Theme Name: Nolsis - Riviera;
-  Theme URI: https://nolsis.com
-  Author: Nolsis;
-  Author URI: https://nolsis.com
-  Description: Official Theme for Riviera website
+  Theme Name: Matan x Real Living
+  Theme URI: https://matanyaniv.com
+  Author: Matan;
+  Author URI: https://matanyaniv.com
+  Description: Real Living
   Version: 1.0.0
 
 */
+
+
+body{
+  line-height: 1.2;
+  font-family: var(--main-font);
+}

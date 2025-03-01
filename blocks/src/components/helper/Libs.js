@@ -1,3 +1,4 @@
+
 /**
  * @param path {String}
  * @return string
@@ -25,6 +26,63 @@ export const sanitizeInput = (input) => {
     // Basic client-side sanitization example
     return input.replace(/[^a-zA-Z0-9 -]/g, '');
 }
+
+
+
+export const getModelValue = (model, props) => {
+    const id = props.model ? `${props.model}.${model}` : model
+    return getNestedValue(props.attributes, id)
+}
+
+export const getModelId = (id, props) => {
+    return props.model ? `${props.model}.${id}` : id
+}
+
+export function transformJson(obj) {
+    const result = {};
+
+    // Loop untuk setiap key di object root
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            // Jika value adalah objek dan bukan null
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                if (Array.isArray(obj[key])) {
+                    // Jika value adalah array, periksa setiap elemen dalam array
+                    result[key] = obj[key].map(item => {
+                        if (typeof item === 'object' && item !== null) {
+                            // Cek jika item memiliki pola { type, default }
+                            for (const innerKey in item) {
+                                if (item.hasOwnProperty(innerKey)) {
+                                    const innerValue = item[innerKey];
+                                    if (typeof innerValue === 'object' && innerValue !== null) {
+                                        if ('type' in innerValue && 'default' in innerValue) {
+                                            // Ambil nilai default dan ubah key-nya sesuai
+                                            item[innerKey] = innerValue.default;
+                                        }
+                                    }
+                                }
+                            }
+                            return item; // Kembalikan item yang sudah diproses
+                        }
+                        return item; // Kalau bukan objek, langsung kembalikan item
+                    });
+                } else if ('type' in obj[key] && 'default' in obj[key]) {
+                    // Ambil nilai default jika ditemukan dalam objek
+                    result[key] = obj[key].default;
+                } else {
+                    // Kalau bukan pattern { type, default }, rekursif ke dalam objek
+                    result[key] = transformJson(obj[key]);
+                }
+            } else {
+                // Kalau value-nya bukan objek, simpan saja
+                result[key] = obj[key];
+            }
+        }
+    }
+
+    return result;
+}
+
 
 
 

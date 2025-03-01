@@ -1,5 +1,51 @@
 figure {
     position: relative;
+
+    .wp-action__floating {
+        top: 5px;
+        left: 5px;
+        gap: 5px;
+        z-index: 6;
+        display: flex;
+        position: absolute;
+
+        button {
+            padding: 0;
+            height: 30px;
+            display: flex;
+            flex: 0 0 30px;
+            border-radius: 50%;
+            align-items: center;
+            border: 1px solid rgba(#FFF, 0.2);
+            justify-content: center;
+            background-color: rgba(#000, 0.2);
+            backdrop-filter: blur(10px);
+
+            svg {
+                width: 15px;
+                height: 15px;
+                fill: none;
+
+                path {
+                    stroke: #FFF;
+                }
+            }
+        }
+    }
+}
+
+
+.link-editor {
+    .block-editor-link-control {
+        .block-editor-link-control__search-input-wrapper {
+            margin-bottom: 0;
+
+            div {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
 }
 
 
@@ -35,73 +81,23 @@ figure {
     }
 }
 
+.card-list-editor-color {
+    .listing {
+        margin-bottom: 20px;
 
-.input-editor {
-    .label {
-        opacity: 0.7;
-        font-size: 11px;
-        margin-bottom: 10px;
+        .label {
+            font-size: 17px;
+            margin-bottom: 10px;
+            border-top: 1px solid #000;
+            padding-top: 10px;
+        }
 
-        &.main-label {
-            padding-top: 20px;
-            font-size: 13px;
+        .react-colorful__saturation {
+            height: 120px !important;
         }
     }
 
-    .custom-input-wrapper {
-        padding: 20px 0;
-        border-bottom: 1px solid #000;
-
-        .link-editor {
-            margin-top: 12px;
-
-            .block-editor-link-control {
-                min-width: unset;
-                width: 100%;
-            }
-
-            .components-base-control {
-                margin: 0;
-                width: 100%;
-                min-width: unset;
-            }
-        }
-
-        .input-wrapper {
-            font-size: 12px;
-            padding-bottom: 20px;
-            position: relative;
-
-
-            figure {
-                img {
-                    width: 100%;
-                    height: 150px;
-                    border-radius: 5px;
-                    object-fit: cover;
-                }
-
-                .wp-action__floating {
-                    button {
-                        width: 30px;
-                        height: 30px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        svg,
-                        .dashicon {
-                            width: 40%;
-                            height: 40%;
-                            font-size: 13px;
-                        }
-                    }
-                }
-            }
-
-            .react-colorful__saturation {
-                height: 120px !important;
-            }
-        }
+    .buttons-slider-container {
+        position: relative;
     }
 }

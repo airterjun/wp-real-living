@@ -78,9 +78,9 @@ class Mailer
 	private $host = 'smtpout.secureserver.net';
 	private $SMTPAuth = true;
 	private $port = 465;
-	private $username = 'info@villaallseteventhire.com';
+	private $username = 'info@villanolsis.com';
 	private $password = 'InfoPword1';
-	private $from = 'info@villaallseteventhire.com';
+	private $from = 'info@villanolsis.com';
 
 	private $mail;
 
@@ -114,8 +114,8 @@ class Mailer
 
 		$template = Timber::compile("mail.twig", $_POST);
 
-		$this->mail->setFrom($this->from, 'Villa allseteventhire');
-		$this->mail->addAddress('info@villaallseteventhire.com');
+		$this->mail->setFrom($this->from, 'Villa nolsis');
+		$this->mail->addAddress('info@villanolsis.com');
 
 		$this->mail->Subject = 'New Submission From Contact Us Page';
 		$this->mail->Body = $template;

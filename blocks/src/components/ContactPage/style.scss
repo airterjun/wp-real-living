@@ -1,0 +1,10 @@
+@import "./../../assets//styles/utils/functions";
+
+.dealer-locator {
+    .dealer-location {
+        &:last-child {
+            padding-top: 0;
+            padding-bottom: vw(129);
+        }
+    }
+}

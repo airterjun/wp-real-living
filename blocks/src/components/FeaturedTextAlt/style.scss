@@ -1,0 +1,35 @@
+@import "./../../assets//styles/utils/functions";
+
+
+.featured-text-alt {
+   display: flex;
+   height: vw(554);
+   position: relative;
+   align-items: center;
+   justify-content: center;
+   border-top: 1.5px solid var(--color-green);
+
+   .content {
+      z-index: 2;
+      color: #F7F7F7;
+      position: relative;
+
+
+      &_b {
+         max-width: vw(660);
+         margin-bottom: vw(42);
+      }
+   }
+
+   figure {
+      z-index: 1;
+      width: 100vw;
+      height: vw(607);
+      position: absolute;
+
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+}

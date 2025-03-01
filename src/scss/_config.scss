@@ -22,12 +22,11 @@ $transition : 0.7s cubic-bezier(1, 0, .25, 1);
 $mobilePadding: 21px;
 
 
+
 :root {
-    --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+    --g-border: 2.6px solid var(--color-gold);
+    --g-padding-container: 84;
 }
-
-
-
 
 @function size($size) {
     @return #{calc($size / $container * 100vw)}
@@ -43,6 +42,6 @@ $mobilePadding: 21px;
 $cubic-bezier: cubic-bezier(.19, 1, .22, .95);
 $cubic-bezier-2: cubic-bezier(.7, 0, .2, 1);
 
-@import 'config/color';
+@import "config/color";
 @import 'config/fonts';
 @import "config/global";

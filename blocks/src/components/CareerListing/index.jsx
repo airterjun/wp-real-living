@@ -2,7 +2,6 @@ import "./style.scss";
 import Text from "../helper/Text"
 import Controller from "../helper/Controller";
 import ButtonSlider from "../helper/ButtonSlider";
-import LinkEditor from "../helper/LinkEditor";
 
 export const attributes = {
     items: {
@@ -37,10 +36,10 @@ export default function (props) {
         const classifications = `items.${index}.classifications`
         return (
             <div className="card-item">
-                <a href={item.form_id.url} className="button-apply" data-form={`${item.form_id.url}?position=${encodeURI(item.title)}`}>
+                <div className="button-apply" data-form={item.form_id}>
                     <div class="label">Apply</div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21"><g clip-path="url(#a)"><path fill="#2D2D2D" d="M17.93 20.68V4.76L2.58 20.07.61 18.1 15.92 2.76H0L2.79 0h17.89v17.89l-2.76 2.79h.01Z" /></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20.68v20.68H0z" /></clipPath></defs></svg>
-                </a>
+                </div>
                 <Text set={keyTitle} {...props} tag="h3" />
                 <Text set={keyDesc} {...props} className="detail" />
 
@@ -57,31 +56,15 @@ export default function (props) {
             </div>
         )
     })
-
-
-    const editor = () => props.attributes.items.map((item, index) => {
-        const keyTitle = `items.${index}.title`
-        const form = `items.${index}.form_id`
-        return <div className="custom-input-wrapper">
-            <div className="label">Job</div>
-            <Text set={keyTitle} {...props} tag="div" />
-            <LinkEditor set={form} {...props} />
-        </div>
-    })
-
     return (
         <section className="career grid">
             <Controller {...props}>
-                <div className="gallery-list-editor input-editor">
-                    {editor()}
-                    <div className="custom-input-wrapper">
-                        <div className="label">Add more job</div>
-                        <ButtonSlider slider="items" {...props} />
-                    </div>
+                <div className="gallery-list-editor">
+                    <ButtonSlider slider="items" {...props} />
                 </div>
             </Controller>
             <div className="grid-inner-wrapper header-detail">
-                <Text set="title" tag="h1" {...props} className="main-title double-border-bottom" />
+                <Text set="title" tag="h1" {...props} className="main-title" />
                 <Text set="description" {...props} className="main-description" />
             </div>
             <div className="grid-inner-wrapper">

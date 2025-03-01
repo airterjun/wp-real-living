@@ -1,14 +1,14 @@
-import {InspectorControls} from '@wordpress/block-editor';
-import {PanelBody, Button, PanelRow} from "@wordpress/components";
+import { InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, PanelRow } from "@wordpress/components";
 
 export default function Controller(props) {
-    const {settings} = props
-    let title = 'Manage'
+    const { settings, title } = props
+    let panelTitle = title || 'Manage'
 
     if (props.edit) {
         return (
             <InspectorControls>
-                <PanelBody title={title}>
+                <PanelBody title={panelTitle}>
                     <PanelRow>
                         {props.children}
                     </PanelRow>

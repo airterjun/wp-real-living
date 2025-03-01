@@ -4,12 +4,10 @@ function site_menu()
 
     add_theme_support('menus');
     register_nav_menu('main', 'Primary Menu');
-    register_nav_menu('booking-menu', 'Booking Menu');
-    register_nav_menu('footer', 'Footer Menu');
-
-    register_nav_menu('footer-cafe', 'Cafe');
-    register_nav_menu('footer-bistro', 'Bistro');
-    register_nav_menu('footer-trattoria', 'Trattoria');
+    register_nav_menu('footer', 'Footer');
+    register_nav_menu('quick', 'Quick footer');
+    register_nav_menu('support', 'support footer');
+    register_nav_menu('social', 'Social footer');
 
 }
 
@@ -17,34 +15,37 @@ add_action('init', 'site_menu');
 
 
 
-function venue_menu($pos)
+class Menu_Thumb extends Walker_Nav_Menu
 {
-    wp_nav_menu([
-        'theme_location' => $pos,
-        'walker' => new class extends Walker_Nav_Menu {
-        function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
-        {
+
+    // Start List Element
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    {
+        $post_id = !empty($item->object_id) ? $item->object_id : 0; // Ambil ID dari post/page
+
+        $output .= '<div class="thumb-post">';
+        $output .= get_the_post_thumbnail($post_id, 'full');
+        $output .= '</div>';
+    }
+
+}
 
 
-            $description = '';
 
-            if (!empty($item->description)) {
-                $description = esc_html($item->description);
-            }
+function show_menu_name($position)
+{
+    $menu_location = $position;
+    $locations = get_nav_menu_locations();
 
+    // Pastikan lokasi ada dan menu terkait tersedia
+    if (isset($locations[$menu_location])) {
+        $menu_id = $locations[$menu_location];
+        $menu_obj = wp_get_nav_menu_object($menu_id);
 
-            $classes = empty($item->classes) ? [] : (array) $item->classes;
-            $class_names = join(' ', array_filter(apply_filters('nav_menu_css_class', array_unique($classes), $item, $args)));
-            $class_names = esc_attr($class_names);
-
-            $icon = '';
-            if ($item->menu_order == 1) { // menu_order starts from 1 for the first item
-                $icon = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21"><g clip-path="url(#a)"><path fill="#2D2D2D" d="M17.93 20.68V4.76L2.58 20.07.61 18.1 15.92 2.76H0L2.79 0h17.89v17.89l-2.76 2.79h.01Z" /></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20.68v20.68H0z" /></clipPath></defs></svg>';
-            }
-
-
-            $output .= '<li class="' . $class_names . '"><a data-desc="' . $description . '" target="' . $item->target . '" href="' . esc_html($item->url) . '" class="menu-title"><div class="label">' . esc_html($item->title) . '</div>' . $icon . '</a></li>';
+        // Tampilkan nama menu jika berhasil ditemukan
+        if ($menu_obj) {
+            echo '<h4>' . esc_html($menu_obj->name) . '</h4>';
         }
-        }
-    ]);
+    }
+
 }

@@ -3,9 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { hasPostCSSConfig } = require("@wordpress/scripts/utils");
 const postcssPlugins = require('@wordpress/postcss-plugins-preset');
 const isProduction = process.env.NODE_ENV === 'production';
-const OptimizePlugin = require('optimize-plugin');
 const defaultConfig = require('@wordpress/scripts/config/webpack.config');
-const { noConflict } = require('lodash');
 
 const cssLoaders = [
     {
@@ -53,10 +51,8 @@ module.exports = {
     entry: {
         ...defaultConfig.entry,
         script: './src/index.js',
-        app: './src/scss/main.scss',
-        'admin-style': './src/scss/admin.scss',
-        nolsis: './blocks/src/index.js',
-        noConflict: './src/js/fix-conflict.js'
+        block: './blocks/src/index.js',
+        app: './src/scss/main.scss'
     },
 
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -70,6 +66,11 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.jsx?$/,
+                use: "webpack-import-glob-loader",
+            },
+
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,

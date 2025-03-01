@@ -1,0 +1,281 @@
+@import "./../../assets//styles/utils/functions";
+
+.listing-all-articles {
+    padding-top: vw(412);
+
+    .header {
+        margin-bottom: vw(80);
+
+        h1 {
+            color: #FFF;
+            grid-column: 1/12;
+            font-size: vw(148);
+            font-weight: 200;
+            padding-left: vw(72);
+            line-height: vw(189.44);
+            text-transform: uppercase;
+        }
+    }
+
+    .listing {
+        width: 100vw;
+        gap: vw(110);
+        display: grid;
+        position: relative;
+        padding: vw(110) vw(64) 0;
+        border-top: vw(10) solid #FFF;
+        grid-template-columns: repeat(3, 1fr);
+
+        &::before {
+            left: 0;
+            top: vw(12);
+            content: '';
+            width: 100%;
+            display: block;
+            height: vw(2);
+            position: absolute;
+            background-color: #FFF;
+        }
+
+        .post {
+            color: #FFF;
+
+            .article-num {
+                font-size: vw(20);
+                font-weight: 400;
+                line-height: vw(20);
+                margin-bottom: vw(24);
+                font-family: "Editor's Note", serif;
+            }
+
+            .thumbnail {
+                width: 100%;
+                height: vw(256);
+                margin-bottom: vw(40);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .detail {
+                &-header {
+                    gap: vw(8);
+                    display: flex;
+                    margin-bottom: vw(24);
+
+                    .item {
+                        color: #FFF;
+                        padding: vw(8);
+                        font-size: vw(12);
+                        font-weight: 400;
+                        line-height: vw(14.32);
+                        background-color: rgba(#FFF, .2);
+                    }
+                }
+
+
+                h2 {
+                    font-size: vw(22);
+                    font-weight: 400;
+                    line-height: vw(24);
+                }
+
+                .post-url {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+}
+
+.article-detail {
+    padding-top: vw(320);
+    background-color: #21409A;
+
+    .top-detail {
+        gap: vw(8);
+        display: flex;
+        padding: 0 vw(64) vw(20);
+        border-bottom: 1px solid rgba(#FFF, 0.4);
+
+        .item {
+            color: #FFF;
+            padding: vw(8);
+            font-size: vw(12);
+            font-weight: 400;
+            line-height: vw(14.32);
+            background-color: rgba(#FFF, .2);
+        }
+    }
+
+    .title {
+        color: #FFF;
+        display: flex;
+        font-size: vw(48);
+        padding: 0 vw(64);
+        margin-top: vw(32);
+        font-weight: 400;
+        line-height: vw(50);
+        margin-bottom: vw(120);
+        justify-content: space-between;
+        font-family: "Editor's Note", serif;
+
+        h1 {
+            flex: 0 0 vw(577);
+            line-height: vw(50);
+            font-weight: 400;
+            font-size: vw(48);
+        }
+    }
+
+
+    .featured-banner {
+        width: 100vw;
+        height: 100vh;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .main-detail {
+        padding: 0 0 0 vw(64);
+        background-color: #D3DCF5;
+
+        .share {
+            padding-top: vw(120);
+            grid-column: 1/3;
+
+            h3 {
+                color: #0E1A2C;
+                font-size: vw(22);
+                font-weight: 400;
+                line-height: vw(24);
+                position: relative;
+                margin-bottom: vw(40);
+                padding-bottom: vw(40);
+
+                &:after {
+                    left: 0;
+                    bottom: 0;
+                    content: '';
+                    width: vw(36);
+                    height: vw(1);
+                    position: absolute;
+                    background-color: #ED454B;
+                }
+            }
+
+            a {
+                color: #21409A;
+                display: block;
+                text-decoration: underline;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: auto;
+            }
+        }
+
+        .content {
+            color: #0E1A2C;
+            grid-column: 4/8;
+            padding-top: vw(120);
+            padding-bottom: vw(240);
+
+            a {
+                color: #0E1A2C;
+                text-decoration: underline;
+            }
+
+            h2 {
+                margin-bottom: vw(40);
+            }
+
+            figure {
+                width: 100%;
+                margin: vw(80) 0;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .related-posts {
+            grid-column: 9/13;
+            padding-top: vw(120);
+            border-left: vw(1) solid rgba(#0E1A2C, 0.3);
+
+            h3 {
+                color: #0E1A2C;
+                font-size: vw(32);
+                font-weight: 300;
+                margin-bottom: vw(80);
+                line-height: vw(34);
+                padding-left: vw(64);
+                text-transform: uppercase;
+                font-family: "Editor's Note", serif;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    padding: vw(32) vw(64) vw(80);
+                    border-bottom: vw(1) solid rgba(#0E1A2C, 0.3);
+
+                    .num {
+                        color: #0E1A2C;
+                        font-size: vw(20);
+                        font-weight: 400;
+                        line-height: vw(20);
+                        margin-bottom: vw(24);
+                        font-family: "Editor's Note", serif;
+                    }
+
+                    .featured {
+                        width: 100%;
+                        height: vw(230);
+                        margin-bottom: vw(40);
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .date-cat {
+                        gap: vw(8);
+                        display: flex;
+
+                        .item {
+                            padding: vw(8);
+                            color: #21409A;
+                            font-size: vw(12);
+                            font-weight: 400;
+                            line-height: vw(14.32);
+                            background-color: #21409A1A;
+                        }
+                    }
+
+                    h2 {
+                        color: #0E1A2C;
+
+                    }
+                }
+            }
+        }
+    }
+
+}

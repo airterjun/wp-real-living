@@ -1,4 +1,5 @@
 import Text from "../helper/Text";
+import IconArrow from "./IconArrow";
 
 export default function (props) {
 
@@ -6,16 +7,8 @@ export default function (props) {
 
   return (
     <div className={`round-button ${props.class}`}>
-      <div className={`button ${editClass}`}>
-        <div className="original button__styled">
-          <Text set={props.set} {...props} />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="14 19 21 12 14 5" fill="none" stroke="#000" stroke-miterlimit="10"></polyline><line x1="21" y1="12" x2="2" y2="12" fill="none" stroke="#000" stroke-miterlimit="10"></line></svg>
-        </div>
-        <div className="copied button__styled">
-          <Text set={props.set} {...props} />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="14 19 21 12 14 5" fill="none" stroke="#000" stroke-miterlimit="10"></polyline><line x1="21" y1="12" x2="2" y2="12" fill="none" stroke="#000" stroke-miterlimit="10"></line></svg>
-        </div>
-      </div>
+      <Text set={props.set} {...props} />
+      <IconArrow />
     </div>
   )
 }
