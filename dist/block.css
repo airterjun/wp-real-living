@@ -1,0 +1,135 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/helper/style/admin.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+figure {
+  position: relative;
+}
+figure .wp-action__floating {
+  top: 5px;
+  left: 5px;
+  gap: 5px;
+  z-index: 6;
+  display: flex;
+  position: absolute;
+}
+figure .wp-action__floating button {
+  padding: 0;
+  height: 30px;
+  display: flex;
+  flex: 0 0 30px;
+  border-radius: 50%;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+figure .wp-action__floating button svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+}
+figure .wp-action__floating button svg path {
+  stroke: #FFF;
+}
+
+.link-editor .block-editor-link-control .block-editor-link-control__search-input-wrapper {
+  margin-bottom: 0;
+}
+.link-editor .block-editor-link-control .block-editor-link-control__search-input-wrapper div {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-list-editor {
+  width: 100%;
+  position: relative;
+}
+.gallery-list-editor .buttons-slider-container {
+  position: relative;
+}
+.gallery-list-editor .swiper-slide {
+  width: 100%;
+  height: 140px;
+}
+.gallery-list-editor .swiper-slide figure {
+  width: 100%;
+  height: 100%;
+}
+.gallery-list-editor .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-list-editor img {
+  width: 100%;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-list-editor-color .listing {
+  margin-bottom: 20px;
+}
+.card-list-editor-color .listing .label {
+  font-size: 17px;
+  margin-bottom: 10px;
+  border-top: 1px solid #000;
+  padding-top: 10px;
+}
+.card-list-editor-color .listing .react-colorful__saturation {
+  height: 120px !important;
+}
+.card-list-editor-color .buttons-slider-container {
+  position: relative;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/helper/style/ButtonSlider.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.buttons-slider-container {
+  right: 0;
+  z-index: 9;
+  padding-top: 20px;
+  padding-right: 20px;
+  display: inline-block;
+}
+.buttons-slider-container .inner-container {
+  gap: 8px;
+  height: 40px;
+  display: flex;
+  padding: 0 20px;
+  overflow: hidden;
+  border-radius: 2px;
+  align-items: center;
+  background-color: #FFF;
+  justify-content: space-between;
+}
+.buttons-slider-container .inner-container .button {
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.buttons-slider-container .inner-container .button__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons-slider-container .inner-container .button__action .icon {
+  color: #FFF;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  line-height: 25px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.buttons-slider-container .inner-container .button__action.delete .icon {
+  background-color: red;
+}
+
+/*# sourceMappingURL=block.css.map*/
