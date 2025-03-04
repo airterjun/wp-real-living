@@ -53,10 +53,11 @@
       grid-template-columns: 1fr vw(959);
 
       .desc {
-         padding: vw(36) vw(27);
          color: #EFEFEF;
          font-size: vw(16);
+         max-width: vw(483);
          line-height: vw(23);
+         padding: vw(36) 0 0 vw(27);
       }
 
 

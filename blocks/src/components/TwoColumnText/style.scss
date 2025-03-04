@@ -101,6 +101,7 @@
 
                 .description {
                     padding-left: vw(30);
+                    max-width: vw(500);
                 }
             }
 
@@ -129,6 +130,7 @@
                     }
 
                     &-a {
+                        max-width: vw(485);
                         font-size: vw(20);
                         line-height: vw(25);
                         color: #353535;

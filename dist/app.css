@@ -160,6 +160,11 @@ button {
   border-top: 1px solid #93EA4E;
 }
 
+.p {
+  display: block;
+  margin-bottom: calc(20 / var(--base-size) * 100vw);
+}
+
 /*
 ========================
 GENERAL

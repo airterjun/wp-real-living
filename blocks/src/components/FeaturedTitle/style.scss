@@ -47,6 +47,7 @@
 
                 &-a {
                     color: #353535;
+                    max-width: vw(455);
                     font-size: vw(20);
                     line-height: vw(25);
 
@@ -65,9 +66,12 @@
         }
 
         .description {
+            margin: 0 auto;
             font-weight: var(--font-semi-bold);
             font-size: vw(24);
             color: #161616;
+            text-align: center;
+            max-width: vw(667);
         }
 
         .text-top-button {

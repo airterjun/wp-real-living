@@ -67,8 +67,9 @@
 .banner-contact .content-a-b-a {
   font-size: calc(27 / var(--base-size) * 100vw);
   color: #FFF6E1;
-  max-width: calc(289 / var(--base-size) * 100vw);
+  max-width: calc(323 / var(--base-size) * 100vw);
   margin-bottom: calc(29 / var(--base-size) * 100vw);
+  font-weight: var(--font-semi-bold);
 }
 .banner-contact .content-a-b .primary-button a {
   color: #EFEFEF;
@@ -139,10 +140,11 @@
   grid-template-columns: 1fr calc(959 / var(--base-size) * 100vw);
 }
 .featured-text .content .desc {
-  padding: calc(36 / var(--base-size) * 100vw) calc(27 / var(--base-size) * 100vw);
   color: #EFEFEF;
   font-size: calc(16 / var(--base-size) * 100vw);
+  max-width: calc(483 / var(--base-size) * 100vw);
   line-height: calc(23 / var(--base-size) * 100vw);
+  padding: calc(36 / var(--base-size) * 100vw) 0 0 calc(27 / var(--base-size) * 100vw);
 }
 .featured-text .content figure {
   width: 100%;
@@ -210,6 +212,7 @@
 }
 .featured-title .main-container .card-item-a-a {
   color: #353535;
+  max-width: calc(455 / var(--base-size) * 100vw);
   font-size: calc(20 / var(--base-size) * 100vw);
   line-height: calc(25 / var(--base-size) * 100vw);
 }
@@ -223,9 +226,12 @@
   margin-bottom: calc(28 / var(--base-size) * 100vw);
 }
 .featured-title .main-container .description {
+  margin: 0 auto;
   font-weight: var(--font-semi-bold);
   font-size: calc(24 / var(--base-size) * 100vw);
   color: #161616;
+  text-align: center;
+  max-width: calc(667 / var(--base-size) * 100vw);
 }
 .featured-title .main-container .text-top-button {
   font-size: calc(24 / var(--base-size) * 100vw);
@@ -455,6 +461,7 @@
 }
 .two-column-text .content.body .left .description {
   padding-left: calc(30 / var(--base-size) * 100vw);
+  max-width: calc(500 / var(--base-size) * 100vw);
 }
 .two-column-text .content.body .item {
   padding-left: calc(23 / var(--base-size) * 100vw);
@@ -479,6 +486,7 @@
   height: calc(23 / var(--base-size) * 100vw);
 }
 .two-column-text .content.body .item-a-a {
+  max-width: calc(485 / var(--base-size) * 100vw);
   font-size: calc(20 / var(--base-size) * 100vw);
   line-height: calc(25 / var(--base-size) * 100vw);
   color: #353535;
