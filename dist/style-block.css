@@ -256,6 +256,7 @@
 }
 .hero-banner {
   display: grid;
+  height: calc(800 / var(--base-size) * 100vw);
   grid-template-columns: calc(1125 / var(--base-size) * 100vw) 1fr;
   border-bottom: 2.6px solid var(--color-gold);
 }
@@ -293,6 +294,7 @@
 }
 .hero-banner .content-a {
   z-index: 9;
+  width: 100%;
   position: relative;
 }
 .hero-banner .content-a-b {
