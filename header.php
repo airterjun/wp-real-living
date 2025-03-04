@@ -39,7 +39,7 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
             <div class="timer">
                 <div class="location">London Time</div>
                 <div class="line"></div>
-                <div class="time">14:30 GMT</div>
+                <div class="time" id="time-ticker">00:00 GMT</div>
             </div>
 
             <a href="<?php echo get_option("siteurl"); ?>" class="logo">

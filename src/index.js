@@ -47,3 +47,13 @@ Program()
 
 
 Slider()
+
+function updateClock() {
+	let now = new Date();
+	let options = { timeZone: 'Europe/London', hour12: false, hour: '2-digit', minute: '2-digit' };
+	let londonTime = new Intl.DateTimeFormat('en-GB', options).format(now) + ' GMT';
+	document.getElementById('time-ticker').innerText = londonTime;
+}
+
+setInterval(updateClock, 1000);
+updateClock();

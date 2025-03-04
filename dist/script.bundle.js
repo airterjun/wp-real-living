@@ -9948,6 +9948,19 @@ gsap__WEBPACK_IMPORTED_MODULE_4__["default"].ticker.lagSmoothing(0);
 new _js_animation__WEBPACK_IMPORTED_MODULE_1__.Animation();
 (0,_js_ProgramSection__WEBPACK_IMPORTED_MODULE_2__.Program)();
 (0,_js_Slider__WEBPACK_IMPORTED_MODULE_3__.Slider)();
+function updateClock() {
+  let now = new Date();
+  let options = {
+    timeZone: 'Europe/London',
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit'
+  };
+  let londonTime = new Intl.DateTimeFormat('en-GB', options).format(now) + ' GMT';
+  document.getElementById('time-ticker').innerText = londonTime;
+}
+setInterval(updateClock, 1000);
+updateClock();
 })();
 
 /******/ })()
