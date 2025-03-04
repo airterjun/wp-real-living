@@ -21,3 +21,5 @@ export default function (props) {
         <BannerContact {...props} model="section_3" />
     </>
 }
+
+
