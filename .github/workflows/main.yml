@@ -17,12 +17,12 @@ jobs:
     - name: Setup SSH
       uses: webfactory/ssh-agent@v0.5.3
       with:
-        ssh-private-key: ${{ secrets.SG_PEAVEY }}
+        ssh-private-key: ${{ secrets.K_P_HOST }}
 
     - name: Add SiteGround to Known Hosts
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.K_H }}" >> ~/.ssh/known_hosts
+        echo "${{ secrets.K_PUB_SG }}" >> ~/.ssh/known_hosts
         chmod 600 ~/.ssh/known_hosts
 
     - name: Sync Theme Files
