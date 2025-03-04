@@ -116,7 +116,7 @@ export default function (props) {
                     <Media {...props} set="banner" className="parallax" />
                     <div className="header-content">
                         <IconArrow />
-                        <Text {...props} set="title" tag="div" />
+                        <Text {...props} set="description" tag="div" />
                     </div>
                 </div>
                 <div className="title">

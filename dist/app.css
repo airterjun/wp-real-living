@@ -162,7 +162,7 @@ button {
 
 .p {
   display: block;
-  margin-bottom: calc(20 / var(--base-size) * 100vw);
+  margin-bottom: calc(10 / var(--base-size) * 100vw);
 }
 
 /*

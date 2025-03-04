@@ -18147,7 +18147,7 @@ const attributes = {
   })), /*#__PURE__*/React.createElement("div", {
     className: "header-content"
   }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_10__["default"], null), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    set: "title",
+    set: "description",
     tag: "div"
   })))), /*#__PURE__*/React.createElement("div", {
     className: "title"

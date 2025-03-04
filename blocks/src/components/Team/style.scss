@@ -1,7 +1,7 @@
 @import "./../../assets//styles/utils/functions";
 
-
-$padding_content : vw(calc(var(--g-outer-padding) + 27));
+$padding_inner: 32;
+$padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
 
 .teams {
     position: relative;
@@ -30,7 +30,7 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
     .header {
         gap: vw(57);
         display: flex;
-        height: vw(239);
+        height: vw(241);
         margin-bottom: vw(103);
         border-top: 1px solid #7F6E41;
         justify-content: space-between;
@@ -54,12 +54,16 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
             color: #0C0C0C;
             font-size: vw(16);
             line-height: vw(23);
-            padding-top: vw(36);
+            padding-top: vw(31);
 
             svg {
                 height: vw(42);
                 flex: 0 0 vw(42);
                 transform: translateY(vw(6));
+            }
+
+            div {
+                max-width: vw(526);
             }
         }
     }
@@ -67,7 +71,7 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
     .title {
         width: 100%;
         display: flex;
-        height: vw(272);
+        height: vw(274);
         position: relative;
         align-items: flex-end;
         border-top: 2.8px solid #231E14;
@@ -120,7 +124,18 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
 
                 .content {
                     color: #FFFFFF;
+                    position: relative;
                     background-color: #231E14;
+
+                    &::before {
+                        top: 0;
+                        width: 2px;
+                        height: 100%;
+                        content: '';
+                        position: absolute;
+                        background-color: #7A7A7A;
+                        left: vw(var(--g-outer-padding));
+                    }
 
                     .t-1 {
                         display: flex;
@@ -131,7 +146,7 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
                         position: relative;
                         line-height: vw(42);
                         align-items: flex-end;
-                        padding-bottom: vw(19);
+                        padding-bottom: vw(11);
                         padding-left: $padding_content;
                         font-weight: var(--font-extra);
                         border-bottom: 2px solid #7A7A7A;
@@ -150,9 +165,9 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
 
                     .t-2 {
                         display: flex;
-                        height: vw(68);
-                        padding-left: vw(27);
-                        padding-bottom: vw(15);
+                        height: vw(71);
+                        padding-left: vw($padding_inner);
+                        padding-bottom: vw(5);
                         align-items: flex-end;
                         border-bottom: 2px solid #7A7A7A;
                         margin-left: vw(var(--g-outer-padding));
@@ -164,10 +179,10 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
                     }
 
                     .t-3 {
-
+                        max-width: vw(588);
                         font-size: vw(22);
-                        padding-top: vw(39);
-                        padding-left: vw(27);
+                        padding-top: vw(34);
+                        padding-left: vw($padding_inner);
                         font-weight: var(--font-medium);
                         margin-left: vw(var(--g-outer-padding));
                     }
@@ -200,6 +215,7 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
                         display: flex;
                         width: vw(43);
                         height: vw(40);
+                        flex: 0 0 vw(43);
                         align-items: center;
                         justify-content: center;
                         border: 1.5px solid #AFAFAF;
@@ -211,8 +227,10 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
                     }
 
                     .t-1 {
+                        flex: 0 100%;
                         font-size: vw(20);
                         color: #2B2211;
+                        transform: translateY(vw(-3));
                         font-weight: var(--font-semi-bold);
                     }
                 }
@@ -220,8 +238,8 @@ $padding_content : vw(calc(var(--g-outer-padding) + 27));
 
             .section-3 {
                 gap: vw(110);
-                height: vw(237);
-                padding: vw(54) $padding_content 0;
+                height: vw(257);
+                padding: vw(50) $padding_content 0;
                 grid-template-columns: 1fr 1fr;
                 font-size: vw(16);
                 line-height: vw(23);
