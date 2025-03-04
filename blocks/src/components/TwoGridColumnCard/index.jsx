@@ -1,36 +1,29 @@
-import _ from "lodash";
 import ButtonSlider from "../helper/ButtonSlider";
 import Controller from "../helper/Controller";
-import { getModelId } from "../helper/Libs";
-import Media from "../helper/Media";
+import { getModelId, getNestedValue } from "../helper/Libs";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
-import { ImageSchema } from "../Schema/image";
 import { TextSchema } from "../Schema/text";
+import IconArrow from "../Shared/IconArrow";
 import "./style.scss";
 const attributes = {
-    title: TextSchema,
     list: ArraySchema(
         [
             {
                 title: TextSchema,
                 description: TextSchema,
-                thumb: ImageSchema
             },
             {
                 title: TextSchema,
                 description: TextSchema,
-                thumb: ImageSchema
             },
             {
                 title: TextSchema,
                 description: TextSchema,
-                thumb: ImageSchema
             },
             {
                 title: TextSchema,
                 description: TextSchema,
-                thumb: ImageSchema
             }
         ]
     )
@@ -38,18 +31,21 @@ const attributes = {
 
 export default function (props) {
 
-    const listItems = _.get(props.attributes, getModelId('list', props))
+    const listItems = getNestedValue(props.attributes, getModelId('list', props))
 
     const grid = () => listItems.map((_, index) => {
         const keyTitle = `list.${index}.title`
         const keyDesc = `list.${index}.description`
-        const thumb = `list.${index}.thumb`
         return (
             <div className="card-wrapper">
-                <Media set={thumb} {...props} className="v-parallax" />
                 <div className="card-wrapper-a">
-                    <Text tag="h2" set={keyTitle} {...props} className="card-wrapper-a-a" />
-                    <Text set={keyDesc} {...props} className="card-wrapper-a-b" />
+                    <div className="icon">
+                        <IconArrow />
+                    </div>
+                    <Text tag="h2" set={keyTitle} {...props} />
+                </div>
+                <div className="card-wrapper-b">
+                    <Text set={keyDesc} {...props} className="description" />
                 </div>
             </div>
         )
@@ -64,13 +60,8 @@ export default function (props) {
             </Controller>
 
             <section className="two-grid-column-card">
-                <div className="container">
-                    <div className="content">
-                        <Text set="title" className="content-a" tag="h2" {...props} />
-                        <div className="content-b">
-                            {grid()}
-                        </div>
-                    </div>
+                <div className="content">
+                    {grid()}
                 </div>
             </section>
         </>

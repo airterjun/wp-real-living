@@ -1,55 +1,99 @@
-import "./style.scss";
-import Text from "../helper/Text";
-import Media from "../helper/Media";
-import banner from "./imgs/emi_01b.jpg"
-import Controller from "../helper/Controller";
-import _ from "lodash"
 import ButtonSlider from "../helper/ButtonSlider";
+import Controller from "../helper/Controller";
+import { getModelId, getNestedValue } from "../helper/Libs";
+import Media from "../helper/Media";
+import Text from "../helper/Text";
+import { ArraySchema } from "../Schema/array";
+import { ImageSchema } from "../Schema/image";
+import { TextSchema } from "../Schema/text";
+import IconArrow from "../Shared/IconArrow";
+import "./style.scss";
 
 export const attributes = {
-    card: {
-        type: 'array',
-        default: [
-            {
-                thumbnail: {
-                    url: banner
-                },
-                name: 'Team name',
-                position: 'Creator and Manager',
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-            }
-        ]
-    },
+    card: ArraySchema([
+        {
+            thumbnail: ImageSchema,
+            text_1: TextSchema,
+            text_2: TextSchema,
+            text_3: TextSchema,
+            text_4: TextSchema,
+            text_5: TextSchema,
+            text_6: TextSchema,
+            text_7: TextSchema,
+            text_8: TextSchema
+        },
+        {
+            thumbnail: ImageSchema,
+            text_1: TextSchema,
+            text_2: TextSchema,
+            text_3: TextSchema,
+            text_4: TextSchema,
+            text_5: TextSchema,
+            text_6: TextSchema,
+            text_7: TextSchema,
+            text_8: TextSchema
+        }
+    ]),
 
-    description: {
-        type: 'string',
-        default: `Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident`
-    }
+    banner: ImageSchema,
+    title_background: ImageSchema,
+    title: TextSchema,
+    description: TextSchema
 }
 
 
 
 export default function (props) {
 
-    const { card, headerColor } = props.attributes
 
-    const cards = () => card.map((item, i) => {
-        const title = `card.${i}.name`
+    const listItems = getNestedValue(props.attributes, getModelId('card', props))
+
+    const cards = () => listItems.map((_, i) => {
+        const t1 = `card.${i}.text_1`
+        const t2 = `card.${i}.text_2`
+        const t3 = `card.${i}.text_3`
+        const t4 = `card.${i}.text_4`
+        const t5 = `card.${i}.text_5`
+        const t6 = `card.${i}.text_6`
+        const t7 = `card.${i}.text_7`
+        const t8 = `card.${i}.text_8`
         const thumb = `card.${i}.thumbnail`
-        const pos = `card.${i}.position`
-        const desc = `card.${i}.description`
 
         return (
-            <div className="team">
-                <div className="left">
-                    <Media set={thumb} {...props} />
-                    <div className="team__s2__card__ab1">
-                        <Text tag="div" className="team-name h2" set={title} {...props} />
-                        <Text set={pos} {...props} className="position double-border-bottom" tag="div" />
+            <div className="teams-cards-item">
+                <div className="group section-1">
+                    <div className="content">
+                        <Text tag="h2" className="t-1" set={t1} {...props} />
+                        <Text set={t2} {...props} className="t-2" tag="div" />
+                        <Text set={t3} {...props} className="t-3" tag="div" />
+                    </div>
+                    <Media set={thumb} {...props} className="parallax" />
+                </div>
+                <div className="group section-2">
+                    <div className="content">
+                        <div className="icon">
+                            <IconArrow />
+                        </div>
+                        <Text {...props} set={t4} className="t-1" tag="div" />
+                    </div>
+                    <div className="content">
+                        <div className="icon">
+                            <IconArrow />
+                        </div>
+                        <Text {...props} set={t5} className="t-1" tag="div" />
+                    </div>
+                    <div className="content">
+                        <div className="icon">
+                            <IconArrow />
+                        </div>
+                        <Text {...props} set={t6} className="t-1" tag="div" />
                     </div>
                 </div>
 
-                <Text tag="div" set={desc} {...props} className="right" />
+                <div className="group section-3">
+                    <Text {...props} set={t7} className="t-1" tag="div" />
+                    <Text {...props} set={t8} className="t-1" tag="div" />
+                </div>
             </div>
         )
     })
@@ -64,12 +108,23 @@ export default function (props) {
                     <ButtonSlider slider="card" {...props} />
                 </div>
             </Controller>
-            <section className="grid teams">
-                <div className="grid-inner-wrapper">
-                    <Text tag="h2" set="description" {...props} />
-                    <div className="team-wrapper">
-                        {cards()}
+            <section className="teams">
+                <div className="decor decor-1"></div>
+                <div className="decor decor-2"></div>
+
+                <div className="header">
+                    <Media {...props} set="banner" className="parallax" />
+                    <div className="header-content">
+                        <IconArrow />
+                        <Text {...props} set="title" tag="div" />
                     </div>
+                </div>
+                <div className="title">
+                    <Text {...props} set="title" tag="h2" />
+                    <Media {...props} set="title_background" className="parallax" />
+                </div>
+                <div className="teams-cards">
+                    {cards()}
                 </div>
             </section>
         </>
