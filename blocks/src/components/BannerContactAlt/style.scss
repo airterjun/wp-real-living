@@ -34,14 +34,19 @@
 
     figure {
         top: 0;
-        left: 0;
         z-index: 1;
-        width: 100%;
+        width: vw(524);
+        display: flex;
+        left: vw(1010);
         height: 100%;
         position: absolute;
+        align-items: center;
+        overflow: visible !important;
 
         img {
             width: 100%;
+            transform: translateY(-20%);
+            height: vw(349.6) !important;
             object-fit: cover;
         }
     }

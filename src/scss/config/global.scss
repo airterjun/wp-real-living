@@ -55,7 +55,7 @@ figure {
 }
 
 .parallax {
-    &:not(.edit) {
+    &:not(.edit):not(.no-scale) {
         img {
             height: 130% !important;
             transform: translateY(-30%)

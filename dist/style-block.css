@@ -554,14 +554,19 @@
 }
 .banner-contact-alt figure {
   top: 0;
-  left: 0;
   z-index: 1;
-  width: 100%;
+  width: calc(524 / var(--base-size) * 100vw);
+  display: flex;
+  left: calc(1010 / var(--base-size) * 100vw);
   height: 100%;
   position: absolute;
+  align-items: center;
+  overflow: visible !important;
 }
 .banner-contact-alt figure img {
   width: 100%;
+  transform: translateY(-20%);
+  height: calc(349.6 / var(--base-size) * 100vw) !important;
   -o-object-fit: cover;
      object-fit: cover;
 }

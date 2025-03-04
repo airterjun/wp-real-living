@@ -17486,7 +17486,7 @@ const attributes = {
     className: "description"
   })), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_4__["default"], props)), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "background",
-    className: "parallax"
+    className: "parallax no-scale"
   })));
 }
 

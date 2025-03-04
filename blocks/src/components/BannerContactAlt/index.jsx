@@ -20,7 +20,7 @@ export default function (props) {
                 <Text {...props} set="desc" tag="div" className="description" />
                 <PrimaryButton {...props} />
             </div>
-            <Media {...props} set="background" className="parallax" />
+            <Media {...props} set="background" className="parallax no-scale" />
         </section>
     )
 }

@@ -110,7 +110,7 @@ figure {
   margin: 0;
 }
 
-.parallax:not(.edit) img {
+.parallax:not(.edit):not(.no-scale) img {
   height: 130% !important;
   transform: translateY(-30%);
 }
