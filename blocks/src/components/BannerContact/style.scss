@@ -3,8 +3,8 @@
 .banner-contact {
     width: 100%;
     height: auto;
-    border-top: 1px solid #7A7A7A;
     position: relative;
+    border-top: 1px solid #7A7A7A;
 
     figure {
         top: 0;
@@ -22,7 +22,7 @@
     .content {
         z-index: 3;
         display: flex;
-        height: vw(497);
+        height: vw(487);
         color: #F7F7F7;
         position: relative;
         align-items: center;
@@ -41,7 +41,7 @@
             z-index: 3;
             width: 100%;
             display: grid;
-            padding-top: vw(52);
+            padding-top: vw(43);
             position: relative;
             border-top: 2px solid #937D4D;
             grid-template-columns: 1fr vw(690);
@@ -49,16 +49,18 @@
             &-a {
                 color: #FFFFFF;
                 font-size: vw(35);
-                max-width: vw(618);
+                max-width: vw(646);
                 font-weight: var(--font-extra);
             }
 
             &-b {
+                padding-top: vw(17);
+
                 &-a {
                     font-size: vw(27);
                     color: #FFF6E1;
                     max-width: vw(323);
-                    margin-bottom: vw(29);
+                    margin-bottom: vw(23);
                     font-weight: var(--font-semi-bold);
                 }
 

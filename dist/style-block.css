@@ -17,8 +17,8 @@
 .banner-contact {
   width: 100%;
   height: auto;
-  border-top: 1px solid #7A7A7A;
   position: relative;
+  border-top: 1px solid #7A7A7A;
 }
 .banner-contact figure {
   top: 0;
@@ -35,7 +35,7 @@
 .banner-contact .content {
   z-index: 3;
   display: flex;
-  height: calc(497 / var(--base-size) * 100vw);
+  height: calc(487 / var(--base-size) * 100vw);
   color: #F7F7F7;
   position: relative;
   align-items: center;
@@ -53,7 +53,7 @@
   z-index: 3;
   width: 100%;
   display: grid;
-  padding-top: calc(52 / var(--base-size) * 100vw);
+  padding-top: calc(43 / var(--base-size) * 100vw);
   position: relative;
   border-top: 2px solid #937D4D;
   grid-template-columns: 1fr calc(690 / var(--base-size) * 100vw);
@@ -61,14 +61,17 @@
 .banner-contact .content-a-a {
   color: #FFFFFF;
   font-size: calc(35 / var(--base-size) * 100vw);
-  max-width: calc(618 / var(--base-size) * 100vw);
+  max-width: calc(646 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
+}
+.banner-contact .content-a-b {
+  padding-top: calc(17 / var(--base-size) * 100vw);
 }
 .banner-contact .content-a-b-a {
   font-size: calc(27 / var(--base-size) * 100vw);
   color: #FFF6E1;
   max-width: calc(323 / var(--base-size) * 100vw);
-  margin-bottom: calc(29 / var(--base-size) * 100vw);
+  margin-bottom: calc(23 / var(--base-size) * 100vw);
   font-weight: var(--font-semi-bold);
 }
 .banner-contact .content-a-b .primary-button a {
