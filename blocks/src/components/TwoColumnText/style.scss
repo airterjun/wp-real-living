@@ -56,7 +56,7 @@
                 font-size: vw(24);
                 margin-top: vw(34);
                 line-height: vw(24.16);
-                padding-left: vw(30);
+                padding-left: vw(27);
                 font-weight: var(--font-bold);
             }
 
@@ -68,7 +68,7 @@
                 margin-bottom: vw(7);
                 letter-spacing: vw(0.95);
                 text-transform: uppercase;
-                padding-left: vw(30);
+                padding-left: vw(27);
                 font-weight: var(--font-semi-bold);
 
             }
@@ -96,7 +96,7 @@
             .left {
                 color: #4C3D1D;
                 font-size: vw(20);
-                padding-top: vw(53);
+                padding-top: vw(45);
                 font-weight: var(--font-semi-bold);
 
                 .description {
@@ -107,10 +107,10 @@
 
             .item {
                 padding-left: vw(23);
-                padding-top: vw(53);
+                padding-top: vw(41);
 
                 &-a {
-                    gap: vw(22);
+                    gap: vw(26);
                     display: flex;
                     margin-bottom: vw(25);
 
@@ -120,6 +120,7 @@
                         flex: 0 0 vw(43);
                         margin-top: vw(4);
                         align-items: center;
+                        transform: translateX(vw(4));
                         justify-content: center;
                         border: 1.5px solid #AFAFAF;
 
