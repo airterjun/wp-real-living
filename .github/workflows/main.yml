@@ -31,6 +31,8 @@ jobs:
       run: |
         rsync -avz --progress --delete \
         --exclude='.git' \
+        --exclude='.github' \
+        --exclude='blocks/src/components' \
         --exclude='node_modules' \
         -e 'ssh -o StrictHostKeyChecking=no -p 18765' \
         ./ $REMOTE_PATH
