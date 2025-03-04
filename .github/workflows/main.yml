@@ -1,0 +1,36 @@
+name: Deploy WordPress Theme to SiteGround Real Living
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy Theme to SiteGround
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SG_PEAVEY }}
+
+    - name: Add SiteGround to Known Hosts
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.K_H }}" >> ~/.ssh/known_hosts
+        chmod 600 ~/.ssh/known_hosts
+
+    - name: Sync Theme Files
+      env:
+        REMOTE_PATH: ' u1266-fxyapz99yzgm@gsgpm1056.siteground.biz:~/www/stag.wearereal.co.uk/public_html/wp-content/themes/real-living'
+      run: |
+        rsync -avz --progress --delete \
+        --exclude='.git' \
+        --exclude='node_modules' \
+        -e 'ssh -o StrictHostKeyChecking=no -p 18765' \
+        ./ $REMOTE_PATH
