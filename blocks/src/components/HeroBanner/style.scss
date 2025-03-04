@@ -12,11 +12,13 @@
         position: relative;
         align-items: center;
         padding-left: vw(358);
-        padding-right: vw(100);
+        padding-right: vw(94);
 
         .h1 {
             font-weight: 800;
             font-size: vw(64);
+            color: #353535;
+            margin-bottom: 0;
             line-height: vw(64.71);
 
         }
@@ -63,7 +65,8 @@
                 font-weight: 700;
                 font-weight: bold;
                 font-size: vw(31);
-                margin: vw(34) 0 vw(51);
+                padding-right: vw(26);
+                margin: vw(20) 0 vw(51);
                 color: var(--color-gold);
             }
         }

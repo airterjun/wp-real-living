@@ -275,11 +275,13 @@
   position: relative;
   align-items: center;
   padding-left: calc(358 / var(--base-size) * 100vw);
-  padding-right: calc(100 / var(--base-size) * 100vw);
+  padding-right: calc(94 / var(--base-size) * 100vw);
 }
 .hero-banner .content .h1 {
   font-weight: 800;
   font-size: calc(64 / var(--base-size) * 100vw);
+  color: #353535;
+  margin-bottom: 0;
   line-height: calc(64.71 / var(--base-size) * 100vw);
 }
 .hero-banner .content::before {
@@ -310,7 +312,8 @@
   font-weight: 700;
   font-weight: bold;
   font-size: calc(31 / var(--base-size) * 100vw);
-  margin: calc(34 / var(--base-size) * 100vw) 0 calc(51 / var(--base-size) * 100vw);
+  padding-right: calc(26 / var(--base-size) * 100vw);
+  margin: calc(20 / var(--base-size) * 100vw) 0 calc(51 / var(--base-size) * 100vw);
   color: var(--color-gold);
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
@@ -515,7 +518,7 @@
 }
 .banner-contact-alt {
   display: flex;
-  height: calc(440 / var(--base-size) * 100vw);
+  height: calc(444 / var(--base-size) * 100vw);
   align-items: center;
   position: relative;
   border-top: 2px solid #937D4D;
@@ -534,12 +537,12 @@
 .banner-contact-alt .content .description {
   color: #6B5B39;
   font-size: calc(31 / var(--base-size) * 100vw);
-  margin-top: calc(23 / var(--base-size) * 100vw);
-  max-width: calc(572 / var(--base-size) * 100vw);
+  margin-top: calc(20 / var(--base-size) * 100vw);
+  max-width: calc(575 / var(--base-size) * 100vw);
   font-weight: var(--font-bold);
 }
 .banner-contact-alt .content .primary-button {
-  margin-top: calc(28 / var(--base-size) * 100vw);
+  margin-top: calc(32 / var(--base-size) * 100vw);
 }
 .banner-contact-alt figure {
   top: 0;
@@ -572,7 +575,7 @@
 }
 .two-column-card {
   position: relative;
-  padding: calc(128 / var(--base-size) * 100vw) 0 calc(180 / var(--base-size) * 100vw);
+  padding: calc(121 / var(--base-size) * 100vw) 0 calc(180 / var(--base-size) * 100vw);
 }
 .two-column-card:before, .two-column-card::after {
   top: 0;
@@ -588,23 +591,23 @@
   left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
 .two-column-card::after {
-  right: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
+  right: calc(358 / var(--base-size) * 100vw);
 }
 .two-column-card h2 {
   color: #231E14;
   border-bottom: 2px solid #7F6E41;
   padding: 0 calc((var(--g-outer-padding) + 28) / var(--base-size) * 100vw);
-  padding-bottom: calc(12 / var(--base-size) * 100vw);
+  padding-bottom: calc(18 / var(--base-size) * 100vw);
   font-size: calc(40 / var(--base-size) * 100vw);
 }
 .two-column-card .column-item {
   display: flex;
-  margin: calc(58 / var(--base-size) * 100vw) 0;
+  margin: calc(52 / var(--base-size) * 100vw) 0;
   justify-content: space-between;
   border-top: 2px solid #7F6E41;
   border-bottom: 2px solid #7F6E41;
-  padding-left: calc((var(--g-outer-padding) + 28) / var(--base-size) * 100vw);
-  padding-right: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
+  padding-left: calc((var(--g-outer-padding) + 32) / var(--base-size) * 100vw);
+  padding-right: calc(358 / var(--base-size) * 100vw);
 }
 .two-column-card .column-item:last-child {
   margin-bottom: 0;
@@ -613,19 +616,23 @@
   gap: calc(30 / var(--base-size) * 100vw);
   flex: 1 auto;
   display: flex;
-  padding: calc(36 / var(--base-size) * 100vw) 0;
+  padding: calc(31 / var(--base-size) * 100vw) 0;
 }
 .two-column-card .column-item-a svg {
-  transform: translateY(calc(4 / var(--base-size) * 100vw));
   width: calc(42 / var(--base-size) * 100vw);
   height: calc(42 / var(--base-size) * 100vw);
+  flex: 0 0 calc(42 / var(--base-size) * 100vw);
+  transform: translateY(calc(6 / var(--base-size) * 100vw));
 }
 .two-column-card .column-item-a .content {
   color: #353535;
   font-size: calc(22 / var(--base-size) * 100vw);
+  max-width: calc(518 / var(--base-size) * 100vw);
   line-height: calc(26 / var(--base-size) * 100vw);
 }
 .two-column-card .column-item-a .content .b2 {
+  font-size: calc(24 / var(--base-size) * 100vw);
+  margin-bottom: calc(5 / var(--base-size) * 100vw);
   font-weight: var(--font-bold);
 }
 .two-column-card .column-item figure {
@@ -643,6 +650,9 @@
 }
 .two-column-card .column-item:nth-of-type(even) .column-item-a {
   flex: 0 0 calc(576 / var(--base-size) * 100vw);
+}
+.two-column-card .column-item:nth-of-type(even) .column-item-a .content {
+  max-width: calc(473 / var(--base-size) * 100vw);
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/TwoGridColumnCard/style.scss ***!
@@ -685,10 +695,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 .two-grid-column-card .content .card-wrapper-a {
-  gap: calc(26 / var(--base-size) * 100vw);
+  gap: calc(28 / var(--base-size) * 100vw);
   width: 100%;
   display: flex;
-  height: calc(88.6 / var(--base-size) * 100vw);
+  height: calc(92.6 / var(--base-size) * 100vw);
   position: relative;
   align-items: center;
   border-top: 2px solid rgba(65, 64, 66, 0.4);
@@ -709,6 +719,8 @@
   height: calc(24 / var(--base-size) * 100vw);
 }
 .two-grid-column-card .content .card-wrapper-a h2 {
+  font-size: calc(35 / var(--base-size) * 100vw);
+  color: #231E14;
   margin-bottom: 0;
 }
 .two-grid-column-card .content .card-wrapper-b {
@@ -716,7 +728,8 @@
 }
 .two-grid-column-card .content .card-wrapper-b .description {
   height: calc(221 / var(--base-size) * 100vw);
-  padding-top: calc(24 / var(--base-size) * 100vw);
+  max-width: calc(589 / var(--base-size) * 100vw);
+  padding-top: calc(18 / var(--base-size) * 100vw);
   padding-left: calc(98 / var(--base-size) * 100vw);
 }
 .two-grid-column-card .content .card-wrapper:nth-of-type(even) .card-wrapper-a {
@@ -829,7 +842,7 @@
   font-size: calc(64 / var(--base-size) * 100vw);
   color: #2D2D2D;
   position: relative;
-  padding-left: calc(27 / var(--base-size) * 100vw);
+  padding-left: calc(32 / var(--base-size) * 100vw);
   margin-bottom: calc(32 / var(--base-size) * 100vw);
   line-height: calc(64.71 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);

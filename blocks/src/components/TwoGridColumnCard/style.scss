@@ -31,10 +31,10 @@
 
         .card-wrapper {
             &-a {
-                gap: vw(26);
+                gap: vw(28);
                 width: 100%;
                 display: flex;
-                height: vw(88.6);
+                height: vw(92.6);
                 position: relative;
                 align-items: center;
                 border-top: 2px solid rgba(#414042, 0.4);
@@ -57,6 +57,8 @@
                 }
 
                 h2 {
+                    font-size: vw(35);
+                    color: #231E14;
                     margin-bottom: 0;
                 }
             }
@@ -66,7 +68,8 @@
 
                 .description {
                     height: vw(221);
-                    padding-top: vw(24);
+                    max-width: vw(589);
+                    padding-top: vw(18);
                     padding-left: vw(98);
                 }
             }

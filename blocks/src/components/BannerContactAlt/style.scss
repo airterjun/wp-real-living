@@ -2,7 +2,7 @@
 
 .banner-contact-alt {
     display: flex;
-    height: vw(440);
+    height: vw(444);
     align-items: center;
     position: relative;
     border-top: 2px solid #937D4D;
@@ -22,13 +22,13 @@
         .description {
             color: #6B5B39;
             font-size: vw(31);
-            margin-top: vw(23);
-            max-width: vw(572);
+            margin-top: vw(20);
+            max-width: vw(575);
             font-weight: var(--font-bold);
         }
 
         .primary-button {
-            margin-top: vw(28);
+            margin-top: vw(32);
         }
     }
 

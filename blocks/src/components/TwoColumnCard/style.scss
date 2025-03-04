@@ -2,7 +2,7 @@
 
 .two-column-card {
     position: relative;
-    padding: vw(128) 0 vw(180);
+    padding: vw(121) 0 vw(180);
 
     &:before,
     &::after {
@@ -21,26 +21,26 @@
     }
 
     &::after {
-        right: vw(var(--g-outer-padding));
+        right: vw(358);
     }
 
     h2 {
         color: #231E14;
         border-bottom: 2px solid #7F6E41;
         padding: 0 vw(calc(var(--g-outer-padding) + 28));
-        padding-bottom: vw(12);
+        padding-bottom: vw(18);
         font-size: vw(40);
     }
 
     .column {
         &-item {
             display: flex;
-            margin: vw(58) 0;
+            margin: vw(52) 0;
             justify-content: space-between;
             border-top: 2px solid #7F6E41;
             border-bottom: 2px solid #7F6E41;
-            padding-left: vw(calc(var(--g-outer-padding) + 28));
-            padding-right: vw(var(--g-outer-padding));
+            padding-left: vw(calc(var(--g-outer-padding) + 32));
+            padding-right: vw(358);
 
             &:last-child {
                 margin-bottom: 0;
@@ -51,21 +51,25 @@
                 gap: vw(30);
                 flex: 1 auto;
                 display: flex;
-                padding: vw(36) 0;
+                padding: vw(31) 0;
 
                 svg {
-                    transform: translateY(vw(4));
                     width: vw(42);
                     height: vw(42);
+                    flex: 0 0 vw(42);
+                    transform: translateY(vw(6));
                 }
 
 
                 .content {
                     color: #353535;
                     font-size: vw(22);
+                    max-width: vw(518);
                     line-height: vw(26);
 
                     .b2 {
+                        font-size: vw(24);
+                        margin-bottom: vw(5);
                         font-weight: var(--font-bold);
                     }
                 }
@@ -87,6 +91,10 @@
 
                 .column-item-a {
                     flex: 0 0 vw(576);
+
+                    .content {
+                        max-width: vw(473);
+                    }
                 }
             }
         }
