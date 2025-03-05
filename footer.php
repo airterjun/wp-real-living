@@ -22,7 +22,7 @@
         </div>
 
         <div class="footer-content-bottom-b">
-            Branding & Website by <a href="https://matanyaniv.com" target="_blank">Bali Branding</a>
+            Branding & Website by <a href="https://balibranding.com" target="_blank">Bali Branding</a>
         </div>
     </div>
 </footer>

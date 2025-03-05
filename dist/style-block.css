@@ -744,6 +744,8 @@
   max-width: calc(589 / var(--base-size) * 100vw);
   padding-top: calc(18 / var(--base-size) * 100vw);
   padding-left: calc(98 / var(--base-size) * 100vw);
+  font-size: calc(21 / var(--base-size) * 100vw);
+  color: #3D3122;
 }
 .two-grid-column-card .content .card-wrapper:nth-of-type(even) .card-wrapper-a {
   padding-left: 0;

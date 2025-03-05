@@ -1,5 +1,4 @@
-import _ from "lodash"
-import { getBaseModelPath } from "./Libs";
+import { getBaseModelPath, getNestedValue, setNestedValue } from "./Libs";
 const { __experimentalLinkControl } = wp.blockEditor;
 const LinkControl = __experimentalLinkControl;
 
@@ -7,12 +6,12 @@ export default function LinkEditor(props) {
     const { attributes, set, setAttributes, edit } = props
 
 
-    let link = _.get(attributes, set)
+    let link = getNestedValue(attributes, set)
 
     const setLink = (newVal) => {
         const path = getBaseModelPath(set)
-        const copy = _.cloneDeep(attributes)
-        _.set(copy, set, newVal)
+        const copy = structuredClone(attributes)
+        setNestedValue(copy, set, newVal)
         setAttributes({
             [path]: copy[path]
         })

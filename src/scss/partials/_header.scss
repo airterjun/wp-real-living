@@ -50,6 +50,7 @@ header {
         .burger {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
 
             .inner-line {
                 width: vw(46);

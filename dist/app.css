@@ -324,6 +324,7 @@ header .inner .logo svg {
 header .inner .burger {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 header .inner .burger .inner-line {
   width: calc(46 / var(--base-size) * 100vw);
