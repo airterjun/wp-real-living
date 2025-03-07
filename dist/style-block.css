@@ -1050,21 +1050,45 @@
   position: relative;
   padding-top: calc(92 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams {
+    padding-top: calc(28 / var(--base-size) * 100vw);
+  }
+}
 .teams .decor {
   z-index: 3;
   width: 2px;
   position: absolute;
   background-color: #7A7A7A;
 }
+@media only screen and (max-width: 879px) {
+  .teams .decor {
+    display: none;
+  }
+}
 .teams .decor.decor-1 {
   top: 0;
   height: calc(1276 / var(--base-size) * 100vw);
   left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams .decor.decor-1 {
+    height: 100%;
+    left: calc(var(--g-padding-container) / var(--base-size) * 100vw);
+  }
+}
 .teams .decor.decor-2 {
   top: calc(706 / var(--base-size) * 100vw);
   left: calc(958 / var(--base-size) * 100vw);
   height: calc(183 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .teams .decor.decor-2 {
+    top: 0;
+    left: unset;
+    height: 100%;
+    right: calc(18 / var(--base-size) * 100vw);
+  }
 }
 .teams .header {
   gap: calc(57 / var(--base-size) * 100vw);
@@ -1076,9 +1100,40 @@
   border-bottom: 1px solid #7F6E41;
   padding-left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams .header {
+    height: auto;
+    display: block;
+    padding-left: 0;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .teams .header:after, .teams .header::before {
+    top: 0;
+    z-index: 6;
+    content: "";
+    height: 100%;
+    width: 1.47px;
+    position: absolute;
+    background-color: #7A7A7A;
+  }
+  .teams .header::before {
+    left: calc(var(--g-padding-container) / var(--base-size) * 100vw);
+  }
+  .teams .header::after {
+    right: calc(18 / var(--base-size) * 100vw);
+  }
+}
 .teams .header figure {
   height: 100%;
   flex: 0 0 calc(576 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .teams .header figure {
+    height: calc(165 / var(--base-size) * 100vw);
+    border-top: 1.4px solid #7F6E41;
+    border-bottom: 1.4px solid #7F6E41;
+  }
 }
 .teams .header figure img {
   width: 100%;
@@ -1094,10 +1149,29 @@
   line-height: calc(23 / var(--base-size) * 100vw);
   padding-top: calc(31 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams .header-content {
+    gap: calc(17 / var(--base-size) * 100vw);
+    font-size: calc(18 / var(--base-size) * 100vw);
+    color: #353535;
+    line-height: calc(21.3 / var(--base-size) * 100vw);
+    margin: calc(26 / var(--base-size) * 100vw) 0;
+    padding: calc(40 / var(--base-size) * 100vw) calc(40 / var(--base-size) * 100vw) calc(45 / var(--base-size) * 100vw) calc(38 / var(--base-size) * 100vw);
+    border-top: 1.4px solid #7F6E41;
+    border-bottom: 1.4px solid #7F6E41;
+  }
+}
 .teams .header-content svg {
   height: calc(42 / var(--base-size) * 100vw);
   flex: 0 0 calc(42 / var(--base-size) * 100vw);
   transform: translateY(calc(6 / var(--base-size) * 100vw));
+}
+@media only screen and (max-width: 879px) {
+  .teams .header-content svg {
+    height: calc(24.6 / var(--base-size) * 100vw);
+    width: calc(24.6 / var(--base-size) * 100vw);
+    flex: 0 0 calc(24.6 / var(--base-size) * 100vw);
+  }
 }
 .teams .header-content div {
   max-width: calc(526 / var(--base-size) * 100vw);
@@ -1112,6 +1186,12 @@
   border-bottom: 2.8px solid #231E14;
   padding-left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams .title {
+    padding-left: 0;
+    height: calc(393 / var(--base-size) * 100vw);
+  }
+}
 .teams .title h2 {
   z-index: 3;
   font-size: calc(64 / var(--base-size) * 100vw);
@@ -1121,6 +1201,14 @@
   margin-bottom: calc(32 / var(--base-size) * 100vw);
   line-height: calc(64.71 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
+}
+@media only screen and (max-width: 879px) {
+  .teams .title h2 {
+    font-size: calc(48 / var(--base-size) * 100vw);
+    line-height: calc(48 / var(--base-size) * 100vw);
+    color: #353535;
+    padding: 0 calc(var(--g-padding-container) / var(--base-size) * 100vw);
+  }
 }
 .teams .title figure {
   top: 0;
@@ -1137,8 +1225,18 @@
 .teams .teams-cards {
   padding-top: calc(183 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards {
+    padding-top: calc(86 / var(--base-size) * 100vw);
+  }
+}
 .teams .teams-cards-item {
   border-top: 2px solid #7A7A7A;
+}
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item {
+    border-color: #7F6E41;
+  }
 }
 .teams .teams-cards-item:last-child {
   border-bottom: 2px solid #7A7A7A;
@@ -1146,9 +1244,20 @@
 .teams .teams-cards-item .group {
   display: grid;
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .group {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .teams .teams-cards-item .section-1 {
   height: calc(384 / var(--base-size) * 100vw);
   grid-template-columns: 1fr calc(962 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 {
+    height: auto;
+  }
 }
 .teams .teams-cards-item .section-1 .content {
   color: #FFFFFF;
@@ -1164,6 +1273,13 @@
   background-color: #7A7A7A;
   left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 .content::before {
+    right: 0;
+    left: unset;
+    display: none;
+  }
+}
 .teams .teams-cards-item .section-1 .content .t-1 {
   display: flex;
   height: calc(144 / var(--base-size) * 100vw);
@@ -1178,6 +1294,15 @@
   font-weight: var(--font-extra);
   border-bottom: 2px solid #7A7A7A;
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 .content .t-1 {
+    width: 100%;
+    height: calc(139 / var(--base-size) * 100vw);
+    font-size: calc(35 / var(--base-size) * 100vw);
+    line-height: calc(36 / var(--base-size) * 100vw);
+    padding-left: calc(var(--g-padding-container) / var(--base-size) * 100vw);
+  }
+}
 .teams .teams-cards-item .section-1 .content .t-1:before {
   top: 0;
   content: "";
@@ -1186,6 +1311,12 @@
   width: calc(37 / var(--base-size) * 100vw);
   position: absolute;
   background-color: #937D4D;
+}
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 .content .t-1:before {
+    right: 0;
+    left: unset;
+  }
 }
 .teams .teams-cards-item .section-1 .content .t-2 {
   display: flex;
@@ -1200,6 +1331,15 @@
   font-weight: var(--font-medium);
   color: #CECECE;
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 .content .t-2 {
+    height: calc(58 / var(--base-size) * 100vw);
+    margin-left: 0;
+    font-size: calc(21 / var(--base-size) * 100vw);
+    padding-bottom: calc(10 / var(--base-size) * 100vw);
+    padding-left: calc(var(--g-padding-container) / var(--base-size) * 100vw);
+  }
+}
 .teams .teams-cards-item .section-1 .content .t-3 {
   max-width: calc(588 / var(--base-size) * 100vw);
   font-size: calc(22 / var(--base-size) * 100vw);
@@ -1208,13 +1348,33 @@
   font-weight: var(--font-medium);
   margin-left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 .content .t-3 {
+    margin-left: 0;
+    font-size: calc(18 / var(--base-size) * 100vw);
+    padding-top: calc(26 / var(--base-size) * 100vw);
+    padding-bottom: calc(32 / var(--base-size) * 100vw);
+    padding-left: calc(var(--g-padding-container) / var(--base-size) * 100vw);
+  }
+}
 .teams .teams-cards-item .section-1 figure {
   width: 100%;
   height: 100%;
   border-left: 2px solid #7A7A7A;
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 figure {
+    border-left: 0;
+    height: calc(376 / var(--base-size) * 100vw);
+  }
+}
 .teams .teams-cards-item .section-1 figure img {
   width: 100%;
+}
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-1 figure img {
+    height: 100%;
+  }
 }
 .teams .teams-cards-item .section-2 {
   gap: calc(52 / var(--base-size) * 100vw);
@@ -1223,10 +1383,22 @@
   border-bottom: 2px solid #7A7A7A;
   grid-template-columns: 1fr 1fr 1fr;
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-2 {
+    display: block;
+    padding: calc(2 / var(--base-size) * 100vw) calc(var(--g-padding-container) / var(--base-size) * 100vw) calc(41 / var(--base-size) * 100vw);
+  }
+}
 .teams .teams-cards-item .section-2 .content {
   gap: calc(20 / var(--base-size) * 100vw);
   display: flex;
   padding: calc(50 / var(--base-size) * 100vw) 0;
+}
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-2 .content {
+    padding-top: calc(34 / var(--base-size) * 100vw);
+    padding-bottom: 0;
+  }
 }
 .teams .teams-cards-item .section-2 .content .icon {
   display: flex;
@@ -1236,6 +1408,11 @@
   align-items: center;
   justify-content: center;
   border: 1.5px solid #AFAFAF;
+}
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-2 .content .icon {
+    transform: translateY(calc(-4 / var(--base-size) * 100vw));
+  }
 }
 .teams .teams-cards-item .section-2 .content .icon svg {
   width: calc(24 / var(--base-size) * 100vw);
@@ -1248,6 +1425,12 @@
   transform: translateY(calc(-3 / var(--base-size) * 100vw));
   font-weight: var(--font-semi-bold);
 }
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-2 .content .t-1 {
+    font-size: calc(16 / var(--base-size) * 100vw);
+    color: #2B2211;
+  }
+}
 .teams .teams-cards-item .section-3 {
   gap: calc(110 / var(--base-size) * 100vw);
   height: calc(257 / var(--base-size) * 100vw);
@@ -1256,6 +1439,19 @@
   font-size: calc(16 / var(--base-size) * 100vw);
   line-height: calc(23 / var(--base-size) * 100vw);
   color: #0C0C0C;
+}
+@media only screen and (max-width: 879px) {
+  .teams .teams-cards-item .section-3 {
+    height: auto;
+    display: block;
+    padding: calc(30 / var(--base-size) * 100vw) calc(var(--g-padding-container) / var(--base-size) * 100vw);
+  }
+  .teams .teams-cards-item .section-3 .t-1 {
+    margin-bottom: calc(20 / var(--base-size) * 100vw);
+  }
+  .teams .teams-cards-item .section-3 .t-1:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style-block.css.map*/
