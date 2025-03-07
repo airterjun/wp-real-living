@@ -795,8 +795,9 @@
 }
 @media only screen and (max-width: 879px) {
   .two-column-card .column-item-a {
+    gap: calc(23 / var(--base-size) * 100vw);
     flex-direction: column-reverse;
-    padding: calc(30 / var(--base-size) * 100vw) calc(var(--g-padding-container) / var(--base-size) * 100vw) calc(66 / var(--base-size) * 100vw);
+    padding: calc(24 / var(--base-size) * 100vw) calc(var(--g-padding-container) / var(--base-size) * 100vw) calc(74 / var(--base-size) * 100vw);
   }
 }
 .two-column-card .column-item-a svg {
@@ -815,6 +816,18 @@
   font-size: calc(24 / var(--base-size) * 100vw);
   margin-bottom: calc(5 / var(--base-size) * 100vw);
   font-weight: var(--font-bold);
+}
+@media only screen and (max-width: 879px) {
+  .two-column-card .column-item-a .content .b2 {
+    font-size: calc(21 / var(--base-size) * 100vw);
+    margin-bottom: calc(4 / var(--base-size) * 100vw);
+  }
+}
+@media only screen and (max-width: 879px) {
+  .two-column-card .column-item-a--b {
+    font-size: calc(18 / var(--base-size) * 100vw);
+    line-height: calc(22 / var(--base-size) * 100vw);
+  }
 }
 .two-column-card .column-item figure {
   height: calc(239 / var(--base-size) * 100vw);

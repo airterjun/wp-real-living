@@ -74,8 +74,9 @@
                 padding: vw(31) 0;
 
                 @include mobile {
+                    gap: vw(23);
                     flex-direction: column-reverse;
-                    padding: vw(30) vw(var(--g-padding-container)) vw(66);
+                    padding: vw(24) vw(var(--g-padding-container)) vw(74);
                 }
 
                 svg {
@@ -96,6 +97,18 @@
                         font-size: vw(24);
                         margin-bottom: vw(5);
                         font-weight: var(--font-bold);
+
+                        @include mobile {
+                            font-size: vw(21);
+                            margin-bottom: vw(4);
+                        }
+                    }
+                }
+
+                &--b {
+                    @include mobile {
+                        font-size: vw(18);
+                        line-height: vw(22);
                     }
                 }
             }
