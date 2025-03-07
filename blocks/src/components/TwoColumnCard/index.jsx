@@ -1,3 +1,5 @@
+import ButtonSlider from '../helper/ButtonSlider'
+import Controller from '../helper/Controller'
 import { getModelId, getNestedValue } from '../helper/Libs'
 import Media from '../helper/Media'
 import Text from "../helper/Text"
@@ -51,6 +53,16 @@ const TwoColumnCard = (props) => {
 
    return (
       <section className="two-column-card">
+         <Controller {...props}>
+            <div className='form-wrapper'>
+               <div className='input-wrapper'>
+                  <div className='label'>
+                     News
+                  </div>
+                  <ButtonSlider {...props} slider="cards" nested={true} />
+               </div>
+            </div>
+         </Controller>
          <Text tag="h2" className="h2" set="title" {...props} />
          <div className="column">
             {cardsRender()}

@@ -11,6 +11,11 @@
     border-top: 2.5px solid #E5E3DF;
     border-bottom: 2.5px solid #E5E3DF;
 
+    @include mobile {
+        height: vw(406);
+        border-color: #7F6E41;
+    }
+
     .title {
         z-index: 4;
         color: #414042;

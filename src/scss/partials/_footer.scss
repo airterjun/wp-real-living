@@ -6,9 +6,17 @@ footer {
         align-items: center;
         justify-content: center;
 
+        @include mobile {
+            margin: vw(105) 0;
+        }
+
         svg {
             width: vw(548);
             height: auto;
+
+            @include mobile {
+                width: vw(300);
+            }
         }
     }
 
@@ -24,9 +32,18 @@ footer {
         padding: 0 vw(var(--g-outer-padding));
         font-family: var(--font-secondary);
 
+        @include mobile {
+            padding: 0;
+            justify-content: center;
+        }
+
 
         &-b {
             color: #828282;
+
+            @include mobile {
+                display: none;
+            }
 
             a {
                 color: #58595B;

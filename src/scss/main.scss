@@ -1,11 +1,19 @@
 :root {
   --header-size: 95.6;
   --color-green: #93EA4E;
+  --mobile-outer-padding: 20;
 }
 
 @import './../../blocks/src/assets/styles/utils/functions';
 @import './_config';
 //@import './plugin/flickity';
+
+@include mobile {
+  :root {
+    --header-size: 52;
+    --g-padding-container: 20;
+  }
+}
 
 
 /*

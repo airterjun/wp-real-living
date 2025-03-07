@@ -4,6 +4,10 @@
     position: relative;
     padding: vw(121) 0 vw(180);
 
+    @include mobile {
+        padding: vw(89) 0 vw(56);
+    }
+
     &:before,
     &::after {
         top: 0;
@@ -14,6 +18,10 @@
         height: 100%;
         position: absolute;
         background-color: #7A7A7A;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &::before {
@@ -26,10 +34,16 @@
 
     h2 {
         color: #231E14;
+        font-size: vw(40);
+        padding-bottom: vw(18);
         border-bottom: 2px solid #7F6E41;
         padding: 0 vw(calc(var(--g-outer-padding) + 28));
-        padding-bottom: vw(18);
-        font-size: vw(40);
+
+        @include mobile {
+            font-size: vw(36);
+            color: #231E14;
+            padding: 0 vw(var(--g-padding-container)) vw(32);
+        }
     }
 
     .column {
@@ -42,6 +56,12 @@
             padding-left: vw(calc(var(--g-outer-padding) + 32));
             padding-right: vw(358);
 
+            @include mobile {
+                padding-left: 0;
+                padding-right: 0;
+                flex-direction: column-reverse;
+            }
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -52,6 +72,11 @@
                 flex: 1 auto;
                 display: flex;
                 padding: vw(31) 0;
+
+                @include mobile {
+                    flex-direction: column-reverse;
+                    padding: vw(30) vw(var(--g-padding-container)) vw(66);
+                }
 
                 svg {
                     width: vw(42);
@@ -79,6 +104,11 @@
                 height: vw(239);
                 flex: 0 0 vw(576);
 
+                @include mobile {
+                    height: vw(189);
+                    flex: 0 0 vw(189);
+                }
+
                 img {
                     width: 100%;
                     object-fit: cover;
@@ -89,8 +119,17 @@
                 padding-left: vw(var(--g-outer-padding));
                 flex-direction: row-reverse;
 
+                @include mobile {
+                    padding: 0;
+                    flex-direction: column-reverse;
+                }
+
                 .column-item-a {
                     flex: 0 0 vw(576);
+
+                    @include mobile {
+                        flex: 0 auto;
+                    }
 
                     .content {
                         max-width: vw(473);

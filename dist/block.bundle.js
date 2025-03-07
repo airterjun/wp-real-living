@@ -18179,15 +18179,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
-/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
-/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
-/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
-/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
-/* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
-/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
-/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/TwoColumnCard/style.scss");
+/* harmony import */ var _helper_ButtonSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/ButtonSlider */ "./blocks/src/components/helper/ButtonSlider.jsx");
+/* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/TwoColumnCard/style.scss");
+
+
 
 
 
@@ -18200,21 +18204,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const attributes = {
-  title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
-  cards: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_5__.ArraySchema)([{
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
-    Description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
-    thumbnail: _Schema_image__WEBPACK_IMPORTED_MODULE_6__.ImageSchema,
-    link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_7__.LinkSchmea
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_10__.TextSchema,
+  cards: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_7__.ArraySchema)([{
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_10__.TextSchema,
+    Description: _Schema_text__WEBPACK_IMPORTED_MODULE_10__.TextSchema,
+    thumbnail: _Schema_image__WEBPACK_IMPORTED_MODULE_8__.ImageSchema,
+    link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_9__.LinkSchmea
   }, {
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
-    Description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
-    thumbnail: _Schema_image__WEBPACK_IMPORTED_MODULE_6__.ImageSchema,
-    link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_7__.LinkSchmea
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_10__.TextSchema,
+    Description: _Schema_text__WEBPACK_IMPORTED_MODULE_10__.TextSchema,
+    thumbnail: _Schema_image__WEBPACK_IMPORTED_MODULE_8__.ImageSchema,
+    link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_9__.LinkSchmea
   }])
 };
 const TwoColumnCard = props => {
-  const cards = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getModelId)('cards', props));
+  const cards = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getModelId)('cards', props));
   const cardsRender = () => cards.map((_, index) => {
     const thumb = `cards.${index}.thumbnail`;
     const title = `cards.${index}.title`;
@@ -18223,24 +18227,33 @@ const TwoColumnCard = props => {
       className: "column-item"
     }, /*#__PURE__*/React.createElement("div", {
       className: "column-item-a"
-    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_9__["default"], null), /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_11__["default"], null), /*#__PURE__*/React.createElement("div", {
       className: "content"
-    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       tag: "div",
       set: title,
       className: "b2 column-item-a--a"
-    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       tag: "div",
       set: Description,
       className: "column-item-a--b"
-    })))), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    })))), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: thumb,
       className: "parallax"
     })));
   });
   return /*#__PURE__*/React.createElement("section", {
     className: "two-column-card"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_3__["default"], props, /*#__PURE__*/React.createElement("div", {
+    className: "form-wrapper"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "input-wrapper"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "News"), /*#__PURE__*/React.createElement(_helper_ButtonSlider__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    slider: "cards",
+    nested: true
+  }))))), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     tag: "h2",
     className: "h2",
     set: "title"
@@ -18463,10 +18476,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style_ButtonSlider_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/ButtonSlider.scss */ "./blocks/src/components/helper/style/ButtonSlider.scss");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Libs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Libs */ "./blocks/src/components/helper/Libs.js");
-
+/* harmony import */ var _Libs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Libs */ "./blocks/src/components/helper/Libs.js");
 
 
 
@@ -18479,10 +18489,12 @@ function ButtonSlider(props) {
     slider,
     button,
     set,
-    nested
+    nested,
+    model
   } = props;
+  const listKey = model ? `${model}.${slider}` : slider;
   if (edit) {
-    let slides = lodash__WEBPACK_IMPORTED_MODULE_2___default().get(attributes, slider);
+    let slides = (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(attributes, listKey);
     const buttonSlider = () => {
       if (slides) {
         return slides.map((item, index) => {
@@ -18502,22 +18514,22 @@ function ButtonSlider(props) {
       }
     };
     const addItems = () => {
-      const newSlides = lodash__WEBPACK_IMPORTED_MODULE_2___default().cloneDeep(slides);
+      const newSlides = structuredClone(slides);
       if (nested) {
         const newAttr = structuredClone(attributes);
         newSlides.push(structuredClone(newSlides[0]));
-        const rootPath = (0,_Libs__WEBPACK_IMPORTED_MODULE_3__.getBaseModelPath)(slider);
-        lodash__WEBPACK_IMPORTED_MODULE_2___default().set(newAttr, slider, newSlides);
+        const rootPath = (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getBaseModelPath)(listKey);
+        (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.setNestedValue)(newAttr, listKey, newSlides);
         props.setAttributes({
           ...attributes,
-          [rootPath]: lodash__WEBPACK_IMPORTED_MODULE_2___default().get(newAttr, rootPath)
+          [rootPath]: (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(newAttr, rootPath)
         });
       } else {
-        newSlides.push(lodash__WEBPACK_IMPORTED_MODULE_2___default().cloneDeep(newSlides[0]));
+        newSlides.push(structuredClone(newSlides[0]));
         let setData = null;
         if (set) {
-          setData = lodash__WEBPACK_IMPORTED_MODULE_2___default().cloneDeep(attributes);
-          lodash__WEBPACK_IMPORTED_MODULE_2___default().set(setData, slider, newSlides);
+          setData = structuredClone(attributes);
+          (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.setNestedValue)(setData, listKey, newSlides);
         }
         props.setAttributes({
           ...(set ? attributes : slides),
@@ -18528,12 +18540,12 @@ function ButtonSlider(props) {
     const deleteItem = () => {
       const selectedIndex = attributes.selectedSlider;
       const clonedAttr = structuredClone(attributes);
-      const lists = lodash__WEBPACK_IMPORTED_MODULE_2___default().get(clonedAttr, slider);
+      const lists = (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(clonedAttr, listKey);
       lists.splice(selectedIndex, 1);
-      const rootPath = (0,_Libs__WEBPACK_IMPORTED_MODULE_3__.getBaseModelPath)(slider);
+      const rootPath = (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getBaseModelPath)(listKey);
       props.setAttributes({
         ...attributes,
-        [rootPath]: lodash__WEBPACK_IMPORTED_MODULE_2___default().get(clonedAttr, rootPath)
+        [rootPath]: (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(clonedAttr, rootPath)
       });
     };
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

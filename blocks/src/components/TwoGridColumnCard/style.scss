@@ -5,6 +5,11 @@
     padding: vw(77) 0 vw(119);
     position: relative;
 
+    @include mobile {
+        padding-top: vw(63);
+        padding-bottom: 0;
+    }
+
     &:after,
     &::before {
         width: 2px;
@@ -14,6 +19,11 @@
         content: '';
         position: absolute;
         background-color: #937D4D;
+
+        @include mobile {
+            display: none;
+        }
+
     }
 
     &::before {
@@ -29,6 +39,11 @@
         border-bottom: 2px solid #937D4D;
         grid-template-columns: repeat(2, 1fr);
 
+        @include mobile {
+            display: block;
+            border-bottom: 0;
+        }
+
         .card-wrapper {
             &-a {
                 gap: vw(28);
@@ -41,6 +56,13 @@
                 border-bottom: 2px solid rgba(#414042, 0.4);
                 padding: 0 vw(var(--g-outer-padding));
 
+                @include mobile {
+                    gap: vw(14);
+                    height: auto;
+                    align-items: flex-start;
+                    padding: vw(31) vw(var(--g-padding-container)) vw(28);
+                }
+
                 .icon {
                     width: vw(43);
                     display: flex;
@@ -49,6 +71,13 @@
                     align-items: center;
                     border: 1.5px solid #AFAFAF;
                     justify-content: center;
+
+                    @include mobile {
+                        margin: 0;
+                        height: vw(44);
+                        flex: 0 0 vw(47.5);
+                        transform: translateY(vw(7));
+                    }
 
                     svg {
                         width: vw(24);
@@ -60,11 +89,20 @@
                     font-size: vw(35);
                     color: #231E14;
                     margin-bottom: 0;
+
+                    @include mobile {
+                        font-size: vw(30);
+                        line-height: vw(36);
+                    }
                 }
             }
 
             &-b {
                 padding: 0 vw(var(--g-outer-padding));
+
+                @include mobile {
+                    padding: vw(25) vw(var(--g-padding-container)) vw(68);
+                }
 
                 .description {
                     height: vw(221);
@@ -73,16 +111,32 @@
                     padding-left: vw(98);
                     font-size: vw(21);
                     color: #3D3122;
+
+                    @include mobile {
+                        padding: 0;
+                        height: auto;
+                        font-size: vw(18);
+                        color: #353535;
+
+                    }
                 }
             }
 
             &:nth-of-type(even) {
                 .card-wrapper-a {
                     padding-left: 0;
+
+                    @include mobile {
+                        padding-left: vw(var(--g-padding-container));
+                    }
                 }
 
                 .card-wrapper-b {
                     padding-left: 0;
+
+                    @include mobile {
+                        padding-left: vw(var(--g-padding-container));
+                    }
                 }
             }
 
@@ -99,12 +153,23 @@
                         position: absolute;
                         background-color: #937D4D;
                         width: vw(var(--g-outer-padding));
+
+                        @include mobile {
+                            right: 0;
+                            top: 0;
+                            left: unset;
+                            width: vw(21);
+                        }
                     }
 
                 }
 
                 .card-wrapper-b {
                     padding-right: 0;
+
+                    @include mobile {
+                        padding-right: vw(var(--g-padding-container));
+                    }
                 }
             }
         }

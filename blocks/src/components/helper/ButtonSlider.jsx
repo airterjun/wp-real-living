@@ -1,15 +1,18 @@
 import "./style/ButtonSlider.scss"
 import React from "react";
-import _ from "lodash"
-import { getBaseModelPath } from "./Libs";
+import { getBaseModelPath, getNestedValue, setNestedValue } from "./Libs";
 
 
 let activeIndex = -1
 
 export default function ButtonSlider(props) {
-    const { edit, attributes, slider, button, set, nested } = props
+    const { edit, attributes, slider, button, set, nested, model } = props
+
+
+    const listKey = model ? `${model}.${slider}` : slider
+
     if (edit) {
-        let slides = _.get(attributes, slider)
+        let slides = getNestedValue(attributes, listKey)
 
         const buttonSlider = () => {
             if (slides) {
@@ -32,30 +35,31 @@ export default function ButtonSlider(props) {
 
 
         const addItems = () => {
-            const newSlides = _.cloneDeep(slides)
+            const newSlides = structuredClone(slides)
 
 
             if (nested) {
                 const newAttr = structuredClone(attributes)
                 newSlides.push(structuredClone(newSlides[0]))
-                const rootPath = getBaseModelPath(slider)
-                _.set(newAttr, slider, newSlides)
+                const rootPath = getBaseModelPath(listKey)
+                setNestedValue(newAttr, listKey, newSlides)
 
                 props.setAttributes({
                     ...attributes,
-                    [rootPath]: _.get(newAttr, rootPath)
+                    [rootPath]: getNestedValue(newAttr, rootPath)
                 })
 
             } else {
 
 
-                newSlides.push(_.cloneDeep(newSlides[0]))
+                newSlides.push(structuredClone(newSlides[0]))
                 let setData = null
 
                 if (set) {
-                    setData = _.cloneDeep(attributes)
-                    _.set(setData, slider, newSlides)
+                    setData = structuredClone(attributes)
+                    setNestedValue(setData, listKey, newSlides)
                 }
+
 
 
                 props.setAttributes({
@@ -69,14 +73,14 @@ export default function ButtonSlider(props) {
 
             const selectedIndex = attributes.selectedSlider
             const clonedAttr = structuredClone(attributes)
-            const lists = _.get(clonedAttr, slider)
+            const lists = getNestedValue(clonedAttr, listKey)
             lists.splice(selectedIndex, 1)
 
-            const rootPath = getBaseModelPath(slider)
+            const rootPath = getBaseModelPath(listKey)
 
             props.setAttributes({
                 ...attributes,
-                [rootPath]: _.get(clonedAttr, rootPath)
+                [rootPath]: getNestedValue(clonedAttr, rootPath)
             })
         }
 

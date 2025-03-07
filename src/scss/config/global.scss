@@ -97,11 +97,22 @@ button {
         padding: 0 vw(42);
         font-size: vw(19);
         align-items: center;
-        border: 1px solid #937D4D;
+        border: 1.5px solid #937D4D;
+
+        @include mobile {
+            height: vw(60);
+        }
 
         svg {
             width: vw(14);
             height: vw(14);
+            flex: 0 0 vw(14);
+
+            @include mobile {
+                width: vw(15.8);
+                height: vw(15.8);
+                flex: 0 0 vw(15.8);
+            }
 
             path {
                 fill: #937D4D;
