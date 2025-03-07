@@ -101,6 +101,14 @@
                     line-height: vw(32);
                 }
             }
+
+            .primary-button {
+                @include mobile {
+                    a {
+                        height: vw(49);
+                    }
+                }
+            }
         }
     }
 }
