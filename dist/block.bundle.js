@@ -17920,14 +17920,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
-/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
-/* harmony import */ var _PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../PrimaryButton/PrimaryButton */ "./blocks/src/components/PrimaryButton/PrimaryButton.jsx");
-/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
-/* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
-/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
-/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/FeaturedTitle2/style.scss");
+/* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../PrimaryButton/PrimaryButton */ "./blocks/src/components/PrimaryButton/PrimaryButton.jsx");
+/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
+/* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/FeaturedTitle2/style.scss");
+
 
 
 
@@ -17939,35 +17941,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const attributes = {
-  title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-  description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-  textButton: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-  link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_6__.LinkSchmea,
-  list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_5__.ArraySchema)([{
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  textButton: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_7__.LinkSchmea,
+  list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_6__.ArraySchema)([{
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
   }, {
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
   }, {
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
+  }]),
+  listMobile: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_6__.ArraySchema)([{
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
+  }, {
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
+  }, {
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
   }])
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
-  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getModelId)('list', props));
-  const listEl = () => listItems.map((_, index) => {
-    const title = `list.${index}.title`;
-    const desc = `list.${index}.description`;
+  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getModelId)('list', props));
+  const mobileEditor = () => listItems.map((_, index) => {
+    const title = `listMobile.${index}.title`;
+    const desc = `listMobile.${index}.description`;
     return /*#__PURE__*/React.createElement("div", {
-      className: "card-item-a"
-    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/React.createElement("div", {
-      className: "card-item-a-a"
-    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: "input"
+    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: title,
       className: "card-item-a-a-a",
       tag: "div"
-    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: desc,
+      className: "card-item-a-a-b",
+      tag: "div"
+    })));
+  });
+  const listEl = (listing = 'list') => listItems.map((_, index) => {
+    const title = `${listing}.${index}.title`;
+    const desc = `${listing}.${index}.description`;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "card-item-a"
+    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_9__["default"], null), /*#__PURE__*/React.createElement("div", {
+      className: "card-item-a-a"
+    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: title,
+      className: "card-item-a-a-a",
+      tag: "div"
+    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: desc,
       className: "card-item-a-a-b",
       tag: "div"
@@ -17975,7 +18002,11 @@ const attributes = {
   });
   return /*#__PURE__*/React.createElement("section", {
     className: "featured-title-2"
+  }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_2__["default"], props, /*#__PURE__*/React.createElement("div", {
+    className: "form-wrapper"
   }, /*#__PURE__*/React.createElement("div", {
+    className: "input-container"
+  }, mobileEditor()))), /*#__PURE__*/React.createElement("div", {
     className: "main-container"
   }, /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -17986,12 +18017,12 @@ const attributes = {
     "stroke-miterlimit": "10",
     "stroke-width": "2",
     d: "M1 233.31V1h115.88v116.43c0 64-51.88 115.88-115.88 115.88ZM143.37 100.87V1h104.87c0 57.92-46.95 99.87-104.87 99.87ZM143.37 128.44h104.87v104.87c-57.92 0-104.87-46.95-104.87-104.87Z"
-  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     className: "title",
     set: "title"
   }, props, {
     tag: "h2"
-  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     className: "description",
     set: "description"
   }, props, {
@@ -17999,8 +18030,10 @@ const attributes = {
   }))), /*#__PURE__*/React.createElement("div", {
     className: "main-container columb-card"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "card-item"
-  }, listEl()), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_4__["default"], props)));
+    className: "card-item desktop"
+  }, listEl()), !props.edit && /*#__PURE__*/React.createElement("div", {
+    className: "card-item mobile"
+  }, listEl('listMobile')), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__["default"], props)));
 }
 
 /***/ }),

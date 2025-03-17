@@ -2,8 +2,8 @@
 
 .contact-form {
     width: 100vw;
-    padding-bottom: vw(124);
     position: relative;
+    padding-bottom: vw(124);
     background-color: #231E14;
 
 
@@ -30,16 +30,32 @@
         margin-top: vw(125);
         grid-template-columns: vw(450) 1fr;
 
+        @include mobile {
+            display: block;
+            margin-top: vw(70);
+            padding: 0 vw(20);
+        }
+
         h2 {
             font-size: vw(35);
             color: #F7F7F7;
             margin-bottom: vw(18);
             font-weight: var(--font-extra);
+
+            @include mobile {
+                font-size: vw(32);
+            }
         }
 
         .description {
             font-size: vw(21);
             color: #F7F7F7;
+
+            @include mobile {
+                font-size: vw(19);
+                line-height: vw(25);
+                margin-bottom: vw(73);
+            }
         }
 
         &-b {
@@ -56,6 +72,10 @@
             padding-top: vw(21);
             padding-bottom: vw(11);
             border-bottom: 1px solid #937D4D;
+
+            @include mobile {
+                padding-top: vw(32);
+            }
 
             &:first-child {
                 padding-top: 0;
@@ -76,6 +96,10 @@
                 letter-spacing: vw(0.08);
                 color: rgba(#F7F7F7, 0.7);
 
+                @include mobile {
+                    padding-left: vw(13);
+                }
+
                 &::placeholder {
                     color: rgba(#F7F7F7, 0.7);
                 }
@@ -90,6 +114,10 @@
                 background-color: transparent;
                 letter-spacing: vw(0.08);
                 color: rgba(#F7F7F7, 0.7);
+
+                @include mobile {
+                    padding-left: vw(13);
+                }
             }
 
             label {
@@ -99,16 +127,22 @@
             textarea {
                 width: 100%;
                 border: none;
-                padding: vw(16) vw(20);
+                height: vw(179);
                 font-size: vw(16);
+                padding: vw(16) vw(20);
                 letter-spacing: vw(0.08);
                 font-family: var(--font-main);
                 background-color: transparent;
+
+                @include mobile {
+                    padding-left: vw(24);
+                }
 
                 &::placeholder {
                     font-size: vw(16);
                     letter-spacing: vw(0.08);
                     color: rgba(#F7F7F7, 0.7);
+
                 }
             }
         }
@@ -118,8 +152,16 @@
             display: grid;
             grid-template-columns: vw(268) 1fr;
 
+            @include mobile {
+                display: block;
+            }
+
             .input-wrapper {
                 padding-top: vw(39) !important;
+
+                @include mobile {
+                    padding-top: vw(28) !important;
+                }
             }
         }
 
@@ -128,6 +170,11 @@
             width: vw(216);
             position: relative;
             margin-top: vw(41);
+
+            @include mobile {
+                width: 100%;
+            }
+
 
 
             svg {
@@ -150,6 +197,12 @@
                 padding-right: vw(13);
                 border: 1px solid #937D4D;
                 letter-spacing: vw(-0.29);
+
+                @include mobile {
+                    width: 100%;
+                    color: #FFFFFF;
+                    background-color: #937D4D;
+                }
             }
         }
     }

@@ -101,3 +101,16 @@ figure {
         position: relative;
     }
 }
+
+
+.form-wrapper {
+    .input-container {
+        width: 100%;
+
+        .input {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #000;
+        }
+    }
+}
