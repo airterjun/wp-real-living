@@ -1066,15 +1066,29 @@
 }
 .banner-office {
   display: grid;
-  height: calc(416 / var(--base-size) * 100vw);
   gap: calc(104 / var(--base-size) * 100vw);
+  height: calc(416 / var(--base-size) * 100vw);
   border-bottom: 1px solid #937D4D;
   border-top: 1px solid #937D4D;
   grid-template-columns: calc(1125 / var(--base-size) * 100vw) 1fr;
 }
+@media only screen and (max-width: 879px) {
+  .banner-office {
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 2px solid #937D4D;
+  }
+}
 .banner-office figure {
   width: calc(1125 / var(--base-size) * 100vw);
   height: calc(416 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .banner-office figure {
+    border-bottom: 2px solid #937D4D;
+    transform: translateX(calc(-128 / var(--base-size) * 100vw));
+  }
 }
 .banner-office figure img {
   width: 100%;
@@ -1083,11 +1097,23 @@
   color: #231E14;
   padding-top: calc(48 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .banner-office .content {
+    padding: calc(38 / var(--base-size) * 100vw) calc(20 / var(--base-size) * 100vw) calc(65 / var(--base-size) * 100vw);
+  }
+}
 .banner-office .content h2 {
   font-size: calc(40 / var(--base-size) * 100vw);
   margin-bottom: calc(17 / var(--base-size) * 100vw);
   line-height: calc(64.71 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
+}
+@media only screen and (max-width: 879px) {
+  .banner-office .content h2 {
+    font-size: calc(33 / var(--base-size) * 100vw);
+    margin-bottom: calc(4 / var(--base-size) * 100vw);
+    color: #231E14;
+  }
 }
 .banner-office .content .description {
   font-size: calc(24 / var(--base-size) * 100vw);
@@ -1095,10 +1121,24 @@
   margin-bottom: calc(35 / var(--base-size) * 100vw);
   font-weight: var(--font-semi-bold);
 }
+@media only screen and (max-width: 879px) {
+  .banner-office .content .description {
+    font-size: calc(21 / var(--base-size) * 100vw);
+    line-height: calc(28 / var(--base-size) * 100vw);
+    margin-bottom: calc(46 / var(--base-size) * 100vw);
+  }
+}
 .banner-office .content .contact {
   font-size: calc(26 / var(--base-size) * 100vw);
   line-height: calc(32 / var(--base-size) * 100vw);
   font-weight: var(--font-semi-bold);
+}
+@media only screen and (max-width: 879px) {
+  .banner-office .content .contact {
+    font-size: calc(23 / var(--base-size) * 100vw);
+    line-height: calc(31 / var(--base-size) * 100vw);
+    color: #0C0C0C;
+  }
 }
 .banner-office .content .contact a {
   color: #937D4D;
