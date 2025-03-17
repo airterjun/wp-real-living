@@ -27,6 +27,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/components/ContactForm/style.scss":
+/*!******************************************************!*\
+  !*** ./blocks/src/components/ContactForm/style.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./blocks/src/components/FeaturedText/style.scss":
 /*!*******************************************************!*\
   !*** ./blocks/src/components/FeaturedText/style.scss ***!
@@ -40,10 +53,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/components/FeaturedText2/style.scss":
+/*!********************************************************!*\
+  !*** ./blocks/src/components/FeaturedText2/style.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./blocks/src/components/FeaturedTitle/style.scss":
 /*!********************************************************!*\
   !*** ./blocks/src/components/FeaturedTitle/style.scss ***!
   \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./blocks/src/components/FeaturedTitle2/style.scss":
+/*!*********************************************************!*\
+  !*** ./blocks/src/components/FeaturedTitle2/style.scss ***!
+  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17493,6 +17532,68 @@ const attributes = {
 
 /***/ }),
 
+/***/ "./blocks/src/components/ContactForm/index.jsx":
+/*!*****************************************************!*\
+  !*** ./blocks/src/components/ContactForm/index.jsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   attributes: () => (/* binding */ attributes),
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/ContactForm/style.scss");
+
+
+
+
+
+
+
+const attributes = {
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
+  description: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
+  form: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
+  background: _Schema_image__WEBPACK_IMPORTED_MODULE_4__.ImageSchema
+};
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  return /*#__PURE__*/React.createElement("section", {
+    className: "contact-form"
+  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "background"
+  }, props)), /*#__PURE__*/React.createElement("div", {
+    className: "contact-form-content"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "contact-form-content-a"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "title",
+    tag: "h2"
+  }, props, {
+    className: "title"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "description"
+  }, props, {
+    className: "description"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "contact-form-content-b"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "form"
+  }, props, {
+    className: "form"
+  })))));
+}
+
+/***/ }),
+
 /***/ "./blocks/src/components/FeaturedText/index.jsx":
 /*!******************************************************!*\
   !*** ./blocks/src/components/FeaturedText/index.jsx ***!
@@ -17556,6 +17657,69 @@ const FeaturedText = props => {
   })))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FeaturedText);
+
+
+/***/ }),
+
+/***/ "./blocks/src/components/FeaturedText2/index.jsx":
+/*!*******************************************************!*\
+  !*** ./blocks/src/components/FeaturedText2/index.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   attributes: () => (/* binding */ attributes),
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/FeaturedText2/style.scss");
+
+
+
+
+
+
+
+
+const attributes = {
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
+  description: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
+  background: _Schema_image__WEBPACK_IMPORTED_MODULE_4__.ImageSchema
+};
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  return /*#__PURE__*/React.createElement("section", {
+    className: "featured-text-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "decor-1 decor"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "decor-2 decor"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "decor-3 decor"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "title"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "content"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "desc"
+  }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "title"
+  }, props, {
+    tag: "div",
+    className: "title"
+  }))), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "background",
+    className: "parallax"
+  }))));
+}
 
 
 /***/ }),
@@ -17664,6 +17828,106 @@ const attributes = {
   }, props, {
     tag: "div"
   })), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_4__["default"], props)));
+}
+
+/***/ }),
+
+/***/ "./blocks/src/components/FeaturedTitle2/index.jsx":
+/*!********************************************************!*\
+  !*** ./blocks/src/components/FeaturedTitle2/index.jsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   attributes: () => (/* binding */ attributes),
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../PrimaryButton/PrimaryButton */ "./blocks/src/components/PrimaryButton/PrimaryButton.jsx");
+/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
+/* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/FeaturedTitle2/style.scss");
+
+
+
+
+
+
+
+
+
+
+const attributes = {
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
+  description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
+  textButton: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
+  link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_6__.LinkSchmea,
+  list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_5__.ArraySchema)([{
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+  }, {
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+  }, {
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+  }])
+};
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getModelId)('list', props));
+  const listEl = () => listItems.map((_, index) => {
+    const title = `list.${index}.title`;
+    const desc = `list.${index}.description`;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "card-item-a"
+    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/React.createElement("div", {
+      className: "card-item-a-a"
+    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: title,
+      className: "card-item-a-a-a",
+      tag: "div"
+    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: desc,
+      className: "card-item-a-a-b",
+      tag: "div"
+    }))));
+  });
+  return /*#__PURE__*/React.createElement("section", {
+    className: "featured-title-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "main-container"
+  }, /*#__PURE__*/React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 250 235"
+  }, /*#__PURE__*/React.createElement("path", {
+    stroke: "#937E4E",
+    "stroke-miterlimit": "10",
+    "stroke-width": "2",
+    d: "M1 233.31V1h115.88v116.43c0 64-51.88 115.88-115.88 115.88ZM143.37 100.87V1h104.87c0 57.92-46.95 99.87-104.87 99.87ZM143.37 128.44h104.87v104.87c-57.92 0-104.87-46.95-104.87-104.87Z"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: "title",
+    set: "title"
+  }, props, {
+    tag: "h2"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: "description",
+    set: "description"
+  }, props, {
+    tag: "div"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "main-container columb-card"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "card-item"
+  }, listEl()), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_4__["default"], props)));
 }
 
 /***/ }),
@@ -19063,12 +19327,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/HomePage/index.jsx */ "./blocks/src/pages/HomePage/index.jsx");
 /* harmony import */ var _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/NewsPage/index.jsx */ "./blocks/src/pages/NewsPage/index.jsx");
-/* harmony import */ var _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/TeamPage/index.jsx */ "./blocks/src/pages/TeamPage/index.jsx");
+/* harmony import */ var _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/PageContact/index.jsx */ "./blocks/src/pages/PageContact/index.jsx");
+/* harmony import */ var _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/TeamPage/index.jsx */ "./blocks/src/pages/TeamPage/index.jsx");
 
 const {
   registerBlockType
 } = wp.blocks;
-   var pages = [_pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__, _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__, _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_3__];
+    var pages = [_pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__, _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__, _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_3__, _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_4__];
 pages.forEach(page => {
   console.log('page', page);
   const {
@@ -19250,6 +19515,61 @@ const pageAttr = {
     model: "section_5"
   })), /*#__PURE__*/React.createElement(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "contact"
+  })));
+}
+
+/***/ }),
+
+/***/ "./blocks/src/pages/PageContact/index.jsx":
+/*!************************************************!*\
+  !*** ./blocks/src/pages/PageContact/index.jsx ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   pageAttr: () => (/* binding */ pageAttr)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_ContactForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/ContactForm */ "./blocks/src/components/ContactForm/index.jsx");
+/* harmony import */ var _components_FeaturedText2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/FeaturedText2 */ "./blocks/src/components/FeaturedText2/index.jsx");
+/* harmony import */ var _components_FeaturedTitle2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/FeaturedTitle2 */ "./blocks/src/components/FeaturedTitle2/index.jsx");
+/* harmony import */ var _components_HeroBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/HeroBanner */ "./blocks/src/components/HeroBanner/index.jsx");
+/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
+
+
+
+
+
+
+
+const pageAttr = {
+  name: 'contact-page',
+  title: 'Contact Page',
+  data: {
+    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_5__.attributes),
+    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_FeaturedText2__WEBPACK_IMPORTED_MODULE_3__.attributes),
+    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_FeaturedTitle2__WEBPACK_IMPORTED_MODULE_4__.attributes),
+    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_ContactForm__WEBPACK_IMPORTED_MODULE_2__.attributes)
+    // section_3: ObjectSchema(RegularBannerAttr),
+    // section_4: ObjectSchema(TwoGridColumnCardAttr),
+    // contact: ObjectSchema(BannerContactAtr),
+    // section_5: ObjectSchema(BannerContactAltAttr)
+  }
+};
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_1"
+  })), /*#__PURE__*/React.createElement(_components_FeaturedText2__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_2"
+  })), /*#__PURE__*/React.createElement(_components_FeaturedTitle2__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_3"
+  })), /*#__PURE__*/React.createElement(_components_ContactForm__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_4"
   })));
 }
 

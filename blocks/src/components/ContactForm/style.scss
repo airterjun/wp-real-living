@@ -1,0 +1,45 @@
+@import "./../../assets//styles/utils/functions";
+
+.contact-form {
+    width: 100vw;
+    padding-bottom: vw(124);
+    position: relative;
+    background-color: #231E14;
+
+    figure {
+        inset: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100vw;
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-content {
+        gap: vw(150);
+        z-index: 2;
+        display: grid;
+        position: relative;
+        padding: 0 vw(360);
+        margin-top: vw(125);
+        grid-template-columns: vw(450) 1fr;
+
+        h2 {
+            font-size: vw(35);
+            color: #F7F7F7;
+            margin-bottom: 0;
+            font-weight: var(--font-extra);
+        }
+
+        .description {
+            font-size: vw(21);
+            color: #F7F7F7;
+        }
+
+
+    }
+}
