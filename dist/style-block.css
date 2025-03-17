@@ -349,12 +349,13 @@
   font-weight: 800;
   font-size: calc(64 / var(--base-size) * 100vw);
   color: #353535;
-  margin-bottom: 0;
+  margin-bottom: calc(31 / var(--base-size) * 100vw);
+  letter-spacing: -0.009em;
   line-height: calc(64.71 / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content .h1 {
-    font-size: calc(48 / var(--base-size) * 100vw);
+    font-size: calc(40 / var(--base-size) * 100vw);
     line-height: calc(52 / var(--base-size) * 100vw);
   }
 }

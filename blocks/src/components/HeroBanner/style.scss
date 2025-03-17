@@ -35,11 +35,12 @@
             font-weight: 800;
             font-size: vw(64);
             color: #353535;
-            margin-bottom: 0;
+            margin-bottom: vw(31);
+            letter-spacing: -0.009em;
             line-height: vw(64.71);
 
             @include mobile {
-                font-size: vw(48);
+                font-size: vw(40);
                 line-height: vw(52);
 
             }
