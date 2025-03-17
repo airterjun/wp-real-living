@@ -179,6 +179,11 @@ button {
   margin-bottom: calc(10 / var(--base-size) * 100vw);
 }
 
+input {
+  border: none;
+  background-color: transparent;
+}
+
 @media only screen and (max-width: 879px) {
   :root {
     --header-size: 52;

@@ -15,16 +15,19 @@ export const attributes = {
 export default function (props) {
     return (
         <section className="contact-form">
-            <Media set="background" {...props} />
+            <Media set="background" {...props} className="parallax" />
             <div className="contact-form-content">
                 <div className="contact-form-content-a">
                     <Text set="title" tag="h2" {...props} className="title" />
                     <Text set="description" {...props} className="description" />
                 </div>
                 <div className="contact-form-content-b">
-                    <Text set="form" {...props} className="form" />
+                    <Text set="form" {...props} className="form" tag="div" />
                 </div>
             </div>
         </section>
     )
 }
+
+
+

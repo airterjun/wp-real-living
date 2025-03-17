@@ -1048,6 +1048,61 @@
     padding-right: calc(var(--g-padding-container) / var(--base-size) * 100vw);
   }
 }
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerOffice/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --base-size: 1920;
+  --mobile-browser: 876;
+  --wrapper-padding: 20;
+  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media only screen and (max-width: 879px) {
+  :root {
+    --base-size: 376;
+    --wrapper-padding: 20;
+  }
+}
+.banner-office {
+  display: grid;
+  height: calc(416 / var(--base-size) * 100vw);
+  gap: calc(104 / var(--base-size) * 100vw);
+  border-bottom: 1px solid #937D4D;
+  border-top: 1px solid #937D4D;
+  grid-template-columns: calc(1125 / var(--base-size) * 100vw) 1fr;
+}
+.banner-office figure {
+  width: calc(1125 / var(--base-size) * 100vw);
+  height: calc(416 / var(--base-size) * 100vw);
+}
+.banner-office figure img {
+  width: 100%;
+}
+.banner-office .content {
+  color: #231E14;
+  padding-top: calc(48 / var(--base-size) * 100vw);
+}
+.banner-office .content h2 {
+  font-size: calc(40 / var(--base-size) * 100vw);
+  margin-bottom: calc(17 / var(--base-size) * 100vw);
+  line-height: calc(64.71 / var(--base-size) * 100vw);
+  font-weight: var(--font-extra);
+}
+.banner-office .content .description {
+  font-size: calc(24 / var(--base-size) * 100vw);
+  line-height: calc(31 / var(--base-size) * 100vw);
+  margin-bottom: calc(35 / var(--base-size) * 100vw);
+  font-weight: var(--font-semi-bold);
+}
+.banner-office .content .contact {
+  font-size: calc(26 / var(--base-size) * 100vw);
+  line-height: calc(32 / var(--base-size) * 100vw);
+  font-weight: var(--font-semi-bold);
+}
+.banner-office .content .contact a {
+  color: #937D4D;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/ContactForm/style.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************/
@@ -1079,7 +1134,9 @@
 }
 .contact-form figure img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .contact-form-content {
   gap: calc(150 / var(--base-size) * 100vw);
@@ -1093,12 +1150,107 @@
 .contact-form-content h2 {
   font-size: calc(35 / var(--base-size) * 100vw);
   color: #F7F7F7;
-  margin-bottom: 0;
+  margin-bottom: calc(18 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
 }
 .contact-form-content .description {
   font-size: calc(21 / var(--base-size) * 100vw);
   color: #F7F7F7;
+}
+.contact-form-content-b p {
+  display: inline;
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) {
+  padding-top: calc(21 / var(--base-size) * 100vw);
+  padding-bottom: calc(11 / var(--base-size) * 100vw);
+  border-bottom: 1px solid #937D4D;
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit):first-child {
+  padding-top: 0;
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit).textarea {
+  padding: 0;
+  margin-top: calc(51 / var(--base-size) * 100vw);
+  border: 1px solid #937D4D;
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) input:not([type=submit]) {
+  width: 100%;
+  height: calc(17 / var(--base-size) * 100vw);
+  padding-left: calc(9 / var(--base-size) * 100vw);
+  font-size: calc(16 / var(--base-size) * 100vw);
+  letter-spacing: calc(0.08 / var(--base-size) * 100vw);
+  color: rgba(247, 247, 247, 0.7);
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) input:not([type=submit])::-moz-placeholder {
+  color: rgba(247, 247, 247, 0.7);
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) input:not([type=submit])::placeholder {
+  color: rgba(247, 247, 247, 0.7);
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) select {
+  width: 100%;
+  border: none;
+  height: calc(17 / var(--base-size) * 100vw);
+  padding-left: calc(9 / var(--base-size) * 100vw);
+  font-size: calc(16 / var(--base-size) * 100vw);
+  background-color: transparent;
+  letter-spacing: calc(0.08 / var(--base-size) * 100vw);
+  color: rgba(247, 247, 247, 0.7);
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) label {
+  display: none;
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) textarea {
+  width: 100%;
+  border: none;
+  padding: calc(16 / var(--base-size) * 100vw) calc(20 / var(--base-size) * 100vw);
+  font-size: calc(16 / var(--base-size) * 100vw);
+  letter-spacing: calc(0.08 / var(--base-size) * 100vw);
+  font-family: var(--font-main);
+  background-color: transparent;
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) textarea::-moz-placeholder {
+  font-size: calc(16 / var(--base-size) * 100vw);
+  letter-spacing: calc(0.08 / var(--base-size) * 100vw);
+  color: rgba(247, 247, 247, 0.7);
+}
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) textarea::placeholder {
+  font-size: calc(16 / var(--base-size) * 100vw);
+  letter-spacing: calc(0.08 / var(--base-size) * 100vw);
+  color: rgba(247, 247, 247, 0.7);
+}
+.contact-form .form-wrapper .input-group {
+  gap: calc(44 / var(--base-size) * 100vw);
+  display: grid;
+  grid-template-columns: calc(268 / var(--base-size) * 100vw) 1fr;
+}
+.contact-form .form-wrapper .input-group .input-wrapper {
+  padding-top: calc(39 / var(--base-size) * 100vw) !important;
+}
+.contact-form .form-wrapper .button-submit {
+  width: calc(216 / var(--base-size) * 100vw);
+  position: relative;
+  margin-top: calc(41 / var(--base-size) * 100vw);
+}
+.contact-form .form-wrapper .button-submit svg {
+  top: calc(19 / var(--base-size) * 100vw);
+  right: calc(31 / var(--base-size) * 100vw);
+  position: absolute;
+  width: calc(15.8 / var(--base-size) * 100vw);
+  height: calc(15.8 / var(--base-size) * 100vw);
+  flex: 0 0 calc(15.8 / var(--base-size) * 100vw);
+  transform: translateY(calc(3 / var(--base-size) * 100vw));
+}
+.contact-form .form-wrapper .button-submit input {
+  width: calc(216 / var(--base-size) * 100vw);
+  height: calc(60.5 / var(--base-size) * 100vw);
+  color: #EFEFEF;
+  text-align: left;
+  font-size: calc(21 / var(--base-size) * 100vw);
+  padding-left: calc(33 / var(--base-size) * 100vw);
+  padding-right: calc(13 / var(--base-size) * 100vw);
+  border: 1px solid #937D4D;
+  letter-spacing: calc(-0.29 / var(--base-size) * 100vw);
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/FeaturedText2/style.scss ***!
@@ -1122,6 +1274,12 @@
   padding-bottom: calc(69 / var(--base-size) * 100vw);
   background-color: var(--color-dark);
 }
+@media only screen and (max-width: 879px) {
+  .featured-text-2 {
+    padding-top: 0;
+    padding-bottom: calc(89 / var(--base-size) * 100vw);
+  }
+}
 .featured-text-2:after {
   left: 0;
   bottom: 1px;
@@ -1130,7 +1288,12 @@
   height: calc(69 / var(--base-size) * 100vw);
   position: absolute;
   background-color: #F7F7F7;
-  border-bottom: 1.5px solid #937D4D;
+  border-bottom: 2px solid #937D4D;
+}
+@media only screen and (max-width: 879px) {
+  .featured-text-2:after {
+    height: calc(89 / var(--base-size) * 100vw);
+  }
 }
 .featured-text-2 .decor {
   position: absolute;
@@ -1144,8 +1307,24 @@
   left: calc(360 / var(--base-size) * 100vw);
   background-color: #7A7A7A;
 }
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .decor-1 {
+    left: 0;
+    top: unset;
+    bottom: calc(92 / var(--base-size) * 100vw);
+    width: calc(21 / var(--base-size) * 100vw);
+    height: calc(70 / var(--base-size) * 100vw);
+    background-color: #937D4D;
+  }
+}
 .featured-text-2 .decor-2 {
   left: calc(958 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .decor-2 {
+    width: 2px;
+    left: calc(21 / var(--base-size) * 100vw);
+  }
 }
 .featured-text-2 .decor-3 {
   z-index: 2;
@@ -1153,6 +1332,14 @@
   height: calc(77.6 / var(--base-size) * 100vw);
   left: calc((var(--g-outer-padding) - 7) / var(--base-size) * 100vw);
   background-color: #937D4D;
+}
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .decor-3 {
+    left: 0;
+    top: calc(192 / var(--base-size) * 100vw);
+    width: calc(21 / var(--base-size) * 100vw);
+    height: calc(27 / var(--base-size) * 100vw);
+  }
 }
 .featured-text-2 .title {
   z-index: 4;
@@ -1163,10 +1350,25 @@
   border-top: 1.5px solid #7A7A7A;
   border-bottom: 1.5px solid #7A7A7A;
 }
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .title {
+    width: 100%;
+    border-top: 0;
+    height: calc(27 / var(--base-size) * 100vw);
+    border-bottom-width: 2px;
+  }
+}
 .featured-text-2 .content {
   display: grid;
   padding-left: calc(356 / var(--base-size) * 100vw);
   grid-template-columns: 1fr calc(962 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .content {
+    display: flex;
+    padding-left: 0;
+    flex-direction: column-reverse;
+  }
 }
 .featured-text-2 .content .desc {
   gap: calc(29 / var(--base-size) * 100vw);
@@ -1174,11 +1376,43 @@
   color: #EFEFEF;
   padding: calc(55 / var(--base-size) * 100vw) calc(58 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .content .desc {
+    width: 100%;
+    gap: calc(16 / var(--base-size) * 100vw);
+    position: relative;
+    margin-left: 0;
+    margin-top: calc(27 / var(--base-size) * 100vw);
+    padding-right: calc(45 / var(--base-size) * 100vw);
+    padding-left: calc(38 / var(--base-size) * 100vw);
+    padding-top: calc(41 / var(--base-size) * 100vw);
+    padding-bottom: calc(129 / var(--base-size) * 100vw);
+    justify-content: space-between;
+    border-top: 2px solid #7A7A7A;
+  }
+  .featured-text-2 .content .desc::after {
+    left: 0;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: calc(72 / var(--base-size) * 100vw);
+    position: absolute;
+    background-color: #7A7A7A;
+  }
+}
 .featured-text-2 .content .desc svg {
   width: calc(41 / var(--base-size) * 100vw);
   flex: 0 0 calc(44 / var(--base-size) * 100vw);
   height: calc(44 / var(--base-size) * 100vw);
   transform: translateY(calc(14 / var(--base-size) * 100vw));
+}
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .content .desc svg {
+    transform: none;
+    width: calc(24.6 / var(--base-size) * 100vw);
+    height: ve(24.6);
+    flex: 0 0 calc(24.6 / var(--base-size) * 100vw);
+  }
 }
 .featured-text-2 .content .desc .title {
   padding: 0;
@@ -1188,9 +1422,24 @@
   letter-spacing: -0.01em;
   font-weight: var(--font-extra);
 }
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .content .desc .title {
+    width: auto;
+    height: auto;
+    flex: 1 auto;
+    font-size: calc(27 / var(--base-size) * 100vw);
+    color: #FFFFFF;
+  }
+}
 .featured-text-2 .content figure {
   width: 100%;
   height: calc(372 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .featured-text-2 .content figure {
+    border-bottom: 2px solid #7A7A7A;
+    height: calc(165 / var(--base-size) * 100vw);
+  }
 }
 .featured-text-2 .content figure img {
   width: 100%;

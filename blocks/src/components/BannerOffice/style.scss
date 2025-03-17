@@ -1,0 +1,50 @@
+@import "./../../assets//styles/utils/functions";
+
+
+.banner-office {
+    display: grid;
+    height: vw(416);
+    gap: vw(104);
+    border-bottom: 1px solid #937D4D;
+    border-top: 1px solid #937D4D;
+    grid-template-columns: vw(1125) 1fr;
+
+
+    figure {
+        width: vw(1125);
+        height: vw(416);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        color: #231E14;
+        padding-top: vw(48);
+
+        h2 {
+            font-size: vw(40);
+            margin-bottom: vw(17);
+            line-height: vw(64.71);
+            font-weight: var(--font-extra);
+        }
+
+        .description {
+            font-size: vw(24);
+            line-height: vw(31);
+            margin-bottom: vw(35);
+            font-weight: var(--font-semi-bold);
+        }
+
+        .contact {
+            font-size: vw(26);
+            line-height: vw(32);
+            font-weight: var(--font-semi-bold);
+
+            a {
+                color: #937D4D;
+            }
+        }
+    }
+}
