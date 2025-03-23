@@ -63,17 +63,18 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
                     <div class="line"></div>
                 </div>
             </div>
+
+            <div class="close-menu" id="close-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+
+            </div>
         </div>
 
     </header>
 
     <div class="header-menu">
-        <div class="close-menu" id="close-menu">
-            <div class="inner">
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </div>
+
         <div class="menu-wrapper">
             <?php
 

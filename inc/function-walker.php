@@ -1,5 +1,6 @@
 <?php
-class WP_Break_Word_Nav_Walker extends Walker_Nav_Menu {
+class WP_Break_Word_Nav_Walker extends Walker_Nav_Menu
+{
     /**
      * Start the element output.
      *
@@ -9,7 +10,8 @@ class WP_Break_Word_Nav_Walker extends Walker_Nav_Menu {
      * @param array $args An array of arguments.
      * @param int $id Current item ID.
      */
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+    {
         $title = $item->title;
 
         $title = apply_filters('the_title', $title, $item->ID);
@@ -19,7 +21,7 @@ class WP_Break_Word_Nav_Walker extends Walker_Nav_Menu {
             $args->before,
             esc_url($item->url),
             $args->link_before,
-            str_replace("/","<br/>", $title),
+            str_replace("/", "<br/>", $title),
             $args->link_after,
             $args->after
         );
