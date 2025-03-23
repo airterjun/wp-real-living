@@ -327,12 +327,15 @@ footer .footer-content-bottom-b a {
 
 header {
   top: 0;
-  z-index: 99;
+  z-index: 992;
   width: 100vw;
   position: fixed;
   height: calc(var(--header-size) / var(--base-size) * 100vw);
   background-color: #191919;
   border-bottom: var(--g-border);
+}
+header.menu-active {
+  border-bottom: none;
 }
 header .inner {
   height: 100%;
@@ -350,6 +353,8 @@ header .inner .timer {
   display: flex;
   color: #F7F7F7;
   align-items: center;
+  font-size: calc(17 / var(--base-size) * 100vw);
+  color: #C9C9C9;
 }
 @media only screen and (max-width: 879px) {
   header .inner .timer {
@@ -390,6 +395,7 @@ header .inner .logo svg {
 }
 header .inner .burger {
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: flex-end;
 }
@@ -411,6 +417,7 @@ header .inner .burger .inner-line .line {
   width: 100%;
   height: 1.5px;
   flex: 0 0 1.5px;
+  transition: width 0.45s var(--cubic-bezier);
   background-color: #E6BC7C;
 }
 header .inner .burger .inner-line .line:last-child {
@@ -421,9 +428,108 @@ header .inner .burger .inner-line .line:last-child {
     width: calc(15.3 / var(--base-size) * 100vw);
   }
 }
+@media only screen and (min-width: 879px) {
+  header .inner .burger .inner-line:hover .line {
+    width: 100%;
+  }
+}
 
 .header-menu {
-  display: none;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 991;
+  position: fixed;
+  top: calc(var(--header-size) / var(--base-size) * 100vw);
+  background-color: #191919;
+  will-change: clip-path;
+  clip-path: inset(0 0 100% 0);
+}
+.header-menu .menu-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: calc(213 / var(--base-size) * 100vw);
+  justify-content: center;
+}
+@media only screen and (max-width: 879px) {
+  .header-menu .menu-wrapper {
+    margin-top: 0;
+    align-items: center;
+  }
+}
+.header-menu .menu-wrapper ul {
+  list-style: none;
+  transform: translateX(calc(-18 / var(--base-size) * 100vw));
+}
+@media only screen and (max-width: 879px) {
+  .header-menu .menu-wrapper ul {
+    transform: none;
+  }
+}
+.header-menu .menu-wrapper ul li {
+  opacity: 0;
+  overflow: hidden;
+  min-width: calc(210 / var(--base-size) * 100vw);
+  position: relative;
+  padding-left: calc(26 / var(--base-size) * 100vw);
+  transform: translateY(calc(20 / var(--base-size) * 100vw));
+}
+@media only screen and (max-width: 879px) {
+  .header-menu .menu-wrapper ul li {
+    padding-left: calc(21 / var(--base-size) * 100vw);
+    transform: translateY(calc(20 / var(--base-size) * 100vw));
+  }
+}
+.header-menu .menu-wrapper ul li::before {
+  left: 0;
+  top: 0;
+  content: "";
+  width: 1.6px;
+  height: 56%;
+  display: block;
+  position: absolute;
+  transform-origin: top;
+  background-color: #FFF;
+  transform: scaleY(0) translateY(calc(8 / var(--base-size) * 100vw));
+  transition: transform 0.25s ease-out;
+}
+@media only screen and (max-width: 879px) {
+  .header-menu .menu-wrapper ul li::before {
+    height: calc(28.6 / var(--base-size) * 100vw);
+  }
+}
+.header-menu .menu-wrapper ul li a {
+  display: block;
+  color: #443826;
+  font-size: calc(52 / var(--base-size) * 100vw);
+  padding-bottom: calc(7 / var(--base-size) * 100vw);
+  line-height: calc(52.86 / var(--base-size) * 100vw);
+  will-change: transform;
+}
+@media only screen and (max-width: 879px) {
+  .header-menu .menu-wrapper ul li a {
+    font-size: calc(41 / var(--base-size) * 100vw);
+    line-height: calc(41.85 / var(--base-size) * 100vw);
+  }
+}
+.header-menu .menu-wrapper ul li.current_page_item a {
+  color: #BA9D63;
+  font-weight: var(--font-semi-bold);
+}
+.header-menu .menu-wrapper ul li.current_page_item::before {
+  transform: scaleX(1) translateY(calc(8 / var(--base-size) * 100vw));
+}
+@media only screen and (min-width: 879px) {
+  .header-menu .menu-wrapper ul li:hover a {
+    color: #BA9D63;
+    font-weight: var(--font-semi-bold);
+  }
+  .header-menu .menu-wrapper ul li:hover::before {
+    transform-origin: bottom;
+    transform: scaleY(1) translateY(calc(8 / var(--base-size) * 100vw));
+  }
 }
 
 .section-wrapper * {

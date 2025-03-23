@@ -9821,8 +9821,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Navigation: () => (/* binding */ Navigation)
 /* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
-const Navigation = lenis => {};
+const Navigation = lenis => {
+  const header = document.getElementById('main-header');
+  const burger = document.getElementById('burger');
+  const headerMenu = document.querySelector('.header-menu');
+  const menuList = headerMenu.querySelectorAll('li');
+  const tl = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    paused: true
+  });
+  tl.to(headerMenu, {
+    clipPath: 'inset(0 0 0% 0)',
+    duration: 1,
+    ease: 'power4.inOut'
+  }).to(menuList, {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.1,
+    ease: 'power4.out'
+  });
+  burger.addEventListener('click', () => {
+    header.classList.toggle('menu-active');
+    if (burger.classList.contains('active')) {
+      tl.reverse(1.5);
+      burger.classList.remove('active');
+      return;
+    }
+    burger.classList.add('active');
+    tl.play();
+  });
+};
 
 /***/ }),
 
