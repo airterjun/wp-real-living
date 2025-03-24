@@ -416,7 +416,7 @@ header .inner .burger .inner-line .line {
   height: 1.5px;
   flex: 0 0 1.5px;
   transform-origin: left;
-  transition: transform 0.45s var(--cubic-bezier);
+  transition: transform 0.25s var(--cubic-bezier);
   background-color: #E6BC7C;
 }
 header .inner .burger .inner-line .line:last-child {
@@ -427,11 +427,11 @@ header .inner .burger .inner-line .line:last-child {
     width: calc(15.3 / var(--base-size) * 100vw);
   }
 }
+header .inner .burger .inner-line .line:nth-of-type(1) {
+  transition-delay: 0.4s;
+}
 header .inner .burger .inner-line .line:nth-of-type(2) {
   transition-delay: 0.2s;
-}
-header .inner .burger .inner-line .line:nth-of-type(3) {
-  transition-delay: 0.5s;
 }
 header .inner .close-menu {
   top: calc(23 / var(--base-size) * 100vw);
@@ -442,12 +442,21 @@ header .inner .close-menu {
   transform: rotate(45deg);
   position: absolute;
 }
+@media only screen and (max-width: 879px) {
+  header .inner .close-menu {
+    top: calc(14 / var(--base-size) * 100vw);
+    right: calc(21 / var(--base-size) * 100vw);
+    width: calc(23.6 / var(--base-size) * 100vw);
+    height: calc(23.6 / var(--base-size) * 100vw);
+  }
+}
 header .inner .close-menu .line {
   width: transform;
   position: absolute;
   transition: transform 0.4s var(--cubic-bezier);
   background-color: #E6BC7C;
   transform: scaleX(1);
+  transition-delay: 0s;
 }
 header .inner .close-menu .line:first-child {
   top: 48%;
@@ -471,6 +480,7 @@ header.menu-active .burger .line {
   transform: scaleX(0);
 }
 header.menu-active .close-menu .line {
+  transition-delay: 1s;
   transform: none !important;
 }
 header.menu-active .close-menu .line:first-child {

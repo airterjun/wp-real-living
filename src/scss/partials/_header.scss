@@ -95,7 +95,7 @@ header {
                     height: 1.5px;
                     flex: 0 0 1.5px;
                     transform-origin: left;
-                    transition: transform .45s var(--cubic-bezier);
+                    transition: transform .25s var(--cubic-bezier);
                     background-color: #E6BC7C;
 
                     &:last-child {
@@ -106,13 +106,13 @@ header {
                         }
                     }
 
+                    &:nth-of-type(1) {
+                        transition-delay: .4s;
+                    }
+
 
                     &:nth-of-type(2) {
                         transition-delay: .2s;
-                    }
-
-                    &:nth-of-type(3) {
-                        transition-delay: .5s;
                     }
                 }
 
@@ -135,12 +135,20 @@ header {
             transform: rotate(45deg);
             position: absolute;
 
+            @include mobile {
+                top: vw(14);
+                right: vw(21);
+                width: vw(23.6);
+                height: vw(23.6);
+            }
+
             .line {
                 width: transform;
                 position: absolute;
                 transition: transform .4s var(--cubic-bezier);
                 background-color: #E6BC7C;
                 transform: scaleX(1);
+                transition-delay: 0s;
 
                 &:first-child {
                     top: 48%;
@@ -178,6 +186,7 @@ header {
             // opacity: 1;
 
             .line {
+                transition-delay: 1s;
                 transform: none !important;
 
                 &:first-child {
