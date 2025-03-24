@@ -120,3 +120,18 @@ export const setNestedValue = (obj, path, value) => {
     current[keys[keys.length - 1]] = value;
     return obj;
 };
+
+
+
+export const getMobileDescription = (props, originalText, mobileText) => {
+    const mobileModel = props.model ? `${props.model}.${mobileText}` : mobileText
+    const desktopModel = props.model ? `${props.model}.${originalText}` : originalText
+
+
+    if (getNestedValue(props.attributes, mobileModel))
+        return getNestedValue(props.attributes, mobileModel)
+
+    return getNestedValue(props.attributes, desktopModel)
+
+
+}

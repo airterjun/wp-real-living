@@ -18054,13 +18054,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
-/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
-/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
-/* harmony import */ var _PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../PrimaryButton/PrimaryButton */ "./blocks/src/components/PrimaryButton/PrimaryButton.jsx");
-/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
-/* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
-/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/HeroBanner/style.scss");
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../PrimaryButton/PrimaryButton */ "./blocks/src/components/PrimaryButton/PrimaryButton.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/HeroBanner/style.scss");
+
 
 
 
@@ -18072,43 +18074,69 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const attributes = {
-  background: _Schema_image__WEBPACK_IMPORTED_MODULE_6__.ImageSchema,
-  text_1: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
-  text_2: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
-  link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_7__.LinkSchmea
+  background: _Schema_image__WEBPACK_IMPORTED_MODULE_7__.ImageSchema,
+  text_1: _Schema_text__WEBPACK_IMPORTED_MODULE_9__.TextSchema,
+  text_2: _Schema_text__WEBPACK_IMPORTED_MODULE_9__.TextSchema,
+  text_1_mobile: _Schema_text__WEBPACK_IMPORTED_MODULE_9__.TextSchema,
+  text_2_mobile: _Schema_text__WEBPACK_IMPORTED_MODULE_9__.TextSchema,
+  link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_8__.LinkSchmea
 };
 const HeroBanner = props => {
   const {
     disabledButton
   } = props;
   const button = () => {
-    if (!disabledButton) return /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    if (!disabledButton) return /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       title: "Manage button link"
     }));
   };
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_2__["default"], props, /*#__PURE__*/React.createElement("div", {
+    className: "form-wrapper"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "gallery-list-editor"
   }, /*#__PURE__*/React.createElement("div", {
     className: "item"
-  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "background"
-  }, props))))), /*#__PURE__*/React.createElement("section", {
+  }, props)))), /*#__PURE__*/React.createElement("div", {
+    className: "input-container"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Mobile Title"), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "text_1_mobile"
+  }, props, {
+    tag: "div",
+    className: "input"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "input-container"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Mobile Desc"), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "text_2_mobile"
+  }, props, {
+    tag: "div",
+    className: "input"
+  }))))), /*#__PURE__*/React.createElement("section", {
     className: "hero-banner"
   }, /*#__PURE__*/React.createElement("div", {
     className: "content"
   }, /*#__PURE__*/React.createElement("div", {
     className: "content-a"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "text_1"
   }, props, {
     tag: "h2",
-    className: "content-a_a h1 item"
-  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: "content-a_a h1 item desktop"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "text_2"
   }, props, {
     tag: "div",
-    className: "content-a-b b1 item"
-  })), button())), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: "content-a-b b1 item desktop"
+  })), /*#__PURE__*/React.createElement("h2", {
+    className: "content-a_a h1 item mobile"
+  }, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getMobileDescription)(props, 'text_1', 'text_1_mobile'), " "), /*#__PURE__*/React.createElement("div", {
+    className: "content-a-b b1 item mobile"
+  }, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getMobileDescription)(props, 'text_2', 'text_2_mobile')), button())), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "background"
   }, props, {
     className: "background parallax"
@@ -19039,6 +19067,7 @@ function Controller(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getBaseModelPath: () => (/* binding */ getBaseModelPath),
+/* harmony export */   getMobileDescription: () => (/* binding */ getMobileDescription),
 /* harmony export */   getModel: () => (/* binding */ getModel),
 /* harmony export */   getModelId: () => (/* binding */ getModelId),
 /* harmony export */   getModelValue: () => (/* binding */ getModelValue),
@@ -19153,6 +19182,12 @@ const setNestedValue = (obj, path, value) => {
   // Set the value at the final key
   current[keys[keys.length - 1]] = value;
   return obj;
+};
+const getMobileDescription = (props, originalText, mobileText) => {
+  const mobileModel = props.model ? `${props.model}.${mobileText}` : mobileText;
+  const desktopModel = props.model ? `${props.model}.${originalText}` : originalText;
+  if (getNestedValue(props.attributes, mobileModel)) return getNestedValue(props.attributes, mobileModel);
+  return getNestedValue(props.attributes, desktopModel);
 };
 
 /***/ }),

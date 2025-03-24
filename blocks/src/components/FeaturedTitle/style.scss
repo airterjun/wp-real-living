@@ -3,11 +3,19 @@
 .featured-title {
     padding: vw(110) 0;
 
+    @include mobile {
+        padding-top: vw(43);
+    }
+
     .main-container {
         grid-column: 4/14;
         color: #F7F7F7;
         position: relative;
         padding: 0 vw(18);
+
+        @include mobile {
+            padding: 0 vw(19);
+        }
 
         &:first-child {
             display: flex;
@@ -18,6 +26,11 @@
             flex-direction: column;
             margin-bottom: vw(66);
 
+            @include mobile {
+                display: block;
+                margin-bottom: vw(64);
+            }
+
             svg {
                 top: 0;
                 left: 0;
@@ -26,10 +39,28 @@
                 width: vw(247);
                 margin: 0 auto;
                 opacity: 0.18;
-                transform: translateX(vw(10));
                 position: absolute;
+                transform: translateX(vw(10));
+
+                @include mobile {
+                    opacity: 1;
+                    margin: 0 0 vw(6);
+                    left: unset;
+                    width: vw(70.6);
+                    height: vw(66);
+                    transform: none;
+                    position: relative;
+                }
             }
         }
+
+        &:nth-of-type(2) {
+            @include mobile {
+                padding: vw(72) vw(20) 0;
+                border-top: 2px solid #7A7A7A;
+            }
+        }
+
 
 
         .card-item {
@@ -38,13 +69,33 @@
             margin-bottom: vw(94);
             grid-template-columns: repeat(2, 1fr);
 
+            @include mobile {
+                display: block;
+                margin-bottom: vw(51);
+            }
+
             &-a {
                 gap: vw(34);
                 display: flex;
                 padding-left: vw(20);
 
+                @include mobile {
+                    gap: vw(10);
+                    padding-left: 0;
+                    margin-bottom: vw(45);
+                    flex-direction: column-reverse;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
                 &:nth-of-type(even) {
                     padding-left: vw(26);
+
+                    @include mobile {
+                        padding-left: 0;
+                    }
                 }
 
                 svg {
@@ -52,6 +103,12 @@
                     height: vw(45);
                     margin-top: vw(4);
                     transform: translateY(vw(5));
+
+                    @include mobile {
+                        transform: 0;
+                        width: vw(35.4);
+                        height: vw(35.4);
+                    }
                 }
 
                 &-a {
@@ -60,8 +117,18 @@
                     font-size: vw(20);
                     line-height: vw(25);
 
+                    @include mobile {
+                        font-size: vw(21);
+                    }
+
                     &-a {
-                        font-weight: 700;
+                        font-weight: var(--font-bold);
+                    }
+
+                    &-b {
+                        @include mobile {
+                            font-size: vw(18);
+                        }
                     }
                 }
             }
@@ -72,6 +139,13 @@
             font-size: vw(46);
             color: #6B5B38;
             margin-bottom: vw(28);
+
+            @include mobile {
+                color: #231E14;
+                font-size: vw(36);
+                margin-bottom: vw(35);
+
+            }
         }
 
         .description {
@@ -81,6 +155,12 @@
             color: #161616;
             text-align: center;
             max-width: vw(662);
+
+            @include mobile {
+                text-align: left;
+                font-size: vw(24);
+                color: #353535;
+            }
         }
 
         .text-top-button {
@@ -88,12 +168,28 @@
             color: #000000;
             text-align: center;
             font-weight: var(--font-semi-bold);
+
+            @include mobile {
+                font-size: vw(21);
+                color: #000000;
+                margin: 0 auto;
+                max-width: vw(247);
+            }
         }
 
         .primary-button {
             display: flex;
             margin-top: vw(27);
             justify-content: center;
+
+            @include mobile {
+                width: 100%;
+
+                a {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
         }
     }
 }

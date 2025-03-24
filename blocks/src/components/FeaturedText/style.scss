@@ -6,6 +6,10 @@
    padding-top: vw(129);
    background-color: var(--color-dark);
 
+   @include mobile {
+      padding-top: vw(53);
+   }
+
    .decor {
       position: absolute;
    }
@@ -24,12 +28,25 @@
       left: vw(958);
    }
 
+
+   .decor-1 {
+      @include mobile {
+         left: vw(21);
+         background-color: #7F6E41;
+      }
+   }
+
    .decor-3 {
       z-index: 2;
       width: vw(37);
       height: vw(77.6);
       left: vw(calc(var(--g-outer-padding) - 37));
       background-color: #937D4D;
+
+      @include mobile {
+         left: 0;
+         display: none;
+      }
    }
 
    .title {
@@ -45,6 +62,17 @@
       padding-left: vw(356);
       border-top: 1.5px solid #7A7A7A;
       border-bottom: 1.5px solid #7A7A7A;
+
+      @include mobile {
+         border: 0;
+         height: auto;
+         padding-left: 0;
+         font-size: vw(32);
+         color: #FFFFFF;
+         max-width: vw(275);
+         padding-left: vw(41);
+         padding-bottom: vw(24);
+      }
    }
 
    .content {
@@ -52,12 +80,30 @@
       padding-left: vw(328);
       grid-template-columns: 1fr vw(959);
 
+      @include mobile {
+         display: flex;
+         padding-left: 0;
+         border-bottom: 2px solid #7F6E41;
+         flex-direction: column-reverse;
+      }
+
       .desc {
+         font-weight: 400;
          color: #EFEFEF;
          font-size: vw(16);
          max-width: vw(483);
          line-height: vw(23);
          padding: vw(32) 0 0 vw(32);
+
+         @include mobile {
+            margin-top: vw(28);
+            padding-top: vw(20);
+            padding-left: vw(48);
+            padding-right: vw(21);
+            padding-bottom: vw(105);
+            border-top: 1.5px solid #7A7A7A;
+         }
+
       }
 
 
@@ -65,6 +111,12 @@
       figure {
          width: 100%;
          height: vw(372);
+
+         @include mobile {
+            border-top: 1.45px solid #7F6E41;
+            border-bottom: 1.45px solid #7F6E41;
+            height: vw(165);
+         }
 
          img {
             width: 100%;
