@@ -24,6 +24,13 @@
         font-size: vw(48);
         font-weight: var(--font-extra);
 
+        @include mobile {
+            color: #414042;
+            padding: 0 vw(20);
+            font-size: vw(48);
+            text-align: center;
+        }
+
     }
 
 

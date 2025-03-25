@@ -4,6 +4,12 @@
     position: relative;
     padding: vw(146) 0;
 
+    @include mobile {
+        padding-top: 0;
+        padding-bottom: vw(57);
+        border-bottom: 2px solid #7F6E41;
+    }
+
     .decor {
         position: absolute;
 
@@ -19,16 +25,29 @@
 
         &.decor-1 {
             left: vw(var(--g-outer-padding));
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &.decor-2 {
             width: 2px;
             left: 50vw;
             background-color: #937D4D;
+
+            @include mobile {
+                left: vw(21);
+                max-height: vw(489);
+            }
         }
 
         &.decor-3 {
             right: vw(var(--g-outer-padding));
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 
@@ -42,6 +61,13 @@
             border-top: 1px solid #7A7A7A;
             border-bottom: 1px solid #7A7A7A;
 
+            @include mobile {
+                display: flex;
+                border-width: 2px;
+                flex-direction: column-reverse;
+            }
+
+
             &::before {
                 left: 0;
                 content: '';
@@ -49,6 +75,10 @@
                 position: absolute;
                 width: vw(var(--g-outer-padding));
                 background-color: #7F6E41;
+
+                @include mobile {
+                    width: vw(21);
+                }
             }
 
             .label {
@@ -77,6 +107,10 @@
                 width: 100%;
                 height: vw(123);
 
+                @include mobile {
+                    height: vw(108);
+                }
+
                 img {
                     width: 100%;
                     height: vw(123);
@@ -86,12 +120,33 @@
         }
 
         .left {
+            color: #727272;
             padding-left: vw(var(--g-outer-padding));
+
+            @include mobile {
+                padding-left: vw(12);
+
+                .label {
+                    font-size: vw(18);
+                    margin-top: vw(37);
+                    line-height: vw(24.16);
+                    font-weight: var(--font-bold);
+                }
+
+                .title {
+                    font-size: vw(39);
+                    margin-bottom: vw(10);
+                }
+            }
 
         }
 
         &.body {
             margin-bottom: 0;
+
+            @include mobile {
+                display: block;
+            }
 
             .left {
                 color: #4C3D1D;
@@ -99,9 +154,22 @@
                 padding-top: vw(45);
                 font-weight: var(--font-semi-bold);
 
+                @include mobile {
+                    font-size: vw(19);
+                    padding-top: vw(26);
+                    padding-right: vw(20);
+                    padding-bottom: vw(77);
+                    border-bottom: 2px solid #7F6E41;
+
+                }
+
                 .description {
                     padding-left: vw(30);
                     max-width: vw(500);
+
+                    @include mobile {
+                        padding-left: vw(35);
+                    }
                 }
             }
 
@@ -109,10 +177,24 @@
                 padding-left: vw(23);
                 padding-top: vw(41);
 
+                @include mobile {
+                    padding-top: vw(51);
+                    padding-left: vw(16);
+                    padding-right: vw(14);
+                }
+
                 &-a {
                     gap: vw(26);
                     display: flex;
                     margin-bottom: vw(25);
+
+                    @include mobile {
+                        margin-bottom: vw(47);
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
 
                     .arrow {
                         display: flex;
@@ -138,6 +220,19 @@
 
                         &-a {
                             font-weight: var(--font-bold);
+
+                            @include mobile {
+                                line-height: vw(21);
+                                font-size: vw(19);
+                                letter-spacing: -.02em;
+                            }
+                        }
+
+                        &-b {
+                            @include mobile {
+                                line-height: vw(21);
+                                font-size: vw(16);
+                            }
                         }
                     }
 

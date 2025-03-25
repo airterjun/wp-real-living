@@ -603,6 +603,14 @@
   font-size: calc(48 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
 }
+@media only screen and (max-width: 879px) {
+  .full-width-banner .title {
+    color: #414042;
+    padding: 0 calc(20 / var(--base-size) * 100vw);
+    font-size: calc(48 / var(--base-size) * 100vw);
+    text-align: center;
+  }
+}
 .full-width-banner figure {
   width: 100vw;
   height: calc(463 / var(--base-size) * 100vw);
@@ -639,6 +647,13 @@
   position: relative;
   padding: calc(146 / var(--base-size) * 100vw) 0;
 }
+@media only screen and (max-width: 879px) {
+  .two-column-text {
+    padding-top: 0;
+    padding-bottom: calc(57 / var(--base-size) * 100vw);
+    border-bottom: 2px solid #7F6E41;
+  }
+}
 .two-column-text .decor {
   position: absolute;
 }
@@ -652,13 +667,29 @@
 .two-column-text .decor.decor-1 {
   left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .two-column-text .decor.decor-1 {
+    display: none;
+  }
+}
 .two-column-text .decor.decor-2 {
   width: 2px;
   left: 50vw;
   background-color: #937D4D;
 }
+@media only screen and (max-width: 879px) {
+  .two-column-text .decor.decor-2 {
+    left: calc(21 / var(--base-size) * 100vw);
+    max-height: calc(489 / var(--base-size) * 100vw);
+  }
+}
 .two-column-text .decor.decor-3 {
   right: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .decor.decor-3 {
+    display: none;
+  }
 }
 .two-column-text .content {
   display: grid;
@@ -669,6 +700,13 @@
   border-top: 1px solid #7A7A7A;
   border-bottom: 1px solid #7A7A7A;
 }
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.header {
+    display: flex;
+    border-width: 2px;
+    flex-direction: column-reverse;
+  }
+}
 .two-column-text .content.header::before {
   left: 0;
   content: "";
@@ -676,6 +714,11 @@
   position: absolute;
   width: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
   background-color: #7F6E41;
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.header::before {
+    width: calc(21 / var(--base-size) * 100vw);
+  }
 }
 .two-column-text .content.header .label {
   color: #727272;
@@ -700,6 +743,11 @@
   width: 100%;
   height: calc(123 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.header figure {
+    height: calc(108 / var(--base-size) * 100vw);
+  }
+}
 .two-column-text .content.header figure img {
   width: 100%;
   height: calc(123 / var(--base-size) * 100vw);
@@ -707,10 +755,31 @@
      object-fit: cover;
 }
 .two-column-text .content .left {
+  color: #727272;
   padding-left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .content .left {
+    padding-left: calc(12 / var(--base-size) * 100vw);
+  }
+  .two-column-text .content .left .label {
+    font-size: calc(18 / var(--base-size) * 100vw);
+    margin-top: calc(37 / var(--base-size) * 100vw);
+    line-height: calc(24.16 / var(--base-size) * 100vw);
+    font-weight: var(--font-bold);
+  }
+  .two-column-text .content .left .title {
+    font-size: calc(39 / var(--base-size) * 100vw);
+    margin-bottom: calc(10 / var(--base-size) * 100vw);
+  }
 }
 .two-column-text .content.body {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.body {
+    display: block;
+  }
 }
 .two-column-text .content.body .left {
   color: #4C3D1D;
@@ -718,18 +787,47 @@
   padding-top: calc(45 / var(--base-size) * 100vw);
   font-weight: var(--font-semi-bold);
 }
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.body .left {
+    font-size: calc(19 / var(--base-size) * 100vw);
+    padding-top: calc(26 / var(--base-size) * 100vw);
+    padding-right: calc(20 / var(--base-size) * 100vw);
+    padding-bottom: calc(77 / var(--base-size) * 100vw);
+    border-bottom: 2px solid #7F6E41;
+  }
+}
 .two-column-text .content.body .left .description {
   padding-left: calc(30 / var(--base-size) * 100vw);
   max-width: calc(500 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.body .left .description {
+    padding-left: calc(35 / var(--base-size) * 100vw);
+  }
 }
 .two-column-text .content.body .item {
   padding-left: calc(23 / var(--base-size) * 100vw);
   padding-top: calc(41 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.body .item {
+    padding-top: calc(51 / var(--base-size) * 100vw);
+    padding-left: calc(16 / var(--base-size) * 100vw);
+    padding-right: calc(14 / var(--base-size) * 100vw);
+  }
+}
 .two-column-text .content.body .item-a {
   gap: calc(26 / var(--base-size) * 100vw);
   display: flex;
   margin-bottom: calc(25 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.body .item-a {
+    margin-bottom: calc(47 / var(--base-size) * 100vw);
+  }
+  .two-column-text .content.body .item-a:last-child {
+    margin-bottom: 0;
+  }
 }
 .two-column-text .content.body .item-a .arrow {
   display: flex;
@@ -753,6 +851,19 @@
 }
 .two-column-text .content.body .item-a-a-a {
   font-weight: var(--font-bold);
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.body .item-a-a-a {
+    line-height: calc(21 / var(--base-size) * 100vw);
+    font-size: calc(19 / var(--base-size) * 100vw);
+    letter-spacing: -0.02em;
+  }
+}
+@media only screen and (max-width: 879px) {
+  .two-column-text .content.body .item-a-a-b {
+    line-height: calc(21 / var(--base-size) * 100vw);
+    font-size: calc(16 / var(--base-size) * 100vw);
+  }
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerContactAlt/style.scss ***!
