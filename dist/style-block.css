@@ -1617,6 +1617,34 @@
     width: 100%;
   }
 }
+.contact-form .form-wrapper .button-submit .button-inner {
+  position: relative;
+}
+.contact-form .form-wrapper .button-submit .button-inner::before {
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: calc(216 / var(--base-size) * 100vw);
+  height: calc(60.5 / var(--base-size) * 100vw);
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: top;
+  background-color: #937D4D;
+  transition: transform 0.45s var(--cubic-bezier);
+}
+@media only screen and (min-width: 879px) {
+  .contact-form .form-wrapper .button-submit:hover .button-inner::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+.contact-form .form-wrapper .button-submit .wpcf7-spinner {
+  top: 20%;
+  right: calc(-100 / var(--base-size) * 100vw);
+  visibility: visible;
+  position: absolute;
+}
 .contact-form .form-wrapper .button-submit svg {
   top: calc(19 / var(--base-size) * 100vw);
   right: calc(31 / var(--base-size) * 100vw);
@@ -1626,13 +1654,23 @@
   flex: 0 0 calc(15.8 / var(--base-size) * 100vw);
   transform: translateY(calc(3 / var(--base-size) * 100vw));
 }
+@media only screen and (max-width: 879px) {
+  .contact-form .form-wrapper .button-submit svg {
+    right: calc(88 / var(--base-size) * 100vw);
+  }
+  .contact-form .form-wrapper .button-submit svg path {
+    fill: #BA9D63;
+  }
+}
 .contact-form .form-wrapper .button-submit input {
   width: calc(216 / var(--base-size) * 100vw);
   height: calc(60.5 / var(--base-size) * 100vw);
   color: #EFEFEF;
   text-align: left;
+  cursor: pointer;
   font-size: calc(21 / var(--base-size) * 100vw);
   padding-left: calc(33 / var(--base-size) * 100vw);
+  position: relative;
   padding-right: calc(13 / var(--base-size) * 100vw);
   border: 1px solid #937D4D;
   letter-spacing: calc(-0.29 / var(--base-size) * 100vw);
@@ -1641,6 +1679,7 @@
   .contact-form .form-wrapper .button-submit input {
     width: 100%;
     color: #FFFFFF;
+    padding-left: calc(90 / var(--base-size) * 100vw);
     background-color: #937D4D;
   }
 }

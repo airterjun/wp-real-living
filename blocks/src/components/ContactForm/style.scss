@@ -175,6 +175,40 @@
                 width: 100%;
             }
 
+            .button-inner {
+                position: relative;
+
+                &::before {
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    display: block;
+                    width: vw(216);
+                    height: vw(60.5);
+                    position: absolute;
+                    transform: scaleY(0);
+                    transform-origin: top;
+                    background-color: #937D4D;
+                    transition: transform .45s var(--cubic-bezier);
+                }
+            }
+
+
+            @include hover {
+                .button-inner {
+                    &::before {
+                        transform: scaleY(1);
+                        transform-origin: bottom;
+                    }
+                }
+            }
+
+            .wpcf7-spinner {
+                top: 20%;
+                right: vw(-100);
+                visibility: visible;
+                position: absolute;
+            }
 
 
             svg {
@@ -185,6 +219,14 @@
                 height: vw(15.8);
                 flex: 0 0 vw(15.8);
                 transform: translateY(vw(3));
+
+                @include mobile {
+                    right: vw(88);
+
+                    path {
+                        fill: #BA9D63
+                    }
+                }
             }
 
             input {
@@ -192,8 +234,10 @@
                 height: vw(60.5);
                 color: #EFEFEF;
                 text-align: left;
+                cursor: pointer;
                 font-size: vw(21);
                 padding-left: vw(33);
+                position: relative;
                 padding-right: vw(13);
                 border: 1px solid #937D4D;
                 letter-spacing: vw(-0.29);
@@ -201,8 +245,11 @@
                 @include mobile {
                     width: 100%;
                     color: #FFFFFF;
+                    padding-left: vw(90);
                     background-color: #937D4D;
                 }
+
+
             }
         }
     }
