@@ -613,7 +613,7 @@
     padding: 0 calc(20 / var(--base-size) * 100vw);
     font-size: calc(48 / var(--base-size) * 100vw);
     text-align: center;
-    max-width: calc(231 / var(--base-size) * 100vw);
+    max-width: calc(250 / var(--base-size) * 100vw);
   }
 }
 .full-width-banner figure {
