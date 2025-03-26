@@ -577,7 +577,9 @@
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content-a .primary-button a {
+    width: calc(228 / var(--base-size) * 100vw);
     height: calc(49 / var(--base-size) * 100vw);
+    justify-content: center;
   }
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
@@ -2118,17 +2120,17 @@
   height: 100%;
   flex: 0 0 calc(576 / var(--base-size) * 100vw);
 }
+.teams .header figure img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media only screen and (max-width: 879px) {
   .teams .header figure {
     height: calc(165 / var(--base-size) * 100vw);
     border-top: 1.4px solid #7F6E41;
     border-bottom: 1.4px solid #7F6E41;
   }
-}
-.teams .header figure img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .teams .header-content {
   gap: calc(30 / var(--base-size) * 100vw);
@@ -2364,6 +2366,9 @@
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-1 figure img {
     height: 100%;
+    width: calc(970 / var(--base-size) * 100vw);
+    position: relative;
+    left: calc(-450 / var(--base-size) * 100vw);
   }
 }
 .teams .teams-cards-item .section-2 {

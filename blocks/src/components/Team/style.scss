@@ -89,15 +89,16 @@ $padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
             height: 100%;
             flex: 0 0 vw(576);
 
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
             @include mobile {
                 height: vw(165);
                 border-top: 1.4px solid #7F6E41;
                 border-bottom: 1.4px solid #7F6E41;
-            }
 
-            img {
-                width: 100%;
-                object-fit: cover;
             }
         }
 
@@ -339,6 +340,10 @@ $padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
 
                         @include mobile {
                             height: 100%;
+                            width: vw(970);
+                            position: relative;
+                            left: vw(-450);
+
                         }
                     }
                 }

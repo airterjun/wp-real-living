@@ -106,7 +106,9 @@
             .primary-button {
                 @include mobile {
                     a {
+                        width: vw(228);
                         height: vw(49);
+                        justify-content: center;
                     }
                 }
             }
