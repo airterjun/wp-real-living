@@ -1642,7 +1642,6 @@
 .contact-form .form-wrapper .button-submit .wpcf7-spinner {
   top: 20%;
   right: calc(-100 / var(--base-size) * 100vw);
-  visibility: visible;
   position: absolute;
 }
 .contact-form .form-wrapper .button-submit svg {
