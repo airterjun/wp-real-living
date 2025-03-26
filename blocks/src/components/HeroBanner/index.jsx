@@ -1,5 +1,6 @@
 import Controller from "../helper/Controller";
 import { getMobileDescription } from "../helper/Libs";
+import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
@@ -18,7 +19,7 @@ export const attributes = {
     link: LinkSchmea
 }
 const HeroBanner = (props) => {
-    const { disabledButton } = props
+    const { disabledButton, section } = props
 
 
     const button = () => {
@@ -29,19 +30,30 @@ const HeroBanner = (props) => {
         <>
             <Controller {...props}>
                 <div className="form-wrapper">
-                    <div className="gallery-list-editor">
-                        <div className="item">
-                            <Media set="background" {...props} />
+
+                    <details>
+                        <summary className="main-title">{section ? `Section ${section}` : 'Hero Banner'}</summary>
+                        <div className="input-container">
+                            <div className="label">Background</div>
+                            <div className="item">
+                                <Media set="background" {...props} />
+                            </div>
                         </div>
-                    </div>
-                    <div className="input-container">
-                        <div className="label">Mobile Title</div>
-                        <Text set="text_1_mobile" {...props} tag="div" className="input" />
-                    </div>
-                    <div className="input-container">
-                        <div className="label">Mobile Desc</div>
-                        <Text set="text_2_mobile" {...props} tag="div" className="input" />
-                    </div>
+                        <div className="input-container">
+                            <div className="label">Mobile Title</div>
+                            <Text set="text_1_mobile" {...props} tag="div" className="input" />
+                        </div>
+                        <div className="input-container">
+                            <div className="label">Mobile Desc</div>
+                            <Text set="text_2_mobile" {...props} tag="div" className="input" />
+                        </div>
+
+                        <div className="input-container">
+                            <div className="label">Button</div>
+                            <LinkEditor {...props} set="link" />
+                        </div>
+                    </details>
+
                 </div>
             </Controller>
             <section className="hero-banner">

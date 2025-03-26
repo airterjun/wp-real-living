@@ -104,8 +104,13 @@ export default function (props) {
     return (
         <>
             <Controller {...props}>
-                <div className="gallery-list-editor">
-                    <ButtonSlider slider="card" {...props} />
+                <div className="form-wrapper">
+                    <details>
+                        <summary className="main-title">
+                            {props.section ? `Section ${props.section}` : "Teams"}
+                        </summary>
+                        <ButtonSlider slider="card" label="text_1" {...props} />
+                    </details>
                 </div>
             </Controller>
             <section className="teams">

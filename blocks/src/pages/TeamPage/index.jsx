@@ -16,8 +16,8 @@ export const pageAttr = {
 
 export default function (props) {
     return <>
-        <HeroBanner {...props} model="section_1" />
-        <Team {...props} model="section_2" />
-        <BannerContact {...props} model="section_3" />
+        <HeroBanner {...props} model="section_1" section="1" />
+        <Team {...props} model="section_2" section="2" />
+        <BannerContact {...props} model="section_3" section="3" />
     </>
 }

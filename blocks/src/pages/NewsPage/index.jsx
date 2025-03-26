@@ -21,12 +21,12 @@ export const pageAttr = {
 
 export default function (props) {
     return <>
-        <HeroBanner {...props} model="section_1" />
-        <TwoColumnCard {...props} model="section_2" />
-        <RegularBanner {...props} model="section_3" />
-        <TwoGridColumnCard {...props} model="section_4" />
-        <BannerContactAlt {...props} model="section_5" />
-        <BannerContact {...props} model="contact" />
+        <HeroBanner {...props} model="section_1" section="1" />
+        <TwoColumnCard {...props} model="section_2" section="2" />
+        <RegularBanner {...props} model="section_3" section="3" />
+        <TwoGridColumnCard {...props} model="section_4" section="4" />
+        <BannerContactAlt {...props} model="section_5" section="5" />
+        <BannerContact {...props} model="contact" section="6" />
     </>
 }
 

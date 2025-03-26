@@ -1,5 +1,6 @@
 import Controller from "../helper/Controller";
 import { getModelId, getNestedValue } from "../helper/Libs";
+import LinkEditor from "../helper/LinkEditor";
 import Text from "../helper/Text";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { ArraySchema } from "../Schema/array";
@@ -52,10 +53,10 @@ export default function (props) {
     const mobileEditor = () => listItems.map((_, index) => {
         const title = `listMobile.${index}.title`
         const desc = `listMobile.${index}.description`
-        return <div className="input">
-            <Text {...props} set={title} className="card-item-a-a-a" tag="div" />
-            <Text {...props} set={desc} className="card-item-a-a-b" tag="div" />
-        </div>
+        return <>
+            <Text {...props} set={title} className="card-item-a-a-a input" tag="div" />
+            <Text {...props} set={desc} className="card-item-a-a-b input" tag="div" />
+        </>
     })
 
 
@@ -75,9 +76,19 @@ export default function (props) {
         <section className="featured-title-2">
             <Controller {...props}>
                 <div className="form-wrapper">
-                    <div className="input-container">
-                        {mobileEditor()}
-                    </div>
+                    <details>
+                        <summary className="main-title">
+                            {props.section ? `Section ${props.section}` : 'Featured Title 2'}
+                        </summary>
+                        <div className="input-container">
+                            <div className="label">Mobile List</div>
+                            {mobileEditor()}
+                        </div>
+                        <div className="input-container">
+                            <div className="label">Button</div>
+                            <LinkEditor {...props} set="link" />
+                        </div>
+                    </details>
                 </div>
             </Controller>
             <div className="main-container">

@@ -54,13 +54,19 @@ const TwoColumnCard = (props) => {
    return (
       <section className="two-column-card">
          <Controller {...props}>
+
             <div className='form-wrapper'>
-               <div className='input-wrapper'>
-                  <div className='label'>
-                     News
+               <details>
+                  <summary className='main-title'>
+                     {props.section ? `Section ${props.section}` : 'Two Column Card'}
+                  </summary>
+                  <div className='input-wrapper'>
+                     <div className='label'>
+                        News
+                     </div>
+                     <ButtonSlider {...props} slider="cards" nested={true} />
                   </div>
-                  <ButtonSlider {...props} slider="cards" nested={true} />
-               </div>
+               </details>
             </div>
          </Controller>
          <Text tag="h2" className="h2" set="title" {...props} />

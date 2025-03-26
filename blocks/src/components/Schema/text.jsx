@@ -4,4 +4,11 @@ export const TextSchema = {
 }
 
 
+
+export const TextSchemaEmpty = {
+    type: 'string',
+    default: ''
+}
+
+
 export const TextSchemaPlaceholder = 'Lorem ipsum dolor sit amet'

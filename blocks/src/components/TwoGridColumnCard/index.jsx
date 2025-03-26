@@ -54,8 +54,15 @@ export default function (props) {
     return (
         <>
             <Controller {...props}>
-                <div className="inner card-list-editor-color">
-                    <ButtonSlider slider="list" {...props} />
+                <div className="form-wrapper">
+                    <details>
+                        <summary className="main-title">
+                            {props.section ? `Section ${props.section}` : 'Grid Column Card'}
+                        </summary>
+                        <div className="input-container">
+                            <ButtonSlider slider="list" {...props} />
+                        </div>
+                    </details>
                 </div>
             </Controller>
 

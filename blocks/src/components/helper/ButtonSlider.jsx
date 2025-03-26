@@ -1,4 +1,3 @@
-import "./style/ButtonSlider.scss"
 import React from "react";
 import { getBaseModelPath, getNestedValue, setNestedValue } from "./Libs";
 
@@ -6,7 +5,7 @@ import { getBaseModelPath, getNestedValue, setNestedValue } from "./Libs";
 let activeIndex = -1
 
 export default function ButtonSlider(props) {
-    const { edit, attributes, slider, button, set, nested, model } = props
+    const { edit, attributes, slider, button, set, nested, model, label } = props
 
 
     const listKey = model ? `${model}.${slider}` : slider
@@ -17,14 +16,8 @@ export default function ButtonSlider(props) {
         const buttonSlider = () => {
             if (slides) {
                 return slides.map((item, index) => {
-                    const active = attributes.selectedSlider === index ? "button active" : "button"
                     return (
-                        <div className={active} onClick={() => {
-                            activeIndex = index
-                            props.setAttributes({
-                                selectedSlider: index
-                            })
-                        }}>{index + 1}</div>
+                        <div className="button-item"><div className="label">{label ? item[label] : `Item ${index + 1}`}</div> <div className="button-remove" onClick={() => { deleteItem(index) }}>x</div></div>
                     )
                 })
             } else {
@@ -69,12 +62,10 @@ export default function ButtonSlider(props) {
             }
         }
 
-        const deleteItem = () => {
-
-            const selectedIndex = attributes.selectedSlider
+        const deleteItem = (index) => {
             const clonedAttr = structuredClone(attributes)
             const lists = getNestedValue(clonedAttr, listKey)
-            lists.splice(selectedIndex, 1)
+            lists.splice(index, 1)
 
             const rootPath = getBaseModelPath(listKey)
 
@@ -96,16 +87,6 @@ export default function ButtonSlider(props) {
                                 +
                             </div>
                         </div>
-
-                        {!button ?
-                            <div className={`button button__action delete`} onClick={() => {
-                                deleteItem()
-                            }}>
-                                <div className="icon">
-                                    -
-                                </div>
-                            </div>
-                            : null}
                     </div>
                 </div>
             </>

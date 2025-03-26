@@ -15,10 +15,6 @@ const FeaturedText = (props) => {
 
   return (
     <>
-      <Controller {...props}>
-        <div className="inner card-list-editor-color">
-        </div>
-      </Controller>
       <section className="featured-text">
         <div className='decor-1 decor'></div>
         <div className='decor-2 decor'></div>

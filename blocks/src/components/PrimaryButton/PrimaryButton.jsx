@@ -1,8 +1,6 @@
-import CheckBox from "../helper/Checkbox"
-import Controller from "../helper/Controller"
 import { getNestedValue } from "../helper/Libs"
-import Text from "../helper/Text"
 import IconArrow from "../Shared/IconArrow"
+import "./style.scss"
 
 const PrimaryButton = (props) => {
     const { attributes, model, fill, set } = props

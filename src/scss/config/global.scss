@@ -94,10 +94,27 @@ button {
         display: flex;
         color: #191919;
         height: vw(50);
+        overflow: hidden;
         padding: 0 vw(42);
         font-size: vw(19);
+        position: relative;
         align-items: center;
         border: 1.5px solid #937D4D;
+        transition: color .45s var(--cubic-bezier);
+
+        &::before {
+            top: 0;
+            left: 0;
+            z-index: -1;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform: scaleY(0);
+            transform-origin: top;
+            background-color: #937D4D;
+            transition: transform .45s var(--cubic-bezier);
+        }
 
         @include mobile {
             height: vw(60);
@@ -107,6 +124,7 @@ button {
             width: vw(14);
             height: vw(14);
             flex: 0 0 vw(14);
+            transition: transform .45s var(--cubic-bezier);
 
             @include mobile {
                 width: vw(15.8);
@@ -116,6 +134,24 @@ button {
 
             path {
                 fill: #937D4D;
+                transition: fill .45s var(--cubic-bezier);
+            }
+        }
+
+        @include hover {
+            color: #FFF;
+
+            &::before {
+                transform-origin: bottom;
+                transform: scaleY(1.2);
+            }
+
+            svg {
+                transform: translateX(vw(10));
+
+                path {
+                    fill: #FFF !important;
+                }
             }
         }
     }
