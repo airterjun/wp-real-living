@@ -18638,6 +18638,7 @@ const attributes = {
     className: "main-title"
   }, props.section ? `Section ${props.section}` : "Teams"), /*#__PURE__*/React.createElement(_helper_ButtonSlider__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     slider: "card",
+    nested: true,
     label: "text_1"
   }, props))))), /*#__PURE__*/React.createElement("section", {
     className: "teams"
