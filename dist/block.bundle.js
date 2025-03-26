@@ -18159,6 +18159,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const attributes = {
   background: _Schema_image__WEBPACK_IMPORTED_MODULE_8__.ImageSchema,
   text_1: _Schema_text__WEBPACK_IMPORTED_MODULE_10__.TextSchema,
@@ -18229,11 +18230,17 @@ const HeroBanner = props => {
   }, props, {
     tag: "div",
     className: "content-a-b b1 item desktop"
-  })), /*#__PURE__*/React.createElement("h2", {
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "text_1_mobile"
+  }, props, {
+    tag: "h2",
     className: "content-a_a h1 item mobile"
-  }, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getMobileDescription)(props, 'text_1', 'text_1_mobile'), " "), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "text_2_mobile"
+  }, props, {
+    tag: "div",
     className: "content-a-b b1 item mobile"
-  }, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getMobileDescription)(props, 'text_2', 'text_2_mobile')), button())), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  })), button())), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "background"
   }, props, {
     className: "background parallax"
@@ -18956,7 +18963,9 @@ const attributes = {
   }, props.section ? `Section ${props.section}` : 'Grid Column Card'), /*#__PURE__*/React.createElement("div", {
     className: "input-container"
   }, /*#__PURE__*/React.createElement(_helper_ButtonSlider__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    slider: "list"
+    slider: "list",
+    label: "title",
+    nested: true
   }, props)))))), /*#__PURE__*/React.createElement("section", {
     className: "two-grid-column-card"
   }, /*#__PURE__*/React.createElement("div", {

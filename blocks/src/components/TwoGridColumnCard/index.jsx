@@ -60,7 +60,7 @@ export default function (props) {
                             {props.section ? `Section ${props.section}` : 'Grid Column Card'}
                         </summary>
                         <div className="input-container">
-                            <ButtonSlider slider="list" {...props} />
+                            <ButtonSlider slider="list" label="title" nested={true} {...props} />
                         </div>
                     </details>
                 </div>

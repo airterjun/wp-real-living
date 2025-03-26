@@ -1,3 +1,4 @@
+import { RawHTML } from "@wordpress/element";
 import Controller from "../helper/Controller";
 import { getMobileDescription } from "../helper/Libs";
 import LinkEditor from "../helper/LinkEditor";
@@ -62,8 +63,8 @@ const HeroBanner = (props) => {
                         <Text set="text_1" {...props} tag="h2" className="content-a_a h1 item desktop" />
                         <Text set="text_2" {...props} tag="div" className="content-a-b b1 item desktop" />
 
-                        <h2 className="content-a_a h1 item mobile">{getMobileDescription(props, 'text_1', 'text_1_mobile')} </h2>
-                        <div className="content-a-b b1 item mobile">{getMobileDescription(props, 'text_2', 'text_2_mobile')}</div>
+                        <Text set="text_1_mobile" {...props} tag="h2" className="content-a_a h1 item mobile" />
+                        <Text set="text_2_mobile" {...props} tag="div" className="content-a-b b1 item mobile" />
                         {button()}
                     </div>
                 </div>
