@@ -116,13 +116,26 @@
   }
 }
 .banner-contact .content-a-b .primary-button a {
+  padding: 0;
+  gap: calc(13 / var(--base-size) * 100vw);
   color: #EFEFEF;
+  height: calc(60 / var(--base-size) * 100vw);
+  width: calc(307 / var(--base-size) * 100vw);
+  font-size: calc(21 / var(--base-size) * 100vw);
+  padding-bottom: calc(3 / var(--base-size) * 100vw);
+  justify-content: center;
+  letter-spacing: calc(-0.29 / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
   .banner-contact .content-a-b .primary-button a {
     width: 100%;
     justify-content: center;
   }
+}
+.banner-contact .content-a-b .primary-button a svg {
+  width: calc(16 / var(--base-size) * 100vw);
+  flex: 0 0 calc(16 / var(--base-size) * 100vw);
+  height: calc(16 / var(--base-size) * 100vw);
 }
 .banner-contact .content-a-b .primary-button a svg path {
   fill: #BA9D63;
