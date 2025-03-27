@@ -42,7 +42,7 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
                 <div class="time" id="time-ticker">00:00 GMT</div>
             </div>
 
-            <a href="<?php echo get_option("siteurl"); ?>" class="logo">
+            <a href="<?php echo get_option("siteurl"); ?>" class="logo" aria-label="We Are Real">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 52">
                     <g fill="#937E4E" clip-path="url(#a)">
                         <path
