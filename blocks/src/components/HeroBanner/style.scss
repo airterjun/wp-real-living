@@ -31,7 +31,7 @@
         position: relative;
         align-items: center;
         padding-left: vw(358);
-        padding-right: vw(94);
+        padding-right: vw(85);
 
         @include mobile {
             padding: vw(43) vw(var(--g-padding-container)) vw(51) !important;

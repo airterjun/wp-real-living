@@ -519,7 +519,7 @@
   position: relative;
   align-items: center;
   padding-left: calc(358 / var(--base-size) * 100vw);
-  padding-right: calc(94 / var(--base-size) * 100vw);
+  padding-right: calc(85 / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content {
