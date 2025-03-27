@@ -19370,7 +19370,9 @@ function Media(props) {
         src: getValue,
         width: width,
         height: height,
-        alt: "We Are Real"
+        alt: "We Are Real",
+        loading: "lazy",
+        decoding: "async"
       });
     }
   };

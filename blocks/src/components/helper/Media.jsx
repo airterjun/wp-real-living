@@ -25,7 +25,7 @@ export default function Media(props) {
             )
         } else {
 
-            return <img src={getValue} width={width} height={height} alt="We Are Real" />
+            return <img src={getValue} width={width} height={height} alt="We Are Real" loading="lazy" decoding="async" />
         }
     }
 
