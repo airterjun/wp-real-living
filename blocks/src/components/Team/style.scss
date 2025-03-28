@@ -33,9 +33,9 @@ $padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
         }
 
         &.decor-2 {
-            top: vw(706);
+            top: vw(708);
             left: vw(958);
-            height: vw(183);
+            height: vw(185);
 
             @include mobile {
                 top: 0;

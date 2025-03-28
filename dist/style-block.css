@@ -2114,9 +2114,9 @@
   }
 }
 .teams .decor.decor-2 {
-  top: calc(706 / var(--base-size) * 100vw);
+  top: calc(708 / var(--base-size) * 100vw);
   left: calc(958 / var(--base-size) * 100vw);
-  height: calc(183 / var(--base-size) * 100vw);
+  height: calc(185 / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
   .teams .decor.decor-2 {
