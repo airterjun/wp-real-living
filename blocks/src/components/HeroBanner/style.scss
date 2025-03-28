@@ -54,8 +54,9 @@
 
             @include mobile {
                 font-size: vw(40);
-                line-height: vw(52);
-
+                line-height: vw(49);
+                letter-spacing: 0.02em;
+                margin-bottom: vw(16);
             }
 
         }
