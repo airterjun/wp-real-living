@@ -182,7 +182,9 @@ $padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
             position: absolute;
 
             img {
-                width: 100%;
+                // left: vw(20);
+                width: calc(100% + vw(40));
+                position: relative;
                 object-fit: cover;
             }
         }
@@ -343,7 +345,7 @@ $padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
                             height: 100%;
                             width: vw(970);
                             position: relative;
-                            left: vw(-450);
+                            left: vw(-130);
 
                         }
                     }

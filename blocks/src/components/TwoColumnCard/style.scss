@@ -35,9 +35,8 @@
     h2 {
         color: #231E14;
         font-size: vw(40);
-        padding-bottom: vw(18);
         border-bottom: 2px solid #7F6E41;
-        padding: 0 vw(calc(var(--g-outer-padding) + 28));
+        padding: 0 vw(calc(var(--g-outer-padding) + 28)) vw(18);
 
         @include mobile {
             font-size: vw(36);
