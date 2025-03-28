@@ -87,7 +87,6 @@ $padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
 
         figure {
             height: 100%;
-            opacity: 0.5;
             flex: 0 0 vw(576);
 
             img {
@@ -179,6 +178,7 @@ $padding_content : vw(calc(var(--g-outer-padding) + $padding_inner));
             left: 0;
             width: 100%;
             height: 100%;
+            opacity: 0.5;
             position: absolute;
 
             img {
