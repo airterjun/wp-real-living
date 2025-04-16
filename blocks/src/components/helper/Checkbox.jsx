@@ -1,18 +1,16 @@
-import { getBaseModelPath } from "./Libs";
-import _ from "lodash"
+import { getBaseModelPath, getNestedValue, setNestedValue } from "./Libs";
 const { ToggleControl } = wp.components;
 
 export default function CheckBox(props) {
     const { attributes, label, setAttributes, set } = props
 
-    const getValue = _.get(attributes, set)
+    const getValue = getNestedValue(attributes, set)
 
     const updateContentVal = newVal => {
-        console.log('asdasd', newVal)
         const path = getBaseModelPath(set)
-        const copy = _.cloneDeep(attributes)
+        const copy = structuredClone(attributes)
 
-        _.set(copy, set, newVal)
+        setNestedValue(copy, set, newVal)
 
         setAttributes({
             [path]: copy[path]
