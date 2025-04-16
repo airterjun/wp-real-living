@@ -52,7 +52,8 @@ module.exports = {
         ...defaultConfig.entry,
         script: './src/index.js',
         block: './blocks/src/index.js',
-        app: './src/scss/main.scss'
+        app: './src/scss/main.scss',
+        noConflict: './src/js/fix-conflict.js'
     },
 
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
