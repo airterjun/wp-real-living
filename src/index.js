@@ -19,7 +19,7 @@ const mainContainer = document.querySelector('.main-container')
 let lenis = null
 
 lenis = new Lenis({
-	duration: 3
+	duration: 0.9
 })
 
 lenis.on('scroll', ScrollTrigger.update)

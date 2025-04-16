@@ -118,6 +118,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/components/ImageLeftSideText/style.scss":
+/*!************************************************************!*\
+  !*** ./blocks/src/components/ImageLeftSideText/style.scss ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./blocks/src/components/PrimaryButton/style.scss":
 /*!********************************************************!*\
   !*** ./blocks/src/components/PrimaryButton/style.scss ***!
@@ -18250,6 +18263,134 @@ const HeroBanner = props => {
 
 /***/ }),
 
+/***/ "./blocks/src/components/ImageLeftSideText/index.jsx":
+/*!***********************************************************!*\
+  !*** ./blocks/src/components/ImageLeftSideText/index.jsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   attributes: () => (/* binding */ attributes),
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/ImageLeftSideText/style.scss");
+
+
+
+
+
+
+
+
+const attributes = {
+  label: _Schema_text__WEBPACK_IMPORTED_MODULE_6__.TextSchema,
+  background: _Schema_image__WEBPACK_IMPORTED_MODULE_5__.ImageSchema,
+  banner: _Schema_image__WEBPACK_IMPORTED_MODULE_5__.ImageSchema,
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_6__.TextSchema,
+  description: _Schema_text__WEBPACK_IMPORTED_MODULE_6__.TextSchema,
+  hightlight: _Schema_text__WEBPACK_IMPORTED_MODULE_6__.TextSchema,
+  textBottom: _Schema_text__WEBPACK_IMPORTED_MODULE_6__.TextSchema
+};
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  const {
+    section
+  } = props;
+  return /*#__PURE__*/React.createElement("section", {
+    className: "image-left-side-text"
+  }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_2__["default"], props, /*#__PURE__*/React.createElement("div", {
+    className: "form-wrapper"
+  }, /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", {
+    className: "main-title"
+  }, section ? `Section ${section}` : 'Hero Banner'), /*#__PURE__*/React.createElement("div", {
+    className: "input-container"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Background"), /*#__PURE__*/React.createElement("div", {
+    className: "item"
+  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "background"
+  }, props))), /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Label"), /*#__PURE__*/React.createElement("div", {
+    className: "item"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    tag: "div",
+    set: "label",
+    className: "input"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Title"), /*#__PURE__*/React.createElement("div", {
+    className: "item"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    tag: "div",
+    set: "title",
+    className: "input"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Description"), /*#__PURE__*/React.createElement("div", {
+    className: "item"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    tag: "div",
+    set: "description",
+    className: "input"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Hightlight"), /*#__PURE__*/React.createElement("div", {
+    className: "item"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    tag: "div",
+    set: "hightlight",
+    className: "input"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Bottom Text"), /*#__PURE__*/React.createElement("div", {
+    className: "item"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    tag: "div",
+    set: "textBottom",
+    className: "input"
+  }))))))), /*#__PURE__*/React.createElement("div", {
+    className: "banner"
+  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "banner",
+    className: "parallax"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "right-text"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "label",
+    className: "label"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "title"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    tag: "h2",
+    set: "title"
+  }))), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "description",
+    className: "description"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "hightlight",
+    className: "hightlight"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "textBottom",
+    className: "bottom-text"
+  })), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "background",
+    className: "background"
+  }))));
+}
+
+/***/ }),
+
 /***/ "./blocks/src/components/PrimaryButton/PrimaryButton.jsx":
 /*!***************************************************************!*\
   !*** ./blocks/src/components/PrimaryButton/PrimaryButton.jsx ***!
@@ -19745,10 +19886,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BannerContact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/BannerContact */ "./blocks/src/components/BannerContact/index.jsx");
 /* harmony import */ var _components_BannerContactAlt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/BannerContactAlt */ "./blocks/src/components/BannerContactAlt/index.jsx");
 /* harmony import */ var _components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/HeroBanner */ "./blocks/src/components/HeroBanner/index.jsx");
-/* harmony import */ var _components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/RegularBanner */ "./blocks/src/components/RegularBanner/index.jsx");
-/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
-/* harmony import */ var _components_TwoColumnCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/TwoColumnCard */ "./blocks/src/components/TwoColumnCard/index.jsx");
-/* harmony import */ var _components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/TwoGridColumnCard */ "./blocks/src/components/TwoGridColumnCard/index.jsx");
+/* harmony import */ var _components_ImageLeftSideText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/ImageLeftSideText */ "./blocks/src/components/ImageLeftSideText/index.jsx");
+/* harmony import */ var _components_RegularBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/RegularBanner */ "./blocks/src/components/RegularBanner/index.jsx");
+/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
+/* harmony import */ var _components_TwoColumnCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/TwoColumnCard */ "./blocks/src/components/TwoColumnCard/index.jsx");
+/* harmony import */ var _components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/TwoGridColumnCard */ "./blocks/src/components/TwoGridColumnCard/index.jsx");
+
 
 
 
@@ -19762,33 +19905,37 @@ const pageAttr = {
   name: 'news-page',
   title: 'News Page',
   data: {
-    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__.attributes),
-    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_TwoColumnCard__WEBPACK_IMPORTED_MODULE_7__.attributes),
-    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__.attributes),
-    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__.attributes),
-    contact: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes),
-    section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_BannerContactAlt__WEBPACK_IMPORTED_MODULE_3__.attributes)
+    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__.attributes),
+    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_TwoColumnCard__WEBPACK_IMPORTED_MODULE_8__.attributes),
+    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_6__.attributes),
+    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_9__.attributes),
+    contact: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes),
+    section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_BannerContactAlt__WEBPACK_IMPORTED_MODULE_3__.attributes),
+    section_7: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_ImageLeftSideText__WEBPACK_IMPORTED_MODULE_5__.attributes)
   }
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_1",
     section: "1"
-  })), /*#__PURE__*/React.createElement(_components_TwoColumnCard__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    model: "section_2",
+  })), /*#__PURE__*/React.createElement(_components_ImageLeftSideText__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_7",
     section: "2"
-  })), /*#__PURE__*/React.createElement(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    model: "section_3",
+  })), /*#__PURE__*/React.createElement(_components_TwoColumnCard__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_2",
     section: "3"
-  })), /*#__PURE__*/React.createElement(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    model: "section_4",
+  })), /*#__PURE__*/React.createElement(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_3",
     section: "4"
+  })), /*#__PURE__*/React.createElement(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_4",
+    section: "5"
   })), /*#__PURE__*/React.createElement(_components_BannerContactAlt__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_5",
-    section: "5"
+    section: "6"
   })), /*#__PURE__*/React.createElement(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "contact",
-    section: "6"
+    section: "7"
   })));
 }
 

@@ -1,0 +1,156 @@
+@import "./../../assets//styles/utils/functions";
+
+.image-left-side-text {
+    display: grid;
+    height: vw(487);
+    overflow: hidden;
+    grid-template-columns: vw(960) 1fr;
+
+    @include mobile {
+        height: auto;
+        display: block;
+    }
+
+    .banner {
+        width: 100%;
+        height: vw(487);
+
+        figure {
+            height: vw(487);
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .right-text {
+        width: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        padding: vw(59) 0 vw(59) vw(68);
+
+        @include mobile {
+            padding: vw(60) vw(20) vw(63);
+            padding-right: 0;
+        }
+
+
+        .background {
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            height: vw(487);
+            position: absolute;
+            background-color: #231E14;
+
+            @include mobile {
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .label {
+            z-index: 2;
+            position: relative;
+            font-size: vw(24);
+            color: #CCB58B;
+            margin-bottom: vw(8);
+            line-height: vw(24.16);
+            font-weight: var(--font-bold);
+
+            @include mobile {
+                font-size: vw(22);
+                line-height: vw(24.16);
+            }
+        }
+
+
+        .title {
+            z-index: 2;
+            position: relative;
+            margin-bottom: vw(32);
+            padding-bottom: vw(12);
+            border-bottom: 2px solid #937D4D;
+
+            @include mobile {
+                margin-bottom: vw(43);
+                padding-bottom: vw(19);
+            }
+
+            h2 {
+                color: #FFFFFF;
+                margin-bottom: 0;
+                font-size: vw(40);
+                max-width: vw(418);
+                font-weight: var(--font-extra);
+                line-height: vw(45);
+
+                @include mobile {
+                    font-size: vw(37);
+                    line-height: vw(44);
+                }
+            }
+        }
+
+        .description {
+            z-index: 2;
+            position: relative;
+            color: #EFEFEF;
+            max-width: vw(476);
+            font-size: vw(20);
+            margin-bottom: vw(26);
+            font-weight: var(--font-semi-bold);
+
+            @include mobile {
+                padding-right: vw(20);
+                font-size: vw(18);
+                line-height: vw(23);
+            }
+        }
+
+
+        .hightlight {
+            z-index: 2;
+            position: relative;
+            display: flex;
+            width: vw(253);
+            color: #FFF;
+            height: vw(49);
+            color: #EFEFEF;
+            font-size: vw(19);
+            align-items: center;
+            margin-bottom: vw(11);
+            background: #937D4D;
+            justify-content: center;
+            letter-spacing: vw(-0.27);
+            font-weight: var(--font-semi-bold);
+
+            @include mobile {
+                font-size: vw(18);
+                letter-spacing: vw(-0.25);
+            }
+        }
+
+        .bottom-text {
+            z-index: 2;
+            position: relative;
+            color: #EFEFEF;
+            font-size: vw(14);
+            letter-spacing: vw(-0.2);
+        }
+
+    }
+}
