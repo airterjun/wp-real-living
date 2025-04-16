@@ -72,6 +72,7 @@
             padding-top: vw(21);
             padding-bottom: vw(11);
             border-bottom: 1px solid #937D4D;
+            position: relative;
 
             @include mobile {
                 padding-top: vw(32);
@@ -105,9 +106,19 @@
                 }
             }
 
+            .wpcf7-not-valid-tip {
+                right: 0;
+                top: vw(8);
+                opacity: 0.7;
+                position: absolute;
+                pointer-events: none;
+                font-size: vw(16) !important;
+            }
+
             select {
                 width: 100%;
                 border: none;
+                outline: none;
                 height: vw(20);
                 overflow: visible;
                 padding-left: vw(9);

@@ -1699,6 +1699,7 @@
   padding-top: calc(21 / var(--base-size) * 100vw);
   padding-bottom: calc(11 / var(--base-size) * 100vw);
   border-bottom: 1px solid #937D4D;
+  position: relative;
 }
 @media only screen and (max-width: 879px) {
   .contact-form .form-wrapper .input-wrapper:not(.button-submit) {
@@ -1732,9 +1733,18 @@
 .contact-form .form-wrapper .input-wrapper:not(.button-submit) input:not([type=submit])::placeholder {
   color: rgba(247, 247, 247, 0.7);
 }
+.contact-form .form-wrapper .input-wrapper:not(.button-submit) .wpcf7-not-valid-tip {
+  right: 0;
+  top: calc(8 / var(--base-size) * 100vw);
+  opacity: 0.7;
+  position: absolute;
+  pointer-events: none;
+  font-size: calc(16 / var(--base-size) * 100vw) !important;
+}
 .contact-form .form-wrapper .input-wrapper:not(.button-submit) select {
   width: 100%;
   border: none;
+  outline: none;
   height: calc(20 / var(--base-size) * 100vw);
   overflow: visible;
   padding-left: calc(9 / var(--base-size) * 100vw);
