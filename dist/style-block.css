@@ -1725,7 +1725,8 @@
 .contact-form .form-wrapper .input-wrapper:not(.button-submit) select {
   width: 100%;
   border: none;
-  height: calc(17 / var(--base-size) * 100vw);
+  height: calc(20 / var(--base-size) * 100vw);
+  overflow: visible;
   padding-left: calc(9 / var(--base-size) * 100vw);
   font-size: calc(16 / var(--base-size) * 100vw);
   background-color: transparent;

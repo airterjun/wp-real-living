@@ -108,7 +108,8 @@
             select {
                 width: 100%;
                 border: none;
-                height: vw(17);
+                height: vw(20);
+                overflow: visible;
                 padding-left: vw(9);
                 font-size: vw(16);
                 background-color: transparent;
