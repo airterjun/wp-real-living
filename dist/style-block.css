@@ -1050,8 +1050,18 @@
   width: 100%;
   height: calc(487 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .image-left-side-text .banner {
+    height: calc(386 / var(--base-size) * 100vw);
+  }
+}
 .image-left-side-text .banner figure {
   height: calc(487 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .image-left-side-text .banner figure {
+    height: calc(386 / var(--base-size) * 100vw);
+  }
 }
 .image-left-side-text .banner img {
   width: 100%;

@@ -15,8 +15,16 @@
         width: 100%;
         height: vw(487);
 
+        @include mobile {
+            height: vw(386);
+        }
+
         figure {
             height: vw(487);
+
+            @include mobile {
+                height: vw(386);
+            }
         }
 
         img {
