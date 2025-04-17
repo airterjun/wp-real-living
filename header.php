@@ -10,9 +10,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color">
 
-    <link rel="icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.png" sizes="32x32" />
-    <link rel="icon" href="<?php echo get_template_directory_uri() ?>/images/favicon-apple.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() ?>/images/favicon-apple.png" />
+    <link rel="icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() ?>/images/apple-touch-icon.ico" />
 
     <?php wp_head(); ?>
 
