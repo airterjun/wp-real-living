@@ -1,10 +1,11 @@
 import gsap from "gsap"
 
-export const Navigation = (lenis) => {
+const Navigation = (lenis) => {
     const header = document.getElementById('main-header')
     const burger = document.getElementById('burger')
     const headerMenu = document.querySelector('.header-menu')
     const menuList = headerMenu.querySelectorAll('li')
+
     const tl = gsap.timeline({
         paused: true
     })
@@ -38,3 +39,31 @@ export const Navigation = (lenis) => {
     })
 
 }
+
+
+const buttonScrollDowm = () => {
+    const heroBanner = document.querySelector('.hero-banner')
+    if (!heroBanner) return
+
+    const rect = heroBanner.getBoundingClientRect()
+
+    const button = heroBanner.querySelector('.hero-banner-button a')
+
+
+    if (!button) return
+
+    button.addEventListener('click', e => {
+
+        e.preventDefault()
+        window.lenis.scrollTo(rect.height)
+
+    })
+
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    Navigation()
+    buttonScrollDowm()
+})

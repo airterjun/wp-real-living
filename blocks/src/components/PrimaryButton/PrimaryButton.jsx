@@ -9,9 +9,11 @@ const PrimaryButton = (props) => {
 
     const val = getNestedValue(attributes, model ? `${model}.${id}` : id)
 
+    const buttonClass = props.className ? props.className : ''
+
     return (
         <>
-            <div className={`primary-button ${fill ? "button-fill" : ''}`}>
+            <div className={`primary-button ${fill ? "button-fill" : '', buttonClass}`}>
                 <a href={val.url}>
                     {val.title}
                     <IconArrow />

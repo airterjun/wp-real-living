@@ -9818,9 +9818,6 @@ class Animation {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Navigation: () => (/* binding */ Navigation)
-/* harmony export */ });
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
 const Navigation = lenis => {
@@ -9853,6 +9850,21 @@ const Navigation = lenis => {
     tl.play();
   });
 };
+const buttonScrollDowm = () => {
+  const heroBanner = document.querySelector('.hero-banner');
+  if (!heroBanner) return;
+  const rect = heroBanner.getBoundingClientRect();
+  const button = heroBanner.querySelector('.hero-banner-button a');
+  if (!button) return;
+  button.addEventListener('click', e => {
+    e.preventDefault();
+    window.lenis.scrollTo(rect.height);
+  });
+};
+document.addEventListener('DOMContentLoaded', () => {
+  Navigation();
+  buttonScrollDowm();
+});
 
 /***/ }),
 
@@ -9938,8 +9950,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _studio_freight_lenis__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @studio-freight/lenis */ "./node_modules/@studio-freight/lenis/dist/lenis.mjs");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-/* harmony import */ var _js_navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/navigation */ "./src/js/navigation.js");
-/* harmony import */ var _js_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/animation */ "./src/js/animation.js");
+/* harmony import */ var _js_animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/animation */ "./src/js/animation.js");
+/* harmony import */ var _js_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navigation */ "./src/js/navigation.js");
 /* harmony import */ var _js_ProgramSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/ProgramSection */ "./src/js/ProgramSection.js");
 /* harmony import */ var _js_Slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/Slider */ "./src/js/Slider.js");
 
@@ -9962,20 +9974,17 @@ let lenis = null;
 lenis = new _studio_freight_lenis__WEBPACK_IMPORTED_MODULE_6__["default"]({
   duration: 0.9
 });
+window.lenis = lenis;
 lenis.on('scroll', gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_5__["default"].update);
 gsap__WEBPACK_IMPORTED_MODULE_4__["default"].ticker.add(time => {
   lenis.raf(time * 1000);
 });
 gsap__WEBPACK_IMPORTED_MODULE_4__["default"].ticker.lagSmoothing(0);
 
-//  Logic
-
-(0,_js_navigation__WEBPACK_IMPORTED_MODULE_0__.Navigation)(lenis);
-
 /**
  * Cretae page animation
  */
-new _js_animation__WEBPACK_IMPORTED_MODULE_1__.Animation();
+new _js_animation__WEBPACK_IMPORTED_MODULE_0__.Animation();
 (0,_js_ProgramSection__WEBPACK_IMPORTED_MODULE_2__.Program)();
 (0,_js_Slider__WEBPACK_IMPORTED_MODULE_3__.Slider)();
 function updateClock() {

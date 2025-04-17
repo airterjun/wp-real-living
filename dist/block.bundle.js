@@ -18188,6 +18188,7 @@ const HeroBanner = props => {
   } = props;
   const button = () => {
     if (!disabledButton) return /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: "hero-banner-button",
       title: "Manage button link"
     }));
   };
@@ -18420,8 +18421,9 @@ const PrimaryButton = props => {
   } = props;
   const id = set ? set : 'link';
   const val = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_1__.getNestedValue)(attributes, model ? `${model}.${id}` : id);
+  const buttonClass = props.className ? props.className : '';
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
-    className: `primary-button ${fill ? "button-fill" : ''}`
+    className: `primary-button ${fill ? "button-fill" : '', buttonClass}`
   }, /*#__PURE__*/React.createElement("a", {
     href: val.url
   }, val.title, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_2__["default"], null))));

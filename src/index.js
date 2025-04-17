@@ -1,8 +1,8 @@
 import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { Navigation } from './js/navigation'
 import { Animation } from './js/animation'
+import './js/navigation'
 import { Program } from './js/ProgramSection'
 import { Slider } from './js/Slider'
 
@@ -22,6 +22,9 @@ lenis = new Lenis({
 	duration: 0.9
 })
 
+
+window.lenis = lenis
+
 lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time) => {
@@ -33,9 +36,7 @@ gsap.ticker.lagSmoothing(0)
 
 
 
-//  Logic
 
-Navigation(lenis)
 
 /**
  * Cretae page animation

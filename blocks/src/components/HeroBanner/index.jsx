@@ -24,7 +24,7 @@ const HeroBanner = (props) => {
 
 
     const button = () => {
-        if (!disabledButton) return <PrimaryButton {...props} title="Manage button link" />
+        if (!disabledButton) return <PrimaryButton {...props} className="hero-banner-button" title="Manage button link" />
     }
 
     return (
