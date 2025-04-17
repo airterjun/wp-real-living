@@ -142,6 +142,7 @@
                 height: vw(179);
                 font-size: vw(16);
                 padding: vw(16) vw(20);
+                color: rgba(#F7F7F7, 0.7);
                 letter-spacing: vw(0.08);
                 font-family: var(--font-main);
                 background-color: transparent;
@@ -263,5 +264,13 @@
 
             }
         }
+    }
+
+    .wpcf7-response-output {
+        border: none !important;
+        color: #FFF;
+        padding: 0 !important;
+        margin-left: 0 !important;
+        font-size: 13px;
     }
 }
