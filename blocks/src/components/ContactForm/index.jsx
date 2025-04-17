@@ -14,7 +14,7 @@ export const attributes = {
 
 export default function (props) {
     return (
-        <section className="contact-form">
+        <section className="contact-form" id="inquiry">
             <Media set="background" {...props} className="parallax" />
             <div className="contact-form-content">
                 <div className="contact-form-content-a">

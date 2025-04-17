@@ -9972,7 +9972,8 @@ const mainContainer = document.querySelector('.main-container');
 
 let lenis = null;
 lenis = new _studio_freight_lenis__WEBPACK_IMPORTED_MODULE_6__["default"]({
-  duration: 0.9
+  duration: 0.9,
+  anchors: true
 });
 window.lenis = lenis;
 lenis.on('scroll', gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_5__["default"].update);

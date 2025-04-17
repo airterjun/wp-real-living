@@ -19,7 +19,8 @@ const mainContainer = document.querySelector('.main-container')
 let lenis = null
 
 lenis = new Lenis({
-	duration: 0.9
+	duration: 0.9,
+	anchors: true
 })
 
 
