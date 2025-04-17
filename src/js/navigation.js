@@ -43,6 +43,31 @@ const Navigation = (lenis) => {
 
 const buttonScrollDowm = () => {
     const heroBanner = document.querySelector('.hero-banner')
+    const primaryButtons = document.querySelectorAll('.primary-button a')
+
+
+    if (primaryButtons) {
+        primaryButtons.forEach(link => {
+
+            if (link.hash.includes('#')) {
+
+                console.log('link.href', link.hash)
+
+                link.addEventListener('click', e => {
+                    e.preventDefault()
+
+
+                    const container = document.getElementById(link.hash.replace("#", ""))
+                    if (!container) return
+                    const rect = container.getBoundingClientRect()
+                    window.lenis.scrollTo(container)
+
+
+                })
+            }
+        })
+    }
+
     if (!heroBanner) return
 
     const rect = heroBanner.getBoundingClientRect()

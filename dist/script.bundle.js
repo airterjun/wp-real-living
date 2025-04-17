@@ -9852,6 +9852,21 @@ const Navigation = lenis => {
 };
 const buttonScrollDowm = () => {
   const heroBanner = document.querySelector('.hero-banner');
+  const primaryButtons = document.querySelectorAll('.primary-button a');
+  if (primaryButtons) {
+    primaryButtons.forEach(link => {
+      if (link.hash.includes('#')) {
+        console.log('link.href', link.hash);
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const container = document.getElementById(link.hash.replace("#", ""));
+          if (!container) return;
+          const rect = container.getBoundingClientRect();
+          window.lenis.scrollTo(container);
+        });
+      }
+    });
+  }
   if (!heroBanner) return;
   const rect = heroBanner.getBoundingClientRect();
   const button = heroBanner.querySelector('.hero-banner-button a');
@@ -9972,8 +9987,7 @@ const mainContainer = document.querySelector('.main-container');
 
 let lenis = null;
 lenis = new _studio_freight_lenis__WEBPACK_IMPORTED_MODULE_6__["default"]({
-  duration: 0.9,
-  anchors: true
+  duration: 0.9
 });
 window.lenis = lenis;
 lenis.on('scroll', gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_5__["default"].update);
