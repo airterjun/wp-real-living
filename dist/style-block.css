@@ -543,10 +543,10 @@
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content .h1 {
-    font-size: calc(40 / var(--base-size) * 100vw);
-    line-height: calc(49 / var(--base-size) * 100vw);
     letter-spacing: 0.02em;
     margin-bottom: calc(16 / var(--base-size) * 100vw);
+    font-size: calc(37 / var(--base-size) * 100vw);
+    line-height: calc(42 / var(--base-size) * 100vw);
   }
 }
 .hero-banner .content::before {
