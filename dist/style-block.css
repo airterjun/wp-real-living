@@ -543,8 +543,7 @@
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content .h1 {
-    letter-spacing: 0.02em;
-    margin-bottom: calc(16 / var(--base-size) * 100vw);
+    margin-bottom: calc(9 / var(--base-size) * 100vw);
     font-size: calc(37 / var(--base-size) * 100vw);
     line-height: calc(42 / var(--base-size) * 100vw);
   }
