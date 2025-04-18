@@ -41,7 +41,7 @@
         padding-right: vw(85);
 
         @include mobile {
-            padding: vw(43) vw(var(--g-padding-container)) vw(51) !important;
+            padding: vw(56) vw(var(--g-padding-container)) vw(51) !important;
         }
 
         .h1 {
@@ -71,6 +71,10 @@
             content: '';
             height: 100%;
             position: absolute;
+
+            @include mobile {
+                display: block;
+            }
         }
 
         &:after {
@@ -112,7 +116,7 @@
 
                 @include mobile {
                     padding-right: 0;
-                    margin-top: vw(21);
+                    margin-top: vw(14);
                     font-size: vw(21);
                     line-height: vw(25);
                     margin-bottom: vw(46);

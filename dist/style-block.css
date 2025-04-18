@@ -530,7 +530,7 @@
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content {
-    padding: calc(43 / var(--base-size) * 100vw) calc(var(--g-padding-container) / var(--base-size) * 100vw) calc(51 / var(--base-size) * 100vw) !important;
+    padding: calc(56 / var(--base-size) * 100vw) calc(var(--g-padding-container) / var(--base-size) * 100vw) calc(51 / var(--base-size) * 100vw) !important;
   }
 }
 .hero-banner .content .h1 {
@@ -556,6 +556,11 @@
   content: "";
   height: 100%;
   position: absolute;
+}
+@media only screen and (max-width: 879px) {
+  .hero-banner .content::before {
+    display: block;
+  }
 }
 .hero-banner .content:after {
   top: 0;
@@ -583,7 +588,7 @@
 @media only screen and (max-width: 879px) {
   .hero-banner .content-a-b {
     padding-right: 0;
-    margin-top: calc(21 / var(--base-size) * 100vw);
+    margin-top: calc(14 / var(--base-size) * 100vw);
     font-size: calc(21 / var(--base-size) * 100vw);
     line-height: calc(25 / var(--base-size) * 100vw);
     margin-bottom: calc(46 / var(--base-size) * 100vw);
