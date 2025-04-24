@@ -719,7 +719,7 @@
 @media only screen and (max-width: 879px) {
   .two-column-text .decor.decor-2 {
     left: calc(21 / var(--base-size) * 100vw);
-    max-height: calc(489 / var(--base-size) * 100vw);
+    max-height: calc(512 / var(--base-size) * 100vw);
   }
 }
 .two-column-text .decor.decor-3 {
