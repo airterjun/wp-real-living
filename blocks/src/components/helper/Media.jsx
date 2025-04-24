@@ -1,8 +1,7 @@
 
 import { MediaUpload } from "@wordpress/block-editor";
 import { Button } from "@wordpress/components";
-import _ from "lodash";
-import { getBaseModelPath, getModel } from "./Libs";
+import { getBaseModelPath, getModel, getNestedValue } from "./Libs";
 import "./style/admin.scss";
 
 export default function Media(props) {
@@ -11,13 +10,13 @@ export default function Media(props) {
 
     const modelSet = model ? `${model}.${set}` : set
 
-    const getValue = _.get(attributes, `${modelSet}.url`)
-    const width = _.get(attributes, `${modelSet}.width`)
-    const height = _.get(attributes, `${modelSet}.height`)
+    const getValue = getNestedValue(attributes, `${modelSet}.url`)
+    const width = getNestedValue(attributes, `${modelSet}.width`)
+    const height = getNestedValue(attributes, `${modelSet}.height`)
 
     const renderMedia = () => {
         if (type === 'video') {
-            const videoUrl = _.get(attributes, modelSet);
+            const videoUrl = getNestedValue(attributes, modelSet);
             return (
                 <div className="image-wrapper">
                     <video width="320" height="240" controls src={videoUrl.default || videoUrl} />

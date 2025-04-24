@@ -1,6 +1,5 @@
-import { RawHTML } from "@wordpress/element";
 import Controller from "../helper/Controller";
-import { getMobileDescription } from "../helper/Libs";
+import ImageRender from "../helper/ImageRender";
 import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
@@ -9,7 +8,6 @@ import { ImageSchema } from "../Schema/image";
 import { LinkSchmea } from "../Schema/linkSchema";
 import { TextSchema } from "../Schema/text";
 import "./style.scss";
-import ImageRender from "../helper/ImageRender";
 
 
 export const attributes = {
@@ -82,7 +80,7 @@ const HeroBanner = (props) => {
                     </div>
                 </div>
                 <Media set="background" {...props} className="background parallax desktop" />
-                <ImageRender value="background" {...props} className="background parallax mobile" fallBack="background" />
+                <ImageRender value="background_mobile" {...props} className="background parallax mobile" fallBack="background" />
             </section>
         </>
     )
