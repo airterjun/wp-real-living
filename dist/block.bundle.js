@@ -2127,16 +2127,25 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   first: () => (/* binding */ first),
 /* harmony export */   getBaseModelPath: () => (/* binding */ getBaseModelPath),
 /* harmony export */   getMobileDescription: () => (/* binding */ getMobileDescription),
 /* harmony export */   getModel: () => (/* binding */ getModel),
 /* harmony export */   getModelId: () => (/* binding */ getModelId),
 /* harmony export */   getModelValue: () => (/* binding */ getModelValue),
 /* harmony export */   getNestedValue: () => (/* binding */ getNestedValue),
+/* harmony export */   last: () => (/* binding */ last),
 /* harmony export */   sanitizeInput: () => (/* binding */ sanitizeInput),
 /* harmony export */   setNestedValue: () => (/* binding */ setNestedValue),
 /* harmony export */   transformJson: () => (/* binding */ transformJson)
 /* harmony export */ });
+const last = arr => {
+  return arr.length ? arr[arr.length - 1] : null;
+};
+const first = arr => {
+  return arr.length ? arr[0] : null;
+};
+
 /**
  * @param path {String}
  * @return string
@@ -2145,7 +2154,7 @@ const getBaseModelPath = path => {
   let base = path;
   if (path.includes('.')) {
     const paths = path.split('.');
-    base = _.first(paths);
+    base = first(paths);
   }
   return base;
 };
@@ -2153,7 +2162,7 @@ const getModel = path => {
   let base = path;
   if (path.includes('.')) {
     const paths = path.split('.');
-    base = _.last(paths);
+    base = last(paths);
   }
   return base;
 };

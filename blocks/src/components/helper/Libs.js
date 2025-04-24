@@ -1,3 +1,12 @@
+export const last = (arr) => {
+    return arr.length ? arr[arr.length - 1] : null
+}
+
+
+export const first = (arr) => {
+    return arr.length ? arr[0] : null
+}
+
 
 /**
  * @param path {String}
@@ -7,7 +16,7 @@ export const getBaseModelPath = (path) => {
     let base = path
     if (path.includes('.')) {
         const paths = path.split('.')
-        base = _.first(paths)
+        base = first(paths)
     }
     return base
 }
@@ -16,7 +25,7 @@ export const getModel = (path) => {
     let base = path
     if (path.includes('.')) {
         const paths = path.split('.')
-        base = _.last(paths)
+        base = last(paths)
     }
     return base
 }
