@@ -19428,7 +19428,6 @@ function LinkEditor(props) {
   } = props;
   const setId = model ? `${model}.${set}` : set;
   let link = (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(attributes, setId);
-  console.log('link', link);
   const setLink = newVal => {
     const path = (0,_Libs__WEBPACK_IMPORTED_MODULE_2__.getBaseModelPath)(setId);
     const copy = structuredClone(attributes);

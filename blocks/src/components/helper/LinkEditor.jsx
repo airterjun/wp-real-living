@@ -9,8 +9,6 @@ export default function LinkEditor(props) {
     let link = getNestedValue(attributes, setId)
 
 
-    console.log('link', link)
-
     const setLink = (newVal) => {
         const path = getBaseModelPath(setId)
         const copy = structuredClone(attributes)

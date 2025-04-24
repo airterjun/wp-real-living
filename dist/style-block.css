@@ -1139,7 +1139,7 @@
   color: #FFFFFF;
   margin-bottom: 0;
   font-size: calc(40 / var(--base-size) * 100vw);
-  max-width: calc(418 / var(--base-size) * 100vw);
+  max-width: calc(447 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
   line-height: calc(45 / var(--base-size) * 100vw);
 }
