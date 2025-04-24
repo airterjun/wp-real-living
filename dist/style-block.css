@@ -896,6 +896,7 @@
     line-height: calc(21 / var(--base-size) * 100vw);
     font-size: calc(19 / var(--base-size) * 100vw);
     letter-spacing: -0.02em;
+    margin-bottom: calc(3 / var(--base-size) * 100vw);
   }
 }
 @media only screen and (max-width: 879px) {
@@ -1879,6 +1880,7 @@
 @media only screen and (max-width: 879px) {
   .contact-form .form-wrapper .button-submit input {
     width: 100%;
+    font-weight: normal;
     color: #FFFFFF;
     padding-left: calc(90 / var(--base-size) * 100vw);
     background-color: #937D4D;
