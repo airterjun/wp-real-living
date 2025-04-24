@@ -27,7 +27,7 @@ jobs:
 
     - name: Sync Theme Files
       env:
-        REMOTE_PATH: ' u1266-fxyapz99yzgm@gsgpm1056.siteground.biz:~/www/stag.wearereal.co.uk/public_html/wp-content/themes/real-living'
+        REMOTE_PATH: ' u1266-fxyapz99yzgm@gsgpm1056.siteground.biz:~/www/wearereal.co.uk/public_html/wp-content/themes/real-living'
       run: |
         rsync -avz --progress --delete \
         --exclude='.git' \
