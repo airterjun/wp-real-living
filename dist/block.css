@@ -105,6 +105,11 @@ figure .wp-action__floating button svg path {
   margin-bottom: 30px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
+.form-wrapper .input-container figure {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
 .form-wrapper .input-container .label {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.4);

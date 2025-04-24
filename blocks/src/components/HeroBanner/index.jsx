@@ -9,10 +9,12 @@ import { ImageSchema } from "../Schema/image";
 import { LinkSchmea } from "../Schema/linkSchema";
 import { TextSchema } from "../Schema/text";
 import "./style.scss";
+import ImageRender from "../helper/ImageRender";
 
 
 export const attributes = {
     background: ImageSchema,
+    background_mobile: ImageSchema,
     text_1: TextSchema,
     text_2: TextSchema,
     text_1_mobile: TextSchema,
@@ -53,6 +55,17 @@ const HeroBanner = (props) => {
                             <div className="label">Button</div>
                             <LinkEditor {...props} set="link" />
                         </div>
+
+                        <div className="header-title">
+                            Mobile Content
+                        </div>
+
+                        <div className="input-container">
+                            <div className="label">Mobile Background</div>
+                            <div className="item">
+                                <Media set="background_mobile" {...props} />
+                            </div>
+                        </div>
                     </details>
 
                 </div>
@@ -68,7 +81,8 @@ const HeroBanner = (props) => {
                         {button()}
                     </div>
                 </div>
-                <Media set="background" {...props} className="background parallax" />
+                <Media set="background" {...props} className="background parallax desktop" />
+                <ImageRender value="background" {...props} className="background parallax mobile" fallBack="background" />
             </section>
         </>
     )

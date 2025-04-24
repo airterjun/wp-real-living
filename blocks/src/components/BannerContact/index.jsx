@@ -3,6 +3,7 @@ import { ImageSchema } from "../Schema/image";
 import { LinkSchmea } from "../Schema/linkSchema";
 import { TextSchema } from "../Schema/text";
 import Controller from "../helper/Controller";
+import ImageRender from "../helper/ImageRender";
 import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
@@ -13,7 +14,8 @@ export const attributes = {
     detail: TextSchema,
     link: LinkSchmea,
     background: ImageSchema,
-    banner: ImageSchema
+    banner: ImageSchema,
+    banner_mobile: ImageSchema
 }
 
 export default function (props) {
@@ -30,10 +32,18 @@ export default function (props) {
                             <div className="label">Button</div>
                             <LinkEditor {...props} set="link" />
                         </div>
+                        <div className="header-title">
+                            Mobile Content
+                        </div>
+                        <div className="input-container">
+                            <div className="label">Mobile Banner</div>
+                            <Media {...props} set="banner_mobile" className="input" />
+                        </div>
                     </details>
                 </div>
             </Controller>
-            <Media {...props} set="banner" className="parallax" />
+            <Media {...props} set="banner" className="parallax desktop" />
+            <ImageRender {...props} value="banner_mobile" fallBack="banner" className="parallax mobile" />
             <div className="content">
                 <Media {...props} set="background" />
                 <div className="content-a">
