@@ -233,7 +233,7 @@
                 transform: translateY(vw(3));
 
                 @include mobile {
-                    right: vw(88);
+                    right: vw(108);
 
                     path {
                         fill: #BA9D63
@@ -257,6 +257,7 @@
                 @include mobile {
                     width: 100%;
                     font-weight: normal;
+                    font-size: vw(19);
                     color: #FFFFFF;
                     padding-left: vw(90);
                     background-color: #937D4D;

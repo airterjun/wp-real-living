@@ -956,10 +956,10 @@
 @media only screen and (max-width: 879px) {
   .banner-contact-alt .content .title {
     margin-top: calc(40 / var(--base-size) * 100vw);
-    font-size: calc(48 / var(--base-size) * 100vw);
+    font-size: calc(37 / var(--base-size) * 100vw);
+    line-height: calc(42 / var(--base-size) * 100vw);
     color: #353535;
     max-width: calc(290 / var(--base-size) * 100vw);
-    line-height: calc(54 / var(--base-size) * 100vw);
   }
 }
 .banner-contact-alt .content .description {
@@ -971,9 +971,9 @@
 }
 @media only screen and (max-width: 879px) {
   .banner-contact-alt .content .description {
-    font-size: calc(31 / var(--base-size) * 100vw);
-    margin-top: calc(18 / var(--base-size) * 100vw);
-    line-height: calc(36 / var(--base-size) * 100vw);
+    font-size: calc(21 / var(--base-size) * 100vw);
+    line-height: calc(25 / var(--base-size) * 100vw);
+    margin-top: calc(9 / var(--base-size) * 100vw);
   }
 }
 .banner-contact-alt .content .primary-button {
@@ -1490,6 +1490,16 @@
   .two-grid-column-card .content .card-wrapper:nth-of-type(even) .card-wrapper-a {
     padding-left: calc(var(--g-padding-container) / var(--base-size) * 100vw);
   }
+  .two-grid-column-card .content .card-wrapper:nth-of-type(even) .card-wrapper-a:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    background-color: #937D4D;
+    width: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
+    right: 0;
+    top: 0;
+    width: calc(21 / var(--base-size) * 100vw);
+  }
 }
 .two-grid-column-card .content .card-wrapper:nth-of-type(even) .card-wrapper-b {
   padding-left: 0;
@@ -1858,7 +1868,7 @@
 }
 @media only screen and (max-width: 879px) {
   .contact-form .form-wrapper .button-submit svg {
-    right: calc(88 / var(--base-size) * 100vw);
+    right: calc(108 / var(--base-size) * 100vw);
   }
   .contact-form .form-wrapper .button-submit svg path {
     fill: #BA9D63;
@@ -1881,6 +1891,7 @@
   .contact-form .form-wrapper .button-submit input {
     width: 100%;
     font-weight: normal;
+    font-size: calc(19 / var(--base-size) * 100vw);
     color: #FFFFFF;
     padding-left: calc(90 / var(--base-size) * 100vw);
     background-color: #937D4D;

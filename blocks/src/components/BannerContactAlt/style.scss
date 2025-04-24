@@ -32,10 +32,10 @@
 
             @include mobile {
                 margin-top: vw(40);
-                font-size: vw(48);
+                font-size: vw(37);
+                line-height: vw(42);
                 color: #353535;
                 max-width: vw(290);
-                line-height: vw(54);
             }
         }
 
@@ -47,9 +47,9 @@
             font-weight: var(--font-bold);
 
             @include mobile {
-                font-size: vw(31);
-                margin-top: vw(18);
-                line-height: vw(36);
+                font-size: vw(21);
+                line-height: vw(25);
+                margin-top: vw(9);
             }
         }
 

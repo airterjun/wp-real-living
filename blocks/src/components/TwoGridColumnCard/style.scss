@@ -128,6 +128,17 @@
 
                     @include mobile {
                         padding-left: vw(var(--g-padding-container));
+
+                        &:before {
+                            content: '';
+                            height: 100%;
+                            position: absolute;
+                            background-color: #937D4D;
+                            width: vw(var(--g-outer-padding));
+                            right: 0;
+                            top: 0;
+                            width: vw(21);
+                        }
                     }
                 }
 
