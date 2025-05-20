@@ -1,0 +1,21 @@
+@import "./../../assets//styles/utils/functions";
+
+.requirement {
+    .two-grid-column-card {
+        padding: 0;
+
+        &::after,
+        &::before {
+            top: 0;
+            height: 100%;
+        }
+    }
+
+    .full-width-banner {
+        height: vw(423);
+
+        figure.desktop {
+            height: vw(423);
+        }
+    }
+}

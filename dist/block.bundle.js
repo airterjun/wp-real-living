@@ -206,6 +206,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/pages/PageRequirementDeskt/style.scss":
+/*!**********************************************************!*\
+  !*** ./blocks/src/pages/PageRequirementDeskt/style.scss ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./blocks/src/components/BannerContact/index.jsx":
 /*!*******************************************************!*\
   !*** ./blocks/src/components/BannerContact/index.jsx ***!
@@ -251,6 +263,21 @@ const attributes = {
   banner_mobile: _Schema_image__WEBPACK_IMPORTED_MODULE_3__.ImageSchema
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  const {
+    hideBanner
+  } = props;
+  const headerBanner = () => {
+    if (!hideBanner) {
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        set: "banner",
+        className: "parallax desktop"
+      })), /*#__PURE__*/React.createElement(_helper_ImageRender__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        value: "banner_mobile",
+        fallBack: "banner",
+        className: "parallax mobile"
+      })));
+    }
+  };
   return /*#__PURE__*/React.createElement("section", {
     className: "banner-contact"
   }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_6__["default"], props, /*#__PURE__*/React.createElement("div", {
@@ -272,14 +299,7 @@ const attributes = {
   }, "Mobile Banner"), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "banner_mobile",
     className: "input"
-  })))))), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    set: "banner",
-    className: "parallax desktop"
-  })), /*#__PURE__*/React.createElement(_helper_ImageRender__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    value: "banner_mobile",
-    fallBack: "banner",
-    className: "parallax mobile"
-  })), /*#__PURE__*/React.createElement("div", {
+  })))))), headerBanner(), /*#__PURE__*/React.createElement("div", {
     className: "content"
   }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "background"
@@ -692,6 +712,11 @@ const attributes = {
   }])
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  const {
+    type,
+    disabledContent
+  } = props;
+  const isTypeBlock = type === 'block';
   const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getModelId)('list', props));
   const mobileEditor = () => listItems.map((_, index) => {
     const title = `list.${index}.mobileTitle`;
@@ -723,8 +748,22 @@ const attributes = {
       tag: "div"
     }))));
   });
+  const footerContent = () => {
+    if (!disabledContent) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "main-container columb-card"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "card-item"
+      }, listEl()), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        className: "text-top-button",
+        set: "textButton"
+      }, props, {
+        tag: "div"
+      })), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__["default"], props));
+    }
+  };
   return /*#__PURE__*/React.createElement("section", {
-    className: "grid featured-title"
+    className: `grid featured-title ${disabledContent && 'no-footer'}`
   }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_2__["default"], props, /*#__PURE__*/React.createElement("div", {
     className: "form-wrapper"
   }, /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", {
@@ -760,16 +799,7 @@ const attributes = {
     set: "description"
   }, props, {
     tag: "div"
-  }))), /*#__PURE__*/React.createElement("div", {
-    className: "main-container columb-card"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "card-item"
-  }, listEl()), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: "text-top-button",
-    set: "textButton"
-  }, props, {
-    tag: "div"
-  })), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__["default"], props)));
+  }))), footerContent());
 }
 
 /***/ }),
@@ -1778,6 +1808,9 @@ const attributes = {
 };
 const TwoColumnText = props => {
   const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getModelId)('list', props));
+  const getLabel = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getModelId)('label', props));
+  const isHasLabel = props.edit ? true : getLabel ? true : false;
+  console.log('isHasLabel', isHasLabel);
   const items = () => listItems.map((_, index) => {
     const title = `list.${index}.title`;
     const desc = `list.${index}.description`;
@@ -1808,8 +1841,8 @@ const TwoColumnText = props => {
   }), /*#__PURE__*/React.createElement("div", {
     className: "content header"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "left"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    className: `left ${!isHasLabel ? 'no-label' : ''}`
+  }, isHasLabel && /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "label",
     tag: "div",
     className: "label"
@@ -2594,14 +2627,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/HomePage/index.jsx */ "./blocks/src/pages/HomePage/index.jsx");
 /* harmony import */ var _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/NewsPage/index.jsx */ "./blocks/src/pages/NewsPage/index.jsx");
 /* harmony import */ var _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/PageContact/index.jsx */ "./blocks/src/pages/PageContact/index.jsx");
-/* harmony import */ var _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/TeamPage/index.jsx */ "./blocks/src/pages/TeamPage/index.jsx");
+/* harmony import */ var _pages_PageRequirementDeskt_PageRequirementDeskt_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/PageRequirementDeskt/PageRequirementDeskt.jsx */ "./blocks/src/pages/PageRequirementDeskt/PageRequirementDeskt.jsx");
+/* harmony import */ var _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/TeamPage/index.jsx */ "./blocks/src/pages/TeamPage/index.jsx");
 
 const {
   registerBlockType
 } = wp.blocks;
-    var pages = [_pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__, _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__, _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_3__, _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_4__];
+     var pages = [_pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__, _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__, _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_3__, _pages_PageRequirementDeskt_PageRequirementDeskt_jsx__WEBPACK_IMPORTED_MODULE_4__, _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_5__];
 pages.forEach(page => {
-  console.log('page', page);
   const {
     pageAttr
   } = page;
@@ -2856,6 +2889,78 @@ const pageAttr = {
   })), /*#__PURE__*/React.createElement(_components_BannerOffice__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_5",
     section: "5"
+  })));
+}
+
+/***/ }),
+
+/***/ "./blocks/src/pages/PageRequirementDeskt/PageRequirementDeskt.jsx":
+/*!************************************************************************!*\
+  !*** ./blocks/src/pages/PageRequirementDeskt/PageRequirementDeskt.jsx ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   pageAttr: () => (/* binding */ pageAttr)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_BannerContact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/BannerContact */ "./blocks/src/components/BannerContact/index.jsx");
+/* harmony import */ var _components_FeaturedTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/FeaturedTitle */ "./blocks/src/components/FeaturedTitle/index.jsx");
+/* harmony import */ var _components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/HeroBanner */ "./blocks/src/components/HeroBanner/index.jsx");
+/* harmony import */ var _components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/RegularBanner */ "./blocks/src/components/RegularBanner/index.jsx");
+/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
+/* harmony import */ var _components_TwoColumnText__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/TwoColumnText */ "./blocks/src/components/TwoColumnText/index.jsx");
+/* harmony import */ var _components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/TwoGridColumnCard */ "./blocks/src/components/TwoGridColumnCard/index.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/pages/PageRequirementDeskt/style.scss");
+
+
+
+
+
+
+
+
+
+
+const pageAttr = {
+  title: 'Page Requirement',
+  name: 'page-requirement',
+  data: {
+    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__.attributes),
+    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_TwoColumnText__WEBPACK_IMPORTED_MODULE_7__.attributes),
+    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__.attributes),
+    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_FeaturedTitle__WEBPACK_IMPORTED_MODULE_3__.attributes),
+    section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__.attributes),
+    section_6: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes)
+  }
+};
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "requirement"
+  }, /*#__PURE__*/React.createElement(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_1",
+    section: "1"
+  })), /*#__PURE__*/React.createElement(_components_TwoColumnText__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_2",
+    section: "2"
+  })), /*#__PURE__*/React.createElement(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_3",
+    section: "3"
+  })), /*#__PURE__*/React.createElement(_components_FeaturedTitle__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_4",
+    section: "4",
+    disabledContent: true
+  })), /*#__PURE__*/React.createElement(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_5",
+    section: "5"
+  })), /*#__PURE__*/React.createElement(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_6",
+    section: "6",
+    hideBanner: true
   })));
 }
 

@@ -19,6 +19,16 @@ export const attributes = {
 }
 
 export default function (props) {
+    const { hideBanner } = props
+
+    const headerBanner = () => {
+        if (!hideBanner) {
+            return <>
+                <Media {...props} set="banner" className="parallax desktop" />
+                <ImageRender {...props} value="banner_mobile" fallBack="banner" className="parallax mobile" />
+            </>
+        }
+    }
 
     return (
         <section className="banner-contact">
@@ -42,8 +52,7 @@ export default function (props) {
                     </details>
                 </div>
             </Controller>
-            <Media {...props} set="banner" className="parallax desktop" />
-            <ImageRender {...props} value="banner_mobile" fallBack="banner" className="parallax mobile" />
+            {headerBanner()}
             <div className="content">
                 <Media {...props} set="background" />
                 <div className="content-a">

@@ -328,6 +328,7 @@
   width: calc(247 / var(--base-size) * 100vw);
   margin: 0 auto;
   opacity: 0.18;
+  pointer-events: none;
   position: absolute;
   transform: translateX(calc(10 / var(--base-size) * 100vw));
 }
@@ -471,6 +472,12 @@
     width: 100%;
     justify-content: center;
   }
+}
+.featured-title.no-footer {
+  padding-bottom: calc(99 / var(--base-size) * 100vw);
+}
+.featured-title.no-footer .main-container {
+  margin-bottom: 0;
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/HeroBanner/style.scss ***!
@@ -2281,6 +2288,35 @@
     width: 100%;
     border-width: 2px;
   }
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/pages/PageRequirementDeskt/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --base-size: 1920;
+  --mobile-browser: 876;
+  --wrapper-padding: 20;
+  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media only screen and (max-width: 879px) {
+  :root {
+    --base-size: 376;
+    --wrapper-padding: 20;
+  }
+}
+.requirement .two-grid-column-card {
+  padding: 0;
+}
+.requirement .two-grid-column-card::after, .requirement .two-grid-column-card::before {
+  top: 0;
+  height: 100%;
+}
+.requirement .full-width-banner {
+  height: calc(423 / var(--base-size) * 100vw);
+}
+.requirement .full-width-banner figure.desktop {
+  height: calc(423 / var(--base-size) * 100vw);
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/Team/style.scss ***!

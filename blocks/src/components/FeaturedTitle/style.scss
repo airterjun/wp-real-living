@@ -3,6 +3,8 @@
 .featured-title {
     padding: vw(110) 0;
 
+
+
     @include mobile {
         padding-top: vw(43);
     }
@@ -39,6 +41,7 @@
                 width: vw(247);
                 margin: 0 auto;
                 opacity: 0.18;
+                pointer-events: none;
                 position: absolute;
                 transform: translateX(vw(10));
 
@@ -190,6 +193,14 @@
                     justify-content: center;
                 }
             }
+        }
+    }
+
+    &.no-footer {
+        padding-bottom: vw(99);
+
+        .main-container {
+            margin-bottom: 0;
         }
     }
 }

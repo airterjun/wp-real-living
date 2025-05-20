@@ -39,7 +39,8 @@ export const attributes = {
 }
 
 export default function (props) {
-
+    const { type, disabledContent } = props
+    const isTypeBlock = type === 'block'
     const listItems = getNestedValue(props.attributes, getModelId('list', props))
 
 
@@ -63,8 +64,26 @@ export default function (props) {
         </div>
     })
 
+
+
+
+    const footerContent = () => {
+
+
+        if (!disabledContent) {
+            return <div className="main-container columb-card">
+                <div className="card-item">
+                    {listEl()}
+                </div>
+                <Text className="text-top-button" set="textButton" {...props} tag="div" />
+                <PrimaryButton {...props} />
+            </div>
+        }
+
+    }
+
     return (
-        <section className="grid featured-title">
+        <section className={`grid featured-title ${disabledContent && 'no-footer'}`}>
             <Controller {...props}>
                 <div className="form-wrapper">
                     <details>
@@ -89,13 +108,8 @@ export default function (props) {
                 <Text className="title" set="title" {...props} tag="h2" />
                 <Text className="description" set="description" {...props} tag="div" />
             </div>
-            <div className="main-container columb-card">
-                <div className="card-item">
-                    {listEl()}
-                </div>
-                <Text className="text-top-button" set="textButton" {...props} tag="div" />
-                <PrimaryButton {...props} />
-            </div>
+
+            {footerContent()}
         </section>
     )
 }

@@ -30,6 +30,11 @@ const attributes = {
 
 const TwoColumnText = (props) => {
    const listItems = getNestedValue(props.attributes, getModelId('list', props))
+   const getLabel = getNestedValue(props.attributes, getModelId('label', props))
+
+   const isHasLabel = props.edit ? true : getLabel ? true : false
+
+   console.log('isHasLabel', isHasLabel)
 
    const items = () => listItems.map((_, index) => {
       const title = `list.${index}.title`
@@ -49,8 +54,9 @@ const TwoColumnText = (props) => {
          <div className="decor decor-2"></div>
          <div className="decor decor-3"></div>
          <div className="content header">
-            <div className="left">
-               <Text {...props} set="label" tag="div" className="label" />
+            <div className={`left ${!isHasLabel ? 'no-label' : ''}`}>
+               {isHasLabel && <Text {...props} set="label" tag="div" className="label" />}
+
                <Text {...props} set="title" tag="h2" className="title" />
             </div>
             <Media set="banner" {...props} className="parallax" />
