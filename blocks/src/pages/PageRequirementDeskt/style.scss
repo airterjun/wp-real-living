@@ -31,5 +31,13 @@
                 font-family: var(--font-bold);
             }
         }
+
+        .body {
+            .left {
+                .description {
+                    max-width: vw(510);
+                }
+            }
+        }
     }
 }
