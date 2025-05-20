@@ -2328,7 +2328,7 @@
   text-transform: none;
   line-height: calc(37.47 / var(--base-size) * 100vw);
   letter-spacing: 0.002em;
-  font-family: var(--font-bold);
+  font-weight: var(--font-bold);
 }
 .requirement .two-column-text .body .left .description {
   max-width: calc(510 / var(--base-size) * 100vw);
