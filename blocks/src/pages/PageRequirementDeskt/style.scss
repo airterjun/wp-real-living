@@ -18,4 +18,18 @@
             height: vw(423);
         }
     }
+
+    .two-column-text {
+        .header {
+            .title {
+                color: #091410;
+                font-size: vw(37);
+                padding-top: vw(33);
+                text-transform: none;
+                line-height: vw(37.47);
+                letter-spacing: 0.002em;
+                font-family: var(--font-bold);
+            }
+        }
+    }
 }

@@ -2318,6 +2318,15 @@
 .requirement .full-width-banner figure.desktop {
   height: calc(423 / var(--base-size) * 100vw);
 }
+.requirement .two-column-text .header .title {
+  color: #091410;
+  font-size: calc(37 / var(--base-size) * 100vw);
+  padding-top: calc(33 / var(--base-size) * 100vw);
+  text-transform: none;
+  line-height: calc(37.47 / var(--base-size) * 100vw);
+  letter-spacing: 0.002em;
+  font-family: var(--font-bold);
+}
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/Team/style.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************/
