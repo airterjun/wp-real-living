@@ -2318,6 +2318,9 @@
 .requirement .full-width-banner figure.desktop {
   height: calc(423 / var(--base-size) * 100vw);
 }
+.requirement .featured-title h2 {
+  margin-bottom: calc(26 / var(--base-size) * 100vw);
+}
 .requirement .two-column-text .header .title {
   color: #091410;
   font-size: calc(37 / var(--base-size) * 100vw);
