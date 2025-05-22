@@ -13,6 +13,11 @@
 
     .full-width-banner {
         height: vw(423);
+        border-top: none;
+
+        @include mobile {
+            height: vw(329);
+        }
 
         figure.desktop {
             height: vw(423);
@@ -26,7 +31,21 @@
     }
 
     .two-column-text {
+        @include mobile {
+            padding-bottom: vw(75);
+
+            .content {
+                border-top: 0;
+            }
+        }
+
         .header {
+            .left {
+                @include mobile {
+                    border-top: 2px solid #7A7A7A;
+                }
+            }
+
             .title {
                 color: #091410;
                 font-size: vw(37);
@@ -35,13 +54,33 @@
                 line-height: vw(37.47);
                 letter-spacing: 0.002em;
                 font-weight: var(--font-bold);
+
+                @include mobile {
+                    padding-top: vw(31);
+                    font-size: vw(30);
+                    line-height: vw(36);
+                    color: #231E14;
+                }
             }
         }
 
         .body {
             .left {
+                @include mobile {
+                    padding-bottom: vw(34);
+                }
+
                 .description {
                     max-width: vw(510);
+                }
+            }
+        }
+
+        .decor {
+            &-2 {
+                @include mobile {
+                    height: 100%;
+                    max-height: vw(492);
                 }
             }
         }

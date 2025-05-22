@@ -566,7 +566,7 @@
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content::before {
-    display: block;
+    display: none;
   }
 }
 .hero-banner .content:after {
@@ -2314,12 +2314,31 @@
 }
 .requirement .full-width-banner {
   height: calc(423 / var(--base-size) * 100vw);
+  border-top: none;
+}
+@media only screen and (max-width: 879px) {
+  .requirement .full-width-banner {
+    height: calc(329 / var(--base-size) * 100vw);
+  }
 }
 .requirement .full-width-banner figure.desktop {
   height: calc(423 / var(--base-size) * 100vw);
 }
 .requirement .featured-title h2 {
   margin-bottom: calc(26 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .requirement .two-column-text {
+    padding-bottom: calc(75 / var(--base-size) * 100vw);
+  }
+  .requirement .two-column-text .content {
+    border-top: 0;
+  }
+}
+@media only screen and (max-width: 879px) {
+  .requirement .two-column-text .header .left {
+    border-top: 2px solid #7A7A7A;
+  }
 }
 .requirement .two-column-text .header .title {
   color: #091410;
@@ -2330,8 +2349,27 @@
   letter-spacing: 0.002em;
   font-weight: var(--font-bold);
 }
+@media only screen and (max-width: 879px) {
+  .requirement .two-column-text .header .title {
+    padding-top: calc(31 / var(--base-size) * 100vw);
+    font-size: calc(30 / var(--base-size) * 100vw);
+    line-height: calc(36 / var(--base-size) * 100vw);
+    color: #231E14;
+  }
+}
+@media only screen and (max-width: 879px) {
+  .requirement .two-column-text .body .left {
+    padding-bottom: calc(34 / var(--base-size) * 100vw);
+  }
+}
 .requirement .two-column-text .body .left .description {
   max-width: calc(510 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .requirement .two-column-text .decor-2 {
+    height: 100%;
+    max-height: calc(492 / var(--base-size) * 100vw);
+  }
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/Team/style.scss ***!
