@@ -88,7 +88,7 @@
             .left {
                 @include mobile {
                     padding-bottom: vw(34);
-                    padding-right: vw(10);
+                    padding-right: 0;
                 }
 
                 .description {

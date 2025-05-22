@@ -2377,7 +2377,7 @@
 @media only screen and (max-width: 879px) {
   .requirement .two-column-text .body .left {
     padding-bottom: calc(34 / var(--base-size) * 100vw);
-    padding-right: calc(10 / var(--base-size) * 100vw);
+    padding-right: 0;
   }
 }
 .requirement .two-column-text .body .left .description {
