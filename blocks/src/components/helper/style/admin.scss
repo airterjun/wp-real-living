@@ -111,12 +111,14 @@ figure {
         box-sizing: border-box;
     }
 
-    .main-title {
+    .main-title,
+    .header-title {
         cursor: pointer;
         font-size: 17px;
         font-weight: 600;
         margin-bottom: 15px;
     }
+
 
     .input-container {
         width: 100%;
@@ -128,6 +130,12 @@ figure {
             width: 100%;
             height: 200px;
             border-radius: 5px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         .label {

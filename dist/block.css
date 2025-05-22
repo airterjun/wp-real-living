@@ -93,7 +93,8 @@ figure .wp-action__floating button svg path {
 .form-wrapper * {
   box-sizing: border-box;
 }
-.form-wrapper .main-title {
+.form-wrapper .main-title,
+.form-wrapper .header-title {
   cursor: pointer;
   font-size: 17px;
   font-weight: 600;
@@ -109,6 +110,12 @@ figure .wp-action__floating button svg path {
   width: 100%;
   height: 200px;
   border-radius: 5px;
+}
+.form-wrapper .input-container figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .form-wrapper .input-container .label {
   font-size: 13px;
