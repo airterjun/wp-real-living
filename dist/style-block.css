@@ -2312,6 +2312,12 @@
   top: 0;
   height: 100%;
 }
+@media only screen and (max-width: 879px) {
+  .requirement .two-grid-column-card .content .card-wrapper-b {
+    padding-bottom: calc(46 / var(--base-size) * 100vw);
+    padding-right: calc(31 / var(--base-size) * 100vw) !important;
+  }
+}
 .requirement .full-width-banner {
   height: calc(423 / var(--base-size) * 100vw);
   border-top: none;
@@ -2324,8 +2330,19 @@
 .requirement .full-width-banner figure.desktop {
   height: calc(423 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .requirement .featured-title {
+    padding-top: calc(65 / var(--base-size) * 100vw);
+    padding-bottom: calc(94 / var(--base-size) * 100vw);
+  }
+}
 .requirement .featured-title h2 {
   margin-bottom: calc(26 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .requirement .featured-title h2 {
+    margin-bottom: calc(25 / var(--base-size) * 100vw) !important;
+  }
 }
 @media only screen and (max-width: 879px) {
   .requirement .two-column-text {

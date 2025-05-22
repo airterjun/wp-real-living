@@ -238,10 +238,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
 /* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
 /* harmony import */ var _helper_ImageRender__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../helper/ImageRender */ "./blocks/src/components/helper/ImageRender.jsx");
-/* harmony import */ var _helper_LinkEditor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../helper/LinkEditor */ "./blocks/src/components/helper/LinkEditor.jsx");
-/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
-/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/BannerContact/style.scss");
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_LinkEditor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../helper/LinkEditor */ "./blocks/src/components/helper/LinkEditor.jsx");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/BannerContact/style.scss");
+
 
 
 
@@ -257,6 +259,7 @@ __webpack_require__.r(__webpack_exports__);
 const attributes = {
   title: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
   detail: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
+  title_mobile: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
   link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_4__.LinkSchmea,
   background: _Schema_image__WEBPACK_IMPORTED_MODULE_3__.ImageSchema,
   banner: _Schema_image__WEBPACK_IMPORTED_MODULE_3__.ImageSchema,
@@ -268,7 +271,7 @@ const attributes = {
   } = props;
   const headerBanner = () => {
     if (!hideBanner) {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
         set: "banner",
         className: "parallax desktop"
       })), /*#__PURE__*/React.createElement(_helper_ImageRender__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
@@ -288,7 +291,7 @@ const attributes = {
     className: "input-container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
-  }, "Button"), /*#__PURE__*/React.createElement(_helper_LinkEditor__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  }, "Button"), /*#__PURE__*/React.createElement(_helper_LinkEditor__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "link"
   }))), /*#__PURE__*/React.createElement("div", {
     className: "header-title"
@@ -296,25 +299,35 @@ const attributes = {
     className: "input-container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
-  }, "Mobile Banner"), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  }, "Banner"), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "banner_mobile",
     className: "input"
-  })))))), headerBanner(), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "input-container"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Description"), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "title_mobile",
+    tag: "h2",
+    className: "content-a-a"
+  }, props)))))), headerBanner(), /*#__PURE__*/React.createElement("div", {
     className: "content"
-  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "background"
   })), /*#__PURE__*/React.createElement("div", {
     className: "content-a"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "title",
     tag: "h2",
-    className: "content-a-a"
-  }, props)), /*#__PURE__*/React.createElement("div", {
+    className: "content-a-a desktop"
+  }, props)), /*#__PURE__*/React.createElement("h2", {
+    className: "content-a-a mobile"
+  }, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_8__.getMobileDescription)(props, 'title', 'title_mobile')), /*#__PURE__*/React.createElement("div", {
     className: "content-a-b"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "detail",
     tag: "div",
-    className: "content-a-b-a"
+    className: "content-a-b-a description"
   }, props)), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_2__["default"], props)))));
 }
 

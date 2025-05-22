@@ -9,6 +9,17 @@
             top: 0;
             height: 100%;
         }
+
+        .content {
+            .card-wrapper {
+                &-b {
+                    @include mobile {
+                        padding-bottom: vw(46);
+                        padding-right: vw(31) !important;
+                    }
+                }
+            }
+        }
     }
 
     .full-width-banner {
@@ -25,8 +36,17 @@
     }
 
     .featured-title {
+        @include mobile {
+            padding-top: vw(65);
+            padding-bottom: vw(94);
+        }
+
         h2 {
             margin-bottom: vw(26);
+
+            @include mobile {
+                margin-bottom: vw(25) !important;
+            }
         }
     }
 
