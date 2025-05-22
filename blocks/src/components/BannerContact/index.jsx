@@ -65,8 +65,7 @@ export default function (props) {
                 <Media {...props} set="background" />
                 <div className="content-a">
                     <Text set="title" tag="h2" className="content-a-a desktop" {...props} />
-                    <h2 className="content-a-a mobile">
-                        {getMobileDescription(props, 'title', 'title_mobile')}
+                    <h2 className="content-a-a mobile" dangerouslySetInnerHTML={{ __html: getMobileDescription(props, 'title', 'title_mobile') }}>
                     </h2>
                     <div className="content-a-b">
                         <Text set="detail" tag="div" className="content-a-b-a description" {...props} />

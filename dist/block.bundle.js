@@ -321,8 +321,11 @@ const attributes = {
     tag: "h2",
     className: "content-a-a desktop"
   }, props)), /*#__PURE__*/React.createElement("h2", {
-    className: "content-a-a mobile"
-  }, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_8__.getMobileDescription)(props, 'title', 'title_mobile')), /*#__PURE__*/React.createElement("div", {
+    className: "content-a-a mobile",
+    dangerouslySetInnerHTML: {
+      __html: (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_8__.getMobileDescription)(props, 'title', 'title_mobile')
+    }
+  }), /*#__PURE__*/React.createElement("div", {
     className: "content-a-b"
   }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "detail",
