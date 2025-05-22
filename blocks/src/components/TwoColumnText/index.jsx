@@ -1,4 +1,5 @@
-import { getModelId, getNestedValue } from "../helper/Libs";
+import Controller from "../helper/Controller";
+import { getMobileDescription, getModelId, getNestedValue } from "../helper/Libs";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
@@ -9,6 +10,7 @@ import "./style.scss";
 
 const attributes = {
    description: TextSchema,
+   description_mobile: TextSchema,
    label: TextSchema,
    title: TextSchema,
    banner: ImageSchema,
@@ -34,8 +36,6 @@ const TwoColumnText = (props) => {
 
    const isHasLabel = props.edit ? true : getLabel ? true : false
 
-   console.log('isHasLabel', isHasLabel)
-
    const items = () => listItems.map((_, index) => {
       const title = `list.${index}.title`
       const desc = `list.${index}.description`
@@ -48,8 +48,18 @@ const TwoColumnText = (props) => {
       </div>
    })
 
+
    return (
       <section className="two-column-text">
+         <Controller getTitle="title" {...props}>
+            <div className="header-title">
+               Mobile Content
+            </div>
+            <div className="input-container">
+               <div className="label">Description</div>
+               <Text set="description_mobile" className="input" {...props} />
+            </div>
+         </Controller>
          <div className="decor decor-1"></div>
          <div className="decor decor-2"></div>
          <div className="decor decor-3"></div>
@@ -63,7 +73,9 @@ const TwoColumnText = (props) => {
          </div>
          <div className="content body">
             <div className="left">
-               <Text tag="div" set="description" {...props} className="description" />
+               <Text tag="div" set="description" {...props} className="description desktop" />
+               <div className="description mobile" dangerouslySetInnerHTML={{ __html: getMobileDescription(props, 'description', 'description_mobile') }}>
+               </div>
             </div>
 
             <div className="right item">

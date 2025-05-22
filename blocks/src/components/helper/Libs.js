@@ -131,6 +131,12 @@ export const setNestedValue = (obj, path, value) => {
 };
 
 
+export const stripHtml = (html) => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = html;
+    return tempDiv.textContent || tempDiv.innerText || "";
+}
+
 
 export const getMobileDescription = (props, originalText, mobileText) => {
     const mobileModel = props.model ? `${props.model}.${mobileText}` : mobileText

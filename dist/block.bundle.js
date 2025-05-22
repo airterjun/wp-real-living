@@ -1788,14 +1788,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
-/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
-/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
-/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
-/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
-/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
-/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/TwoColumnText/style.scss");
+/* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/TwoColumnText/style.scss");
+
 
 
 
@@ -1807,26 +1809,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const attributes = {
-  description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-  label: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-  title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-  banner: _Schema_image__WEBPACK_IMPORTED_MODULE_6__.ImageSchema,
-  list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_5__.ArraySchema)([{
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+  description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  description_mobile: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  label: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  banner: _Schema_image__WEBPACK_IMPORTED_MODULE_7__.ImageSchema,
+  list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_6__.ArraySchema)([{
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
   }, {
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
   }, {
-    title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+    title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+    description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema
   }])
 };
 const TwoColumnText = props => {
-  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getModelId)('list', props));
-  const getLabel = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_2__.getModelId)('label', props));
+  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getModelId)('list', props));
+  const getLabel = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getModelId)('label', props));
   const isHasLabel = props.edit ? true : getLabel ? true : false;
-  console.log('isHasLabel', isHasLabel);
   const items = () => listItems.map((_, index) => {
     const title = `list.${index}.title`;
     const desc = `list.${index}.description`;
@@ -1834,13 +1836,13 @@ const TwoColumnText = props => {
       className: "item-a"
     }, /*#__PURE__*/React.createElement("div", {
       className: "arrow"
-    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_9__["default"], null)), /*#__PURE__*/React.createElement("div", {
       className: "item-a-a"
-    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: desc,
       tag: "div",
       className: "item-a-a-a"
-    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: title,
       tag: "div",
       className: "item-a-a-b"
@@ -1848,7 +1850,18 @@ const TwoColumnText = props => {
   });
   return /*#__PURE__*/React.createElement("section", {
     className: "two-column-text"
+  }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    getTitle: "title"
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: "header-title"
+  }, "Mobile Content"), /*#__PURE__*/React.createElement("div", {
+    className: "input-container"
   }, /*#__PURE__*/React.createElement("div", {
+    className: "label"
+  }, "Description"), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "description_mobile",
+    className: "input"
+  }, props)))), /*#__PURE__*/React.createElement("div", {
     className: "decor decor-1"
   }), /*#__PURE__*/React.createElement("div", {
     className: "decor decor-2"
@@ -1858,15 +1871,15 @@ const TwoColumnText = props => {
     className: "content header"
   }, /*#__PURE__*/React.createElement("div", {
     className: `left ${!isHasLabel ? 'no-label' : ''}`
-  }, isHasLabel && /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  }, isHasLabel && /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "label",
     tag: "div",
     className: "label"
-  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "title",
     tag: "h2",
     className: "title"
-  }))), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }))), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "banner"
   }, props, {
     className: "parallax"
@@ -1874,12 +1887,17 @@ const TwoColumnText = props => {
     className: "content body"
   }, /*#__PURE__*/React.createElement("div", {
     className: "left"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     tag: "div",
     set: "description"
   }, props, {
-    className: "description"
-  }))), /*#__PURE__*/React.createElement("div", {
+    className: "description desktop"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "description mobile",
+    dangerouslySetInnerHTML: {
+      __html: (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_3__.getMobileDescription)(props, 'description', 'description_mobile')
+    }
+  })), /*#__PURE__*/React.createElement("div", {
     className: "right item"
   }, items())));
 };
@@ -2111,11 +2129,12 @@ function Controller(props) {
   let panelTitle = title || 'Manage';
   if (getTitle) {
     const keyId = model ? `${model}.${getTitle}` : getTitle;
-    panelTitle = (0,_Libs__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(attributes, keyId) || 'Manage';
+    panelTitle = (0,_Libs__WEBPACK_IMPORTED_MODULE_3__.stripHtml)((0,_Libs__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(attributes, keyId)) || 'Manage';
   }
   if (props.edit) {
     return /*#__PURE__*/React.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, /*#__PURE__*/React.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-      title: panelTitle
+      title: panelTitle,
+      initialOpen: false
     }, /*#__PURE__*/React.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, /*#__PURE__*/React.createElement("div", {
       className: "form-wrapper"
     }, props.children))));
@@ -2186,6 +2205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   last: () => (/* binding */ last),
 /* harmony export */   sanitizeInput: () => (/* binding */ sanitizeInput),
 /* harmony export */   setNestedValue: () => (/* binding */ setNestedValue),
+/* harmony export */   stripHtml: () => (/* binding */ stripHtml),
 /* harmony export */   transformJson: () => (/* binding */ transformJson)
 /* harmony export */ });
 const last = arr => {
@@ -2301,6 +2321,11 @@ const setNestedValue = (obj, path, value) => {
   // Set the value at the final key
   current[keys[keys.length - 1]] = value;
   return obj;
+};
+const stripHtml = html => {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = html;
+  return tempDiv.textContent || tempDiv.innerText || "";
 };
 const getMobileDescription = (props, originalText, mobileText) => {
   const mobileModel = props.model ? `${props.model}.${mobileText}` : mobileText;
