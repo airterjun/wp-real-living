@@ -9,6 +9,12 @@
     flex-direction: column;
     justify-content: center;
 
+    @include mobile {
+        height: vw(545);
+        display: block;
+        padding-top: vw(73);
+    }
+
     .inner-container {
         z-index: 4;
         width: 100%;
@@ -16,12 +22,23 @@
         position: relative;
         max-width: vw(1200);
 
+        @include mobile {
+            padding: 0 vw(20);
+        }
+
         h1 {
             font-size: vw(48);
             color: #FFFFFF;
             line-height: vw(54);
             margin-bottom: vw(30);
             font-weight: var(--font-extra);
+
+            @include mobile {
+                font-size: vw(33);
+                color: #FFFFFF;
+                line-height: vw(37);
+                font-weight: var(--font-bold);
+            }
         }
 
         .primary-button {
@@ -34,6 +51,12 @@
                 border-color: #F7F7F7;
                 letter-spacing: vw(-0.27);
                 justify-content: center;
+
+                @include mobile {
+                    width: 100%;
+                    font-size: vw(21);
+                    letter-spacing: vw(-0.29);
+                }
 
                 &::before {
                     background-color: #F7F7F7;
@@ -64,6 +87,10 @@
         height: vw(428);
         overflow: hidden;
         position: absolute;
+
+        @include mobile {
+            height: vw(545);
+        }
 
         img {
             width: 100%;

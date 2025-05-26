@@ -526,7 +526,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const attributes = {
   title: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
+  title_mobile: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema,
   background: _Schema_image__WEBPACK_IMPORTED_MODULE_5__.ImageSchema,
+  background_mobile: _Schema_image__WEBPACK_IMPORTED_MODULE_5__.ImageSchema,
   link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_6__.LinkSchmea
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
@@ -540,16 +542,45 @@ const attributes = {
     className: "label"
   }, "Button"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_helper_LinkEditor__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "link"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "main-title"
+  }, "Mobile Content"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "input-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "label"
+  }, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "title_mobile"
+  }, props, {
+    tag: "div",
+    className: "input"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "input-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "label"
+  }, "Background"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "background_mobile"
+  }, props, {
+    className: "input"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "inner-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "title"
   }, props, {
-    tag: "h1"
+    tag: "h1",
+    className: "desktop"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "title_mobile"
+  }, props, {
+    tag: "h1",
+    className: "mobile"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_4__["default"], props)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "background"
   }, props, {
-    className: "parallax"
+    className: "parallax desktop"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "background_mobile"
+  }, props, {
+    className: "parallax mobile"
   })));
 }
 
