@@ -479,6 +479,36 @@
 .featured-title.no-footer .main-container {
   margin-bottom: 0;
 }
+.featured-title.no-description {
+  row-gap: 0;
+}
+.featured-title.no-description .main-container:first-child {
+  padding-top: 0;
+  flex-direction: row;
+  margin-bottom: calc(54 / var(--base-size) * 100vw);
+  justify-content: center;
+}
+.featured-title.no-description .main-container:first-child .title {
+  margin-bottom: 0;
+  font-size: calc(60 / var(--base-size) * 100vw);
+  color: #6B5B38;
+  letter-spacing: -0.009em;
+}
+.featured-title.no-description .main-container:last-child {
+  padding: 0;
+}
+.featured-title.no-description .main-container:last-child .card-item {
+  margin-bottom: calc(63 / var(--base-size) * 100vw);
+}
+.featured-title.no-description .main-container:last-child .card-item-a svg path {
+  fill: #6b5b38;
+}
+.featured-title.no-description .main-container:last-child .card-item-a:nth-of-type(even) {
+  padding-left: calc(37 / var(--base-size) * 100vw);
+}
+.featured-title.no-description .main-container:last-child .card-item-a-a {
+  max-width: calc(479 / var(--base-size) * 100vw);
+}
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/HeroBanner/style.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
@@ -2388,6 +2418,80 @@
     height: 100%;
     max-height: calc(483 / var(--base-size) * 100vw);
   }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerWithTitleCta/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --base-size: 1920;
+  --mobile-browser: 876;
+  --wrapper-padding: 20;
+  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media only screen and (max-width: 879px) {
+  :root {
+    --base-size: 376;
+    --wrapper-padding: 20;
+  }
+}
+.banner-with-title-cta {
+  height: calc(428 / var(--base-size) * 100vw);
+  display: flex;
+  margin-top: calc(44 / var(--base-size) * 100vw);
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner-with-title-cta .inner-container {
+  z-index: 4;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: calc(1200 / var(--base-size) * 100vw);
+}
+.banner-with-title-cta .inner-container h1 {
+  font-size: calc(48 / var(--base-size) * 100vw);
+  color: #FFFFFF;
+  line-height: calc(54 / var(--base-size) * 100vw);
+  margin-bottom: calc(30 / var(--base-size) * 100vw);
+  font-weight: var(--font-extra);
+}
+.banner-with-title-cta .inner-container .primary-button a {
+  width: calc(250 / var(--base-size) * 100vw);
+  height: calc(49 / var(--base-size) * 100vw);
+  font-size: calc(19 / var(--base-size) * 100vw);
+  color: #F7F7F7;
+  border-color: #F7F7F7;
+  letter-spacing: calc(-0.27 / var(--base-size) * 100vw);
+  justify-content: center;
+}
+.banner-with-title-cta .inner-container .primary-button a::before {
+  background-color: #F7F7F7;
+}
+.banner-with-title-cta .inner-container .primary-button a svg path {
+  fill: #F7F7F7;
+}
+@media only screen and (min-width: 879px) {
+  .banner-with-title-cta .inner-container .primary-button a:hover {
+    color: #937D4D;
+  }
+  .banner-with-title-cta .inner-container .primary-button a:hover svg path {
+    fill: #937D4D !important;
+  }
+}
+.banner-with-title-cta figure {
+  top: 0;
+  width: 100%;
+  height: calc(428 / var(--base-size) * 100vw);
+  overflow: hidden;
+  position: absolute;
+}
+.banner-with-title-cta figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/Team/style.scss ***!

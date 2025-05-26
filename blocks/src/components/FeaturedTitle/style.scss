@@ -203,4 +203,51 @@
             margin-bottom: 0;
         }
     }
+
+
+    &.no-description {
+        row-gap: 0;
+
+        .main-container {
+            &:first-child {
+                padding-top: 0;
+                flex-direction: row;
+                margin-bottom: vw(54);
+                justify-content: center;
+
+                .title {
+                    margin-bottom: 0;
+                    font-size: vw(60);
+                    color: #6B5B38;
+                    letter-spacing: -0.009em;
+                }
+            }
+
+
+            &:last-child {
+                padding: 0;
+
+                .card-item {
+                    margin-bottom: vw(63);
+
+                    &-a {
+
+                        svg {
+                            path {
+                                fill: #6b5b38
+                            }
+                        }
+
+                        &:nth-of-type(even) {
+                            padding-left: vw(37);
+                        }
+
+                        &-a {
+                            max-width: vw(479);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

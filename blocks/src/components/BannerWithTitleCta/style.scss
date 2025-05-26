@@ -1,0 +1,73 @@
+@import "./../../assets//styles/utils/functions";
+
+
+.banner-with-title-cta {
+    height: vw(428);
+    display: flex;
+    margin-top: vw(44);
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+
+    .inner-container {
+        z-index: 4;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        max-width: vw(1200);
+
+        h1 {
+            font-size: vw(48);
+            color: #FFFFFF;
+            line-height: vw(54);
+            margin-bottom: vw(30);
+            font-weight: var(--font-extra);
+        }
+
+        .primary-button {
+            a {
+                width: vw(250);
+                height: vw(49);
+                font-size: vw(19);
+                color: #F7F7F7;
+                border-color: #F7F7F7;
+                letter-spacing: vw(-0.27);
+                justify-content: center;
+
+                &::before {
+                    background-color: #F7F7F7;
+                }
+
+                svg {
+                    path {
+                        fill: #F7F7F7
+                    }
+                }
+
+                @include hover {
+                    color: #937D4D;
+
+                    svg {
+                        path {
+                            fill: #937D4D !important
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    figure {
+        top: 0;
+        width: 100%;
+        height: vw(428);
+        overflow: hidden;
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
