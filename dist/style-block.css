@@ -507,7 +507,7 @@
   padding-left: calc(37 / var(--base-size) * 100vw);
 }
 .featured-title.no-description .main-container:last-child .card-item-a-a {
-  max-width: calc(479 / var(--base-size) * 100vw);
+  max-width: calc(485 / var(--base-size) * 100vw);
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/HeroBanner/style.scss ***!
