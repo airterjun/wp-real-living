@@ -2458,11 +2458,11 @@
   font-weight: var(--font-extra);
 }
 .banner-with-title-cta .inner-container .primary-button a {
+  padding: 0;
   width: calc(250 / var(--base-size) * 100vw);
   height: calc(49 / var(--base-size) * 100vw);
   font-size: calc(19 / var(--base-size) * 100vw);
   color: #F7F7F7;
-  padding: 0 calc(40 / var(--base-size) * 100vw);
   border-color: #F7F7F7;
   letter-spacing: calc(-0.27 / var(--base-size) * 100vw);
   justify-content: center;
