@@ -7,6 +7,8 @@ import { LinkSchmea } from '../Schema/linkSchema';
 import { TextSchema } from '../Schema/text';
 
 import "./style.scss";
+import Controller from '../helper/Controller';
+import LinkEditor from '../helper/LinkEditor';
 
 
 export const attributes = {
@@ -17,6 +19,12 @@ export const attributes = {
 export default function (props) {
     return (
         <section className='banner-with-title-cta'>
+            <Controller {...props} getTitle="title">
+                <div className='input-container'>
+                    <div className="label">Button</div>
+                    <LinkEditor {...props} set="link" />
+                </div>
+            </Controller>
             <div className='inner-container'>
                 <Text set="title" {...props} tag="h1" />
                 <PrimaryButton {...props} />
