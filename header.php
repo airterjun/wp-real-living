@@ -31,7 +31,6 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
 ?>
 
 
-
 <body <?= body_class() ?> id="main-website-wrapper">
     <header class="main-header <?php echo $custom_class; ?>" id="main-header">
         <div class="inner">
