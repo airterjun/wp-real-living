@@ -23,7 +23,7 @@ footer {
     .footer-content-bottom {
         display: flex;
         height: vw(44);
-        color: #58595B;
+        color: #000;
         font-weight: 500;
         font-size: vw(15);
         align-items: center;
@@ -43,7 +43,7 @@ footer {
 
 
         &-b {
-            color: #828282;
+            color: #000;
 
             @include mobile {
                 padding-top: vw(6);
@@ -51,7 +51,7 @@ footer {
 
 
             a {
-                color: #58595B;
+                color: #000;
             }
         }
     }
