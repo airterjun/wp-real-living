@@ -329,7 +329,7 @@ footer .logo svg {
 footer .footer-content-bottom {
   display: flex;
   height: calc(44 / var(--base-size) * 100vw);
-  color: #000;
+  color: #443826;
   font-weight: 500;
   font-size: calc(15 / var(--base-size) * 100vw);
   align-items: center;
@@ -348,7 +348,7 @@ footer .footer-content-bottom {
   }
 }
 footer .footer-content-bottom-b {
-  color: #000;
+  color: #443826;
 }
 @media only screen and (max-width: 879px) {
   footer .footer-content-bottom-b {
@@ -356,7 +356,7 @@ footer .footer-content-bottom-b {
   }
 }
 footer .footer-content-bottom-b a {
-  color: #000;
+  color: #443826;
 }
 
 header {
