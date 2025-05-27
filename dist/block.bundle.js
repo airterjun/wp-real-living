@@ -1180,7 +1180,7 @@ const HeroBanner = props => {
   }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "text_1"
   }, props, {
-    tag: "h2",
+    tag: "h1",
     className: "content-a_a h1 item desktop"
   })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "text_2"
@@ -1190,7 +1190,7 @@ const HeroBanner = props => {
   })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "text_1_mobile"
   }, props, {
-    tag: "h2",
+    tag: "h1",
     className: "content-a_a h1 item mobile"
   })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "text_2_mobile"

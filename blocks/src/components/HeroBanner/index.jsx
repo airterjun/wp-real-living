@@ -71,10 +71,10 @@ const HeroBanner = (props) => {
             <section className="hero-banner">
                 <div className="content">
                     <div className="content-a">
-                        <Text set="text_1" {...props} tag="h2" className="content-a_a h1 item desktop" />
+                        <Text set="text_1" {...props} tag="h1" className="content-a_a h1 item desktop" />
                         <Text set="text_2" {...props} tag="div" className="content-a-b b1 item desktop" />
 
-                        <Text set="text_1_mobile" {...props} tag="h2" className="content-a_a h1 item mobile" />
+                        <Text set="text_1_mobile" {...props} tag="h1" className="content-a_a h1 item mobile" />
                         <Text set="text_2_mobile" {...props} tag="div" className="content-a-b b1 item mobile" />
                         {button()}
                     </div>

@@ -33,7 +33,7 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
 
 
 <body <?= body_class() ?> id="main-website-wrapper">
-    <header class="main-header <?php echo $custom_class; ?>" id="main-header">
+    <header class="main-header <?php echo $custom_class; ?>" id="main-header" role="header">
         <div class="inner">
             <div class="timer">
                 <div class="location">London Time</div>
@@ -72,7 +72,7 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
 
     </header>
 
-    <div class="header-menu">
+    <nav class="header-menu" role="navigation">
 
         <div class="menu-wrapper">
             <?php
@@ -86,7 +86,7 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
 
         </div>
 
-    </div>
+    </nav>
 
     <?php
     $mainClass = implode(' ', array_map(function ($word) {
@@ -94,4 +94,4 @@ $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
     }, explode(' ', $custom_class)));
 
     ?>
-    <main class="main-container <?php echo $mainClass ?>">
+    <main class="main-container <?php echo $mainClass ?>" role="main">
