@@ -79,6 +79,7 @@ const HeroBanner = (props) => {
                         {button()}
                     </div>
                 </div>
+
                 <Media set="background" {...props} className="background parallax desktop" />
                 <ImageRender value="background_mobile" {...props} className="background parallax mobile" fallBack="background" />
             </section>
