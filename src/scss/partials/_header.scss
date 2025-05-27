@@ -238,7 +238,7 @@ header {
 
             @include mobile {
                 transform: none;
-                transform: translateX(vw(40));
+                // transform: translateX(vw(40));
             }
 
             li {

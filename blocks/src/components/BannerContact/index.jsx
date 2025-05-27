@@ -36,28 +36,21 @@ export default function (props) {
 
     return (
         <section className="banner-contact">
-            <Controller {...props}>
-                <div className="form-wrapper">
-                    <details>
-                        <summary className="main-title">
-                            {props.section ? `Section ${props.section}` : 'Banner Contact'}
-                        </summary>
-                        <div className="input-container">
-                            <div className="label">Button</div>
-                            <LinkEditor {...props} set="link" />
-                        </div>
-                        <div className="header-title">
-                            Mobile Content
-                        </div>
-                        <div className="input-container">
-                            <div className="label">Banner</div>
-                            <Media {...props} set="banner_mobile" className="input" />
-                        </div>
-                        <div className="input-container">
-                            <div className="label">Description</div>
-                            <Text set="title_mobile" tag="h2" className="content-a-a" {...props} />
-                        </div>
-                    </details>
+            <Controller {...props} getTitle="title">
+                <div className="input-container">
+                    <div className="label">Button</div>
+                    <LinkEditor {...props} set="link" />
+                </div>
+                <div className="header-title">
+                    Mobile Content
+                </div>
+                <div className="input-container">
+                    <div className="label">Banner</div>
+                    <Media {...props} set="banner_mobile" className="input" />
+                </div>
+                <div className="input-container">
+                    <div className="label">Description</div>
+                    <Text set="title_mobile" tag="h2" className="content-a-a" {...props} />
                 </div>
             </Controller>
             {headerBanner()}

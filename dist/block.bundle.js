@@ -295,11 +295,9 @@ const attributes = {
   };
   return /*#__PURE__*/React.createElement("section", {
     className: "banner-contact"
-  }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_6__["default"], props, /*#__PURE__*/React.createElement("div", {
-    className: "form-wrapper"
-  }, /*#__PURE__*/React.createElement("details", null, /*#__PURE__*/React.createElement("summary", {
-    className: "main-title"
-  }, props.section ? `Section ${props.section}` : 'Banner Contact'), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(_helper_Controller__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    getTitle: "title"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "input-container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
@@ -322,7 +320,7 @@ const attributes = {
     set: "title_mobile",
     tag: "h2",
     className: "content-a-a"
-  }, props)))))), headerBanner(), /*#__PURE__*/React.createElement("div", {
+  }, props)))), headerBanner(), /*#__PURE__*/React.createElement("div", {
     className: "content"
   }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "background"
