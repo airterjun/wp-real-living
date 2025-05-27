@@ -29,7 +29,7 @@
 </footer>
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css' ?>" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/dist/app.css?v=1.2.1' ?>" />
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/dist/app.css?v=1.2.1.0' ?>" />
 <?php wp_footer(); ?>
 </body>
 
