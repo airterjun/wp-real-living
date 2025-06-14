@@ -244,7 +244,7 @@ header {
             li {
                 opacity: 0;
                 overflow: hidden;
-                min-width: vw(290);
+                min-width: vw(400);
                 position: relative;
                 padding-left: vw(26);
                 transform: translateY(vw(20));
@@ -264,8 +264,8 @@ header {
                     position: absolute;
                     transform-origin: top;
                     background-color: #FFF;
-                    transform: scaleY(0) translateY(vw(8));
                     transition: transform .25s ease-out;
+                    transform: scaleY(0) translateY(vw(8));
 
                     @include mobile {
                         height: vw(28.6);
