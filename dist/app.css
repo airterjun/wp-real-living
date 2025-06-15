@@ -569,7 +569,7 @@ header.menu-active .close-menu .line:last-child {
 }
 @media only screen and (max-width: 879px) {
   .header-menu .menu-wrapper ul li {
-    min-width: calc(300 / var(--base-size) * 100vw);
+    min-width: calc(340 / var(--base-size) * 100vw);
     padding-left: calc(21 / var(--base-size) * 100vw);
     transform: translateY(calc(20 / var(--base-size) * 100vw));
   }

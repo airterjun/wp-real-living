@@ -250,7 +250,7 @@ header {
                 transform: translateY(vw(20));
 
                 @include mobile {
-                    min-width: vw(300);
+                    min-width: vw(340);
                     padding-left: vw(21);
                     transform: translateY(vw(20));
                 }
