@@ -17,13 +17,23 @@
 
 
     <title><?php the_title() ?></title>
-    <meta property="og:title" content="<?php the_title() ?>">
+    <!-- <meta property="og:title" content="<?php the_title() ?>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="description" content="<?php the_excerpt() ?>">
-    <meta property="og:description" content="<?php the_excerpt() ?>">
+    <meta property="og:description" content="<?php the_excerpt() ?>"> -->
 
     <link rel="stylesheet" href="https://use.typekit.net/pkj7fwh.css">
 
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2YKGKS6G0L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2YKGKS6G0L');
+</script>
 </head>
 
 <?php
