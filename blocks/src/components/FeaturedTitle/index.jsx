@@ -2,6 +2,7 @@ import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
 import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
+import LinkEditor from "../helper/LinkEditor";
 import ListEditor from "../helper/ListEditor";
 import Text from "../helper/Text";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
@@ -129,13 +130,11 @@ export default function (props) {
                             <InputWrapper label="Text above button">
                                 <Text set="textButton" {...props} tag="div" />
                             </InputWrapper>
-                            <InputWrapper label="Button">
-                                <PrimaryButton {...props} />
-                            </InputWrapper>
+                            <LinkEditor {...props} set="link" />
                         </>
                     }
                 </div>
-                <div className="tab-item active">
+                <div className="tab-item">
                     {!disabledContent &&
                         <>
                             <InputWrapper label="List">

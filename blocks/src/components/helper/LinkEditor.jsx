@@ -12,9 +12,10 @@ export default function LinkEditor(props) {
     const setId = model ? `${model}.${set}` : set
 
     let link = getNestedValue(attributes, setId)
+    if (link && !link.url) link.url = "#"
 
 
-
+    console.log('link', link)
 
     const setLink = (newVal) => {
         const path = getBaseModelPath(setId)

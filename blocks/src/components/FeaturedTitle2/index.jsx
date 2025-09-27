@@ -93,9 +93,7 @@ export default function (props) {
                     <InputWrapper label="List">
                         <ListEditor nested={true} set="list" title="title" {...props} template={(index) => mobileEditor(index, true)} />
                     </InputWrapper>
-                    <InputWrapper label="Button">
-                        <LinkEditor {...props} set="link" />
-                    </InputWrapper>
+                    <LinkEditor {...props} set="link" />
                 </div>
 
                 <div className="tab-item" data-name="dekstop">
