@@ -10,6 +10,7 @@ const BlockEditor = (props) => {
         const contentRef = useRef()
         const blockClass = `editor-${id}`
         const mainContainerWrapper = useRef(null);
+        const handleDrag = useRef(null);
         const containerRef = useRef(null);
         const isDragging = useRef(false);
         const offsetX = useRef(0);
@@ -67,12 +68,12 @@ const BlockEditor = (props) => {
 
             if (!mainContainerWrapper.current) return () => { }
 
-            mainContainerWrapper.current.addEventListener("mousemove", handleMouseMove);
-            mainContainerWrapper.current.addEventListener("mouseup", handleMouseUp);
+            handleDrag.current.addEventListener("mousemove", handleMouseMove);
+            handleDrag.current.addEventListener("mouseup", handleMouseUp);
 
             return () => {
-                mainContainerWrapper.current.removeEventListener("mousemove", handleMouseMove);
-                mainContainerWrapper.current.removeEventListener("mouseup", handleMouseUp);
+                handleDrag.current.removeEventListener("mousemove", handleMouseMove);
+                handleDrag.current.removeEventListener("mouseup", handleMouseUp);
             };
         }, []);
 
@@ -90,9 +91,8 @@ const BlockEditor = (props) => {
         };
         return (
             <div className="block-editor-pannel-wrapper" ref={mainContainerWrapper}>
-                <div className={`block-editor-pannel ${blockClass}`} ref={containerRef}
-                    onMouseDown={startDragging}>
-                    <div className="header-panel">
+                <div className={`block-editor-pannel ${blockClass}`} ref={containerRef}>
+                    <div className="header-panel" onMouseDown={startDragging} ref={handleDrag}>
                         <div className="header-panel-title">Section Settings </div>
                         <div className="button-close" onClick={() => { closePanel() }}>x</div>
                     </div>

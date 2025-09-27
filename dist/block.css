@@ -122,6 +122,21 @@
   padding-top: 20px;
   padding-bottom: 5px;
 }
+.block-editor-pannel .content-scroll input {
+  border: none;
+  color: #FFF;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 5px !important;
+}
+.block-editor-pannel .content-scroll .block-editor-url-input__button-modal-line {
+  display: flex;
+  background-color: #FFF;
+  justify-content: space-between;
+}
+.block-editor-pannel .content-scroll .block-editor-url-input__button-modal-line .components-base-control {
+  flex: 1 auto;
+}
 .block-editor-pannel .content-scroll .tab-item {
   display: none;
 }
@@ -153,7 +168,7 @@
 .block-editor-pannel .list-item-wrapper {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.block-editor-pannel .list-item-wrapper .header {
+.block-editor-pannel .list-item-wrapper-header {
   gap: 20px;
   height: auto;
   display: flex;
@@ -163,7 +178,7 @@
   border-top: none !important;
   justify-content: space-between;
 }
-.block-editor-pannel .list-item-wrapper .header .list-title {
+.block-editor-pannel .list-item-wrapper-header-list-title {
   gap: 10px;
   flex: 1 auto;
   display: flex;
@@ -171,23 +186,29 @@
   overflow: hidden;
   align-items: center;
 }
-.block-editor-pannel .list-item-wrapper .header .list-title .icon {
+.block-editor-pannel .list-item-wrapper-header-list-title .icon {
   flex: 0 0 10px;
 }
-.block-editor-pannel .list-item-wrapper .header .list-title .icon svg {
+.block-editor-pannel .list-item-wrapper-header-list-title .icon svg {
   width: 10px;
   height: 10px;
 }
-.block-editor-pannel .list-item-wrapper .header .list-title .icon svg path {
+.block-editor-pannel .list-item-wrapper-header-list-title .icon svg path {
   stroke: #FFF;
 }
-.block-editor-pannel .list-item-wrapper .header .list-title .title-wrapper {
+.block-editor-pannel .list-item-wrapper-header-list-title .title-wrapper {
   flex: 1 auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.block-editor-pannel .list-item-button-delete {
+.block-editor-pannel .list-item-wrapper-header-buttons {
+  gap: 20px;
+  flex: 0 0 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+.block-editor-pannel .list-item-wrapper-header-buttons .button-container {
   gap: 6px;
   flex: 0 0 25px;
   width: 25px;
@@ -202,18 +223,18 @@
   text-transform: uppercase;
   justify-content: center;
 }
-.block-editor-pannel .list-item-button-delete.disabled-delete {
+.block-editor-pannel .list-item-wrapper-header-buttons .button-container.disabled-delete {
   opacity: 0.3;
   pointer-events: none;
 }
-.block-editor-pannel .list-item-button-delete:hover {
+.block-editor-pannel .list-item-wrapper-header-buttons .button-container:hover {
   background-color: rgb(185, 16, 16);
 }
-.block-editor-pannel .list-item-button-delete svg {
+.block-editor-pannel .list-item-wrapper-header-buttons .button-container svg {
   width: 15px;
   flex: 0 0 15px;
 }
-.block-editor-pannel .list-item-button-delete svg path {
+.block-editor-pannel .list-item-wrapper-header-buttons .button-container svg path {
   stroke: #FFF;
 }
 .block-editor-pannel .media-editor {

@@ -124,6 +124,24 @@
         }
 
 
+        input {
+            border: none;
+            color: #FFF;
+            padding: 10px;
+            background-color: #222;
+            border-radius: 5px !important;
+        }
+
+
+        .block-editor-url-input__button-modal-line {
+            display: flex;
+            background-color: #FFF;
+            justify-content: space-between;
+
+            .components-base-control {
+                flex: 1 auto
+            }
+        }
 
         .tab-item {
             display: none;
@@ -163,7 +181,7 @@
     .list-item-wrapper {
         border-bottom: 1px solid rgba(#fff, 0.1);
 
-        .header {
+        &-header {
             gap: 20px;
             height: auto;
             display: flex;
@@ -174,7 +192,7 @@
             justify-content: space-between;
 
 
-            .list-title {
+            &-list-title {
                 gap: 10px;
                 flex: 1 auto;
                 display: flex;
@@ -203,44 +221,52 @@
                 }
 
             }
-        }
-    }
 
-    // Button delete list
-    .list-item-button-delete {
-        gap: 6px;
-        flex: 0 0 25px;
-        width: 25px;
-        height: 25px;
-        display: flex;
-        cursor: pointer;
-        margin-top: 5px;
-        font-size: 11px;
-        border-radius: 50%;
-        align-items: center;
-        background-color: #222;
-        text-transform: uppercase;
-        justify-content: center;
+            &-buttons {
+                gap: 20px;
+                flex: 0 0 80px;
+                display: flex;
+                justify-content: flex-end;
 
-        &.disabled-delete {
-            opacity: 0.3;
-            pointer-events: none;
-        }
+                .button-container {
+                    gap: 6px;
+                    flex: 0 0 25px;
+                    width: 25px;
+                    height: 25px;
+                    display: flex;
+                    cursor: pointer;
+                    margin-top: 5px;
+                    font-size: 11px;
+                    border-radius: 50%;
+                    align-items: center;
+                    background-color: #222;
+                    text-transform: uppercase;
+                    justify-content: center;
 
-        &:hover {
-            background-color: rgb(185, 16, 16);
-        }
+                    &.disabled-delete {
+                        opacity: 0.3;
+                        pointer-events: none;
+                    }
+
+                    &:hover {
+                        background-color: rgb(185, 16, 16);
+                    }
 
 
-        svg {
-            width: 15px;
-            flex: 0 0 15px;
+                    svg {
+                        width: 15px;
+                        flex: 0 0 15px;
 
-            path {
-                stroke: #FFF;
+                        path {
+                            stroke: #FFF;
+                        }
+                    }
+                }
             }
         }
     }
+
+
 
 
     .media-editor {

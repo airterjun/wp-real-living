@@ -91,7 +91,7 @@ export default function (props) {
                         <Text set="description" {...props} tag="div" />
                     </InputWrapper>
                     <InputWrapper label="List">
-                        <ListEditor set="list" title="title" {...props} template={(index) => mobileEditor(index, true)} />
+                        <ListEditor nested={true} set="list" title="title" {...props} template={(index) => mobileEditor(index, true)} />
                     </InputWrapper>
                     <InputWrapper label="Button">
                         <LinkEditor {...props} set="link" />
@@ -100,7 +100,7 @@ export default function (props) {
 
                 <div className="tab-item" data-name="dekstop">
                     <InputWrapper label="List">
-                        <ListEditor set="list" title="title" {...props} template={(index) => mobileEditor(index)} />
+                        <ListEditor nested={true} set="list" title="title" {...props} template={(index) => mobileEditor(index)} />
                     </InputWrapper>
                 </div>
             </BlockEditor>

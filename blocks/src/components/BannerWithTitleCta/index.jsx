@@ -32,7 +32,7 @@ export default function (props) {
                         <Text set="title" {...props} tag="div" />
                     </InputWrapper>
                     <InputWrapper label="Button">
-                        <PrimaryButton {...props} />
+                        <LinkEditor {...props} set="link" />
                     </InputWrapper>
                 </div>
 

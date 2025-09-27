@@ -124,7 +124,7 @@ export default function (props) {
                     {!disabledContent &&
                         <>
                             <InputWrapper label="List">
-                                <ListEditor set="list" title="title" template={(index) => listTemplateEditor(index)} {...props} />
+                                <ListEditor nested={true} set="list" title="title" template={(index) => listTemplateEditor(index)} {...props} />
                             </InputWrapper>
                             <InputWrapper label="Text above button">
                                 <Text set="textButton" {...props} tag="div" />
@@ -139,7 +139,7 @@ export default function (props) {
                     {!disabledContent &&
                         <>
                             <InputWrapper label="List">
-                                <ListEditor set="list" title="title" template={(index) => listTemplateEditor(index, true)} {...props} />
+                                <ListEditor nested={true} set="list" title="title" template={(index) => listTemplateEditor(index, true)} {...props} />
                             </InputWrapper>
                         </>
                     }

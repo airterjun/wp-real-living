@@ -8,13 +8,9 @@ export default function (props) {
 
     let getValueAttr = getNestedValue(attributes, modelSet)
 
-
     if (!getValueAttr) {
         getValueAttr = getNestedValue(attributes, fallBackModelSet)
     }
-
-
-    console.log('getValueAttr', getValueAttr)
 
     return (
         <figure className={className ? className : ''}>

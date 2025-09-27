@@ -1,6 +1,10 @@
+import BlockEditor from "../helper/BlockEditor";
+import BlockWrapper from "../helper/BlockWrapper";
 import ButtonSlider from "../helper/ButtonSlider";
 import Controller from "../helper/Controller";
+import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
+import ListEditor from "../helper/ListEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
@@ -98,40 +102,100 @@ export default function (props) {
         )
     })
 
+    const cardsEditor = (i) => {
+        const t1 = `card.${i}.text_1`
+        const t2 = `card.${i}.text_2`
+        const t3 = `card.${i}.text_3`
+        const t4 = `card.${i}.text_4`
+        const t5 = `card.${i}.text_5`
+        const t6 = `card.${i}.text_6`
+        const t7 = `card.${i}.text_7`
+        const t8 = `card.${i}.text_8`
+        const thumb = `card.${i}.thumbnail`
+
+        return (
+            <>
+                <InputWrapper label="Name">
+                    <Text tag="h2" set={t1} {...props} />
+                </InputWrapper>
+
+                <InputWrapper label="Position">
+                    <Text set={t2} {...props} tag="div" />
+                </InputWrapper>
+
+                <InputWrapper label="Detail">
+                    <Text set={t3} {...props} tag="div" />
+                </InputWrapper>
+
+                <InputWrapper label="Thumb">
+                    <Media set={thumb} {...props} />
+                </InputWrapper>
+
+                <InputWrapper label="Capabilities #1">
+                    <Text {...props} set={t4} tag="div" />
+                </InputWrapper>
+
+                <InputWrapper label="Capabilities #2">
+                    <Text {...props} set={t5} tag="div" />
+                </InputWrapper>
+
+                <InputWrapper label="Capabilities #3">
+                    <Text {...props} set={t6} tag="div" />
+                </InputWrapper>
+
+                <InputWrapper label="Left footer desciption">
+                    <Text {...props} set={t7} tag="div" />
+                </InputWrapper>
+
+                <InputWrapper label="Right footer desciption">
+                    <Text {...props} set={t8} tag="div" />
+                </InputWrapper>
+            </>
+        )
+    }
+
 
 
 
     return (
-        <>
-            <Controller {...props}>
-                <div className="form-wrapper">
-                    <details>
-                        <summary className="main-title">
-                            {props.section ? `Section ${props.section}` : "Teams"}
-                        </summary>
-                        <ButtonSlider slider="card" nested={true} label="text_1" {...props} />
-                    </details>
-                </div>
-            </Controller>
-            <section className="teams">
-                <div className="decor decor-1"></div>
-                <div className="decor decor-2"></div>
 
-                <div className="header">
-                    <Media {...props} set="banner" className="parallax" />
-                    <div className="header-content">
-                        <IconArrow />
+        <BlockWrapper className="teams" {...props}>
+            <BlockEditor {...props}>
+                <div className="tab-item active">
+                    <InputWrapper label="Banner">
+                        <Media {...props} set="banner" />
+                    </InputWrapper>
+                    <InputWrapper label="Background">
+                        <Media {...props} set="title_background" />
+                    </InputWrapper>
+                    <InputWrapper label="Description">
                         <Text {...props} set="description" tag="div" />
-                    </div>
+                    </InputWrapper>
+                    <InputWrapper label="Title">
+                        <Text {...props} set="title" tag="div" />
+                    </InputWrapper>
+                    <InputWrapper label="Team">
+                        <ListEditor nested={true} set="card" title="text_1" {...props} template={(index) => cardsEditor(index)} nested={true} />
+                    </InputWrapper>
                 </div>
-                <div className="title">
-                    <Text {...props} set="title" tag="h2" />
-                    <Media {...props} set="title_background" className="parallax" />
+            </BlockEditor>
+            <div className="decor decor-1"></div>
+            <div className="decor decor-2"></div>
+
+            <div className="header">
+                <Media {...props} set="banner" className="parallax" />
+                <div className="header-content">
+                    <IconArrow />
+                    <Text {...props} set="description" tag="div" />
                 </div>
-                <div className="teams-cards">
-                    {cards()}
-                </div>
-            </section>
-        </>
+            </div>
+            <div className="title">
+                <Text {...props} set="title" tag="h2" />
+                <Media {...props} set="title_background" className="parallax" />
+            </div>
+            <div className="teams-cards">
+                {cards()}
+            </div>
+        </BlockWrapper>
     )
 }
