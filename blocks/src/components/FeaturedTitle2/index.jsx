@@ -1,6 +1,10 @@
+import BlockEditor from "../helper/BlockEditor";
+import BlockWrapper from "../helper/BlockWrapper";
 import Controller from "../helper/Controller";
+import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
 import LinkEditor from "../helper/LinkEditor";
+import ListEditor from "../helper/ListEditor";
 import Text from "../helper/Text";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { ArraySchema } from "../Schema/array";
@@ -50,14 +54,18 @@ export default function (props) {
     const listItems = getNestedValue(props.attributes, getModelId('list', props))
 
 
-    const mobileEditor = () => listItems.map((_, index) => {
-        const title = `listMobile.${index}.title`
-        const desc = `listMobile.${index}.description`
+    const mobileEditor = (index, mobile) => {
+        const title = `${mobile ? 'listMobile' : 'list'}.${index}.title`
+        const desc = `${mobile ? 'listMobile' : 'list'}.${index}.description`
         return <>
-            <Text {...props} set={title} className="card-item-a-a-a input" tag="div" />
-            <Text {...props} set={desc} className="card-item-a-a-b input" tag="div" />
+            <InputWrapper label="Title">
+                <Text {...props} set={title} tag="div" />
+            </InputWrapper>
+            <InputWrapper label="Description">
+                <Text {...props} set={desc} tag="div" />
+            </InputWrapper>
         </>
-    })
+    }
 
 
     const listEl = (listing = 'list') => listItems.map((_, index) => {
@@ -73,25 +81,30 @@ export default function (props) {
     })
 
     return (
-        <section className="featured-title-2">
-            <Controller {...props}>
-                <div className="form-wrapper">
-                    <details>
-                        <summary className="main-title">
-                            {props.section ? `Section ${props.section}` : 'Featured Title 2'}
-                        </summary>
-                        <div className="input-container">
-                            <div className="label">Mobile List</div>
-                            {mobileEditor()}
-                        </div>
-                        <div className="input-container">
-                            <div className="label">Button</div>
-                            <LinkEditor {...props} set="link" />
-                        </div>
-                    </details>
+        <BlockWrapper className="featured-title-2" {...props}>
+            <BlockEditor {...props} tabEditor={true}>
+                <div className="tab-item active" data-name="dekstop">
+                    <InputWrapper label="Title">
+                        <Text set="title" {...props} tag="div" />
+                    </InputWrapper>
+                    <InputWrapper label="Description">
+                        <Text set="description" {...props} tag="div" />
+                    </InputWrapper>
+                    <InputWrapper label="List">
+                        <ListEditor set="list" title="title" {...props} template={(index) => mobileEditor(index, true)} />
+                    </InputWrapper>
+                    <InputWrapper label="Button">
+                        <LinkEditor {...props} set="link" />
+                    </InputWrapper>
                 </div>
-            </Controller>
-            <div className="main-container">
+
+                <div className="tab-item" data-name="dekstop">
+                    <InputWrapper label="List">
+                        <ListEditor set="list" title="title" {...props} template={(index) => mobileEditor(index)} />
+                    </InputWrapper>
+                </div>
+            </BlockEditor>
+            <div className="main-container top-content">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 250 235"><path stroke="#937E4E" stroke-miterlimit="10" stroke-width="2" d="M1 233.31V1h115.88v116.43c0 64-51.88 115.88-115.88 115.88ZM143.37 100.87V1h104.87c0 57.92-46.95 99.87-104.87 99.87ZM143.37 128.44h104.87v104.87c-57.92 0-104.87-46.95-104.87-104.87Z" /></svg>
                 <Text className="title" set="title" {...props} tag="h2" />
                 <Text className="description" set="description" {...props} tag="div" />
@@ -106,6 +119,6 @@ export default function (props) {
                     </div>}
                 <PrimaryButton {...props} />
             </div>
-        </section>
+        </BlockWrapper>
     )
 }

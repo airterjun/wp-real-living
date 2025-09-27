@@ -19,7 +19,7 @@
             padding: 0 vw(19);
         }
 
-        &:first-child {
+        &.top-content {
             display: flex;
             min-height: vw(232);
             align-items: center;
@@ -57,7 +57,7 @@
             }
         }
 
-        &:nth-of-type(2) {
+        &.columb-card {
             @include mobile {
                 padding: vw(72) vw(20) 0;
                 border-top: 2px solid #7A7A7A;
@@ -220,7 +220,7 @@
                 }
             }
 
-            &:first-child {
+            &.top-content {
                 padding-top: 0;
                 flex-direction: row;
                 margin-bottom: vw(54);
@@ -249,7 +249,7 @@
             }
 
 
-            &:last-child {
+            &.columb-card {
                 padding: 0;
 
                 @include mobile {

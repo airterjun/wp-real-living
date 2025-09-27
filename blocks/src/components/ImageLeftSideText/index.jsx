@@ -1,5 +1,8 @@
-import Controller from "../helper/Controller";
+import BlockEditor from "../helper/BlockEditor";
+import BlockWrapper from "../helper/BlockWrapper";
+import InputWrapper from "../helper/InputWrapper";
 import Media from "../helper/Media";
+import MediaInput from "../helper/MediaInput";
 import Text from "../helper/Text";
 import { ImageSchema } from "../Schema/image";
 import { TextSchema } from "../Schema/text";
@@ -23,47 +26,35 @@ export default function (props) {
     const { section } = props
 
     return (
-        <section className="image-left-side-text">
-            <Controller {...props}>
-                <div className="form-wrapper">
-                    <details>
-                        <summary className="main-title">{section ? `Section ${section}` : 'Hero Banner'}</summary>
-                        <div className="input-container">
-                            <div className="label">Background</div>
-                            <div className="item">
-                                <Media set="background" {...props} />
-                            </div>
+        <BlockWrapper className="image-left-side-text" {...props}>
+            <BlockEditor {...props}>
+                <div className="tab-item active" data-name="dekstop">
+                    <InputWrapper label="Background">
+                        <MediaInput set="background" {...props} />
+                    </InputWrapper>
 
-                            <div className="label">Label</div>
-                            <div className="item">
-                                <Text {...props} tag="div" set="label" className="input" />
-                            </div>
+                    <InputWrapper label="Label">
+                        <Text {...props} tag="div" set="label" className="input" />
+                    </InputWrapper>
 
-                            <div className="label">Title</div>
-                            <div className="item">
-                                <Text {...props} tag="div" set="title" className="input" />
-                            </div>
+                    <InputWrapper label="Title">
+                        <Text {...props} tag="div" set="title" className="input" />
+                    </InputWrapper>
 
+                    <InputWrapper label="Description">
+                        <Text {...props} tag="div" set="description" className="input" />
+                    </InputWrapper>
 
-                            <div className="label">Description</div>
-                            <div className="item">
-                                <Text {...props} tag="div" set="description" className="input" />
-                            </div>
+                    <InputWrapper label="Hightlight">
+                        <Text {...props} tag="div" set="hightlight" className="input" />
+                    </InputWrapper>
 
-                            <div className="label">Hightlight</div>
-                            <div className="item">
-                                <Text {...props} tag="div" set="hightlight" className="input" />
-                            </div>
-
-                            <div className="label">Bottom Text</div>
-                            <div className="item">
-                                <Text {...props} tag="div" set="textBottom" className="input" />
-                            </div>
-                        </div>
-                    </details>
+                    <InputWrapper label="Bottom Text">
+                        <Text {...props} tag="div" set="textBottom" className="input" />
+                    </InputWrapper>
 
                 </div>
-            </Controller>
+            </BlockEditor>
             <div className="banner">
                 <Media {...props} set="banner" className="parallax" />
             </div>
@@ -77,6 +68,6 @@ export default function (props) {
                 <Text {...props} set="textBottom" className="bottom-text" />
                 <Media {...props} set="background" className="background" />
             </div>
-        </section>
+        </BlockWrapper>
     )
 }

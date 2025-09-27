@@ -1,0 +1,110 @@
+import { useEffect, useRef } from '@wordpress/element';
+import { v4 as uuidv4 } from 'uuid';
+
+const BlockEditor = (props) => {
+    const { edit, attributes, tabEditor, setAttributes } = props
+
+
+    if (edit) {
+        const id = uuidv4()
+        const contentRef = useRef()
+        const blockClass = `editor-${id}`
+        const mainContainerWrapper = useRef(null);
+        const containerRef = useRef(null);
+        const isDragging = useRef(false);
+        const offsetX = useRef(0);
+        const offsetY = useRef(0);
+
+        const closePanel = () => {
+            mainContainerWrapper.current.style.display = 'none'
+        }
+
+        const setTabActive = (index) => {
+            document.body.style.overflow = 'hidden'
+            const tabs = contentRef.current.querySelectorAll(`.${blockClass} .tab-item`)
+            const tabsButton = mainContainerWrapper.current.querySelectorAll(`.tab-buttons .button`)
+
+
+            if (tabs) {
+                tabs.forEach(item => {
+                    item.classList.remove('active')
+                })
+
+                tabsButton.forEach(item => {
+                    item.classList.remove('active')
+                })
+
+                tabs[index].classList.add('active')
+                tabsButton[index].classList.add('active')
+            }
+        }
+
+
+        const buttonTab = () => {
+            if (tabEditor) {
+                return <div className="tab-buttons">
+                    <div className="button active" onClick={() => { setTabActive(0) }}>Desktop</div>
+                    <div className="button" onClick={() => { setTabActive(1) }}>Mobile</div>
+                </div>
+            }
+        }
+
+
+
+        useEffect(() => {
+            const dragBox = containerRef.current;
+
+            const handleMouseMove = (e) => {
+                if (!isDragging.current || !dragBox) return;
+                dragBox.style.left = `${e.clientX - offsetX.current}px`;
+                dragBox.style.top = `${e.clientY - offsetY.current}px`;
+            };
+
+            const handleMouseUp = () => {
+                isDragging.current = false;
+            };
+
+
+            if (!mainContainerWrapper.current) return () => { }
+
+            mainContainerWrapper.current.addEventListener("mousemove", handleMouseMove);
+            mainContainerWrapper.current.addEventListener("mouseup", handleMouseUp);
+
+            return () => {
+                mainContainerWrapper.current.removeEventListener("mousemove", handleMouseMove);
+                mainContainerWrapper.current.removeEventListener("mouseup", handleMouseUp);
+            };
+        }, []);
+
+        const startDragging = (e) => {
+
+            const iframeWidth = document.querySelector('#editor iframe')
+
+            if (iframeWidth.clientWidth < 800) return
+
+            const dragBox = containerRef.current;
+            if (!dragBox) return;
+            isDragging.current = true;
+            offsetX.current = e.clientX - dragBox.offsetLeft;
+            offsetY.current = e.clientY - dragBox.offsetTop;
+        };
+        return (
+            <div className="block-editor-pannel-wrapper" ref={mainContainerWrapper}>
+                <div className={`block-editor-pannel ${blockClass}`} ref={containerRef}
+                    onMouseDown={startDragging}>
+                    <div className="header-panel">
+                        <div className="header-panel-title">Section Settings </div>
+                        <div className="button-close" onClick={() => { closePanel() }}>x</div>
+                    </div>
+                    {buttonTab()}
+                    <div className="content-scroll" ref={contentRef}>
+                        {props.children}
+                    </div>
+                </div>
+            </div >
+        )
+    }
+}
+
+
+export default BlockEditor;

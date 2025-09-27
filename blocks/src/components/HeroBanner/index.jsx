@@ -1,5 +1,7 @@
-import Controller from "../helper/Controller";
+import BlockWrapper from "../helper/BlockWrapper";
+import BlockEditor from "../helper/BlockEditor";
 import ImageRender from "../helper/ImageRender";
+import InputWrapper from "../helper/InputWrapper";
 import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
@@ -8,6 +10,7 @@ import { ImageSchema } from "../Schema/image";
 import { LinkSchmea } from "../Schema/linkSchema";
 import { TextSchema } from "../Schema/text";
 import "./style.scss";
+import MediaInput from "../helper/MediaInput";
 
 
 export const attributes = {
@@ -17,8 +20,13 @@ export const attributes = {
     text_2: TextSchema,
     text_1_mobile: TextSchema,
     text_2_mobile: TextSchema,
-    link: LinkSchmea
+    link: LinkSchmea,
+    disabled: {
+        type: 'boolean',
+        default: false
+    }
 }
+
 const HeroBanner = (props) => {
     const { disabledButton, section } = props
 
@@ -29,46 +37,34 @@ const HeroBanner = (props) => {
 
     return (
         <>
-            <Controller {...props}>
-                <div className="form-wrapper">
-
-                    <details>
-                        <summary className="main-title">{section ? `Section ${section}` : 'Hero Banner'}</summary>
-                        <div className="input-container">
-                            <div className="label">Background</div>
-                            <div className="item">
-                                <Media set="background" {...props} />
-                            </div>
-                        </div>
-                        <div className="input-container">
-                            <div className="label">Mobile Title</div>
-                            <Text set="text_1_mobile" {...props} tag="div" className="input" />
-                        </div>
-                        <div className="input-container">
-                            <div className="label">Mobile Desc</div>
-                            <Text set="text_2_mobile" {...props} tag="div" className="input" />
-                        </div>
-
-                        <div className="input-container">
-                            <div className="label">Button</div>
+            <BlockWrapper className="hero-banner" {...props}>
+                <BlockEditor {...props} tabEditor={true}>
+                    <div className="tab-item active" data-name="dekstop">
+                        <InputWrapper label="Background">
+                            <MediaInput set="background" {...props} />
+                        </InputWrapper>
+                        <InputWrapper label="Background">
                             <LinkEditor {...props} set="link" />
-                        </div>
-
-                        <div className="header-title">
-                            Mobile Content
-                        </div>
-
-                        <div className="input-container">
-                            <div className="label">Mobile Background</div>
-                            <div className="item">
-                                <Media set="background_mobile" {...props} />
-                            </div>
-                        </div>
-                    </details>
-
-                </div>
-            </Controller>
-            <section className="hero-banner">
+                        </InputWrapper>
+                        <InputWrapper label="Title">
+                            <Text set="text_1" {...props} tag="div" className="input" />
+                        </InputWrapper>
+                        <InputWrapper label="Description">
+                            <Text set="text_2" {...props} tag="div" className="input" />
+                        </InputWrapper>
+                    </div>
+                    <div className="tab-item" data-name="mobile">
+                        <InputWrapper label="Background">
+                            <MediaInput set="background_mobile" {...props} />
+                        </InputWrapper>
+                        <InputWrapper label="Title">
+                            <Text set="text_1_mobile" {...props} tag="div" className="input" />
+                        </InputWrapper>
+                        <InputWrapper label="Description">
+                            <Text set="text_2_mobile" {...props} tag="div" className="input" />
+                        </InputWrapper>
+                    </div>
+                </BlockEditor>
                 <div className="content">
                     <div className="content-a">
                         <Text set="text_1" {...props} tag="h1" className="content-a_a h1 item desktop" />
@@ -82,7 +78,7 @@ const HeroBanner = (props) => {
 
                 <Media set="background" {...props} className="background parallax desktop" />
                 <ImageRender value="background_mobile" {...props} className="background parallax mobile" fallBack="background" />
-            </section>
+            </BlockWrapper>
         </>
     )
 

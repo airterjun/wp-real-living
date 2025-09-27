@@ -1,6 +1,10 @@
+import BlockEditor from "../helper/BlockEditor";
+import BlockWrapper from "../helper/BlockWrapper";
 import ButtonSlider from "../helper/ButtonSlider";
 import Controller from "../helper/Controller";
+import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
+import ListEditor from "../helper/ListEditor";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
 import { TextSchema } from "../Schema/text";
@@ -33,7 +37,8 @@ export default function (props) {
 
     const listItems = getNestedValue(props.attributes, getModelId('list', props))
 
-    const grid = () => listItems.map((_, index) => {
+
+    const template = (index) => {
         const keyTitle = `list.${index}.title`
         const keyDesc = `list.${index}.description`
         return (
@@ -49,28 +54,40 @@ export default function (props) {
                 </div>
             </div>
         )
-    })
+    }
+
+    const grid = () => listItems.map((_, index) => template(index))
+
+    const editorTemplate = (index) => {
+        const keyTitle = `list.${index}.title`
+        const keyDesc = `list.${index}.description`
+        return <>
+            <InputWrapper label="Title">
+                <Text tag="div" set={keyTitle} {...props} />
+            </InputWrapper>
+            <InputWrapper label="Description">
+                <Text tag="div" set={keyDesc} {...props} />
+            </InputWrapper>
+        </>
+    }
+
 
     return (
         <>
-            <Controller {...props}>
-                <div className="form-wrapper">
-                    <details>
-                        <summary className="main-title">
-                            {props.section ? `Section ${props.section}` : 'Grid Column Card'}
-                        </summary>
-                        <div className="input-container">
-                            <ButtonSlider slider="list" label="title" nested={true} {...props} />
-                        </div>
-                    </details>
-                </div>
-            </Controller>
 
-            <section className="two-grid-column-card">
+            <BlockWrapper {...props} className="two-grid-column-card">
+                <BlockEditor {...props}>
+                    <div className="tab-item active" data-name="dekstop">
+                        <InputWrapper label="List">
+                            <ListEditor set="list" {...props} template={(index) => editorTemplate(index)} title="title" nested={true} />
+                        </InputWrapper>
+                    </div>
+                </BlockEditor>
+
                 <div className="content">
                     {grid()}
                 </div>
-            </section>
+            </BlockWrapper>
         </>
 
     )

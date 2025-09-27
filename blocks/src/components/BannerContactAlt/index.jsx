@@ -1,4 +1,7 @@
+import BlockEditor from '../helper/BlockEditor';
+import BlockWrapper from '../helper/BlockWrapper';
 import Controller from '../helper/Controller';
+import InputWrapper from '../helper/InputWrapper';
 import LinkEditor from '../helper/LinkEditor';
 import Media from '../helper/Media';
 import Text from '../helper/Text';
@@ -17,24 +20,28 @@ const attributes = {
 
 export default function (props) {
     return (
-        <section className='banner-contact-alt'>
-            <Controller {...props}>
-                <div className="form-wrapper">
-                    <details>
-                        <summary className='main-title'>
-                            {props.section ? `Section ${props.section}` : 'Banner Contact'}
-                        </summary>
-                        <div className="input-container">
-                            <div className="label">Mobile Desc</div>
-                            <Text {...props} set="descMobile" tag="div" className="input" />
-                        </div>
-                        <div className="input-container">
-                            <div className="label">Button</div>
-                            <LinkEditor {...props} set="link" />
-                        </div>
-                    </details>
+        <BlockWrapper {...props} className='banner-contact-alt'>
+            <BlockEditor {...props} tabEditor={true}>
+                <div className="tab-item active" data-name="dekstop">
+                    <InputWrapper label="Banner">
+                        <Media {...props} set="background" />
+                    </InputWrapper>
+                    <InputWrapper label="Title">
+                        <Text {...props} set="title" tag="div" />
+                    </InputWrapper>
+                    <InputWrapper label="Description">
+                        <Text {...props} set="desc" tag="div" />
+                    </InputWrapper>
+                    <InputWrapper label="Button">
+                        <LinkEditor {...props} set="link" />
+                    </InputWrapper>
                 </div>
-            </Controller>
+                <div className="tab-item" data-name="dekstop">
+                    <InputWrapper label="Description">
+                        <Text {...props} set="descMobile" tag="div" />
+                    </InputWrapper>
+                </div>
+            </BlockEditor>
             <div className="content">
                 <Text {...props} set="title" tag="div" className="title" />
                 <Text {...props} set="desc" tag="div" className="description desktop" />
@@ -42,7 +49,7 @@ export default function (props) {
                 <PrimaryButton {...props} />
             </div>
             <Media {...props} set="background" className="parallax no-scale" />
-        </section>
+        </BlockWrapper>
     )
 }
 
