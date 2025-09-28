@@ -79,10 +79,10 @@ const TwoColumnText = (props) => {
                   </InputWrapper>
                }
                <InputWrapper label="Title">
-                  <Text {...props} set="title" tag="div" />
+                  <Text tag="div" set="description" {...props} />
                </InputWrapper>
                <InputWrapper label="Description">
-                  <Text tag="div" set="description" {...props} />
+                  <Text {...props} set="title" tag="div" />
                </InputWrapper>
                <InputWrapper label="List">
                   <ListEditor nested={true} set="list" title="description" {...props} template={(index) => itemEditor(index)} />

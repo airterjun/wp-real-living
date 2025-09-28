@@ -19765,15 +19765,15 @@ const TwoColumnText = props => {
     tag: "div"
   }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
     label: "Title"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    set: "title",
-    tag: "div"
-  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    label: "Description"
   }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     tag: "div",
     set: "description"
   }, props))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    label: "Description"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "title",
+    tag: "div"
+  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
     label: "List"
   }, /*#__PURE__*/React.createElement(_helper_ListEditor__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     nested: true,
