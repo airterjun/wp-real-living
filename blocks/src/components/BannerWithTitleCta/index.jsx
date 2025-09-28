@@ -6,9 +6,11 @@ import { ImageSchema } from '../Schema/image';
 import { LinkSchmea } from '../Schema/linkSchema';
 import { TextSchema } from '../Schema/text';
 
-import "./style.scss";
-import Controller from '../helper/Controller';
+import BlockEditor from '../helper/BlockEditor';
+import BlockWrapper from '../helper/BlockWrapper';
 import LinkEditor from '../helper/LinkEditor';
+import "./style.scss";
+import InputWrapper from '../helper/InputWrapper';
 
 
 export const attributes = {
@@ -20,24 +22,29 @@ export const attributes = {
 }
 export default function (props) {
     return (
-        <section className='banner-with-title-cta'>
-            <Controller {...props} getTitle="title">
-                <div className='input-container'>
-                    <div className="label">Button</div>
-                    <LinkEditor {...props} set="link" />
+        <BlockWrapper {...props} className='banner-with-title-cta'>
+            <BlockEditor {...props} tabEditor={true}>
+                <div className='tab-item active'>
+                    <InputWrapper label="Background">
+                        <Media set="background" {...props} />
+                    </InputWrapper>
+                    <InputWrapper label="Title">
+                        <Text set="title" {...props} tag="div" />
+                    </InputWrapper>
+                    <InputWrapper label="Button">
+                        <LinkEditor {...props} set="link" />
+                    </InputWrapper>
                 </div>
-                <div className='main-title'>
-                    Mobile Content
+
+                <div className='tab-item'>
+                    <InputWrapper label="Background">
+                        <Media set="background_mobile" {...props} />
+                    </InputWrapper>
+                    <InputWrapper label="Title">
+                        <Text set="title_mobile" {...props} tag="div" />
+                    </InputWrapper>
                 </div>
-                <div className='input-container'>
-                    <div className="label">Title</div>
-                    <Text set="title_mobile" {...props} tag="div" className="input" />
-                </div>
-                <div className='input-container'>
-                    <div className="label">Background</div>
-                    <Media set="background_mobile" {...props} className="input" />
-                </div>
-            </Controller>
+            </BlockEditor>
             <div className='inner-container'>
                 <Text set="title" {...props} tag="h1" className="desktop" />
                 <Text set="title_mobile" {...props} tag="h1" className="mobile" />
@@ -46,7 +53,7 @@ export default function (props) {
 
             <Media set="background" {...props} className="parallax desktop" />
             <Media set="background_mobile" {...props} className="parallax mobile" />
-        </section>
+        </BlockWrapper>
     )
 
 }

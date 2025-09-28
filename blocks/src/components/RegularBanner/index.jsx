@@ -1,5 +1,7 @@
-import Controller from '../helper/Controller';
+import BlockEditor from '../helper/BlockEditor';
+import BlockWrapper from '../helper/BlockWrapper';
 import ImageRender from '../helper/ImageRender';
+import InputWrapper from '../helper/InputWrapper';
 import Media from '../helper/Media';
 import Text from '../helper/Text';
 import { ImageSchema } from "../Schema/image";
@@ -16,25 +18,25 @@ export const attributes = {
 export default function (props) {
     const { section } = props
     return (
-        <section className="full-width-banner">
-            <Controller {...props} getTitle="title">
-                <details>
-                    <summary className="main-title">{section ? `Section ${section}` : 'Hero Banner'}</summary>
-                    <div className="header-title">
-                        Mobile Content
-                    </div>
-
-                    <div className="input-container">
-                        <div className="label">Mobile Background</div>
-                        <div className="item">
-                            <Media set="banner_mobile" {...props} />
-                        </div>
-                    </div>
-                </details>
-            </Controller>
+        <BlockWrapper className="full-width-banner" {...props}>
+            <BlockEditor {...props} tabEditor={true}>
+                <div className="tab-item active" data-name="dekstop">
+                    <InputWrapper label="Title">
+                        <Text {...props} set="title" tag="div" />
+                    </InputWrapper>
+                    <InputWrapper className="Banner">
+                        <Media set="banner" {...props} />
+                    </InputWrapper>
+                </div>
+                <div className="tab-item" data-name="dekstop">
+                    <InputWrapper label="Banner">
+                        <Media set="banner_mobile" {...props} />
+                    </InputWrapper>
+                </div>
+            </BlockEditor>
             <Text className="title" {...props} set="title" tag="div" />
             <Media set="banner" {...props} className="parallax desktop" />
             <ImageRender value="banner_mobile" fallBack="banner" className="parallax mobile" {...props}></ImageRender>
-        </section>
+        </BlockWrapper>
     )
 }

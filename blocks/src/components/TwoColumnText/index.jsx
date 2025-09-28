@@ -1,5 +1,9 @@
+import BlockEditor from "../helper/BlockEditor";
+import BlockWrapper from "../helper/BlockWrapper";
 import Controller from "../helper/Controller";
+import InputWrapper from "../helper/InputWrapper";
 import { getMobileDescription, getModelId, getNestedValue } from "../helper/Libs";
+import ListEditor from "../helper/ListEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
@@ -49,17 +53,49 @@ const TwoColumnText = (props) => {
    })
 
 
+   const itemEditor = (index) => {
+      const title = `list.${index}.title`
+      const desc = `list.${index}.description`
+      return <>
+         <InputWrapper label="Title">
+            <Text {...props} set={title} tag="div" />
+         </InputWrapper>
+         <InputWrapper label="Description">
+            <Text {...props} set={desc} tag="div" />
+         </InputWrapper>
+      </>
+   }
+
    return (
-      <section className="two-column-text">
-         <Controller getTitle="title" {...props}>
-            <div className="header-title">
-               Mobile Content
+      <BlockWrapper className="two-column-text" {...props}>
+         <BlockEditor {...props} tabEditor={true}>
+            <div className="tab-item active">
+               <InputWrapper label="Banner">
+                  <Media set="banner" {...props} />
+               </InputWrapper>
+               {isHasLabel &&
+                  <InputWrapper label="Label">
+                     <Text {...props} set="label" tag="div" />
+                  </InputWrapper>
+               }
+               <InputWrapper label="Title">
+                  <Text {...props} set="title" tag="div" />
+               </InputWrapper>
+               <InputWrapper label="Description">
+                  <Text tag="div" set="description" {...props} />
+               </InputWrapper>
+               <InputWrapper label="List">
+                  <ListEditor nested={true} set="list" title="description" {...props} template={(index) => itemEditor(index)} />
+               </InputWrapper>
             </div>
-            <div className="input-container">
-               <div className="label">Description</div>
-               <Text set="description_mobile" className="input" {...props} />
+
+            <div className="tab-item">
+
+               <InputWrapper label="Description">
+                  <Text set="description_mobile" tag="div" {...props} />
+               </InputWrapper>
             </div>
-         </Controller>
+         </BlockEditor>
          <div className="decor decor-1"></div>
          <div className="decor decor-2"></div>
          <div className="decor decor-3"></div>
@@ -82,7 +118,7 @@ const TwoColumnText = (props) => {
                {items()}
             </div>
          </div>
-      </section>
+      </BlockWrapper>
    )
 }
 
