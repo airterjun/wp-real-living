@@ -138,3 +138,90 @@ function fix_media_library_conflict()
     );
 }
 add_action('admin_enqueue_scripts', 'fix_media_library_conflict');
+
+
+
+
+function wp_add_ga4_tracking_code() {
+    // Dapatkan domain / host saat ini
+    $current_host = $_SERVER['HTTP_HOST'];
+
+    // Disable di localhost atau domain dev/staging
+    $disabled_hosts = ['localhost', '127.0.0.1', 'dev.', 'staging.'];
+
+    // Cek apakah domain mengandung salah satu kata di atas
+    foreach ($disabled_hosts as $disabled) {
+        if (stripos($current_host, $disabled) !== false) {
+            return; // Jangan load script
+        }
+    }
+
+    // Kalau bukan localhost atau staging, load GA4
+    ?>
+    <!-- Google Analytics 4 (only active on live site) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YKGKS6G0L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2YKGKS6G0L');
+    </script>
+    <?php
+}
+add_action('wp_head', 'wp_add_ga4_tracking_code');
+
+// Additional meta box for set new header on for new layout
+
+// Add meta box
+function wp_add_header_option_metabox() {
+    add_meta_box(
+        'wp_header_option_metabox',        // ID
+        'Header',                  // Title
+        'wp_render_header_option_metabox', // Callback
+        'page',                            // Post type
+        'side',                            // Context (side, normal, advanced)
+        'default'                          // Priority
+    );
+}
+add_action('add_meta_boxes', 'wp_add_header_option_metabox');
+
+// Render meta box content
+function wp_render_header_option_metabox($post) {
+    $value = get_post_meta($post->ID, '_use_new_header', true);
+    wp_nonce_field('wp_save_header_option', 'wp_header_option_nonce');
+    ?>
+    <p>
+        <label>
+            <input type="checkbox" name="use_new_header" value="1" <?php checked($value, '1'); ?> />
+            Use new header
+        </label>
+    </p>
+    <?php
+}
+
+// Save meta box value
+function wp_save_header_option_metabox($post_id) {
+    // Verify nonce
+    if (!isset($_POST['wp_header_option_nonce']) || 
+        !wp_verify_nonce($_POST['wp_header_option_nonce'], 'wp_save_header_option')) {
+        return;
+    }
+
+    // Skip autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // Check user permission
+    if (!current_user_can('edit_page', $post_id)) {
+        return;
+    }
+
+    // Update or delete meta
+    if (isset($_POST['use_new_header'])) {
+        update_post_meta($post_id, '_use_new_header', '1');
+    } else {
+        delete_post_meta($post_id, '_use_new_header');
+    }
+}
+add_action('save_post', 'wp_save_header_option_metabox');

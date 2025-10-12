@@ -1,5 +1,5 @@
 {
-  "name": "peavey",
+  "name": "realliving",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack:watch": "webpack --watch",
     "prod": "webpack --mode production",
-    "sync": "browser-sync start --proxy \"http://localhost/real-living/\" --port 12345 --files '**/*'",
-    "dev": "yarn webpack:watch & yarn sync",
+    "sync": "browser-sync start --proxy \"http://localhost/bv/\" --port 12345 --files \"**/*\"",
+    "dev": "start yarn webpack:watch && start yarn sync",
     "start": "yarn wp-scripts start & yarn dev"
   },
   "dependencies": {
