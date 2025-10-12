@@ -1,1 +1,1 @@
-{"version":3,"file":"noConflict.bundle.js","mappings":";;;;AAAA;AACA;AACA,C","sources":["webpack://peavey/./src/js/fix-conflict.js"],"sourcesContent":["if (typeof _ !== 'undefined' && typeof _.noConflict === 'function') {\n  _.noConflict();\n}"],"names":[],"sourceRoot":""}
+{"version":3,"file":"noConflict.bundle.js","mappings":";;;;AAAA;AACA;AACA,C","sources":["webpack://realliving/./src/js/fix-conflict.js"],"sourcesContent":["if (typeof _ !== 'undefined' && typeof _.noConflict === 'function') {\n  _.noConflict();\n}"],"names":[],"sourceRoot":""}

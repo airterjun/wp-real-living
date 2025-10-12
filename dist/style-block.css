@@ -2607,7 +2607,7 @@
   z-index: 3;
   width: 2px;
   position: absolute;
-  background-color: #7A7A7A;
+  background-color: #7a7a7a;
 }
 @media only screen and (max-width: 879px) {
   .teams .decor {
@@ -2626,7 +2626,7 @@
   }
 }
 .teams .decor.decor-2 {
-  top: calc(708 / var(--base-size) * 100vw);
+  top: calc(778 / var(--base-size) * 100vw);
   left: calc(958 / var(--base-size) * 100vw);
   height: calc(185 / var(--base-size) * 100vw);
 }
@@ -2641,12 +2641,49 @@
 .teams .header {
   gap: calc(57 / var(--base-size) * 100vw);
   display: flex;
-  height: calc(241 / var(--base-size) * 100vw);
-  margin-bottom: calc(103 / var(--base-size) * 100vw);
-  border-top: 1px solid #7F6E41;
+  height: calc(412 / var(--base-size) * 100vw);
+  position: relative;
+  border-top: 1px solid #7f6e41;
   justify-content: space-between;
-  border-bottom: 1px solid #7F6E41;
   padding-left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
+}
+.teams .header .header-content-wrapper {
+  flex: 1 auto;
+}
+.teams .header .box-decor-header {
+  left: 0;
+  bottom: 0;
+  height: calc(172 / var(--base-size) * 100vw);
+  position: absolute;
+  background-color: var(--color-gold);
+  width: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
+}
+.teams .header .border-decor-header {
+  left: 0;
+  z-index: 9;
+  height: 1px;
+  width: 100vw;
+  bottom: calc(170 / var(--base-size) * 100vw);
+  position: absolute;
+  background-color: var(--color-gold);
+}
+.teams .header .number-section {
+  width: 100%;
+  gap: calc(43 / var(--base-size) * 100vw);
+  display: flex;
+  height: calc(172 / var(--base-size) * 100vw);
+  margin-top: calc(41 / var(--base-size) * 100vw);
+  padding-top: calc(32 / var(--base-size) * 100vw);
+  padding-left: calc(70 / var(--base-size) * 100vw);
+}
+.teams .header .number-section h3 {
+  font-size: calc(35 / var(--base-size) * 100vw);
+  margin-bottom: calc(8 / var(--base-size) * 100vw);
+  font-weight: var(--font-extra);
+}
+.teams .header .number-section .desc {
+  font-size: calc(22 / var(--base-size) * 100vw);
+  max-width: calc(259 / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
   .teams .header {
@@ -2663,7 +2700,7 @@
     height: 100%;
     width: 1.47px;
     position: absolute;
-    background-color: #7A7A7A;
+    background-color: #7a7a7a;
   }
   .teams .header::before {
     left: calc(var(--g-padding-container) / var(--base-size) * 100vw);
@@ -2684,15 +2721,15 @@
 @media only screen and (max-width: 879px) {
   .teams .header figure {
     height: calc(165 / var(--base-size) * 100vw);
-    border-top: 1.4px solid #7F6E41;
-    border-bottom: 1.4px solid #7F6E41;
+    border-top: 1.4px solid #7f6e41;
+    border-bottom: 1.4px solid #7f6e41;
   }
 }
 .teams .header-content {
   gap: calc(30 / var(--base-size) * 100vw);
   flex: 1 auto;
   display: flex;
-  color: #0C0C0C;
+  color: #0c0c0c;
   font-size: calc(16 / var(--base-size) * 100vw);
   line-height: calc(23 / var(--base-size) * 100vw);
   padding-top: calc(31 / var(--base-size) * 100vw);
@@ -2705,8 +2742,8 @@
     line-height: calc(21.3 / var(--base-size) * 100vw);
     margin: calc(26 / var(--base-size) * 100vw) 0;
     padding: calc(40 / var(--base-size) * 100vw) calc(40 / var(--base-size) * 100vw) calc(45 / var(--base-size) * 100vw) calc(38 / var(--base-size) * 100vw);
-    border-top: 1.4px solid #7F6E41;
-    border-bottom: 1.4px solid #7F6E41;
+    border-top: 1.4px solid #7f6e41;
+    border-bottom: 1.4px solid #7f6e41;
   }
 }
 .teams .header-content svg {
@@ -2730,8 +2767,8 @@
   height: calc(274 / var(--base-size) * 100vw);
   position: relative;
   align-items: flex-end;
-  border-top: 2.8px solid #231E14;
-  border-bottom: 2.8px solid #231E14;
+  border-top: 2.8px solid #231e14;
+  border-bottom: 2.8px solid #231e14;
   padding-left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
@@ -2742,12 +2779,18 @@
 }
 .teams .title h2 {
   z-index: 3;
-  font-size: calc(64 / var(--base-size) * 100vw);
-  color: #2D2D2D;
+  font-weight: 400;
+  font-size: calc(50 / var(--base-size) * 100vw);
+  color: #2d2d2d;
+  margin-bottom: 0;
   position: relative;
   padding-left: calc(32 / var(--base-size) * 100vw);
+  line-height: calc(57 / var(--base-size) * 100vw);
+}
+.teams .title h2:not(.title-slim) {
+  font-size: calc(60 / var(--base-size) * 100vw);
   margin-bottom: calc(32 / var(--base-size) * 100vw);
-  line-height: calc(64.71 / var(--base-size) * 100vw);
+  letter-spacing: -0.01em;
   font-weight: var(--font-extra);
 }
 @media only screen and (max-width: 879px) {
@@ -2781,15 +2824,15 @@
   }
 }
 .teams .teams-cards-item {
-  border-top: 2px solid #7A7A7A;
+  border-top: 2px solid #7a7a7a;
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item {
-    border-color: #7F6E41;
+    border-color: #7f6e41;
   }
 }
 .teams .teams-cards-item:last-child {
-  border-bottom: 2px solid #7A7A7A;
+  border-bottom: 2px solid #7a7a7a;
 }
 .teams .teams-cards-item .group {
   display: grid;
@@ -2810,9 +2853,9 @@
   }
 }
 .teams .teams-cards-item .section-1 .content {
-  color: #FFFFFF;
+  color: #ffffff;
   position: relative;
-  background-color: #231E14;
+  background-color: #231e14;
 }
 .teams .teams-cards-item .section-1 .content::before {
   top: 0;
@@ -2820,7 +2863,7 @@
   height: 100%;
   content: "";
   position: absolute;
-  background-color: #7A7A7A;
+  background-color: #7a7a7a;
   left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
@@ -2833,7 +2876,7 @@
 .teams .teams-cards-item .section-1 .content .t-1 {
   display: flex;
   height: calc(144 / var(--base-size) * 100vw);
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: calc(43 / var(--base-size) * 100vw);
   margin-bottom: 0;
   position: relative;
@@ -2842,7 +2885,7 @@
   padding-bottom: calc(11 / var(--base-size) * 100vw);
   padding-left: calc((var(--g-outer-padding) + 32) / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
-  border-bottom: 2px solid #7A7A7A;
+  border-bottom: 2px solid #7a7a7a;
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-1 .content .t-1 {
@@ -2860,7 +2903,7 @@
   left: calc(293 / var(--base-size) * 100vw);
   width: calc(37 / var(--base-size) * 100vw);
   position: absolute;
-  background-color: #937D4D;
+  background-color: #937d4d;
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-1 .content .t-1:before {
@@ -2874,12 +2917,12 @@
   padding-left: calc(32 / var(--base-size) * 100vw);
   padding-bottom: calc(5 / var(--base-size) * 100vw);
   align-items: flex-end;
-  border-bottom: 2px solid #7A7A7A;
+  border-bottom: 2px solid #7a7a7a;
   margin-left: calc(var(--g-outer-padding) / var(--base-size) * 100vw);
   font-style: italic;
   font-size: calc(30 / var(--base-size) * 100vw);
   font-weight: var(--font-medium);
-  color: #CECECE;
+  color: #cecece;
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-1 .content .t-2 {
@@ -2910,7 +2953,7 @@
 .teams .teams-cards-item .section-1 figure {
   width: 100%;
   height: 100%;
-  border-left: 2px solid #7A7A7A;
+  border-left: 2px solid #7a7a7a;
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-1 figure {
@@ -2932,8 +2975,8 @@
 .teams .teams-cards-item .section-2 {
   gap: calc(52 / var(--base-size) * 100vw);
   padding: 0 calc((var(--g-outer-padding) + 32) / var(--base-size) * 100vw);
-  border-top: 2px solid #7A7A7A;
-  border-bottom: 2px solid #7A7A7A;
+  border-top: 2px solid #7a7a7a;
+  border-bottom: 2px solid #7a7a7a;
   grid-template-columns: 1fr 1fr 1fr;
 }
 @media only screen and (max-width: 879px) {
@@ -2960,7 +3003,7 @@
   flex: 0 0 calc(43 / var(--base-size) * 100vw);
   align-items: center;
   justify-content: center;
-  border: 1.5px solid #AFAFAF;
+  border: 1.5px solid #afafaf;
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-2 .content .icon {
@@ -2974,14 +3017,14 @@
 .teams .teams-cards-item .section-2 .content .t-1 {
   flex: 0 100%;
   font-size: calc(20 / var(--base-size) * 100vw);
-  color: #2B2211;
+  color: #2b2211;
   transform: translateY(calc(-3 / var(--base-size) * 100vw));
   font-weight: var(--font-semi-bold);
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-2 .content .t-1 {
     font-size: calc(16 / var(--base-size) * 100vw);
-    color: #2B2211;
+    color: #2b2211;
   }
 }
 .teams .teams-cards-item .section-3 {
@@ -2991,7 +3034,7 @@
   grid-template-columns: 1fr 1fr;
   font-size: calc(16 / var(--base-size) * 100vw);
   line-height: calc(23 / var(--base-size) * 100vw);
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 @media only screen and (max-width: 879px) {
   .teams .teams-cards-item .section-3 {

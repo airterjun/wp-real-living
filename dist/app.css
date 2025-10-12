@@ -380,13 +380,28 @@ header .inner {
     grid-template-columns: 1fr 1fr;
   }
 }
+header .inner .button-partner {
+  width: calc(201 / var(--base-size) * 100vw);
+  align-items: center;
+}
+header .inner .button-partner a {
+  gap: calc(9 / var(--base-size) * 100vw);
+  color: #fff;
+  flex: 0 100%;
+  font-size: calc(19 / var(--base-size) * 100vw);
+  padding: 0 calc(25 / var(--base-size) * 100vw);
+  letter-spacing: -0.01em;
+}
+header .inner .button-partner a svg {
+  transform: translateY(calc(-1 / var(--base-size) * 100vw));
+}
 header .inner .timer {
   gap: calc(11 / var(--base-size) * 100vw);
   display: flex;
-  color: #F7F7F7;
+  color: #f7f7f7;
   align-items: center;
   font-size: calc(17 / var(--base-size) * 100vw);
-  color: #C9C9C9;
+  color: #c9c9c9;
 }
 @media only screen and (max-width: 879px) {
   header .inner .timer {
@@ -402,7 +417,7 @@ header .inner .timer .line {
   background-color: var(--color-gold);
 }
 header .inner .timer .time {
-  color: #C9C9C9;
+  color: #c9c9c9;
 }
 header .inner .logo {
   height: 100%;
@@ -451,7 +466,7 @@ header .inner .burger .inner-line .line {
   flex: 0 0 1.5px;
   transform-origin: left;
   transition: transform 0.25s var(--cubic-bezier);
-  background-color: #E6BC7C;
+  background-color: #e6bc7c;
 }
 header .inner .burger .inner-line .line:last-child {
   width: calc(26 / var(--base-size) * 100vw);
@@ -488,7 +503,7 @@ header .inner .close-menu .line {
   width: transform;
   position: absolute;
   transition: transform 0.4s var(--cubic-bezier);
-  background-color: #E6BC7C;
+  background-color: #e6bc7c;
   transform: scaleX(1);
   transition-delay: 0s;
 }
@@ -583,7 +598,7 @@ header.menu-active .close-menu .line:last-child {
   display: block;
   position: absolute;
   transform-origin: top;
-  background-color: #FFF;
+  background-color: #fff;
   transition: transform 0.25s ease-out;
   transform: scaleY(0) translateY(calc(8 / var(--base-size) * 100vw));
 }
@@ -621,7 +636,7 @@ header.menu-active .close-menu .line:last-child {
   }
 }
 .header-menu .menu-wrapper ul li.current_page_item a {
-  color: #BA9D63;
+  color: #ba9d63;
   font-weight: var(--font-semi-bold);
 }
 .header-menu .menu-wrapper ul li.current_page_item a svg {
@@ -633,7 +648,7 @@ header.menu-active .close-menu .line:last-child {
 }
 @media only screen and (min-width: 879px) {
   .header-menu .menu-wrapper ul li:hover a {
-    color: #BA9D63;
+    color: #ba9d63;
     font-weight: var(--font-semi-bold);
   }
   .header-menu .menu-wrapper ul li:hover a svg {
