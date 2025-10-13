@@ -1,11 +1,11 @@
 :root {
   --header-size: 95.6;
-  --color-green: #93EA4E;
+  --color-green: #93ea4e;
   --mobile-outer-padding: 20;
 }
 
-@import './../../blocks/src/assets/styles/utils/functions';
-@import './_config';
+@import "./../../blocks/src/assets/styles/utils/functions";
+@import "./_config";
 //@import './plugin/flickity';
 
 @include mobile {
@@ -14,7 +14,6 @@
     --g-padding-container: 20;
   }
 }
-
 
 /*
 ========================
@@ -31,29 +30,24 @@ html {
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: grayscale;
 
-
   &.lenis-stopped {
     overflow: hidden !important;
   }
 }
 
-
-
 #main-website-wrapper {
-
   * {
     box-sizing: border-box;
   }
-
 }
 
 body {
   margin: 0;
   padding: 0;
-  color: #0C0C0C;
+  color: #0c0c0c;
   word-wrap: break-word;
   font-family: var(--font-main);
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 h1,
@@ -64,7 +58,6 @@ h5,
 h6 {
   margin-top: 0;
 }
-
 
 a,
 button {
@@ -82,13 +75,11 @@ a {
   }
 }
 
-
 main {
   z-index: 9;
   position: relative;
   margin-top: vw(var(--header-size));
 }
-
 
 .container {
   width: 100%;
@@ -98,26 +89,24 @@ main {
   max-width: vw(1230);
 }
 
-
 blockquote {
   padding: vw(42);
-  border-left: vw(3) solid #0E1A2C;
-  background-color: #21409A14
+  border-left: vw(3) solid #0e1a2c;
+  background-color: #21409a14;
 }
-
 
 figure {
   &.parallax {
     overflow: hidden;
 
     img {
-      object-fit: cover
+      object-fit: cover;
     }
   }
 }
 
-@import './partials/footer';
-@import './partials/header';
+@import "./partials/footer";
+@import "./partials/header";
 
 .section-wrapper {
   * {
