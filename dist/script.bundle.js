@@ -9981,8 +9981,8 @@ gsap__WEBPACK_IMPORTED_MODULE_4__["default"].registerPlugin(gsap_ScrollTrigger__
 /**
  * set for footer overlay
  */
-const footer = document.getElementById('footer');
-const mainContainer = document.querySelector('.main-container');
+const footer = document.getElementById("footer");
+const mainContainer = document.querySelector(".main-container");
 // mainContainer.style.marginBottom = `${footer.offsetHeight}px`
 
 let lenis = null;
@@ -9990,7 +9990,7 @@ lenis = new _studio_freight_lenis__WEBPACK_IMPORTED_MODULE_6__["default"]({
   duration: 0.9
 });
 window.lenis = lenis;
-lenis.on('scroll', gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_5__["default"].update);
+lenis.on("scroll", gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_5__["default"].update);
 gsap__WEBPACK_IMPORTED_MODULE_4__["default"].ticker.add(time => {
   lenis.raf(time * 1000);
 });
@@ -10005,13 +10005,13 @@ new _js_animation__WEBPACK_IMPORTED_MODULE_0__.Animation();
 function updateClock() {
   let now = new Date();
   let options = {
-    timeZone: 'Europe/London',
+    timeZone: "Europe/London",
     hour12: false,
-    hour: '2-digit',
-    minute: '2-digit'
+    hour: "2-digit",
+    minute: "2-digit"
   };
-  let londonTime = new Intl.DateTimeFormat('en-GB', options).format(now) + ' GMT';
-  document.getElementById('time-ticker').innerText = londonTime;
+  let londonTime = new Intl.DateTimeFormat("en-GB", options).format(now) + " GMT";
+  if (document.getElementById("time-ticker")) document.getElementById("time-ticker").innerText = londonTime;
 }
 setInterval(updateClock, 1000);
 updateClock();

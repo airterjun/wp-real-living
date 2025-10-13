@@ -1,59 +1,58 @@
-import Lenis from '@studio-freight/lenis'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { Animation } from './js/animation'
-import './js/navigation'
-import { Program } from './js/ProgramSection'
-import { Slider } from './js/Slider'
+import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { Animation } from "./js/animation";
+import "./js/navigation";
+import { Program } from "./js/ProgramSection";
+import { Slider } from "./js/Slider";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 /**
  * set for footer overlay
  */
-const footer = document.getElementById('footer')
-const mainContainer = document.querySelector('.main-container')
+const footer = document.getElementById("footer");
+const mainContainer = document.querySelector(".main-container");
 // mainContainer.style.marginBottom = `${footer.offsetHeight}px`
 
-
-let lenis = null
+let lenis = null;
 
 lenis = new Lenis({
-	duration: 0.9
-})
+  duration: 0.9,
+});
 
+window.lenis = lenis;
 
-window.lenis = lenis
-
-lenis.on('scroll', ScrollTrigger.update)
+lenis.on("scroll", ScrollTrigger.update);
 
 gsap.ticker.add((time) => {
-	lenis.raf(time * 1000)
-})
+  lenis.raf(time * 1000);
+});
 
-gsap.ticker.lagSmoothing(0)
-
-
-
-
-
+gsap.ticker.lagSmoothing(0);
 
 /**
  * Cretae page animation
  */
-new Animation()
+new Animation();
 
+Program();
 
-Program()
-
-
-Slider()
+Slider();
 
 function updateClock() {
-	let now = new Date();
-	let options = { timeZone: 'Europe/London', hour12: false, hour: '2-digit', minute: '2-digit' };
-	let londonTime = new Intl.DateTimeFormat('en-GB', options).format(now) + ' GMT';
-	document.getElementById('time-ticker').innerText = londonTime;
+  let now = new Date();
+  let options = {
+    timeZone: "Europe/London",
+    hour12: false,
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+  let londonTime =
+    new Intl.DateTimeFormat("en-GB", options).format(now) + " GMT";
+
+  if (document.getElementById("time-ticker"))
+    document.getElementById("time-ticker").innerText = londonTime;
 }
 
 setInterval(updateClock, 1000);

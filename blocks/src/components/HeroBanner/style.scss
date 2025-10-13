@@ -134,3 +134,13 @@
     }
   }
 }
+
+.new-ui-hero-banner {
+  .content {
+    &-a {
+      &_a {
+        margin-bottom: vw(11) !important;
+      }
+    }
+  }
+}
