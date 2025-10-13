@@ -5,7 +5,7 @@ include "dynamic-component/dynamic-component.php";
 function website_enqueue_block_editor_assets()
 {
 
-    wp_enqueue_script('media-editor');  // Pastikan media-editor sudah dimuat
+    wp_enqueue_script('media-editor');  
     wp_enqueue_script('lodash');
     wp_enqueue_script(
         'nolsis-block',
