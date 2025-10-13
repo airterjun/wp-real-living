@@ -18723,6 +18723,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/HeroBanner/style.scss");
 /* harmony import */ var _helper_MediaInput__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../helper/MediaInput */ "./blocks/src/components/helper/MediaInput.jsx");
+/* harmony import */ var _helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../helper/BaseAttributes */ "./blocks/src/components/helper/BaseAttributes.jsx");
 
 
 
@@ -18738,7 +18739,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const attributes = {
+
+const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_15__.createAttributes)({
   background: _Schema_image__WEBPACK_IMPORTED_MODULE_10__.ImageSchema,
   background_mobile: _Schema_image__WEBPACK_IMPORTED_MODULE_10__.ImageSchema,
   text_1: _Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
@@ -18747,10 +18749,10 @@ const attributes = {
   text_2_mobile: _Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
   link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_11__.LinkSchmea,
   disabled: {
-    type: 'boolean',
+    type: "boolean",
     default: false
   }
-};
+});
 const HeroBanner = props => {
   const {
     disabledButton,
@@ -18788,6 +18790,13 @@ const HeroBanner = props => {
     label: "Description"
   }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "text_2"
+  }, props, {
+    tag: "div",
+    className: "input"
+  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    label: "Section Class"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "section_class"
   }, props, {
     tag: "div",
     className: "input"
@@ -19980,6 +19989,28 @@ const attributes = {
 
 /***/ }),
 
+/***/ "./blocks/src/components/helper/BaseAttributes.jsx":
+/*!*********************************************************!*\
+  !*** ./blocks/src/components/helper/BaseAttributes.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createAttributes: () => (/* binding */ createAttributes)
+/* harmony export */ });
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+
+const createAttributes = attr => {
+  return {
+    section_class: _Schema_text__WEBPACK_IMPORTED_MODULE_0__.TextSchema,
+    ...attr
+  };
+};
+
+/***/ }),
+
 /***/ "./blocks/src/components/helper/BlockEditor.jsx":
 /*!******************************************************!*\
   !*** ./blocks/src/components/helper/BlockEditor.jsx ***!
@@ -20129,12 +20160,18 @@ const BlockWrapper = props => {
     attributes,
     model
   } = props;
-  let classStyle = '';
+  let classStyle = "";
   if (props.className !== undefined) {
     classStyle = props.className;
   }
-  const sectionClass = `section-block-wrapper ${edit ? 'edit-mode' : 'live'} ${classStyle}`;
-  const disabledKey = model ? `${model}.disabled` : 'disabled';
+  console.log("-----", attributes);
+  const customClassKey = model ? `${model}.section_class` : "section_class";
+  const customClass = (0,_Libs__WEBPACK_IMPORTED_MODULE_1__.getNestedValue)(attributes, customClassKey);
+  if (customClass) {
+    classStyle = `${props.className} ${customClass}`;
+  }
+  const sectionClass = `section-block-wrapper ${edit ? "edit-mode" : "live"} ${classStyle}`;
+  const disabledKey = model ? `${model}.disabled` : "disabled";
   let isDisabled = (0,_Libs__WEBPACK_IMPORTED_MODULE_1__.getNestedValue)(attributes, disabledKey);
   if (edit) {
     const mainContainer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
@@ -20148,8 +20185,8 @@ const BlockWrapper = props => {
         });
       };
       const openPanelEditor = () => {
-        const pannel = mainContainer.current.querySelector('.block-editor-pannel-wrapper');
-        pannel.style.display = 'block';
+        const pannel = mainContainer.current.querySelector(".block-editor-pannel-wrapper");
+        pannel.style.display = "block";
       };
       return /*#__PURE__*/React.createElement("div", {
         className: "button-edit-section"

@@ -8,7 +8,7 @@
     "webpack:watch": "webpack --watch",
     "prod": "webpack --mode production",
     "sync": "browser-sync start --proxy \"http://localhost/bv/\" --port 12345 --files \"**/*\"",
-    "dev": "start yarn webpack:watch && start yarn sync",
+    "dev": "concurrently \"yarn webpack:watch\" \"yarn sync\"",
     "start": "yarn wp-scripts start & yarn dev"
   },
   "dependencies": {
@@ -55,6 +55,7 @@
     "@wordpress/scripts": "^26.15.0",
     "@wordpress/server-side-render": "^4.21.0",
     "babel-loader": "^9.1.3",
+    "concurrently": "^9.2.1",
     "resolve-url-loader": "^5.0.0",
     "thread-loader": "^3.0.4"
   }
