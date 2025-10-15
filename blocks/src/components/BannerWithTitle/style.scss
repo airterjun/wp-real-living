@@ -1,0 +1,35 @@
+@import "./../../assets//styles/utils/functions";
+
+.banner-with-title {
+  width: 100vw;
+  height: vw(361);
+  position: relative;
+  border-bottom: vw(2.6) solid var(--color-gold);
+
+  .title {
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #414042;
+    font-size: vw(50);
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-extra);
+    justify-content: center;
+  }
+
+  figure {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+}

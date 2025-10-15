@@ -1,61 +1,58 @@
 @import "./../../assets//styles/utils/functions";
 
 .property-gallery {
-    width: 100vw;
-    height: auto;
-    overflow: hidden;
-    padding: vw(79) 0;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  padding: vw(79) 0;
 
-    .swiper {
+  .swiper {
+    display: flex;
+    animation: infiniteMarque 30s linear infinite;
+    width: fit-content;
+
+    .swiper-wrapper {
+      will-change: transform;
+      display: flex;
+
+      .swiper-slide {
         display: flex;
-        animation: infiniteMarque 30s linear infinite;
-        width: fit-content;
+        height: vw(576);
+        align-items: center;
 
-        .swiper-wrapper {
-            will-change: transform;
-            display: flex;
+        figure {
+          padding: 0 vw(50);
+          width: 100%;
+          height: 100%;
 
-            .swiper-slide {
-                display: flex;
-                height: vw(576);
-                align-items: center;
-
-                figure {
-                    padding: 0 vw(50);
-                    width: 100%;
-                    height: 100%;
-
-                    img {
-                        width: auto;
-                        height: 100%;
-                    }
-                }
-
-                &:nth-of-type(2n) {
-                    figure {
-                        padding: vw(67) vw(50);
-                    }
-                }
-
-                &:nth-of-type(3n) {
-                    figure {
-                        padding: vw(100) vw(50);
-                    }
-                }
-
-            }
-
+          img {
+            width: auto;
+            height: 100%;
+          }
         }
+
+        &:nth-of-type(2n) {
+          figure {
+            padding: vw(67) vw(50);
+          }
+        }
+
+        &:nth-of-type(3n) {
+          figure {
+            padding: vw(100) vw(50);
+          }
+        }
+      }
     }
+  }
 }
 
 @keyframes infiniteMarque {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-
-    100% {
-        transform: translateX(-50%);
-    }
+  100% {
+    transform: translateX(-50%);
+  }
 }

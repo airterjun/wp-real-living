@@ -1,53 +1,50 @@
 @import "./../../assets//styles/utils/functions";
 
-
 .full-width-banner {
-    width: 100vw;
-    display: flex;
-    height: vw(463);
+  width: 100vw;
+  display: flex;
+  height: vw(463);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-top: 2.5px solid #e5e3df;
+  border-bottom: 2.5px solid #e5e3df;
+
+  @include mobile {
+    height: vw(406);
+    border-color: #7f6e41;
+  }
+
+  .title {
+    z-index: 4;
+    color: #414042;
+    color: #414042;
     position: relative;
-    align-items: center;
-    justify-content: center;
-    border-top: 2.5px solid #E5E3DF;
-    border-bottom: 2.5px solid #E5E3DF;
+    font-size: vw(48);
+    font-weight: var(--font-extra);
 
     @include mobile {
-        height: vw(406);
-        border-color: #7F6E41;
+      color: #414042;
+      padding: 0 vw(20);
+      font-size: vw(48);
+      text-align: center;
+      max-width: vw(250);
     }
+  }
 
-    .title {
-        z-index: 4;
-        color: #414042;
-        color: #414042;
-        position: relative;
-        font-size: vw(48);
-        font-weight: var(--font-extra);
+  figure {
+    width: 100vw;
+    height: vw(463);
+    position: absolute;
 
-        @include mobile {
-            color: #414042;
-            padding: 0 vw(20);
-            font-size: vw(48);
-            text-align: center;
-            max-width: vw(250);
-        }
+    img {
+      width: 100vw;
+      height: vw(463);
+      object-fit: cover;
 
+      @include mobile {
+        height: 100%;
+      }
     }
-
-
-    figure {
-        width: 100vw;
-        height: vw(463);
-        position: absolute;
-
-        img {
-            width: 100vw;
-            height: vw(463);
-            object-fit: cover;
-
-            @include mobile {
-                height: 100%;
-            }
-        }
-    }
+  }
 }

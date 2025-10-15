@@ -1,183 +1,179 @@
 @import "./../../assets//styles/utils/functions";
 
 .featured-title-2 {
-    padding: vw(133) 0;
+  padding: vw(133) 0;
 
-    @include mobile {
-        padding-top: vw(44);
-        padding-bottom: vw(75);
+  @include mobile {
+    padding-top: vw(44);
+    padding-bottom: vw(75);
+  }
+
+  .main-container {
+    color: #f7f7f7;
+    position: relative;
+
+    &.top-content {
+      display: flex;
+      min-height: vw(232);
+      align-items: center;
+      padding-top: vw(20);
+      // justify-content: center;
+      flex-direction: column;
+      margin-bottom: vw(89);
+
+      @include mobile {
+        padding-left: vw(21);
+        align-items: flex-start;
+      }
+
+      svg {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: vw(247);
+        margin: 0 auto;
+        opacity: 0.18;
+        transform: translateX(vw(-3));
+        position: absolute;
+        pointer-events: none;
+
+        @include mobile {
+          margin: 0;
+          opacity: 1;
+          width: vw(70.5);
+          transform: none;
+          height: vw(66.2);
+          position: relative;
+          margin-bottom: vw(11);
+        }
+      }
     }
 
-    .main-container {
-        color: #F7F7F7;
-        position: relative;
+    .card-item {
+      gap: vw(60);
+      width: vw(1199);
+      display: grid;
+      margin: 0 auto;
+      margin-bottom: vw(94);
+      grid-template-columns: repeat(3, 1fr);
 
-        &.top-content {
-            display: flex;
-            min-height: vw(232);
-            align-items: center;
-            padding-top: vw(20);
-            // justify-content: center;
-            flex-direction: column;
-            margin-bottom: vw(89);
+      &.mobile {
+        display: none;
+      }
 
-            @include mobile {
-                padding-left: vw(21);
-                align-items: flex-start;
-            }
+      @include mobile {
+        width: 100%;
+        display: none;
+        padding: 0 vw(20);
+        padding-top: vw(69);
+        border-top: 2px solid #7a7a7a;
 
-            svg {
-                top: 0;
-                left: 0;
-                right: 0;
-                height: auto;
-                width: vw(247);
-                margin: 0 auto;
-                opacity: 0.18;
-                transform: translateX(vw(-3));
-                position: absolute;
-                pointer-events: none;
+        &.mobile {
+          display: block;
+        }
+      }
 
-                @include mobile {
-                    margin: 0;
-                    opacity: 1;
-                    width: vw(70.5);
-                    transform: none;
-                    height: vw(66.2);
-                    position: relative;
-                    margin-bottom: vw(11);
-                }
-            }
+      &-a {
+        gap: vw(22);
+        display: flex;
+        // padding-left: vw(20);
+
+        @include mobile {
+          gap: vw(16);
+          margin-bottom: vw(37);
+          flex-direction: column-reverse;
         }
 
+        svg {
+          flex: 0 0 vw(45);
+          width: vw(45);
+          height: vw(45);
+          margin-top: vw(4);
+          transform: translateY(vw(5)) translateX(vw(-3));
 
-        .card-item {
-            gap: vw(60);
-            width: vw(1199);
-            display: grid;
-            margin: 0 auto;
-            margin-bottom: vw(94);
-            grid-template-columns: repeat(3, 1fr);
-
-
-            &.mobile {
-                display: none;
-            }
-
-            @include mobile {
-                width: 100%;
-                display: none;
-                padding: 0 vw(20);
-                padding-top: vw(69);
-                border-top: 2px solid #7A7A7A;
-
-                &.mobile {
-                    display: block;
-                }
-            }
-
-            &-a {
-                gap: vw(22);
-                display: flex;
-                // padding-left: vw(20);
-
-                @include mobile {
-                    gap: vw(16);
-                    margin-bottom: vw(37);
-                    flex-direction: column-reverse;
-                }
-
-
-                svg {
-                    flex: 0 0 vw(45);
-                    width: vw(45);
-                    height: vw(45);
-                    margin-top: vw(4);
-                    transform: translateY(vw(5)) translateX(vw(-3));
-
-                    @include mobile {
-                        margin-top: vw(5);
-                        width: vw(35.4);
-                        transform: none;
-                        height: vw(35.4);
-                        flex: 0 0 vw(35.4);
-                    }
-                }
-
-                &-a {
-                    color: #353535;
-                    max-width: vw(455);
-                    font-size: vw(20);
-                    padding-top: vw(3);
-                    line-height: vw(25);
-
-                    &-a {
-                        font-size: vw(22);
-                        font-weight: 700;
-                        margin-bottom: vw(4);
-                    }
-
-                    &-b {
-                        @include mobile {
-                            font-size: vw(18);
-                            line-height: vw(22);
-                        }
-                    }
-                }
-            }
+          @include mobile {
+            margin-top: vw(5);
+            width: vw(35.4);
+            transform: none;
+            height: vw(35.4);
+            flex: 0 0 vw(35.4);
+          }
         }
 
-        .title {
-            font-weight: var(--font-extra);
-            font-size: vw(46);
-            color: #6B5B38;
-            margin-bottom: vw(25);
+        &-a {
+          color: #353535;
+          max-width: vw(455);
+          font-size: vw(20);
+          padding-top: vw(3);
+          line-height: vw(25);
 
+          &-a {
+            font-size: vw(22);
+            font-weight: 700;
+            margin-bottom: vw(4);
+          }
+
+          &-b {
             @include mobile {
-                width: vw(240);
-                font-size: vw(36);
-                color: #6B5B38;
-                margin-bottom: vw(35);
+              font-size: vw(18);
+              line-height: vw(22);
             }
+          }
         }
-
-        .description {
-            margin: 0 auto;
-            font-weight: var(--font-semi-bold);
-            font-size: vw(24);
-            color: #161616;
-            text-align: center;
-            max-width: vw(662);
-
-
-            @include mobile {
-                text-align: left;
-                font-size: vw(24);
-                color: #353535;
-            }
-        }
-
-        .primary-button {
-            display: flex;
-            margin-top: vw(27);
-            justify-content: center;
-
-            @include mobile {
-                width: 100%;
-                padding: 0 vw(20);
-            }
-
-            a {
-                display: flex;
-                width: vw(266);
-                height: vw(63.3);
-                justify-content: center;
-
-                @include mobile {
-                    width: 100%;
-                    border-width: 2px;
-                }
-            }
-        }
+      }
     }
+
+    .title {
+      font-weight: var(--font-extra);
+      font-size: vw(46);
+      color: #6b5b38;
+      margin-bottom: vw(25);
+
+      @include mobile {
+        width: vw(240);
+        font-size: vw(36);
+        color: #6b5b38;
+        margin-bottom: vw(35);
+      }
+    }
+
+    .description {
+      margin: 0 auto;
+      font-weight: var(--font-semi-bold);
+      font-size: vw(24);
+      color: #161616;
+      text-align: center;
+      max-width: vw(662);
+
+      @include mobile {
+        text-align: left;
+        font-size: vw(24);
+        color: #353535;
+      }
+    }
+
+    .primary-button {
+      display: flex;
+      margin-top: vw(27);
+      justify-content: center;
+
+      @include mobile {
+        width: 100%;
+        padding: 0 vw(20);
+      }
+
+      a {
+        display: flex;
+        width: vw(266);
+        height: vw(63.3);
+        justify-content: center;
+
+        @include mobile {
+          width: 100%;
+          border-width: 2px;
+        }
+      }
+    }
+  }
 }

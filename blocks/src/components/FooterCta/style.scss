@@ -1,14 +1,14 @@
 @import "./../../assets//styles/utils/functions";
 
 .footer-cta {
-    &-e {
-        text-align: center;
-        margin: vw(135) 0 vw(34);
-    }
+  &-e {
+    text-align: center;
+    margin: vw(135) 0 vw(34);
+  }
 
-    .primary-button {
-        display: flex;
-        margin: vw(38) auto 0;
-        justify-content: center;
-    }
+  .primary-button {
+    display: flex;
+    margin: vw(38) auto 0;
+    justify-content: center;
+  }
 }

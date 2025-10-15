@@ -1,51 +1,51 @@
 @import "./../../assets//styles/utils/functions";
 
 .three-column-card {
-    padding: vw(125) 0 vw(157);
-    background-color: #0C0C0C;
+  padding: vw(125) 0 vw(157);
+  background-color: #0c0c0c;
 
-    .container {
-        gap: vw(109);
-        color: #FFFFFF;
+  .container {
+    gap: vw(109);
+    color: #ffffff;
 
-        .h2 {
-            width: 100%;
-            text-align: center;
-        }
-
-        .list-wrapper {
-            gap: vw(84);
-            display: grid;
-            margin-top: vw(91);
-            grid-template-columns: 1fr 1fr 1fr;
-
-            figure {
-                width: 100%;
-                height: vw(161);
-                margin-bottom: vw(64);
-                border-radius: vw(8);
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: vw(8);
-                }
-            }
-
-            .list {
-                &_b {
-                    margin-bottom: vw(17);
-                }
-
-                &_c {
-                    min-height: vw(126);
-                }
-            }
-
-            .primary-button {
-                margin-top: vw(40);
-            }
-        }
+    .h2 {
+      width: 100%;
+      text-align: center;
     }
+
+    .list-wrapper {
+      gap: vw(84);
+      display: grid;
+      margin-top: vw(91);
+      grid-template-columns: 1fr 1fr 1fr;
+
+      figure {
+        width: 100%;
+        height: vw(161);
+        margin-bottom: vw(64);
+        border-radius: vw(8);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: vw(8);
+        }
+      }
+
+      .list {
+        &_b {
+          margin-bottom: vw(17);
+        }
+
+        &_c {
+          min-height: vw(126);
+        }
+      }
+
+      .primary-button {
+        margin-top: vw(40);
+      }
+    }
+  }
 }

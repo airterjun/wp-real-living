@@ -1,0 +1,54 @@
+@import "./../../assets//styles/utils/functions";
+
+.partner-gallery {
+  padding: vw(98) 0;
+  h2 {
+    width: 100%;
+    text-align: center;
+    color: #6b5b38;
+    font-size: vw(30);
+  }
+
+  .partner-logo-container {
+    gap: 0;
+    display: flex;
+    margin-top: vw(55);
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      &:nth-of-type(1) {
+        flex: 0 0 vw(240);
+        width: vw(240);
+        margin-right: vw(85);
+      }
+
+      &:nth-of-type(2) {
+        flex: 0 0 vw(300);
+        width: vw(300);
+        margin-right: vw(95);
+      }
+
+      &:nth-of-type(3) {
+        flex: 0 0 vw(231);
+        width: vw(231);
+      }
+
+      &:nth-of-type(4) {
+        flex: 0 0 vw(200);
+        margin-left: vw(78);
+        width: vw(200);
+      }
+
+      figure {
+        width: 100%;
+        height: auto;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

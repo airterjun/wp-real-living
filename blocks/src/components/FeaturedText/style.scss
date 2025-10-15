@@ -1,126 +1,121 @@
 @import "./../../assets//styles/utils/functions";
 
-
 .featured-text {
-   position: relative;
-   padding-top: vw(129);
-   background-color: var(--color-dark);
+  position: relative;
+  padding-top: vw(129);
+  background-color: var(--color-dark);
 
-   @include mobile {
-      padding-top: vw(53);
-   }
+  @include mobile {
+    padding-top: vw(53);
+  }
 
-   .decor {
-      position: absolute;
-   }
+  .decor {
+    position: absolute;
+  }
 
-   .decor-1,
-   .decor-2 {
-      top: 0;
-      height: 100%;
-      width: 1.5px;
-      left: vw(var(--g-outer-padding));
-      z-index: 4;
-      background-color: #7A7A7A;
-   }
+  .decor-1,
+  .decor-2 {
+    top: 0;
+    height: 100%;
+    width: 1.5px;
+    left: vw(var(--g-outer-padding));
+    z-index: 4;
+    background-color: #7a7a7a;
+  }
 
-   .decor-2 {
-      left: vw(958);
-   }
+  .decor-2 {
+    left: vw(958);
+  }
 
+  .decor-1 {
+    @include mobile {
+      left: vw(21);
+      background-color: #7f6e41;
+    }
+  }
 
-   .decor-1 {
-      @include mobile {
-         left: vw(21);
-         background-color: #7F6E41;
-      }
-   }
+  .decor-3 {
+    z-index: 2;
+    width: vw(37);
+    height: vw(77.6);
+    left: vw(calc(var(--g-outer-padding) - 37));
+    background-color: #937d4d;
 
-   .decor-3 {
-      z-index: 2;
-      width: vw(37);
-      height: vw(77.6);
-      left: vw(calc(var(--g-outer-padding) - 37));
-      background-color: #937D4D;
+    @include mobile {
+      left: 0;
+      display: none;
+    }
+  }
 
-      @include mobile {
-         left: 0;
-         display: none;
-      }
-   }
+  .title {
+    z-index: 4;
+    display: flex;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: vw(40);
+    height: vw(77.6);
+    position: relative;
+    align-items: flex-end;
+    padding-bottom: vw(6);
+    padding-left: vw(356);
+    border-top: 1.5px solid #7a7a7a;
+    border-bottom: 1.5px solid #7a7a7a;
 
-   .title {
-      z-index: 4;
+    @include mobile {
+      border: 0;
+      height: auto;
+      padding-left: 0;
+      font-size: vw(32);
+      color: #ffffff;
+      max-width: vw(275);
+      padding-left: vw(41);
+      padding-bottom: vw(24);
+    }
+  }
+
+  .content {
+    display: grid;
+    padding-left: vw(328);
+    grid-template-columns: 1fr vw(959);
+
+    @include mobile {
       display: flex;
-      font-weight: 800;
-      color: #FFFFFF;
-      font-size: vw(40);
-      height: vw(77.6);
-      position: relative;
-      align-items: flex-end;
-      padding-bottom: vw(6);
-      padding-left: vw(356);
-      border-top: 1.5px solid #7A7A7A;
-      border-bottom: 1.5px solid #7A7A7A;
+      padding-left: 0;
+      border-bottom: 2px solid #7f6e41;
+      flex-direction: column-reverse;
+    }
+
+    .desc {
+      font-weight: 400;
+      color: #efefef;
+      font-size: vw(16);
+      max-width: vw(483);
+      line-height: vw(23);
+      padding: vw(32) 0 0 vw(32);
 
       @include mobile {
-         border: 0;
-         height: auto;
-         padding-left: 0;
-         font-size: vw(32);
-         color: #FFFFFF;
-         max-width: vw(275);
-         padding-left: vw(41);
-         padding-bottom: vw(24);
+        margin-top: vw(28);
+        padding-top: vw(20);
+        padding-left: vw(48);
+        padding-right: vw(21);
+        padding-bottom: vw(105);
+        border-top: 1.5px solid #7a7a7a;
       }
-   }
+    }
 
-   .content {
-      display: grid;
-      padding-left: vw(328);
-      grid-template-columns: 1fr vw(959);
+    figure {
+      width: 100%;
+      height: vw(372);
 
       @include mobile {
-         display: flex;
-         padding-left: 0;
-         border-bottom: 2px solid #7F6E41;
-         flex-direction: column-reverse;
+        border-top: 1.45px solid #7f6e41;
+        border-bottom: 1.45px solid #7f6e41;
+        height: vw(165);
       }
 
-      .desc {
-         font-weight: 400;
-         color: #EFEFEF;
-         font-size: vw(16);
-         max-width: vw(483);
-         line-height: vw(23);
-         padding: vw(32) 0 0 vw(32);
-
-         @include mobile {
-            margin-top: vw(28);
-            padding-top: vw(20);
-            padding-left: vw(48);
-            padding-right: vw(21);
-            padding-bottom: vw(105);
-            border-top: 1.5px solid #7A7A7A;
-         }
-
+      img {
+        width: 100%;
       }
-
-
-
-      figure {
-         width: 100%;
-         height: vw(372);
-
-         @include mobile {
-            border-top: 1.45px solid #7F6E41;
-            border-bottom: 1.45px solid #7F6E41;
-            height: vw(165);
-         }
-
-         img {
-            width: 100%;
-         }
-      }
-   }
+    }
+  }
 }

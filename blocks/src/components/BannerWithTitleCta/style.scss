@@ -1,101 +1,100 @@
 @import "./../../assets//styles/utils/functions";
 
-
 .banner-with-title-cta {
-    height: vw(428);
-    display: flex;
-    margin-top: vw(44);
+  height: vw(428);
+  display: flex;
+  margin-top: vw(44);
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mobile {
+    height: vw(545);
+    display: block;
+    padding-top: vw(73);
+  }
+
+  .inner-container {
+    z-index: 4;
+    width: 100%;
+    margin: 0 auto;
     position: relative;
-    flex-direction: column;
-    justify-content: center;
+    max-width: vw(1200);
 
     @include mobile {
-        height: vw(545);
-        display: block;
-        padding-top: vw(73);
+      padding: 0 vw(20);
     }
 
-    .inner-container {
-        z-index: 4;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        max-width: vw(1200);
+    h1 {
+      font-size: vw(48);
+      color: #ffffff;
+      line-height: vw(54);
+      margin-bottom: vw(30);
+      font-weight: var(--font-extra);
+
+      @include mobile {
+        font-size: vw(33);
+        color: #ffffff;
+        line-height: vw(37);
+        font-weight: var(--font-bold);
+      }
+    }
+
+    .primary-button {
+      a {
+        padding: 0;
+        width: vw(250);
+        height: vw(49);
+        font-size: vw(19);
+        color: #f7f7f7;
+        border-color: #f7f7f7;
+        letter-spacing: vw(-0.27);
+        justify-content: center;
 
         @include mobile {
-            padding: 0 vw(20);
+          width: 100%;
+          font-size: vw(21);
+          letter-spacing: vw(-0.29);
         }
 
-        h1 {
-            font-size: vw(48);
-            color: #FFFFFF;
-            line-height: vw(54);
-            margin-bottom: vw(30);
-            font-weight: var(--font-extra);
+        &::before {
+          background-color: #f7f7f7;
+        }
 
-            @include mobile {
-                font-size: vw(33);
-                color: #FFFFFF;
-                line-height: vw(37);
-                font-weight: var(--font-bold);
+        svg {
+          path {
+            fill: #f7f7f7;
+          }
+        }
+
+        @include hover {
+          color: #937d4d;
+
+          svg {
+            path {
+              fill: #937d4d !important;
             }
+          }
         }
+      }
+    }
+  }
 
-        .primary-button {
-            a {
-                padding: 0;
-                width: vw(250);
-                height: vw(49);
-                font-size: vw(19);
-                color: #F7F7F7;
-                border-color: #F7F7F7;
-                letter-spacing: vw(-0.27);
-                justify-content: center;
+  figure {
+    top: 0;
+    width: 100%;
+    height: vw(428);
+    overflow: hidden;
+    position: absolute;
 
-                @include mobile {
-                    width: 100%;
-                    font-size: vw(21);
-                    letter-spacing: vw(-0.29);
-                }
-
-                &::before {
-                    background-color: #F7F7F7;
-                }
-
-                svg {
-                    path {
-                        fill: #F7F7F7
-                    }
-                }
-
-                @include hover {
-                    color: #937D4D;
-
-                    svg {
-                        path {
-                            fill: #937D4D !important
-                        }
-                    }
-                }
-            }
-        }
+    @include mobile {
+      height: vw(545);
     }
 
-    figure {
-        top: 0;
-        width: 100%;
-        height: vw(428);
-        overflow: hidden;
-        position: absolute;
-
-        @include mobile {
-            height: vw(545);
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+  }
 }

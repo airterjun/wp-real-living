@@ -40,6 +40,10 @@
     padding-left: vw(358);
     padding-right: vw(85);
 
+    &.hero-alt {
+      padding-right: 0;
+    }
+
     @include mobile {
       padding: vw(56) vw(var(--g-padding-container)) vw(51) !important;
     }
@@ -105,6 +109,17 @@
       width: 100%;
       position: relative;
 
+      .label {
+        width: 100%;
+        font-size: vw(26);
+        margin-bottom: vw(16);
+        padding-bottom: vw(6);
+        color: var(--color-gold);
+        letter-spacing: -0.01em;
+        font-weight: var(--font-semi-bold);
+        border-bottom: 2.7px solid var(--color-gold);
+      }
+
       &-b {
         font-weight: 700;
         font-size: vw(31);
@@ -119,6 +134,52 @@
           font-size: vw(21);
           line-height: vw(25);
           margin-bottom: vw(46);
+        }
+      }
+
+      &--inner {
+        padding-right: vw(85);
+
+        .h1 {
+          margin-bottom: vw(24);
+        }
+
+        .content-a-b {
+          margin-bottom: vw(46);
+        }
+
+        .buttons-action {
+          gap: vw(28);
+          display: flex;
+
+          .button-gold {
+            background-color: var(--color-gold);
+            a {
+              z-index: 1;
+              color: #fff;
+
+              &::before {
+                // z-index: 4;
+                background-color: #fff;
+              }
+
+              svg {
+                path {
+                  stroke: #ffe2ae;
+                }
+              }
+
+              @include hover {
+                color: var(--color-gold);
+
+                svg {
+                  path {
+                    stroke: var(--color-gold);
+                  }
+                }
+              }
+            }
+          }
         }
       }
 

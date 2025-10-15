@@ -1,245 +1,238 @@
 @import "./../../assets//styles/utils/functions";
 
 .two-column-text {
-    position: relative;
-    padding: vw(146) 0;
+  position: relative;
+  padding: vw(146) 0;
 
-    @include mobile {
-        padding-top: 0;
-        padding-bottom: vw(57);
-        border-bottom: 2px solid #7F6E41;
+  @include mobile {
+    padding-top: 0;
+    padding-bottom: vw(57);
+    border-bottom: 2px solid #7f6e41;
+  }
+
+  .decor {
+    position: absolute;
+
+    &.decor-1,
+    &.decor-2,
+    &.decor-3 {
+      top: 0;
+      z-index: 4;
+      width: 1px;
+      height: 100%;
+      background-color: #7a7a7a;
     }
 
-    .decor {
+    &.decor-1 {
+      left: vw(var(--g-outer-padding));
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &.decor-2 {
+      width: 2px;
+      left: 50vw;
+      background-color: #937d4d;
+
+      @include mobile {
+        left: vw(21);
+        max-height: vw(512);
+      }
+    }
+
+    &.decor-3 {
+      right: vw(var(--g-outer-padding));
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &.header {
+      position: relative;
+      border-top: 1px solid #7a7a7a;
+      border-bottom: 1px solid #7a7a7a;
+
+      @include mobile {
+        display: flex;
+        border-width: 2px;
+        flex-direction: column-reverse;
+      }
+
+      &::before {
+        left: 0;
+        content: "";
+        height: 100%;
         position: absolute;
+        width: vw(var(--g-outer-padding));
+        background-color: #7f6e41;
 
-        &.decor-1,
-        &.decor-2,
-        &.decor-3 {
-            top: 0;
-            z-index: 4;
-            width: 1px;
-            height: 100%;
-            background-color: #7A7A7A;
+        @include mobile {
+          width: vw(21);
+        }
+      }
+
+      .label {
+        color: #727272;
+        font-size: vw(24);
+        margin-top: vw(34);
+        line-height: vw(24.16);
+        padding-left: vw(27);
+        font-weight: var(--font-bold);
+      }
+
+      h2 {
+        margin-bottom: 0;
+        color: #1a1a1c;
+        font-size: vw(50);
+        line-height: 1.1;
+        margin-bottom: vw(7);
+        letter-spacing: vw(0.95);
+        text-transform: uppercase;
+        padding-left: vw(27);
+        font-weight: var(--font-semi-bold);
+      }
+
+      figure {
+        width: 100%;
+        height: vw(123);
+
+        @include mobile {
+          height: vw(108);
         }
 
-        &.decor-1 {
-            left: vw(var(--g-outer-padding));
-
-            @include mobile {
-                display: none;
-            }
+        img {
+          width: 100%;
+          height: vw(123);
+          object-fit: cover;
         }
-
-        &.decor-2 {
-            width: 2px;
-            left: 50vw;
-            background-color: #937D4D;
-
-            @include mobile {
-                left: vw(21);
-                max-height: vw(512);
-            }
-        }
-
-        &.decor-3 {
-            right: vw(var(--g-outer-padding));
-
-            @include mobile {
-                display: none;
-            }
-        }
+      }
     }
 
+    .left {
+      color: #727272;
+      padding-left: vw(var(--g-outer-padding));
 
-    .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+      @include mobile {
+        padding-left: vw(12);
 
-        &.header {
-            position: relative;
-            border-top: 1px solid #7A7A7A;
-            border-bottom: 1px solid #7A7A7A;
-
-            @include mobile {
-                display: flex;
-                border-width: 2px;
-                flex-direction: column-reverse;
-            }
-
-
-            &::before {
-                left: 0;
-                content: '';
-                height: 100%;
-                position: absolute;
-                width: vw(var(--g-outer-padding));
-                background-color: #7F6E41;
-
-                @include mobile {
-                    width: vw(21);
-                }
-            }
-
-            .label {
-                color: #727272;
-                font-size: vw(24);
-                margin-top: vw(34);
-                line-height: vw(24.16);
-                padding-left: vw(27);
-                font-weight: var(--font-bold);
-            }
-
-            h2 {
-                margin-bottom: 0;
-                color: #1A1A1C;
-                font-size: vw(50);
-                line-height: 1.1;
-                margin-bottom: vw(7);
-                letter-spacing: vw(0.95);
-                text-transform: uppercase;
-                padding-left: vw(27);
-                font-weight: var(--font-semi-bold);
-
-            }
-
-            figure {
-                width: 100%;
-                height: vw(123);
-
-                @include mobile {
-                    height: vw(108);
-                }
-
-                img {
-                    width: 100%;
-                    height: vw(123);
-                    object-fit: cover;
-                }
-            }
+        .label {
+          font-size: vw(18);
+          margin-top: vw(37);
+          line-height: vw(24.16);
+          font-weight: var(--font-bold);
         }
 
-        .left {
-            color: #727272;
-            padding-left: vw(var(--g-outer-padding));
-
-            @include mobile {
-                padding-left: vw(12);
-
-                .label {
-                    font-size: vw(18);
-                    margin-top: vw(37);
-                    line-height: vw(24.16);
-                    font-weight: var(--font-bold);
-                }
-
-                .title {
-                    font-size: vw(39);
-                    margin-bottom: vw(10);
-                }
-            }
-
+        .title {
+          font-size: vw(39);
+          margin-bottom: vw(10);
         }
-
-        &.body {
-            margin-bottom: 0;
-
-            @include mobile {
-                display: block;
-            }
-
-            .left {
-                color: #4C3D1D;
-                font-size: vw(20);
-                padding-top: vw(45);
-                font-weight: var(--font-semi-bold);
-
-                @include mobile {
-                    font-size: vw(19);
-                    padding-top: vw(26);
-                    padding-right: vw(20);
-                    padding-bottom: vw(77);
-                    border-bottom: 2px solid #7F6E41;
-
-                }
-
-                .description {
-                    padding-left: vw(30);
-                    max-width: vw(500);
-
-                    @include mobile {
-                        padding-left: vw(35);
-                    }
-                }
-            }
-
-            .item {
-                padding-left: vw(23);
-                padding-top: vw(41);
-
-                @include mobile {
-                    padding-top: vw(51);
-                    padding-left: vw(16);
-                    padding-right: vw(14);
-                }
-
-                &-a {
-                    gap: vw(26);
-                    display: flex;
-                    margin-bottom: vw(25);
-
-                    @include mobile {
-                        margin-bottom: vw(47);
-
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-                    }
-
-                    .arrow {
-                        display: flex;
-                        height: vw(40);
-                        flex: 0 0 vw(43);
-                        margin-top: vw(4);
-                        align-items: center;
-                        transform: translateX(vw(4));
-                        justify-content: center;
-                        border: 1.5px solid #AFAFAF;
-
-                        svg {
-                            width: vw(23);
-                            height: vw(23);
-                        }
-                    }
-
-                    &-a {
-                        max-width: vw(485);
-                        font-size: vw(20);
-                        line-height: vw(25);
-                        color: #353535;
-
-                        &-a {
-                            font-weight: var(--font-bold);
-
-                            @include mobile {
-                                line-height: vw(21);
-                                font-size: vw(19);
-                                letter-spacing: -.02em;
-                                margin-bottom: vw(3);
-                            }
-                        }
-
-                        &-b {
-                            @include mobile {
-                                line-height: vw(21);
-                                font-size: vw(16);
-                            }
-                        }
-                    }
-
-                }
-            }
-
-        }
+      }
     }
+
+    &.body {
+      margin-bottom: 0;
+
+      @include mobile {
+        display: block;
+      }
+
+      .left {
+        color: #4c3d1d;
+        font-size: vw(20);
+        padding-top: vw(45);
+        font-weight: var(--font-semi-bold);
+
+        @include mobile {
+          font-size: vw(19);
+          padding-top: vw(26);
+          padding-right: vw(20);
+          padding-bottom: vw(77);
+          border-bottom: 2px solid #7f6e41;
+        }
+
+        .description {
+          padding-left: vw(30);
+          max-width: vw(500);
+
+          @include mobile {
+            padding-left: vw(35);
+          }
+        }
+      }
+
+      .item {
+        padding-left: vw(23);
+        padding-top: vw(41);
+
+        @include mobile {
+          padding-top: vw(51);
+          padding-left: vw(16);
+          padding-right: vw(14);
+        }
+
+        &-a {
+          gap: vw(26);
+          display: flex;
+          margin-bottom: vw(25);
+
+          @include mobile {
+            margin-bottom: vw(47);
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          .arrow {
+            display: flex;
+            height: vw(40);
+            flex: 0 0 vw(43);
+            margin-top: vw(4);
+            align-items: center;
+            transform: translateX(vw(4));
+            justify-content: center;
+            border: 1.5px solid #afafaf;
+
+            svg {
+              width: vw(23);
+              height: vw(23);
+            }
+          }
+
+          &-a {
+            max-width: vw(485);
+            font-size: vw(20);
+            line-height: vw(25);
+            color: #353535;
+
+            &-a {
+              font-weight: var(--font-bold);
+
+              @include mobile {
+                line-height: vw(21);
+                font-size: vw(19);
+                letter-spacing: -0.02em;
+                margin-bottom: vw(3);
+              }
+            }
+
+            &-b {
+              @include mobile {
+                line-height: vw(21);
+                font-size: vw(16);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

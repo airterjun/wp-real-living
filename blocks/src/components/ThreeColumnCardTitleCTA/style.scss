@@ -1,59 +1,58 @@
 @import "./../../assets//styles/utils/functions";
 
 .three-column-card-title-cta {
+  color: #000000;
+  padding: vw(125) 0 vw(157);
+  background-color: #f9f9f9;
+
+  .content {
+    gap: vw(109);
     color: #000000;
-    padding: vw(125) 0 vw(157);
-    background-color: #F9F9F9;
 
-    .content {
-        gap: vw(109);
-        color: #000000;
+    .list-wrapper {
+      gap: vw(84);
+      display: grid;
+      margin-top: vw(91);
+      grid-template-columns: 1fr 1fr 1fr;
 
+      figure {
+        width: 100%;
+        height: vw(161);
+        margin-bottom: vw(64);
+        border-radius: vw(8);
 
-        .list-wrapper {
-            gap: vw(84);
-            display: grid;
-            margin-top: vw(91);
-            grid-template-columns: 1fr 1fr 1fr;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: vw(8);
+        }
+      }
 
-            figure {
-                width: 100%;
-                height: vw(161);
-                margin-bottom: vw(64);
-                border-radius: vw(8);
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: vw(8);
-                }
-            }
-
-            .list {
-                &_b {
-                    margin-bottom: vw(17);
-                }
-
-                &_c {
-                    min-height: vw(126);
-                }
-            }
-
-            .primary-button {
-                margin-top: vw(40);
-            }
+      .list {
+        &_b {
+          margin-bottom: vw(17);
         }
 
-        &-c {
-            text-align: center;
-            margin-top: vw(122);
+        &_c {
+          min-height: vw(126);
         }
+      }
 
-        .primary-button {
-            display: flex;
-            margin-top: vw(34);
-            justify-content: center;
-        }
+      .primary-button {
+        margin-top: vw(40);
+      }
     }
+
+    &-c {
+      text-align: center;
+      margin-top: vw(122);
+    }
+
+    .primary-button {
+      display: flex;
+      margin-top: vw(34);
+      justify-content: center;
+    }
+  }
 }

@@ -1,133 +1,130 @@
 @import "./../../assets//styles/utils/functions";
 
 .banner-contact {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-top: 1px solid #7a7a7a;
+
+  figure {
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: vw(513);
+
+    @include mobile {
+      height: vw(329.7);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    z-index: 3;
+    display: flex;
+    height: vw(487);
+    color: #f7f7f7;
     position: relative;
-    border-top: 1px solid #7A7A7A;
+    align-items: center;
+    background-color: #231e14;
+    padding-left: vw(var(--g-outer-padding));
+
+    @include mobile {
+      height: auto;
+      display: block;
+      padding-top: vw(83);
+      padding-bottom: vw(88);
+      padding-left: vw(var(--g-padding-container));
+    }
 
     figure {
-        top: 0;
-        z-index: 1;
-        width: 100vw;
-        height: vw(513);
-
-        @include mobile {
-            height: vw(329.7);
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
     }
 
-    .content {
-        z-index: 3;
-        display: flex;
-        height: vw(487);
-        color: #F7F7F7;
-        position: relative;
-        align-items: center;
-        background-color: #231E14;
-        padding-left: vw(var(--g-outer-padding));
+    &-a {
+      z-index: 3;
+      width: 100%;
+      display: grid;
+      padding-top: vw(43);
+      position: relative;
+      border-top: 2px solid #937d4d;
+      grid-template-columns: 1fr vw(690);
+
+      @include mobile {
+        display: block;
+        padding-top: vw(28);
+        padding-right: vw(var(--g-padding-container));
+      }
+
+      &-a {
+        color: #ffffff;
+        font-size: vw(35);
+        max-width: vw(646);
+        font-weight: var(--font-extra);
 
         @include mobile {
-            height: auto;
-            display: block;
-            padding-top: vw(83);
-            padding-bottom: vw(88);
-            padding-left: vw(var(--g-padding-container));
+          font-size: vw(30);
+          color: #ffffff;
+          margin-bottom: vw(49);
         }
+      }
 
-        figure {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
+      &-b {
+        padding-top: vw(17);
 
         &-a {
-            z-index: 3;
+          font-size: vw(27);
+          color: #fff6e1;
+          max-width: vw(323);
+          margin-bottom: vw(23);
+          font-weight: var(--font-semi-bold);
+
+          @include mobile {
             width: 100%;
-            display: grid;
-            padding-top: vw(43);
-            position: relative;
-            border-top: 2px solid #937D4D;
-            grid-template-columns: 1fr vw(690);
+            color: #fff6e1;
+            text-align: center;
+            font-size: vw(25);
+            letter-spacing: 0.01em;
+          }
+        }
+
+        .primary-button {
+          a {
+            padding: 0;
+            gap: vw(13);
+            color: #efefef;
+            height: vw(60);
+            width: vw(307);
+            font-size: vw(21);
+            padding-bottom: vw(3);
+            justify-content: center;
+            letter-spacing: vw(-0.29);
 
             @include mobile {
-                display: block;
-                padding-top: vw(28);
-                padding-right: vw(var(--g-padding-container));
+              width: 100%;
+              justify-content: center;
             }
 
-            &-a {
-                color: #FFFFFF;
-                font-size: vw(35);
-                max-width: vw(646);
-                font-weight: var(--font-extra);
+            svg {
+              width: vw(16);
+              flex: 0 0 vw(16);
+              height: vw(16);
 
-                @include mobile {
-                    font-size: vw(30);
-                    color: #FFFFFF;
-                    margin-bottom: vw(49);
-                }
-
-
+              path {
+                fill: #ba9d63;
+              }
             }
-
-            &-b {
-                padding-top: vw(17);
-
-                &-a {
-                    font-size: vw(27);
-                    color: #FFF6E1;
-                    max-width: vw(323);
-                    margin-bottom: vw(23);
-                    font-weight: var(--font-semi-bold);
-
-                    @include mobile {
-                        width: 100%;
-                        color: #FFF6E1;
-                        text-align: center;
-                        font-size: vw(25);
-                        letter-spacing: .01em;
-                    }
-
-                }
-
-                .primary-button {
-                    a {
-                        padding: 0;
-                        gap: vw(13);
-                        color: #EFEFEF;
-                        height: vw(60);
-                        width: vw(307);
-                        font-size: vw(21);
-                        padding-bottom: vw(3);
-                        justify-content: center;
-                        letter-spacing: vw(-0.29);
-
-                        @include mobile {
-                            width: 100%;
-                            justify-content: center;
-                        }
-
-                        svg {
-                            width: vw(16);
-                            flex: 0 0 vw(16);
-                            height: vw(16);
-
-                            path {
-                                fill: #BA9D63
-                            }
-                        }
-                    }
-                }
-            }
+          }
         }
+      }
     }
+  }
 }

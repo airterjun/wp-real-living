@@ -1,278 +1,268 @@
 @import "./../../assets//styles/utils/functions";
 
 .contact-form {
+  width: 100vw;
+  position: relative;
+  padding-bottom: vw(124);
+  background-color: #231e14;
+
+  figure {
+    inset: 0;
+    z-index: 1;
+    height: 100%;
     width: 100vw;
+    position: absolute;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    gap: vw(150);
+    z-index: 2;
+    display: grid;
     position: relative;
-    padding-bottom: vw(124);
-    background-color: #231E14;
+    padding: 0 vw(360);
+    margin-top: vw(125);
+    grid-template-columns: vw(450) 1fr;
 
-
-    figure {
-        inset: 0;
-        z-index: 1;
-        height: 100%;
-        width: 100vw;
-        position: absolute;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    @include mobile {
+      display: block;
+      margin-top: vw(70);
+      padding: 0 vw(20);
     }
 
-    &-content {
-        gap: vw(150);
-        z-index: 2;
-        display: grid;
-        position: relative;
-        padding: 0 vw(360);
-        margin-top: vw(125);
-        grid-template-columns: vw(450) 1fr;
+    h2 {
+      font-size: vw(35);
+      color: #f7f7f7;
+      margin-bottom: vw(18);
+      font-weight: var(--font-extra);
+
+      @include mobile {
+        font-size: vw(32);
+      }
+    }
+
+    .description {
+      font-size: vw(21);
+      color: #f7f7f7;
+
+      @include mobile {
+        font-size: vw(19);
+        line-height: vw(25);
+        margin-bottom: vw(73);
+      }
+    }
+
+    &-b {
+      p {
+        display: inline;
+      }
+    }
+  }
+
+  .form-wrapper {
+    .input-wrapper:not(.button-submit) {
+      padding-top: vw(21);
+      padding-bottom: vw(11);
+      border-bottom: 1px solid #937d4d;
+      position: relative;
+
+      @include mobile {
+        padding-top: vw(32);
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &.textarea {
+        padding: 0;
+        margin-top: vw(51);
+        border: 1px solid #937d4d;
+      }
+
+      input:not([type="submit"]) {
+        width: 100%;
+        height: vw(17);
+        padding-left: vw(9);
+        font-size: vw(16);
+        letter-spacing: vw(0.08);
+        color: rgba(#f7f7f7, 0.7);
 
         @include mobile {
-            display: block;
-            margin-top: vw(70);
-            padding: 0 vw(20);
+          padding-left: vw(13);
         }
 
-        h2 {
-            font-size: vw(35);
-            color: #F7F7F7;
-            margin-bottom: vw(18);
-            font-weight: var(--font-extra);
+        &::placeholder {
+          color: rgba(#f7f7f7, 0.7);
+        }
+      }
 
-            @include mobile {
-                font-size: vw(32);
-            }
+      .wpcf7-not-valid-tip {
+        right: 0;
+        top: vw(8);
+        opacity: 0.7;
+        position: absolute;
+        pointer-events: none;
+        font-size: vw(16) !important;
+      }
+
+      select {
+        width: 100%;
+        border: none;
+        outline: none;
+        height: vw(20);
+        overflow: visible;
+        padding-left: vw(9);
+        font-size: vw(16);
+        background-color: transparent;
+        letter-spacing: vw(0.08);
+        color: rgba(#f7f7f7, 0.7);
+
+        @include mobile {
+          padding-left: vw(13);
+        }
+      }
+
+      label {
+        display: none;
+      }
+
+      textarea {
+        width: 100%;
+        border: none;
+        height: vw(179);
+        font-size: vw(16);
+        padding: vw(16) vw(20);
+        color: rgba(#f7f7f7, 0.7);
+        letter-spacing: vw(0.08);
+        font-family: var(--font-main);
+        background-color: transparent;
+
+        @include mobile {
+          padding-left: vw(24);
         }
 
-        .description {
-            font-size: vw(21);
-            color: #F7F7F7;
-
-            @include mobile {
-                font-size: vw(19);
-                line-height: vw(25);
-                margin-bottom: vw(73);
-            }
+        &::placeholder {
+          font-size: vw(16);
+          letter-spacing: vw(0.08);
+          color: rgba(#f7f7f7, 0.7);
         }
-
-        &-b {
-            p {
-                display: inline;
-            }
-        }
+      }
     }
 
+    .input-group {
+      gap: vw(44);
+      display: grid;
+      grid-template-columns: vw(268) 1fr;
 
+      @include mobile {
+        display: block;
+      }
 
-    .form-wrapper {
-        .input-wrapper:not(.button-submit) {
-            padding-top: vw(21);
-            padding-bottom: vw(11);
-            border-bottom: 1px solid #937D4D;
-            position: relative;
+      .input-wrapper {
+        padding-top: vw(39) !important;
 
-            @include mobile {
-                padding-top: vw(32);
-            }
-
-            &:first-child {
-                padding-top: 0;
-            }
-
-            &.textarea {
-                padding: 0;
-                margin-top: vw(51);
-                border: 1px solid #937D4D;
-            }
-
-
-            input:not([type=submit]) {
-                width: 100%;
-                height: vw(17);
-                padding-left: vw(9);
-                font-size: vw(16);
-                letter-spacing: vw(0.08);
-                color: rgba(#F7F7F7, 0.7);
-
-                @include mobile {
-                    padding-left: vw(13);
-                }
-
-                &::placeholder {
-                    color: rgba(#F7F7F7, 0.7);
-                }
-            }
-
-            .wpcf7-not-valid-tip {
-                right: 0;
-                top: vw(8);
-                opacity: 0.7;
-                position: absolute;
-                pointer-events: none;
-                font-size: vw(16) !important;
-            }
-
-            select {
-                width: 100%;
-                border: none;
-                outline: none;
-                height: vw(20);
-                overflow: visible;
-                padding-left: vw(9);
-                font-size: vw(16);
-                background-color: transparent;
-                letter-spacing: vw(0.08);
-                color: rgba(#F7F7F7, 0.7);
-
-                @include mobile {
-                    padding-left: vw(13);
-                }
-            }
-
-            label {
-                display: none;
-            }
-
-            textarea {
-                width: 100%;
-                border: none;
-                height: vw(179);
-                font-size: vw(16);
-                padding: vw(16) vw(20);
-                color: rgba(#F7F7F7, 0.7);
-                letter-spacing: vw(0.08);
-                font-family: var(--font-main);
-                background-color: transparent;
-
-                @include mobile {
-                    padding-left: vw(24);
-                }
-
-                &::placeholder {
-                    font-size: vw(16);
-                    letter-spacing: vw(0.08);
-                    color: rgba(#F7F7F7, 0.7);
-
-                }
-            }
+        @include mobile {
+          padding-top: vw(28) !important;
         }
-
-        .input-group {
-            gap: vw(44);
-            display: grid;
-            grid-template-columns: vw(268) 1fr;
-
-            @include mobile {
-                display: block;
-            }
-
-            .input-wrapper {
-                padding-top: vw(39) !important;
-
-                @include mobile {
-                    padding-top: vw(28) !important;
-                }
-            }
-        }
-
-
-        .button-submit {
-            width: vw(216);
-            position: relative;
-            margin-top: vw(41);
-
-            @include mobile {
-                width: 100%;
-            }
-
-            .button-inner {
-                position: relative;
-
-                &::before {
-                    top: 0;
-                    left: 0;
-                    content: '';
-                    display: block;
-                    width: vw(216);
-                    height: vw(60.5);
-                    position: absolute;
-                    transform: scaleY(0);
-                    transform-origin: top;
-                    background-color: #937D4D;
-                    transition: transform .45s var(--cubic-bezier);
-                }
-            }
-
-
-            @include hover {
-                .button-inner {
-                    &::before {
-                        transform: scaleY(1);
-                        transform-origin: bottom;
-                    }
-                }
-            }
-
-            .wpcf7-spinner {
-                top: 20%;
-                right: vw(-100);
-                position: absolute;
-            }
-
-
-            svg {
-                top: vw(19);
-                right: vw(31);
-                position: absolute;
-                width: vw(15.8);
-                height: vw(15.8);
-                flex: 0 0 vw(15.8);
-                transform: translateY(vw(3));
-
-                @include mobile {
-                    right: vw(108);
-
-                    path {
-                        fill: #BA9D63
-                    }
-                }
-            }
-
-            input {
-                width: vw(216);
-                height: vw(60.5);
-                color: #EFEFEF;
-                text-align: left;
-                cursor: pointer;
-                font-size: vw(21);
-                padding-left: vw(33);
-                position: relative;
-                padding-right: vw(13);
-                border: 1px solid #937D4D;
-                letter-spacing: vw(-0.29);
-
-                @include mobile {
-                    width: 100%;
-                    font-weight: normal;
-                    font-size: vw(19);
-                    color: #FFFFFF;
-                    padding-left: vw(90);
-                    background-color: #937D4D;
-                }
-
-
-            }
-        }
+      }
     }
 
-    .wpcf7-response-output {
-        border: none !important;
-        color: #FFF;
-        padding: 0 !important;
-        margin-left: 0 !important;
-        font-size: 13px;
+    .button-submit {
+      width: vw(216);
+      position: relative;
+      margin-top: vw(41);
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .button-inner {
+        position: relative;
+
+        &::before {
+          top: 0;
+          left: 0;
+          content: "";
+          display: block;
+          width: vw(216);
+          height: vw(60.5);
+          position: absolute;
+          transform: scaleY(0);
+          transform-origin: top;
+          background-color: #937d4d;
+          transition: transform 0.45s var(--cubic-bezier);
+        }
+      }
+
+      @include hover {
+        .button-inner {
+          &::before {
+            transform: scaleY(1);
+            transform-origin: bottom;
+          }
+        }
+      }
+
+      .wpcf7-spinner {
+        top: 20%;
+        right: vw(-100);
+        position: absolute;
+      }
+
+      svg {
+        top: vw(19);
+        right: vw(31);
+        position: absolute;
+        width: vw(15.8);
+        height: vw(15.8);
+        flex: 0 0 vw(15.8);
+        transform: translateY(vw(3));
+
+        @include mobile {
+          right: vw(108);
+
+          path {
+            fill: #ba9d63;
+          }
+        }
+      }
+
+      input {
+        width: vw(216);
+        height: vw(60.5);
+        color: #efefef;
+        text-align: left;
+        cursor: pointer;
+        font-size: vw(21);
+        padding-left: vw(33);
+        position: relative;
+        padding-right: vw(13);
+        border: 1px solid #937d4d;
+        letter-spacing: vw(-0.29);
+
+        @include mobile {
+          width: 100%;
+          font-weight: normal;
+          font-size: vw(19);
+          color: #ffffff;
+          padding-left: vw(90);
+          background-color: #937d4d;
+        }
+      }
     }
+  }
+
+  .wpcf7-response-output {
+    border: none !important;
+    color: #fff;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    font-size: 13px;
+  }
 }

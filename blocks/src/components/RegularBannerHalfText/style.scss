@@ -1,0 +1,70 @@
+@import "./../../assets//styles/utils/functions";
+
+.full-width-banner-two-column {
+  width: 100vw;
+  height: vw(367);
+  position: relative;
+  background-color: #16130d;
+  border-top: 2.5px solid #7f6e41;
+  border-bottom: 2.5px solid #7f6e41;
+
+  @include mobile {
+    height: vw(406);
+    border-color: #7f6e41;
+  }
+
+  .title {
+    z-index: 4;
+    color: #bc9f6c;
+    position: relative;
+    font-size: vw(35);
+    font-weight: var(--font-extra);
+
+    @include mobile {
+      color: #414042;
+      padding: 0 vw(20);
+      font-size: vw(48);
+      text-align: center;
+      max-width: vw(250);
+    }
+  }
+
+  .description {
+    font-size: vw(24);
+    color: #e5e5e5;
+  }
+
+  figure {
+    width: 100%;
+    height: vw(367);
+
+    img {
+      width: 100%;
+      height: vw(367);
+      object-fit: cover;
+
+      @include mobile {
+        height: 100%;
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: vw(960) 1fr;
+
+    &-detail {
+      display: flex;
+      height: vw(367);
+      flex-direction: column;
+      justify-content: center;
+      padding: vw(79) vw(99);
+
+      .description {
+        margin-top: vw(23);
+        max-width: vw(488);
+        line-height: vw(28);
+      }
+    }
+  }
+}

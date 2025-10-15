@@ -1,30 +1,30 @@
 @import "./../../assets//styles/utils/functions";
 
 .header-content {
+  &-a {
+    font-size: vw(29);
+    padding-bottom: vw(18);
+    font-family: var(--font-main-bold);
+    border-bottom: 1.5px solid var(--color-green);
+  }
+
+  &-b {
+    gap: vw(63);
+    display: grid;
+    padding-top: vw(53);
+    grid-template-columns: 1fr vw(489);
+
     &-a {
-        font-size: vw(29);
-        padding-bottom: vw(18);
-        font-family: var(--font-main-bold);
-        border-bottom: 1.5px solid var(--color-green);
+      margin-bottom: 0;
+      font-size: vw(50);
+      font-family: var(--font-main-black);
     }
 
     &-b {
-        gap: vw(63);
-        display: grid;
-        padding-top: vw(53);
-        grid-template-columns: 1fr vw(489);
-
-        &-a {
-            margin-bottom: 0;
-            font-size: vw(50);
-            font-family: var(--font-main-black);
-        }
-
-        &-b {
-            display: flex;
-            font-size: vw(24);
-            justify-content: flex-end;
-            font-family: var(--font-main-bold);
-        }
+      display: flex;
+      font-size: vw(24);
+      justify-content: flex-end;
+      font-family: var(--font-main-bold);
     }
+  }
 }

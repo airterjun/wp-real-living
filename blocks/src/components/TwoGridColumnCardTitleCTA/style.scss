@@ -1,68 +1,67 @@
 @import "./../../assets//styles/utils/functions";
 
-
 .two-grid-column-card-title-cta {
-    color: #F7F7F7;
-    padding: vw(156) 0;
-    background-color: #111111;
+  color: #f7f7f7;
+  padding: vw(156) 0;
+  background-color: #111111;
 
-    .content {
-        &-b {
-            font-size: vw(45);
-            max-width: vw(720);
-            margin-bottom: vw(28);
-            font-family: var(--font-main-black);
-        }
-
-        &-a {
-            color: var(--color-green);
-            font-size: vw(28);
-            margin-bottom: vw(31);
-            font-family: var(--font-main-bold);
-        }
-
-        &-c {
-            max-width: vw(650);
-            font-size: vw(29);
-            margin-bottom: vw(132);
-        }
-
-        &-d {
-            gap: vw(165);
-            display: grid;
-            row-gap: vw(100);
-            grid-template-columns: repeat(2, 1fr);
-
-            .card-wrapper {
-                color: #FFF;
-
-                figure {
-                    width: 100%;
-                    height: vw(187);
-                    border-radius: vw(10);
-                    margin-bottom: vw(41);
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: vw(10);
-                    }
-                }
-
-                &-b {
-                    h2 {
-                        font-size: vw(38);
-                        margin-bottom: vw(12);
-                        font-family: var(--font-main-bold);
-                    }
-
-                    &-b {
-                        font-size: vw(25);
-                        color: rgba(#F2F2F2, 0.93);
-                    }
-                }
-            }
-        }
+  .content {
+    &-b {
+      font-size: vw(45);
+      max-width: vw(720);
+      margin-bottom: vw(28);
+      font-family: var(--font-main-black);
     }
+
+    &-a {
+      color: var(--color-green);
+      font-size: vw(28);
+      margin-bottom: vw(31);
+      font-family: var(--font-main-bold);
+    }
+
+    &-c {
+      max-width: vw(650);
+      font-size: vw(29);
+      margin-bottom: vw(132);
+    }
+
+    &-d {
+      gap: vw(165);
+      display: grid;
+      row-gap: vw(100);
+      grid-template-columns: repeat(2, 1fr);
+
+      .card-wrapper {
+        color: #fff;
+
+        figure {
+          width: 100%;
+          height: vw(187);
+          border-radius: vw(10);
+          margin-bottom: vw(41);
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: vw(10);
+          }
+        }
+
+        &-b {
+          h2 {
+            font-size: vw(38);
+            margin-bottom: vw(12);
+            font-family: var(--font-main-bold);
+          }
+
+          &-b {
+            font-size: vw(25);
+            color: rgba(#f2f2f2, 0.93);
+          }
+        }
+      }
+    }
+  }
 }

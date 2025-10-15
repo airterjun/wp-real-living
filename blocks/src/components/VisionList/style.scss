@@ -1,0 +1,129 @@
+@import "./../../assets//styles/utils/functions";
+
+.vision-list {
+  .inner-block-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    width: vw(1234);
+    justify-content: space-between;
+    border-right: vw(2) solid #7a7a7a;
+    border-left: vw(2) solid #7a7a7a;
+  }
+  &-inner {
+    .header {
+      height: vw(188);
+      border-bottom: vw(2) solid #bfbfbf;
+
+      .inner-block-wrapper {
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: vw(17) vw(26);
+      }
+
+      &-label {
+        font-size: vw(28);
+        font-weight: var(--font-semi-bold);
+        color: var(--color-gold);
+      }
+
+      &-title {
+        color: #414042;
+        font-size: vw(48);
+        font-weight: var(--font-extra);
+      }
+    }
+
+    .item-wrapper {
+      width: 100%;
+      display: flex;
+      margin-top: vw(54);
+      justify-content: space-between;
+      border-top: vw(2) solid #bfbfbf;
+      border-bottom: vw(2) solid #bfbfbf;
+
+      .box {
+        flex: 1 auto;
+        // max-width: 50%;
+
+        &.content-thumb {
+          max-width: vw(576);
+          flex: 0 0 vw(576);
+        }
+
+        // Content
+        &.content-wrapper {
+          gap: vw(27);
+          flex: 1 auto;
+          display: flex;
+          color: #353535;
+          padding: vw(30) vw(31);
+
+          .content {
+            padding-right: vw(37);
+          }
+
+          .list-title {
+            font-size: vw(24);
+            margin-bottom: vw(6);
+            font-weight: var(--font-bold);
+          }
+
+          .list-desc {
+            font-size: vw(22);
+            line-height: vw(26);
+          }
+
+          svg {
+            width: vw(44);
+            height: vw(44);
+            flex: 0 0 vw(44);
+            transform: translateY(vw(7));
+
+            path {
+              fill: #939393;
+            }
+          }
+        }
+
+        figure {
+          width: 100%;
+          height: vw(239);
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          object-fit: cover;
+        }
+      }
+
+      &:nth-of-type(even) {
+        .inner-block-wrapper {
+          flex-direction: row-reverse;
+
+          .content-wrapper {
+            padding-left: vw(2);
+            padding-right: 0;
+            flex: 0 0 vw(576);
+          }
+        }
+      }
+    }
+
+    .footer-container {
+      .inner-block-wrapper {
+        gap: vw(24);
+        height: vw(287);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+          font-size: vw(24);
+        }
+      }
+    }
+  }
+}

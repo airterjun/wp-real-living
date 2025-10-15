@@ -1,84 +1,82 @@
 @import "./../../assets//styles/utils/functions";
 
-
 .banner-office {
-    display: grid;
-    gap: vw(104);
+  display: grid;
+  gap: vw(104);
+  height: vw(416);
+  border-bottom: 1px solid #937d4d;
+  border-top: 1px solid #937d4d;
+  grid-template-columns: vw(1125) 1fr;
+
+  @include mobile {
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 2px solid #937d4d;
+  }
+
+  figure {
+    width: vw(1125);
     height: vw(416);
-    border-bottom: 1px solid #937D4D;
-    border-top: 1px solid #937D4D;
-    grid-template-columns: vw(1125) 1fr;
 
     @include mobile {
-        height: auto;
-        display: block;
-        overflow: hidden;
-        border-bottom: 2px solid #937D4D;
+      border-bottom: 2px solid #937d4d;
+      transform: translateX(vw(-128));
     }
 
+    img {
+      width: 100%;
+    }
+  }
 
-    figure {
-        width: vw(1125);
-        height: vw(416);
+  .content {
+    color: #231e14;
+    padding-top: vw(48);
 
-        @include mobile {
-            border-bottom: 2px solid #937D4D;
-            transform: translateX(vw(-128));
-        }
-
-        img {
-            width: 100%;
-        }
+    @include mobile {
+      padding: vw(38) vw(20) vw(65);
     }
 
-    .content {
-        color: #231E14;
-        padding-top: vw(48);
+    h2 {
+      font-size: vw(40);
+      margin-bottom: vw(17);
+      line-height: vw(64.71);
+      font-weight: var(--font-extra);
 
-        @include mobile {
-            padding: vw(38) vw(20) vw(65);
-        }
-
-        h2 {
-            font-size: vw(40);
-            margin-bottom: vw(17);
-            line-height: vw(64.71);
-            font-weight: var(--font-extra);
-
-            @include mobile {
-                font-size: vw(33);
-                margin-bottom: vw(4);
-                color: #231E14;
-            }
-        }
-
-        .description {
-            font-size: vw(24);
-            line-height: vw(31);
-            margin-bottom: vw(35);
-            font-weight: var(--font-semi-bold);
-
-            @include mobile {
-                font-size: vw(21);
-                line-height: vw(28);
-                margin-bottom: vw(46);
-            }
-        }
-
-        .contact {
-            font-size: vw(26);
-            line-height: vw(32);
-            font-weight: var(--font-semi-bold);
-
-            @include mobile {
-                font-size: vw(23);
-                line-height: vw(31);
-                color: #0C0C0C;
-            }
-
-            a {
-                color: #937D4D;
-            }
-        }
+      @include mobile {
+        font-size: vw(33);
+        margin-bottom: vw(4);
+        color: #231e14;
+      }
     }
+
+    .description {
+      font-size: vw(24);
+      line-height: vw(31);
+      margin-bottom: vw(35);
+      font-weight: var(--font-semi-bold);
+
+      @include mobile {
+        font-size: vw(21);
+        line-height: vw(28);
+        margin-bottom: vw(46);
+      }
+    }
+
+    .contact {
+      font-size: vw(26);
+      line-height: vw(32);
+      font-weight: var(--font-semi-bold);
+
+      @include mobile {
+        font-size: vw(23);
+        line-height: vw(31);
+        color: #0c0c0c;
+      }
+
+      a {
+        color: #937d4d;
+      }
+    }
+  }
 }

@@ -1,0 +1,112 @@
+@import "./../../assets//styles/utils/functions";
+
+.featured-title {
+  padding: vw(110) 0;
+
+  @include mobile {
+    padding-top: vw(43);
+  }
+
+  .main-container {
+    grid-column: 4/14;
+    color: #f7f7f7;
+    position: relative;
+    padding: 0 vw(18);
+
+    @include mobile {
+      padding: 0 vw(19);
+    }
+
+    &.top-content {
+      display: flex;
+      min-height: vw(232);
+      align-items: center;
+      padding-top: vw(20);
+      // justify-content: center;
+      flex-direction: column;
+      margin-bottom: vw(66);
+
+      @include mobile {
+        display: block;
+        margin-bottom: vw(64);
+      }
+
+      .content-wrapper {
+        text-align: center;
+        margin-top: vw(14);
+
+        .label {
+          color: #937d4d;
+          font-size: vw(28);
+        }
+      }
+
+      svg {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: vw(299);
+        margin: 0 auto;
+        opacity: 0.18;
+        pointer-events: none;
+        position: absolute;
+        transform: translateX(vw(10));
+
+        @include mobile {
+          opacity: 1;
+          margin: 0 0 vw(6);
+          left: unset;
+          width: vw(70.6);
+          height: vw(66);
+          transform: none;
+          position: relative;
+        }
+      }
+    }
+
+    &.columb-card {
+      @include mobile {
+        padding: vw(72) vw(20) 0;
+        border-top: 2px solid #7a7a7a;
+      }
+    }
+
+    .title {
+      font-weight: var(--font-extra);
+      font-size: vw(46);
+      color: #6b5b38;
+      line-height: vw(49);
+      margin-bottom: vw(26);
+
+      @include mobile {
+        color: #231e14;
+        font-size: vw(36);
+        margin-bottom: vw(35);
+      }
+    }
+
+    .description {
+      margin: 0 auto;
+      font-size: vw(24);
+      color: #161616;
+      text-align: center;
+      max-width: vw(735);
+      font-weight: var(--font-semi-bold);
+
+      @include mobile {
+        text-align: left;
+        font-size: vw(24);
+        color: #353535;
+      }
+    }
+  }
+
+  &.no-footer {
+    padding-bottom: vw(99);
+
+    .main-container {
+      margin-bottom: 0;
+    }
+  }
+}

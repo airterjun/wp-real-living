@@ -1,24 +1,23 @@
 @import "./../../assets//styles/utils/functions";
 
 .partners {
-    padding: vw(38) 0;
-    background-color: #161616;
+  padding: vw(38) 0;
+  background-color: #161616;
 
-    .container {
-        gap: vw(117);
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
+  .container {
+    gap: vw(117);
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 
+    figure {
+      width: 100%;
+      height: vw(74);
 
-        figure {
-            width: 100%;
-            height: vw(74);
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-        }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
+  }
 }

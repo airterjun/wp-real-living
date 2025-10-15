@@ -1,7 +1,7 @@
 @import "./../../assets//styles/utils/functions";
 
 .two-grid-column-card {
-  padding: vw(77) 0 vw(119);
+  padding: vw(31) 0 0;
   position: relative;
 
   @include mobile {
@@ -11,13 +11,14 @@
 
   &:after,
   &::before {
-    width: 2px;
-    top: vw(77);
-    bottom: vw(119);
+    width: vw(2);
+    top: vw(31);
+    z-index: 1;
+    bottom: 0;
     height: auto;
     content: "";
     position: absolute;
-    background-color: #937d4d;
+    background-color: #bfbfbf;
 
     @include mobile {
       display: none;
@@ -33,8 +34,10 @@
   }
 
   .content {
+    z-index: 2;
     display: grid;
-    border-bottom: 2px solid #937d4d;
+    position: relative;
+    border-bottom: vw(2) solid #937d4d;
     grid-template-columns: repeat(2, 1fr);
 
     @include mobile {
@@ -50,8 +53,8 @@
         height: vw(92.6);
         position: relative;
         align-items: center;
-        border-top: 2px solid rgba(#414042, 0.4);
-        border-bottom: 2px solid rgba(#414042, 0.4);
+        border-top: vw(2) solid rgba(#414042, 0.4);
+        border-bottom: vw(2) solid rgba(#414042, 0.4);
         padding: 0 vw(var(--g-outer-padding));
 
         @include mobile {
@@ -116,6 +119,42 @@
             font-size: vw(18);
             color: #353535;
           }
+
+          &.amenity-list-wrapper {
+            padding-left: vw(55);
+            padding-top: vw(22);
+          }
+
+          .amenity-list {
+            gap: 0;
+            margin: 0;
+            row-gap: vw(2);
+            display: grid;
+            padding-left: 0;
+            max-width: vw(506);
+            grid-template-columns: repeat(2, 1fr);
+
+            li {
+              gap: vw(16);
+              display: flex;
+              color: #3d3122;
+              list-style: none;
+              font-size: vw(21);
+
+              .num {
+                display: flex;
+                flex: 0 0 vw(30);
+                color: #937d4d;
+                justify-content: space-between;
+
+                .amenity-item {
+                  flex: 0 0 vw(20);
+                  text-align: right;
+                  justify-content: flex-end;
+                }
+              }
+            }
+          }
         }
       }
 
@@ -149,7 +188,7 @@
       }
 
       &:nth-of-type(odd) {
-        border-right: 2px solid #937d4d;
+        border-right: vw(2) solid #bfbfbf;
 
         .card-wrapper-a {
           padding-right: 0;
@@ -178,6 +217,25 @@
             padding-right: vw(var(--g-padding-container));
           }
         }
+      }
+    }
+  }
+
+  .timeline-list {
+    margin-bottom: vw(9);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .group {
+      gap: vw(23);
+      display: grid;
+      font-size: vw(21);
+      grid-template-columns: vw(170) 1fr;
+
+      .value {
+        font-weight: var(--font-semi-bold);
+        color: #937d4d;
       }
     }
   }
