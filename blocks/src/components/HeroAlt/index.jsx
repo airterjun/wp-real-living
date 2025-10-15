@@ -51,8 +51,12 @@ const HeroBannerAlt = (props) => {
             <InputWrapper label="Background">
               <MediaInput set="background" {...props} />
             </InputWrapper>
-            <InputWrapper label="Background">
+            <InputWrapper label="Button More">
               <LinkEditor {...props} set="link" />
+            </InputWrapper>
+
+            <InputWrapper label="Button Book">
+              <LinkEditor {...props} set="buttonBook" />
             </InputWrapper>
             <InputWrapper label="Title">
               <Text set="text_1" {...props} tag="div" className="input" />

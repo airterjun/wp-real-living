@@ -2291,7 +2291,7 @@
   padding: calc(30 / var(--base-size) * 100vw) calc(31 / var(--base-size) * 100vw);
 }
 .vision-list-inner .item-wrapper .box.content-wrapper .content {
-  padding-right: calc(37 / var(--base-size) * 100vw);
+  padding-right: calc(10 / var(--base-size) * 100vw);
 }
 .vision-list-inner .item-wrapper .box.content-wrapper .list-title {
   font-size: calc(24 / var(--base-size) * 100vw);
@@ -2332,7 +2332,7 @@
   flex: 0 0 calc(576 / var(--base-size) * 100vw);
 }
 .vision-list-inner .footer-container .inner-block-wrapper {
-  gap: calc(24 / var(--base-size) * 100vw);
+  gap: calc(27 / var(--base-size) * 100vw);
   height: calc(287 / var(--base-size) * 100vw);
   align-items: center;
   justify-content: center;
@@ -2340,6 +2340,7 @@
 }
 .vision-list-inner .footer-container .inner-block-wrapper .title {
   font-size: calc(24 / var(--base-size) * 100vw);
+  font-weight: var(--font-semi-bold);
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerOffice/style.scss ***!

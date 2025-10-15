@@ -1,6 +1,9 @@
 import { createAttributes } from "../helper/BaseAttributes";
+import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
+import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
+import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
@@ -59,6 +62,11 @@ const VisionList = (props) => {
 
   return (
     <BlockWrapper {...props} className="vision-list">
+      <BlockEditor {...props}>
+        <div className="tab-item active" data-name="dekstop">
+          <LinkEditor {...props} set="footerButton" />
+        </div>
+      </BlockEditor>
       <div className="vision-list-inner">
         <div className="header">
           <div className="inner-block-wrapper">
