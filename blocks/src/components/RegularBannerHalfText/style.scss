@@ -62,8 +62,26 @@
 
       .description {
         margin-top: vw(23);
-        max-width: vw(488);
+        max-width: vw(490);
         line-height: vw(28);
+      }
+    }
+  }
+
+  &.investing-banner {
+    height: vw(423);
+
+    figure {
+      height: vw(423);
+
+      img {
+        height: vw(423);
+      }
+    }
+
+    .content-wrapper {
+      &-detail {
+        height: vw(423);
       }
     }
   }

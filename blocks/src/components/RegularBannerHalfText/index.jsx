@@ -25,8 +25,11 @@ export default function (props) {
           <InputWrapper label="Title">
             <Text {...props} set="title" tag="div" />
           </InputWrapper>
-          <InputWrapper className="Banner">
+          <InputWrapper label="Banner">
             <Media set="banner" {...props} />
+          </InputWrapper>
+          <InputWrapper label="Block classes">
+            <Text set="section_class" {...props} tag="div" />
           </InputWrapper>
         </div>
         <div className="tab-item" data-name="dekstop">

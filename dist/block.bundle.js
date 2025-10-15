@@ -19476,10 +19476,16 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_2__.create
     set: "title",
     tag: "div"
   }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "Banner"
+    label: "Banner"
   }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "banner"
-  }, props)))), /*#__PURE__*/React.createElement("div", {
+  }, props))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    label: "Block classes"
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "section_class"
+  }, props, {
+    tag: "div"
+  })))), /*#__PURE__*/React.createElement("div", {
     className: "tab-item",
     "data-name": "dekstop"
   }, /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -20982,21 +20988,21 @@ const BlockEditor = props => {
     const offsetX = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
     const offsetY = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
     const closePanel = () => {
-      mainContainerWrapper.current.style.display = 'none';
+      mainContainerWrapper.current.style.display = "none";
     };
     const setTabActive = index => {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
       const tabs = contentRef.current.querySelectorAll(`.${blockClass} .tab-item`);
       const tabsButton = mainContainerWrapper.current.querySelectorAll(`.tab-buttons .button`);
       if (tabs) {
         tabs.forEach(item => {
-          item.classList.remove('active');
+          item.classList.remove("active");
         });
         tabsButton.forEach(item => {
-          item.classList.remove('active');
+          item.classList.remove("active");
         });
-        tabs[index].classList.add('active');
-        tabsButton[index].classList.add('active');
+        tabs[index].classList.add("active");
+        tabsButton[index].classList.add("active");
       }
     };
     const buttonTab = () => {
@@ -21030,12 +21036,14 @@ const BlockEditor = props => {
       handleDrag.current.addEventListener("mousemove", handleMouseMove);
       handleDrag.current.addEventListener("mouseup", handleMouseUp);
       return () => {
-        handleDrag.current.removeEventListener("mousemove", handleMouseMove);
-        handleDrag.current.removeEventListener("mouseup", handleMouseUp);
+        if (handleDrag.current) {
+          handleDrag.current.removeEventListener("mousemove", handleMouseMove);
+          handleDrag.current.removeEventListener("mouseup", handleMouseUp);
+        }
       };
     }, []);
     const startDragging = e => {
-      const iframeWidth = document.querySelector('#editor iframe');
+      const iframeWidth = document.querySelector("#editor iframe");
       if (iframeWidth.clientWidth < 800) return;
       const dragBox = containerRef.current;
       if (!dragBox) return;

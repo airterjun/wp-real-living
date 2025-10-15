@@ -1862,8 +1862,20 @@
 }
 .full-width-banner-two-column .content-wrapper-detail .description {
   margin-top: calc(23 / var(--base-size) * 100vw);
-  max-width: calc(488 / var(--base-size) * 100vw);
+  max-width: calc(490 / var(--base-size) * 100vw);
   line-height: calc(28 / var(--base-size) * 100vw);
+}
+.full-width-banner-two-column.investing-banner {
+  height: calc(423 / var(--base-size) * 100vw);
+}
+.full-width-banner-two-column.investing-banner figure {
+  height: calc(423 / var(--base-size) * 100vw);
+}
+.full-width-banner-two-column.investing-banner figure img {
+  height: calc(423 / var(--base-size) * 100vw);
+}
+.full-width-banner-two-column.investing-banner .content-wrapper-detail {
+  height: calc(423 / var(--base-size) * 100vw);
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/TitleWithLogo/style.scss ***!
