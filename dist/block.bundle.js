@@ -17817,9 +17817,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
 /* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
 /* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
-/* harmony import */ var _helper_BlockEditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/BlockEditor */ "./blocks/src/components/helper/BlockEditor.jsx");
-/* harmony import */ var _helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../helper/BlockWrapper */ "./blocks/src/components/helper/BlockWrapper.jsx");
-/* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
+/* harmony import */ var _helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/BaseAttributes */ "./blocks/src/components/helper/BaseAttributes.jsx");
+/* harmony import */ var _helper_BlockEditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../helper/BlockEditor */ "./blocks/src/components/helper/BlockEditor.jsx");
+/* harmony import */ var _helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../helper/BlockWrapper */ "./blocks/src/components/helper/BlockWrapper.jsx");
 /* harmony import */ var _helper_ImageRender__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../helper/ImageRender */ "./blocks/src/components/helper/ImageRender.jsx");
 /* harmony import */ var _helper_InputWrapper__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../helper/InputWrapper */ "./blocks/src/components/helper/InputWrapper.jsx");
 /* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
@@ -17843,15 +17843,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const attributes = {
+const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_6__.createAttributes)({
   title: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
   detail: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
   title_mobile: _Schema_text__WEBPACK_IMPORTED_MODULE_5__.TextSchema,
   link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_4__.LinkSchmea,
   background: _Schema_image__WEBPACK_IMPORTED_MODULE_3__.ImageSchema,
   banner: _Schema_image__WEBPACK_IMPORTED_MODULE_3__.ImageSchema,
-  banner_mobile: _Schema_image__WEBPACK_IMPORTED_MODULE_3__.ImageSchema
-};
+  banner_mobile: _Schema_image__WEBPACK_IMPORTED_MODULE_3__.ImageSchema,
+  disabledBanner: {
+    type: Boolean,
+    default: false
+  }
+});
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
   const {
     hideBanner
@@ -17868,9 +17872,9 @@ const attributes = {
       })));
     }
   };
-  return /*#__PURE__*/React.createElement(_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  return /*#__PURE__*/React.createElement(_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     className: "banner-contact"
-  }), /*#__PURE__*/React.createElement(_helper_BlockEditor__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  }), /*#__PURE__*/React.createElement(_helper_BlockEditor__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     getTitle: "title",
     tabEditor: true
   }), /*#__PURE__*/React.createElement("div", {
@@ -17922,7 +17926,7 @@ const attributes = {
   }, props)), /*#__PURE__*/React.createElement("h2", {
     className: "content-a-a mobile",
     dangerouslySetInnerHTML: {
-      __html: (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_11__.getMobileDescription)(props, 'title', 'title_mobile')
+      __html: (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_11__.getMobileDescription)(props, "title", "title_mobile")
     }
   }), /*#__PURE__*/React.createElement("div", {
     className: "content-a-b"
@@ -20933,6 +20937,10 @@ __webpack_require__.r(__webpack_exports__);
 const createAttributes = attr => {
   return {
     section_class: _Schema_text__WEBPACK_IMPORTED_MODULE_0__.TextSchema,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     ...attr
   };
 };
@@ -22563,10 +22571,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_FeaturedTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/FeaturedTitle */ "./blocks/src/components/FeaturedTitle/index.jsx");
 /* harmony import */ var _components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/HeroBanner */ "./blocks/src/components/HeroBanner/index.jsx");
 /* harmony import */ var _components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/RegularBanner */ "./blocks/src/components/RegularBanner/index.jsx");
-/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
-/* harmony import */ var _components_TwoColumnText__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/TwoColumnText */ "./blocks/src/components/TwoColumnText/index.jsx");
-/* harmony import */ var _components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/TwoGridColumnCard */ "./blocks/src/components/TwoGridColumnCard/index.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/pages/PageRequirementDeskt/style.scss");
+/* harmony import */ var _components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/RegularBannerHalfText */ "./blocks/src/components/RegularBannerHalfText/index.jsx");
+/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
+/* harmony import */ var _components_TwoColumnText__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/TwoColumnText */ "./blocks/src/components/TwoColumnText/index.jsx");
+/* harmony import */ var _components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/TwoGridColumnCard */ "./blocks/src/components/TwoGridColumnCard/index.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/pages/PageRequirementDeskt/style.scss");
+
 
 
 
@@ -22578,15 +22588,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const pageAttr = {
-  title: 'Page Requirement',
-  name: 'page-requirement',
+  title: "Page Requirement",
+  name: "page-requirement",
   data: {
-    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__.attributes),
-    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_TwoColumnText__WEBPACK_IMPORTED_MODULE_7__.attributes),
-    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__.attributes),
-    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_FeaturedTitle__WEBPACK_IMPORTED_MODULE_3__.attributes),
-    section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__.attributes),
-    section_6: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_6__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes)
+    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__.attributes),
+    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_TwoColumnText__WEBPACK_IMPORTED_MODULE_8__.attributes),
+    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__.attributes),
+    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_FeaturedTitle__WEBPACK_IMPORTED_MODULE_3__.attributes),
+    section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_9__.attributes),
+    section_6: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes),
+    section_7: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes),
+    bannerinvesting: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_6__.attributes)
   }
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
@@ -22595,23 +22607,28 @@ const pageAttr = {
   }, /*#__PURE__*/React.createElement(_components_HeroBanner__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_1",
     section: "1"
-  })), /*#__PURE__*/React.createElement(_components_TwoColumnText__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_TwoColumnText__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_2",
     section: "2"
   })), /*#__PURE__*/React.createElement(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_3",
     section: "3"
+  })), /*#__PURE__*/React.createElement(_components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "bannerinvesting"
   })), /*#__PURE__*/React.createElement(_components_FeaturedTitle__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_4",
     section: "4",
     disabledContent: true
-  })), /*#__PURE__*/React.createElement(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_TwoGridColumnCard__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_5",
     section: "5"
   })), /*#__PURE__*/React.createElement(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_6",
     section: "6",
     hideBanner: true
+  })), /*#__PURE__*/React.createElement(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "section_7",
+    section: "6"
   })));
 }
 
