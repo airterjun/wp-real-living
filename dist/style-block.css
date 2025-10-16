@@ -2570,6 +2570,11 @@
 .vision-list-inner .item-wrapper .box.content-wrapper .content {
   padding-right: calc(10 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .vision-list-inner .item-wrapper .box.content-wrapper .content {
+    padding-right: 0;
+  }
+}
 .vision-list-inner .item-wrapper .box.content-wrapper .list-title {
   font-size: calc(24 / var(--base-size) * 100vw);
   margin-bottom: calc(6 / var(--base-size) * 100vw);
