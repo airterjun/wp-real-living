@@ -2645,7 +2645,7 @@
 @media only screen and (max-width: 879px) {
   .vision-list-inner .item-wrapper:nth-of-type(even) .inner-block-wrapper .content-wrapper {
     flex: 1 auto;
-    padding: calc(30 / var(--base-size) * 100vw) calc(31 / var(--base-size) * 100vw);
+    padding: calc(30 / var(--base-size) * 100vw) calc(20 / var(--base-size) * 100vw) calc(30 / var(--base-size) * 100vw) calc(31 / var(--base-size) * 100vw);
   }
 }
 .vision-list-inner .footer-container .inner-block-wrapper {
