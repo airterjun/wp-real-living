@@ -6,6 +6,10 @@
   position: relative;
   border-bottom: vw(2.6) solid var(--color-gold);
 
+  @include mobile {
+    height: vw(320);
+  }
+
   .title {
     z-index: 9;
     width: 100%;
@@ -17,6 +21,12 @@
     position: relative;
     font-weight: var(--font-extra);
     justify-content: center;
+
+    @include mobile {
+      font-size: vw(40);
+      text-align: center;
+      line-height: vw(48);
+    }
   }
 
   figure {

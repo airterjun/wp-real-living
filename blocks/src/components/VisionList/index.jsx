@@ -1,7 +1,6 @@
 import { createAttributes } from "../helper/BaseAttributes";
 import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
-import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
 import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
@@ -21,6 +20,7 @@ export const attributes = createAttributes({
     {
       title: TextSchema,
       description: TextSchema,
+      descriptionMobile: TextSchema,
       thumb: ImageSchema,
     },
     3
@@ -36,6 +36,7 @@ const VisionList = (props) => {
     listItems.map((item, index) => {
       const title = `list.${index}.title`;
       const description = `list.${index}.description`;
+      const descriptionMobile = `list.${index}.descriptionMobile`;
       const thumbnail = `list.${index}.thumb`;
       return (
         <div className="item-wrapper">
@@ -48,7 +49,14 @@ const VisionList = (props) => {
                   {...props}
                   set={description}
                   tag="div"
-                  className="list-desc"
+                  className="list-desc desktop"
+                />
+
+                <Text
+                  {...props}
+                  set={descriptionMobile}
+                  tag="div"
+                  className="list-desc mobile"
                 />
               </div>
             </div>

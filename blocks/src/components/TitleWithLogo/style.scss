@@ -1,6 +1,6 @@
 @import "./../../assets//styles/utils/functions";
 
-.featured-title {
+.featured-title-with-logo {
   padding: vw(110) 0;
 
   @include mobile {
@@ -14,7 +14,7 @@
     padding: 0 vw(18);
 
     @include mobile {
-      padding: 0 vw(19);
+      padding: 0 vw(21);
     }
 
     &.top-content {
@@ -28,6 +28,7 @@
 
       @include mobile {
         display: block;
+        padding-top: vw(26);
         margin-bottom: vw(64);
       }
 
@@ -35,9 +36,18 @@
         text-align: center;
         margin-top: vw(14);
 
+        @include mobile {
+          text-align: left;
+        }
+
         .label {
           color: #937d4d;
           font-size: vw(28);
+
+          @include mobile {
+            margin-bottom: vw(5);
+            font-size: vw(18);
+          }
         }
       }
 
@@ -55,11 +65,11 @@
 
         @include mobile {
           opacity: 1;
-          margin: 0 0 vw(6);
           left: unset;
-          width: vw(70.6);
           height: vw(66);
+          width: vw(70.6);
           transform: none;
+          margin: 0 0 vw(3);
           position: relative;
         }
       }
@@ -82,7 +92,8 @@
       @include mobile {
         color: #231e14;
         font-size: vw(36);
-        margin-bottom: vw(35);
+        line-height: vw(40);
+        margin-bottom: vw(38);
       }
     }
 
@@ -96,7 +107,6 @@
 
       @include mobile {
         text-align: left;
-        font-size: vw(24);
         color: #353535;
       }
     }
@@ -104,6 +114,10 @@
 
   &.no-footer {
     padding-bottom: vw(99);
+
+    @include mobile {
+      padding-bottom: vw(8);
+    }
 
     .main-container {
       margin-bottom: 0;

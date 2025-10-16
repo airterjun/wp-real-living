@@ -38,6 +38,7 @@
 
       @include mobile {
         left: vw(21);
+        display: none;
         max-height: vw(512);
       }
     }
@@ -106,6 +107,16 @@
 
         @include mobile {
           height: vw(108);
+
+          &::before {
+            content: "";
+            width: 2px;
+            left: vw(20);
+            height: 100%;
+            z-index: 9;
+            position: absolute;
+            background-color: #937d4d;
+          }
         }
 
         img {
@@ -121,7 +132,19 @@
       padding-left: vw(var(--g-outer-padding));
 
       @include mobile {
+        position: relative;
         padding-left: vw(12);
+
+        &::before {
+          top: 0;
+          content: "";
+          width: 2px;
+          left: vw(20);
+          height: 100%;
+          z-index: 9;
+          position: absolute;
+          background-color: #937d4d;
+        }
 
         .label {
           font-size: vw(18);

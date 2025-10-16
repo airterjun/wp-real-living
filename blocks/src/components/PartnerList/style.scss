@@ -2,11 +2,23 @@
 
 .partner-gallery {
   padding: vw(98) 0;
+
+  @include mobile {
+    padding-top: vw(39);
+    padding-bottom: vw(57);
+    background-color: #fff;
+  }
   h2 {
     width: 100%;
     text-align: center;
     color: #6b5b38;
     font-size: vw(30);
+
+    @include mobile {
+      color: #353535;
+      font-size: vw(18);
+      line-height: vw(21);
+    }
   }
 
   .partner-logo-container {
@@ -16,28 +28,57 @@
     align-items: center;
     justify-content: center;
 
+    @include mobile {
+      margin-top: vw(83);
+      align-items: center;
+      flex-direction: column;
+    }
+
     .logo {
       &:nth-of-type(1) {
         flex: 0 0 vw(240);
         width: vw(240);
         margin-right: vw(85);
+
+        @include mobile {
+          margin-right: 0;
+          width: vw(240);
+          flex: 0 0 auto;
+          margin-bottom: vw(57);
+        }
       }
 
       &:nth-of-type(2) {
         flex: 0 0 vw(300);
         width: vw(300);
         margin-right: vw(95);
+
+        @include mobile {
+          margin-right: 0;
+          flex: 0 0 auto;
+          margin-bottom: vw(39);
+        }
       }
 
       &:nth-of-type(3) {
         flex: 0 0 vw(231);
         width: vw(231);
+
+        @include mobile {
+          flex: 0 0 auto;
+          margin-bottom: vw(-3);
+        }
       }
 
       &:nth-of-type(4) {
         flex: 0 0 vw(200);
         margin-left: vw(78);
         width: vw(200);
+
+        @include mobile {
+          margin-left: 0;
+          flex: 0 0 auto;
+        }
       }
 
       figure {

@@ -13,7 +13,9 @@ export const attributes = createAttributes({
   banner: ImageSchema,
   banner_mobile: ImageSchema,
   title: TextSchema,
+  titleMobile: TextSchema,
   description: TextSchema,
+  descriptionMobile: TextSchema,
 });
 
 export default function (props) {
@@ -28,16 +30,28 @@ export default function (props) {
           <InputWrapper label="Banner">
             <Media set="banner" {...props} />
           </InputWrapper>
+          <InputWrapper label="Description">
+            <Text {...props} set="description" tag="div" />
+          </InputWrapper>
           <InputWrapper label="Block classes">
             <Text set="section_class" {...props} tag="div" />
           </InputWrapper>
         </div>
         <div className="tab-item" data-name="dekstop">
+          <InputWrapper label="Title">
+            <Text {...props} set="titleMobile" tag="div" />
+          </InputWrapper>
+
           <InputWrapper label="Banner">
             <Media set="banner_mobile" {...props} />
           </InputWrapper>
+
+          <InputWrapper label="Description">
+            <Text {...props} set="descriptionMobile" tag="div" />
+          </InputWrapper>
         </div>
       </BlockEditor>
+
       <div className="content-wrapper">
         <div className="content-wrapper-banner">
           <Media set="banner" {...props} className="parallax desktop" />
@@ -49,11 +63,24 @@ export default function (props) {
           ></ImageRender>
         </div>
         <div className="content-wrapper-detail">
-          <Text className="title" {...props} set="title" tag="div" />
+          <Text className="title desktop" {...props} set="title" tag="div" />
           <Text
-            className="description"
+            className="title mobile"
+            {...props}
+            set="titleMobile"
+            tag="div"
+          />
+          <Text
+            className="description desktop"
             {...props}
             set="description"
+            tag="div"
+          />
+
+          <Text
+            className="description mobile"
+            {...props}
+            set="descriptionMobile"
             tag="div"
           />
         </div>

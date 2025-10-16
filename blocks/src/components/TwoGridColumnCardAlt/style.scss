@@ -1,6 +1,6 @@
 @import "./../../assets//styles/utils/functions";
 
-.two-grid-column-card {
+.two-grid-column-card-alt {
   padding: vw(31) 0 0;
   position: relative;
 
@@ -61,7 +61,7 @@
           gap: vw(14);
           height: auto;
           align-items: flex-start;
-          padding: vw(31) vw(var(--g-padding-container)) vw(28);
+          padding: vw(31) vw(var(--g-padding-container)) vw(25);
         }
 
         .icon {
@@ -102,7 +102,7 @@
         padding: 0 vw(var(--g-outer-padding));
 
         @include mobile {
-          padding: vw(25) vw(var(--g-padding-container)) vw(68);
+          padding: vw(22) vw(var(--g-padding-container)) vw(68);
         }
 
         .description {
@@ -123,6 +123,11 @@
           &.amenity-list-wrapper {
             padding-left: vw(55);
             padding-top: vw(22);
+
+            @include mobile {
+              padding-top: 0;
+              padding-left: vw(15);
+            }
           }
 
           .amenity-list {
@@ -132,7 +137,16 @@
             display: grid;
             padding-left: 0;
             max-width: vw(506);
+            // grid-template-columns: repeat(2, 1fr);
+            grid-auto-flow: column;
+            counter-reset: list-counter;
             grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, auto);
+
+            @include mobile {
+              grid-auto-flow: unset;
+              grid-template-columns: 1fr;
+            }
 
             li {
               gap: vw(16);
@@ -140,11 +154,33 @@
               color: #3d3122;
               list-style: none;
               font-size: vw(21);
+              position: relative;
+              counter-increment: list-counter;
+
+              @include mobile {
+                line-height: vw(23);
+              }
+
+              &::before {
+                top: 0;
+                left: vw(-40);
+                width: vw(30);
+                color: #937d4d;
+                display: block;
+                text-align: right;
+                position: relative;
+                content: counter(list-counter) ".";
+
+                @include mobile {
+                  left: vw(-5);
+                }
+              }
 
               .num {
-                display: flex;
+                display: none;
                 flex: 0 0 vw(30);
                 color: #937d4d;
+                opacity: 0.2;
                 justify-content: space-between;
 
                 .amenity-item {
@@ -190,6 +226,10 @@
       &:nth-of-type(odd) {
         border-right: vw(2) solid #bfbfbf;
 
+        @include mobile {
+          border-right: 0;
+        }
+
         .card-wrapper-a {
           padding-right: 0;
 
@@ -218,11 +258,28 @@
           }
         }
       }
+
+      &:last-child {
+        @include mobile {
+          padding-bottom: vw(10);
+          border-bottom: vw(2) solid var(--color-gold);
+        }
+      }
     }
   }
 
   .timeline-list {
     margin-bottom: vw(9);
+
+    @include mobile {
+      margin-bottom: vw(23);
+    }
+
+    &:first-child {
+      @include mobile {
+        margin-top: vw(11);
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -233,9 +290,18 @@
       font-size: vw(21);
       grid-template-columns: vw(170) 1fr;
 
+      @include mobile {
+        display: block;
+        font-size: vw(18);
+      }
+
       .value {
         font-weight: var(--font-semi-bold);
         color: #937d4d;
+
+        @include mobile {
+          margin-top: vw(3);
+        }
       }
     }
   }

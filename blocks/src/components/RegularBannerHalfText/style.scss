@@ -9,7 +9,7 @@
   border-bottom: 2.5px solid #7f6e41;
 
   @include mobile {
-    height: vw(406);
+    height: auto;
     border-color: #7f6e41;
   }
 
@@ -21,22 +21,27 @@
     font-weight: var(--font-extra);
 
     @include mobile {
-      color: #414042;
-      padding: 0 vw(20);
-      font-size: vw(48);
-      text-align: center;
-      max-width: vw(250);
+      padding: 0;
+      font-size: vw(37);
     }
   }
 
   .description {
     font-size: vw(24);
     color: #e5e5e5;
+
+    @include mobile {
+      font-size: vw(18);
+    }
   }
 
   figure {
     width: 100%;
     height: vw(367);
+
+    @include mobile {
+      height: vw(329);
+    }
 
     img {
       width: 100%;
@@ -53,6 +58,10 @@
     display: grid;
     grid-template-columns: vw(960) 1fr;
 
+    @include mobile {
+      display: block;
+    }
+
     &-detail {
       display: flex;
       height: vw(367);
@@ -60,10 +69,20 @@
       justify-content: center;
       padding: vw(79) vw(99);
 
+      @include mobile {
+        height: auto !important;
+        padding: vw(49) vw(21) vw(82);
+      }
+
       .description {
         margin-top: vw(23);
         max-width: vw(490);
         line-height: vw(28);
+
+        @include mobile {
+          margin-top: vw(24);
+          line-height: vw(23);
+        }
       }
     }
   }
@@ -71,8 +90,16 @@
   &.investing-banner {
     height: vw(423);
 
+    @include mobile {
+      height: auto;
+    }
+
     figure {
       height: vw(423);
+
+      @include mobile {
+        height: vw(329);
+      }
 
       img {
         height: vw(423);

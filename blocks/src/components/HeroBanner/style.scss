@@ -196,11 +196,26 @@
   }
 }
 
-.new-ui-hero-banner {
+.hero-banner.new-ui-hero-banner {
   .content {
+    @include mobile {
+      padding-top: vw(43) !important;
+    }
     &-a {
       &_a {
         margin-bottom: vw(11) !important;
+
+        @include mobile {
+          line-height: vw(52) !important;
+          font-size: vw(48) !important;
+        }
+      }
+
+      &-b {
+        @include mobile {
+          font-size: vw(28);
+          line-height: vw(32);
+        }
       }
     }
   }

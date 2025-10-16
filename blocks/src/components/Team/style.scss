@@ -68,6 +68,10 @@ $padding_content: vw(calc(var(--g-outer-padding) + $padding_inner));
       position: absolute;
       background-color: var(--color-gold);
       width: vw(var(--g-outer-padding));
+
+      @include mobile {
+        display: none;
+      }
     }
 
     .border-decor-header {
@@ -78,6 +82,10 @@ $padding_content: vw(calc(var(--g-outer-padding) + $padding_inner));
       bottom: vw(170);
       position: absolute;
       background-color: var(--color-gold);
+
+      @include mobile {
+        display: none;
+      }
     }
 
     .number-section {
@@ -89,15 +97,41 @@ $padding_content: vw(calc(var(--g-outer-padding) + $padding_inner));
       padding-top: vw(32);
       padding-left: vw(70);
 
+      @include mobile {
+        height: auto;
+        margin-top: 0;
+        display: block;
+        padding-top: vw(21);
+        padding-left: vw(78);
+        padding-bottom: vw(60);
+
+        .group {
+          margin-bottom: vw(32);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
       h3 {
         font-size: vw(35);
         margin-bottom: vw(8);
         font-weight: var(--font-extra);
+
+        @include mobile {
+          font-size: vw(29);
+          margin-bottom: vw(1);
+        }
       }
 
       .desc {
         font-size: vw(22);
         max-width: vw(259);
+
+        @include mobile {
+          font-size: vw(20);
+        }
       }
     }
 
@@ -215,10 +249,15 @@ $padding_content: vw(calc(var(--g-outer-padding) + $padding_inner));
       }
 
       @include mobile {
-        font-size: vw(48);
-        line-height: vw(48);
+        font-size: vw(27);
+        line-height: vw(32);
         color: #353535;
         padding: 0 vw(var(--g-padding-container));
+
+        &:not(.title-slim) {
+          font-size: vw(48);
+          line-height: vw(48);
+        }
       }
     }
 
@@ -244,18 +283,50 @@ $padding_content: vw(calc(var(--g-outer-padding) + $padding_inner));
     padding-top: vw(183);
 
     @include mobile {
-      padding-top: vw(86);
+      padding-top: 0;
+      position: relative;
+      // padding-top: vw(86);
     }
 
     &-item {
-      border-top: 2px solid #7a7a7a;
+      border-top: vw(1.7) solid #7a7a7a;
 
       @include mobile {
+        margin-top: vw(86);
+        position: relative;
         border-color: #7f6e41;
+        border-top-color: #7f6e41;
+        border-bottom: vw(1.7) solid #7a7a7a;
+
+        &::before {
+          top: vw(-88);
+          z-index: 8;
+          content: "";
+          left: 50%;
+          width: vw(1.4);
+          height: vw(88);
+          position: absolute;
+          background-color: #7f6e41;
+        }
       }
 
       &:last-child {
         border-bottom: 2px solid #7a7a7a;
+
+        @include mobile {
+          margin-bottom: vw(86);
+
+          &::after {
+            bottom: vw(-88);
+            z-index: 8;
+            content: "";
+            left: 50%;
+            width: vw(1.4);
+            height: vw(88);
+            position: absolute;
+            background-color: #7f6e41;
+          }
+        }
       }
 
       .group {

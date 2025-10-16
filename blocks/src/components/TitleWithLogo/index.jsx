@@ -11,6 +11,10 @@ export const attributes = createAttributes({
   title: TextSchema,
   description: TextSchema,
   label: TextSchema,
+
+  titleMobile: TextSchema,
+  descriptionMobile: TextSchema,
+  labelMobile: TextSchema,
 });
 
 export default function (props) {
@@ -45,27 +49,30 @@ export default function (props) {
   };
 
   return (
-    <BlockWrapper className="grid featured-title no-footer" {...props}>
+    <BlockWrapper
+      className="grid featured-title-with-logo no-footer"
+      {...props}
+    >
       <BlockEditor {...props} tabEditor={true}>
         <div className="tab-item active">
+          <InputWrapper label="Sub Title">
+            <Text set="label" {...props} />
+          </InputWrapper>
           <InputWrapper label="Title">
             <Text set="title" {...props} />
           </InputWrapper>
-          {!disabledDescription && (
-            <InputWrapper label="Description">
-              <Text set="description" {...props} tag="div" />
-            </InputWrapper>
-          )}
-
-          {!disabledContent && (
-            <>
-              <InputWrapper label="Text above button">
-                <Text set="textButton" {...props} tag="div" />
-              </InputWrapper>
-            </>
-          )}
+          <InputWrapper label="Description">
+            <Text set="description" {...props} />
+          </InputWrapper>
         </div>
-        <div className="tab-item">{!disabledContent && <></>}</div>
+        <div className="tab-item">
+          <InputWrapper label="Title">
+            <Text set="titleMobile" {...props} />
+          </InputWrapper>
+          <InputWrapper label="Description">
+            <Text set="descriptionMobile" {...props} />
+          </InputWrapper>
+        </div>
       </BlockEditor>
       <div className="main-container top-content">
         <svg
@@ -82,10 +89,23 @@ export default function (props) {
         </svg>
         <div className="content-wrapper">
           <Text className="label" set="label" {...props} tag="div" />
-          <Text className="title" set="title" {...props} tag="h2" />
+          <Text className="title desktop" set="title" {...props} tag="h2" />
           <Text
-            className="description"
+            className="description desktop"
             set="description"
+            {...props}
+            tag="div"
+          />
+
+          <Text
+            className="title mobile"
+            set="titleMobile"
+            {...props}
+            tag="h2"
+          />
+          <Text
+            className="description mobile"
+            set="descriptionMobile"
             {...props}
             tag="div"
           />

@@ -384,6 +384,11 @@ header .inner .button-partner {
   width: calc(201 / var(--base-size) * 100vw);
   align-items: center;
 }
+@media only screen and (max-width: 879px) {
+  header .inner .button-partner {
+    display: none;
+  }
+}
 header .inner .button-partner a {
   gap: calc(9 / var(--base-size) * 100vw);
   color: #fff;

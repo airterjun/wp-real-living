@@ -9,9 +9,17 @@ import { TextSchema } from "../Schema/text";
 import IconArrow from "../Shared/IconArrow";
 import "./style.scss";
 const attributes = createAttributes({
+  // 1.
   box1Title: TextSchema,
   box1Desc: TextSchema,
+  // Mobile
+  box1TitleMobile: TextSchema,
+  box1DescMobile: TextSchema,
+
+  // 2.
   box2Title: TextSchema,
+  // Mobile
+  box2TitleMobile: TextSchema,
   amenityList: ArraySchema(
     {
       num: TextSchema,
@@ -19,9 +27,18 @@ const attributes = createAttributes({
     },
     10
   ),
+
+  // 3.
   box3Title: TextSchema,
   box3Desc: TextSchema,
+  // Mobile
+  box3TitleMobile: TextSchema,
+  box3DescMobile: TextSchema,
+
+  // 4.
   box4Title: TextSchema,
+  // Mobile
+  box4TitleMobile: TextSchema,
   box4Desc: ArraySchema(
     {
       label: TextSchema,
@@ -39,41 +56,6 @@ export default function (props) {
   const timelineList = getDataByKey("box4Desc", props);
   const amenity = getDataByKey("amenityList", props);
 
-  const template = (index) => {
-    const keyTitle = `list.${index}.title`;
-    const keyDesc = `list.${index}.description`;
-    return (
-      <div className="card-wrapper">
-        <div className="card-wrapper-a">
-          <div className="icon">
-            <IconArrow />
-          </div>
-          <Text tag="h2" set={keyTitle} {...props} />
-        </div>
-        <div className="card-wrapper-b">
-          <Text set={keyDesc} {...props} className="description" />
-        </div>
-      </div>
-    );
-  };
-
-  const grid = () => listItems.map((_, index) => template(index));
-
-  const editorTemplate = (index) => {
-    const keyTitle = `list.${index}.title`;
-    const keyDesc = `list.${index}.description`;
-    return (
-      <>
-        <InputWrapper label="Title">
-          <Text tag="div" set={keyTitle} {...props} />
-        </InputWrapper>
-        <InputWrapper label="Description">
-          <Text tag="div" set={keyDesc} {...props} />
-        </InputWrapper>
-      </>
-    );
-  };
-
   const timeline = () =>
     timelineList.map((_, index) => {
       const label = `box4Desc.${index}.label`;
@@ -87,8 +69,6 @@ export default function (props) {
         </div>
       );
     });
-
-  console.log("amenity", amenity);
 
   const amenityList = () =>
     amenity.map((_, index) => {
@@ -111,7 +91,8 @@ export default function (props) {
           <div className="icon">
             <IconArrow />
           </div>
-          <Text tag="h2" set={title} {...props} />
+          <Text tag="h2" className="desktop" set={title} {...props} />
+          <Text tag="h2" className="mobile" set={`${title}Mobile`} {...props} />
         </div>
         <div className="card-wrapper-b">{desc()}</div>
       </div>
@@ -120,16 +101,28 @@ export default function (props) {
 
   return (
     <>
-      <BlockWrapper {...props} className="two-grid-column-card">
+      <BlockWrapper {...props} className="two-grid-column-card-alt">
         <BlockEditor {...props}>
           <div className="tab-item active" data-name="dekstop">
-            <InputWrapper label="List"></InputWrapper>
+            <InputWrapper label="Room Type">
+              <Text {...props} set="box1title" tag="div" />
+            </InputWrapper>
+            <InputWrapper label="Room Description">
+              <Text {...props} set="box1title" tag="div" />
+            </InputWrapper>
           </div>
         </BlockEditor>
 
         <div className="content">
           {boxTemplate("box1title", () => (
-            <Text set="box1Desc" {...props} className="description" />
+            <>
+              <Text set="box1Desc" {...props} className="description desktop" />
+              <Text
+                set="box1DescMobile"
+                {...props}
+                className="description mobile"
+              />
+            </>
           ))}
           {boxTemplate("box2title", () => (
             <div className="description amenity-list-wrapper">
@@ -137,7 +130,14 @@ export default function (props) {
             </div>
           ))}
           {boxTemplate("box3title", () => (
-            <Text set="box3Desc" {...props} className="description" />
+            <>
+              <Text set="box3Desc" {...props} className="description desktop" />
+              <Text
+                set="box3DescMobile"
+                {...props}
+                className="description mobile"
+              />
+            </>
           ))}
           {boxTemplate("box4title", () => (
             <div className="description">{timeline()}</div>
