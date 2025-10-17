@@ -18390,14 +18390,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _helper_BlockEditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/BlockEditor */ "./blocks/src/components/helper/BlockEditor.jsx");
 /* harmony import */ var _helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/BlockWrapper */ "./blocks/src/components/helper/BlockWrapper.jsx");
-/* harmony import */ var _helper_Controller__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Controller */ "./blocks/src/components/helper/Controller.jsx");
-/* harmony import */ var _helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/InputWrapper */ "./blocks/src/components/helper/InputWrapper.jsx");
-/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
-/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
-/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
-/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/FeaturedText/style.scss");
-
+/* harmony import */ var _helper_InputWrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/InputWrapper */ "./blocks/src/components/helper/InputWrapper.jsx");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/FeaturedText/style.scss");
 
 
 
@@ -18409,9 +18407,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const attributes = {
-  title: _Schema_text__WEBPACK_IMPORTED_MODULE_9__.TextSchema,
-  description: _Schema_text__WEBPACK_IMPORTED_MODULE_9__.TextSchema,
-  background: _Schema_image__WEBPACK_IMPORTED_MODULE_8__.ImageSchema
+  title: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  titleMobile: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  description: _Schema_text__WEBPACK_IMPORTED_MODULE_8__.TextSchema,
+  background: _Schema_image__WEBPACK_IMPORTED_MODULE_7__.ImageSchema
 };
 const FeaturedText = props => {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -18419,19 +18418,19 @@ const FeaturedText = props => {
   }, props), /*#__PURE__*/React.createElement(_helper_BlockEditor__WEBPACK_IMPORTED_MODULE_2__["default"], props, /*#__PURE__*/React.createElement("div", {
     className: "tab-item active",
     "data-name": "dekstop"
-  }, /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_4__["default"], {
     label: "Background"
-  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "background"
-  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_4__["default"], {
     label: "Title"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "title"
   }, props, {
     tag: "div"
-  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_4__["default"], {
     label: "Description"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "description"
   }, props, {
     tag: "div"
@@ -18440,20 +18439,25 @@ const FeaturedText = props => {
   }), /*#__PURE__*/React.createElement("div", {
     className: "decor-2 decor"
   }), /*#__PURE__*/React.createElement("div", {
-    className: "decor-3 decor"
-  }), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: "decor-3 decor updated"
+  }), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "title"
   }, props, {
     tag: "div",
-    className: "title"
+    className: "title desktop"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "titleMobile"
+  }, props, {
+    tag: "div",
+    className: "title mobile"
   })), /*#__PURE__*/React.createElement("div", {
     className: "content"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "description"
   }, props, {
     tag: "h2",
     className: "desc"
-  })), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "background",
     className: "parallax"
   })))));
@@ -18685,6 +18689,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const attributes = {
   title: _Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
+  titleMobile: _Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
   description: _Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
   textButton: _Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
   link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_11__.LinkSchmea,
@@ -18712,19 +18717,7 @@ const attributes = {
     disabledContent,
     disabledDescription
   } = props;
-  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_5__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_5__.getModelId)('list', props));
-  const mobileEditor = () => listItems.map((_, index) => {
-    const title = `list.${index}.mobileTitle`;
-    return /*#__PURE__*/React.createElement("div", {
-      className: "input-container"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "label"
-    }, "Title ", _.title), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-      set: title,
-      tag: "div",
-      className: "input"
-    })));
-  });
+  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_5__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_5__.getModelId)("list", props));
   const listEl = () => listItems.map((_, index) => {
     const title = `list.${index}.title`;
     const desc = `list.${index}.description`;
@@ -18743,7 +18736,7 @@ const attributes = {
       tag: "div"
     })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: desc,
-      className: `card-item-a-a-b ${editor ? '' : 'desktop'}`,
+      className: `card-item-a-a-b ${editor ? "" : "desktop"}`,
       tag: "div"
     }))));
   });
@@ -18786,7 +18779,7 @@ const attributes = {
     }))));
   };
   return /*#__PURE__*/React.createElement(_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: `grid featured-title ${disabledContent ? 'no-footer' : ''} ${disabledDescription ? 'no-description' : ''}`
+    className: `grid featured-title ${disabledContent ? "no-footer" : ""} ${disabledDescription ? "no-description" : ""}`
   }, props), /*#__PURE__*/React.createElement(_helper_BlockEditor__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     tabEditor: true
   }), /*#__PURE__*/React.createElement("div", {
@@ -18837,8 +18830,13 @@ const attributes = {
     "stroke-width": "2",
     d: "M1 233.31V1h115.88v116.43c0 64-51.88 115.88-115.88 115.88ZM143.37 100.87V1h104.87c0 57.92-46.95 99.87-104.87 99.87ZM143.37 128.44h104.87v104.87c-57.92 0-104.87-46.95-104.87-104.87Z"
   })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: "title",
+    className: "title desktop",
     set: "title"
+  }, props, {
+    tag: "h2"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: "title mobile",
+    set: "titleMobile"
   }, props, {
     tag: "h2"
   })), !disabledDescription && /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({

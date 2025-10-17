@@ -41,6 +41,10 @@
     left: vw(calc(var(--g-outer-padding) - 37));
     background-color: #937d4d;
 
+    &.updated {
+      height: vw(130);
+    }
+
     @include mobile {
       left: 0;
       display: none;
@@ -61,6 +65,14 @@
     border-top: 1.5px solid #7a7a7a;
     border-bottom: 1.5px solid #7a7a7a;
 
+    &.desktop {
+      height: vw(130);
+    }
+
+    &.mobile {
+      display: none;
+    }
+
     @include mobile {
       border: 0;
       height: auto;
@@ -70,6 +82,10 @@
       max-width: vw(275);
       padding-left: vw(41);
       padding-bottom: vw(24);
+
+      &.mobile {
+        display: flex;
+      }
     }
   }
 

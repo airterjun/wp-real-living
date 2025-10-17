@@ -1,7 +1,6 @@
-import BlockEditor from '../helper/BlockEditor';
-import BlockWrapper from '../helper/BlockWrapper';
-import Controller from '../helper/Controller';
-import InputWrapper from '../helper/InputWrapper';
+import BlockEditor from "../helper/BlockEditor";
+import BlockWrapper from "../helper/BlockWrapper";
+import InputWrapper from "../helper/InputWrapper";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
 import { ImageSchema } from "../Schema/image";
@@ -10,12 +9,12 @@ import "./style.scss";
 
 const attributes = {
   title: TextSchema,
+  titleMobile: TextSchema,
   description: TextSchema,
-  background: ImageSchema
-}
+  background: ImageSchema,
+};
 
 const FeaturedText = (props) => {
-
   return (
     <>
       <BlockWrapper className="featured-text" {...props}>
@@ -32,21 +31,19 @@ const FeaturedText = (props) => {
             </InputWrapper>
           </div>
         </BlockEditor>
-        <div className='decor-1 decor'></div>
-        <div className='decor-2 decor'></div>
-        <div className='decor-3 decor'></div>
-        <Text set="title" {...props} tag="div" className="title" />
+        <div className="decor-1 decor"></div>
+        <div className="decor-2 decor"></div>
+        <div className="decor-3 decor updated"></div>
+        <Text set="title" {...props} tag="div" className="title desktop" />
+        <Text set="titleMobile" {...props} tag="div" className="title mobile" />
         <div className="content">
           <Text set="description" {...props} tag="h2" className="desc" />
           <Media {...props} set="background" className="parallax" />
         </div>
       </BlockWrapper>
     </>
-  )
-}
-
-export default FeaturedText
-export {
-  attributes
+  );
 };
 
+export default FeaturedText;
+export { attributes };

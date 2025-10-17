@@ -89,7 +89,7 @@ main {
 
 @media only screen and (max-width: 879px) {
   .desktop {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -149,7 +149,7 @@ button {
   font-size: calc(19 / var(--base-size) * 100vw);
   position: relative;
   align-items: center;
-  border: 1.5px solid #937D4D;
+  border: 1.5px solid #937d4d;
   transition: color 0.45s var(--cubic-bezier);
 }
 .primary-button a::before {
@@ -162,7 +162,7 @@ button {
   position: absolute;
   transform: scaleY(0);
   transform-origin: top;
-  background-color: #937D4D;
+  background-color: #937d4d;
   transition: transform 0.45s var(--cubic-bezier);
 }
 @media only screen and (max-width: 879px) {
@@ -184,12 +184,12 @@ button {
   }
 }
 .primary-button a svg path {
-  fill: #937D4D;
+  fill: #937d4d;
   transition: fill 0.45s var(--cubic-bezier);
 }
 @media only screen and (min-width: 879px) {
   .primary-button a:hover {
-    color: #FFF;
+    color: #fff;
   }
   .primary-button a:hover::before {
     transform-origin: bottom;
@@ -199,12 +199,12 @@ button {
     transform: translateX(calc(10 / var(--base-size) * 100vw));
   }
   .primary-button a:hover svg path {
-    fill: #FFF !important;
+    fill: #fff !important;
   }
 }
 
 .border-green-top {
-  border-top: 1px solid #93EA4E;
+  border-top: 1px solid #93ea4e;
 }
 
 .p {

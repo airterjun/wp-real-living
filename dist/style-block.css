@@ -194,6 +194,9 @@
   left: calc((var(--g-outer-padding) - 37) / var(--base-size) * 100vw);
   background-color: #937d4d;
 }
+.featured-text .decor-3.updated {
+  height: calc(130 / var(--base-size) * 100vw);
+}
 @media only screen and (max-width: 879px) {
   .featured-text .decor-3 {
     left: 0;
@@ -214,6 +217,12 @@
   border-top: 1.5px solid #7a7a7a;
   border-bottom: 1.5px solid #7a7a7a;
 }
+.featured-text .title.desktop {
+  height: calc(130 / var(--base-size) * 100vw);
+}
+.featured-text .title.mobile {
+  display: none;
+}
 @media only screen and (max-width: 879px) {
   .featured-text .title {
     border: 0;
@@ -224,6 +233,9 @@
     max-width: calc(275 / var(--base-size) * 100vw);
     padding-left: calc(41 / var(--base-size) * 100vw);
     padding-bottom: calc(24 / var(--base-size) * 100vw);
+  }
+  .featured-text .title.mobile {
+    display: flex;
   }
 }
 .featured-text .content {
@@ -804,7 +816,7 @@
     padding: 0 calc(20 / var(--base-size) * 100vw);
     font-size: calc(48 / var(--base-size) * 100vw);
     text-align: center;
-    max-width: calc(250 / var(--base-size) * 100vw);
+    max-width: calc(350 / var(--base-size) * 100vw);
   }
 }
 .full-width-banner figure {
