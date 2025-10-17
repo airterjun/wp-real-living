@@ -163,16 +163,31 @@
 
               &::before {
                 top: 0;
-                left: vw(-40);
+                left: vw(-10);
                 width: vw(30);
                 color: #937d4d;
                 display: block;
                 text-align: right;
                 position: relative;
-                content: counter(list-counter) ".";
+                content: counter(list-counter);
 
                 @include mobile {
-                  left: vw(-5);
+                  left: vw(-10);
+                }
+              }
+
+              &::after {
+                top: 0;
+                content: ".";
+                left: 0;
+                width: vw(30);
+                color: #937d4d;
+                display: block;
+                text-align: right;
+                position: absolute;
+
+                @include mobile {
+                  left: 0;
                 }
               }
 

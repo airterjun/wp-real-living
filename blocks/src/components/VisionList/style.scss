@@ -135,6 +135,7 @@
 
             @include mobile {
               transform: none;
+              margin-top: vw(2);
               margin-left: vw(3);
             }
 
@@ -176,7 +177,7 @@
 
             @include mobile {
               flex: 1 auto;
-              padding: vw(30) vw(20) vw(30) vw(31);
+              padding: vw(24) vw(17) vw(66);
             }
           }
         }

@@ -1,0 +1,97 @@
+@import "./../../assets//styles/utils/functions";
+
+.featured-content {
+  display: grid;
+  grid-template-columns: vw(959) 1fr;
+
+  @include mobile {
+    display: block;
+  }
+
+  .parallax {
+    width: 100%;
+    height: vw(487);
+    overflow: hidden;
+
+    @include mobile {
+      height: vw(345);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    figure {
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    &-inner {
+      width: 100%;
+      z-index: 2;
+      position: relative;
+      padding-left: vw(69);
+
+      @include mobile {
+        padding: vw(55) 0 vw(87) vw(20);
+      }
+
+      .label {
+        color: #937d4d;
+        font-size: vw(24);
+        margin-bottom: vw(6);
+        letter-spacing: -0.005em;
+        font-weight: var(--font-bold);
+
+        @include mobile {
+          font-size: vw(22);
+          line-height: vw(24);
+          margin-bottom: vw(9);
+        }
+      }
+
+      .title {
+        width: 100%;
+        color: #231e14;
+        font-size: vw(40);
+        line-height: vw(45);
+        margin-bottom: vw(32);
+        padding-bottom: vw(12);
+        letter-spacing: -0.005em;
+        font-weight: var(--font-extra);
+        border-bottom: vw(2) solid #937d4d;
+
+        @include mobile {
+          font-size: vw(37);
+          padding-bottom: vw(14);
+          padding-bottom: vw(16);
+          line-height: vw(44);
+        }
+      }
+
+      .description {
+        font-size: vw(20);
+        max-width: vw(475);
+        line-height: vw(24);
+        letter-spacing: -0.005em;
+        font-weight: var(--font-semi-bold);
+
+        @include mobile {
+          font-size: vw(18);
+          line-height: vw(23);
+          padding-right: vw(21);
+        }
+      }
+    }
+  }
+}
