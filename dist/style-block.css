@@ -633,6 +633,11 @@
   padding-right: 0;
 }
 @media only screen and (max-width: 879px) {
+  .hero-banner .content.hero-alt {
+    padding-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 879px) {
   .hero-banner .content {
     padding: calc(56 / var(--base-size) * 100vw) calc(var(--g-padding-container) / var(--base-size) * 100vw) calc(51 / var(--base-size) * 100vw) !important;
   }
@@ -691,6 +696,12 @@
   font-weight: var(--font-semi-bold);
   border-bottom: 2.7px solid var(--color-gold);
 }
+@media only screen and (max-width: 879px) {
+  .hero-banner .content-a .label {
+    font-size: calc(22 / var(--base-size) * 100vw);
+    margin-bottom: calc(13 / var(--base-size) * 100vw);
+  }
+}
 .hero-banner .content-a-b {
   font-weight: 700;
   font-size: calc(31 / var(--base-size) * 100vw);
@@ -711,18 +722,50 @@
 .hero-banner .content-a--inner {
   padding-right: calc(85 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .hero-banner .content-a--inner {
+    padding-right: calc(47 / var(--base-size) * 100vw);
+  }
+}
 .hero-banner .content-a--inner .h1 {
   margin-bottom: calc(24 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .hero-banner .content-a--inner .h1 {
+    font-size: calc(37 / var(--base-size) * 100vw);
+    margin-bottom: calc(6 / var(--base-size) * 100vw);
+  }
+}
 .hero-banner .content-a--inner .content-a-b {
   margin-bottom: calc(46 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 879px) {
+  .hero-banner .content-a--inner .content-a-b {
+    font-size: calc(21 / var(--base-size) * 100vw);
+    margin-top: calc(12 / var(--base-size) * 100vw);
+    margin-bottom: calc(36 / var(--base-size) * 100vw);
+    letter-spacing: -0.006em;
+  }
 }
 .hero-banner .content-a--inner .buttons-action {
   gap: calc(28 / var(--base-size) * 100vw);
   display: flex;
 }
+@media only screen and (max-width: 879px) {
+  .hero-banner .content-a--inner .buttons-action {
+    display: block;
+  }
+  .hero-banner .content-a--inner .buttons-action .primary-button {
+    width: calc(228 / var(--base-size) * 100vw);
+  }
+}
 .hero-banner .content-a--inner .buttons-action .button-gold {
   background-color: var(--color-gold);
+}
+@media only screen and (max-width: 879px) {
+  .hero-banner .content-a--inner .buttons-action .button-gold {
+    margin-top: calc(18 / var(--base-size) * 100vw);
+  }
 }
 .hero-banner .content-a--inner .buttons-action .button-gold a {
   z-index: 1;

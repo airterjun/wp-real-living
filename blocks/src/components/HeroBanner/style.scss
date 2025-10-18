@@ -42,6 +42,10 @@
 
     &.hero-alt {
       padding-right: 0;
+
+      @include mobile {
+        padding-right: 0 !important;
+      }
     }
 
     @include mobile {
@@ -118,6 +122,11 @@
         letter-spacing: -0.01em;
         font-weight: var(--font-semi-bold);
         border-bottom: 2.7px solid var(--color-gold);
+
+        @include mobile {
+          font-size: vw(22);
+          margin-bottom: vw(13);
+        }
       }
 
       &-b {
@@ -140,20 +149,49 @@
       &--inner {
         padding-right: vw(85);
 
+        @include mobile {
+          padding-right: vw(47);
+        }
+
         .h1 {
           margin-bottom: vw(24);
+
+          @include mobile {
+            font-size: vw(37);
+            margin-bottom: vw(6);
+          }
         }
 
         .content-a-b {
           margin-bottom: vw(46);
+
+          @include mobile {
+            font-size: vw(21);
+            margin-top: vw(12);
+            margin-bottom: vw(36);
+            letter-spacing: -0.006em;
+          }
         }
 
         .buttons-action {
           gap: vw(28);
           display: flex;
 
+          @include mobile {
+            display: block;
+
+            .primary-button {
+              width: vw(228);
+            }
+          }
+
           .button-gold {
             background-color: var(--color-gold);
+
+            @include mobile {
+              margin-top: vw(18);
+            }
+
             a {
               z-index: 1;
               color: #fff;
