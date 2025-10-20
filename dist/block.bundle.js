@@ -18083,6 +18083,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_2__.createAttributes)({
   background: _Schema_image__WEBPACK_IMPORTED_MODULE_6__.ImageSchema,
+  backgroundMobile: _Schema_image__WEBPACK_IMPORTED_MODULE_6__.ImageSchema,
   label: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
 });
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
@@ -18090,7 +18091,10 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_2__.create
     className: "background-with-label"
   }), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "background",
-    className: "parallax"
+    className: "parallax desktop"
+  })), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "backgroundMobile",
+    className: "parallax mobile"
   })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "label",
     className: "label"

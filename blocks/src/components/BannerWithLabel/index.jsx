@@ -9,13 +9,15 @@ import "./style.scss";
 
 export const attributes = createAttributes({
   background: ImageSchema,
+  backgroundMobile: ImageSchema,
   label: TextSchema,
 });
 
 export default function (props) {
   return (
     <BlockWrapper {...props} className="background-with-label">
-      <Media {...props} set="background" className="parallax" />
+      <Media {...props} set="background" className="parallax desktop" />
+      <Media {...props} set="backgroundMobile" className="parallax mobile" />
       <Text {...props} set="label" className="label" />
     </BlockWrapper>
   );
