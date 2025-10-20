@@ -1884,6 +1884,72 @@
   }
 }
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerWithLabel/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --base-size: 1920;
+  --mobile-browser: 876;
+  --wrapper-padding: 20;
+  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media only screen and (max-width: 879px) {
+  :root {
+    --base-size: 376;
+    --wrapper-padding: 20;
+  }
+}
+.background-with-label {
+  width: 100vw;
+  height: calc(800 / var(--base-size) * 100vw);
+  position: relative;
+}
+@media only screen and (max-width: 879px) {
+  .background-with-label {
+    height: auto;
+  }
+}
+.background-with-label figure {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 879px) {
+  .background-with-label figure {
+    height: calc(362 / var(--base-size) * 100vw);
+  }
+}
+.background-with-label figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.background-with-label .label {
+  bottom: 0;
+  z-index: 99;
+  height: calc(55 / var(--base-size) * 100vw);
+  display: flex;
+  width: calc(600 / var(--base-size) * 100vw);
+  left: calc(960 / var(--base-size) * 100vw);
+  color: #f7f7f7;
+  font-size: calc(28 / var(--base-size) * 100vw);
+  align-items: center;
+  position: absolute;
+  line-height: calc(33 / var(--base-size) * 100vw);
+  letter-spacing: -0.006em;
+  justify-content: center;
+  background-color: #262013;
+}
+@media only screen and (max-width: 879px) {
+  .background-with-label .label {
+    left: 0;
+    width: 100%;
+    font-size: calc(18 / var(--base-size) * 100vw);
+    position: relative;
+    letter-spacing: -0.017em;
+  }
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerWithTitle/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
 :root {
@@ -1962,7 +2028,7 @@
 }
 @media only screen and (max-width: 879px) {
   .partner-gallery {
-    padding-top: calc(39 / var(--base-size) * 100vw);
+    padding-top: calc(69 / var(--base-size) * 100vw);
     padding-bottom: calc(57 / var(--base-size) * 100vw);
     background-color: #fff;
   }

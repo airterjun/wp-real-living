@@ -4,7 +4,7 @@ import { attributes as FeaturedTitleAttr } from "../../components/FeaturedTitle"
 import { attributes as HeroBannerAttr } from "../../components/HeroBanner";
 import { attributes as RegularBanner } from "../../components/RegularBanner";
 import { ObjectSchema } from "../../components/Schema/object";
-import { attributesas as featuredAttr } from "../../components/TwoColumnSideTextWithBackground";
+import { attributes as FeaturedAttr } from "../../components/TwoColumnSideTextWithBackground";
 
 import { attributes as TwoColumnText } from "../../components/TwoColumnText";
 
@@ -18,6 +18,6 @@ export const pageAttr = {
     section_4: ObjectSchema(RegularBanner),
     section_5: ObjectSchema(TwoColumnText),
     section_6: ObjectSchema(BannerContact),
-    section_featured: ObjectSchema(featuredAttr),
+    section_featured: ObjectSchema(FeaturedAttr),
   },
 };

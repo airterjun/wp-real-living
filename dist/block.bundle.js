@@ -40,6 +40,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/components/BannerWithLabel/style.scss":
+/*!**********************************************************!*\
+  !*** ./blocks/src/components/BannerWithLabel/style.scss ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./blocks/src/components/BannerWithTitleCta/style.scss":
 /*!*************************************************************!*\
   !*** ./blocks/src/components/BannerWithTitleCta/style.scss ***!
@@ -18037,6 +18050,55 @@ const attributes = {
 
 /***/ }),
 
+/***/ "./blocks/src/components/BannerWithLabel/index.jsx":
+/*!*********************************************************!*\
+  !*** ./blocks/src/components/BannerWithLabel/index.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   attributes: () => (/* binding */ attributes),
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/BaseAttributes */ "./blocks/src/components/helper/BaseAttributes.jsx");
+/* harmony import */ var _helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/BlockWrapper */ "./blocks/src/components/helper/BlockWrapper.jsx");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _helper_Text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _Schema_image__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/BannerWithLabel/style.scss");
+
+
+
+
+
+
+
+
+
+const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_2__.createAttributes)({
+  background: _Schema_image__WEBPACK_IMPORTED_MODULE_6__.ImageSchema,
+  label: _Schema_text__WEBPACK_IMPORTED_MODULE_7__.TextSchema
+});
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  return /*#__PURE__*/React.createElement(_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    className: "background-with-label"
+  }), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "background",
+    className: "parallax"
+  })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "label",
+    className: "label"
+  })));
+}
+
+/***/ }),
+
 /***/ "./blocks/src/components/BannerWithTitleCta/index.jsx":
 /*!************************************************************!*\
   !*** ./blocks/src/components/BannerWithTitleCta/index.jsx ***!
@@ -22417,7 +22479,7 @@ const pageAttr = {
     section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_5__.ObjectSchema)(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_4__.attributes),
     section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_5__.ObjectSchema)(_components_TwoColumnText__WEBPACK_IMPORTED_MODULE_7__.attributes),
     section_6: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_5__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_0__.attributes),
-    section_featured: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_5__.ObjectSchema)(_components_TwoColumnSideTextWithBackground__WEBPACK_IMPORTED_MODULE_6__.attributesas)
+    section_featured: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_5__.ObjectSchema)(_components_TwoColumnSideTextWithBackground__WEBPACK_IMPORTED_MODULE_6__.attributes)
   }
 };
 
@@ -22573,14 +22635,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_BannerContact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/BannerContact */ "./blocks/src/components/BannerContact/index.jsx");
-/* harmony import */ var _components_BannerWithTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/BannerWithTitle */ "./blocks/src/components/BannerWithTitle/index.jsx");
-/* harmony import */ var _components_HeroAlt__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/HeroAlt */ "./blocks/src/components/HeroAlt/index.jsx");
-/* harmony import */ var _components_PartnerList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/PartnerList */ "./blocks/src/components/PartnerList/index.jsx");
-/* harmony import */ var _components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/RegularBannerHalfText */ "./blocks/src/components/RegularBannerHalfText/index.jsx");
-/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
-/* harmony import */ var _components_TitleWithLogo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/TitleWithLogo */ "./blocks/src/components/TitleWithLogo/index.jsx");
-/* harmony import */ var _components_TwoGridColumnCardAlt__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/TwoGridColumnCardAlt */ "./blocks/src/components/TwoGridColumnCardAlt/index.jsx");
-/* harmony import */ var _components_VisionList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/VisionList */ "./blocks/src/components/VisionList/index.jsx");
+/* harmony import */ var _components_BannerWithLabel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/BannerWithLabel */ "./blocks/src/components/BannerWithLabel/index.jsx");
+/* harmony import */ var _components_BannerWithTitle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/BannerWithTitle */ "./blocks/src/components/BannerWithTitle/index.jsx");
+/* harmony import */ var _components_HeroAlt__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/HeroAlt */ "./blocks/src/components/HeroAlt/index.jsx");
+/* harmony import */ var _components_PartnerList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/PartnerList */ "./blocks/src/components/PartnerList/index.jsx");
+/* harmony import */ var _components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/RegularBannerHalfText */ "./blocks/src/components/RegularBannerHalfText/index.jsx");
+/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
+/* harmony import */ var _components_TitleWithLogo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/TitleWithLogo */ "./blocks/src/components/TitleWithLogo/index.jsx");
+/* harmony import */ var _components_TwoGridColumnCardAlt__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/TwoGridColumnCardAlt */ "./blocks/src/components/TwoGridColumnCardAlt/index.jsx");
+/* harmony import */ var _components_VisionList__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/VisionList */ "./blocks/src/components/VisionList/index.jsx");
+
 
 
 
@@ -22596,30 +22660,33 @@ const pageAttr = {
   name: "oxford-page",
   title: "Oxford Page",
   data: {
-    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_HeroAlt__WEBPACK_IMPORTED_MODULE_4__.attributes),
-    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_BannerWithTitle__WEBPACK_IMPORTED_MODULE_3__.attributes),
-    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_VisionList__WEBPACK_IMPORTED_MODULE_10__.attributes),
-    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_6__.attributes),
-    section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_TitleWithLogo__WEBPACK_IMPORTED_MODULE_8__.attributes),
-    section_7: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_TwoGridColumnCardAlt__WEBPACK_IMPORTED_MODULE_9__.attributes),
-    partners: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_PartnerList__WEBPACK_IMPORTED_MODULE_5__.attributes),
-    footerContact: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_7__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes)
+    section_1: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_HeroAlt__WEBPACK_IMPORTED_MODULE_5__.attributes),
+    section_2: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_BannerWithTitle__WEBPACK_IMPORTED_MODULE_4__.attributes),
+    section_3: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_VisionList__WEBPACK_IMPORTED_MODULE_11__.attributes),
+    section_4: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_7__.attributes),
+    section_5: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_TitleWithLogo__WEBPACK_IMPORTED_MODULE_9__.attributes),
+    section_7: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_TwoGridColumnCardAlt__WEBPACK_IMPORTED_MODULE_10__.attributes),
+    partners: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_PartnerList__WEBPACK_IMPORTED_MODULE_6__.attributes),
+    footerContact: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes),
+    bannerWithLabel: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_8__.ObjectSchema)(_components_BannerWithLabel__WEBPACK_IMPORTED_MODULE_3__.attributes)
   }
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components_HeroAlt__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components_HeroAlt__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_1"
-  })), /*#__PURE__*/React.createElement(_components_BannerWithTitle__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_BannerWithTitle__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_2"
-  })), /*#__PURE__*/React.createElement(_components_VisionList__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_VisionList__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_3"
-  })), /*#__PURE__*/React.createElement(_components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_RegularBannerHalfText__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_4"
-  })), /*#__PURE__*/React.createElement(_components_TitleWithLogo__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_TitleWithLogo__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_5"
-  })), /*#__PURE__*/React.createElement(_components_TwoGridColumnCardAlt__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_TwoGridColumnCardAlt__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "section_7"
-  })), /*#__PURE__*/React.createElement(_components_PartnerList__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  })), /*#__PURE__*/React.createElement(_components_BannerWithLabel__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "bannerWithLabel"
+  })), /*#__PURE__*/React.createElement(_components_PartnerList__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "partners"
   })), /*#__PURE__*/React.createElement(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     model: "footerContact"
