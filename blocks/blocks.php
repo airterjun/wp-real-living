@@ -168,7 +168,7 @@ add_action('enqueue_block_assets', function () {
         'nolsis-style',
         get_template_directory_uri() . '/dist/app.css',
         array(),
-        '1.1.1.2'
+        '3'
     );
 
     wp_enqueue_style('custmom-b-admin-style', get_template_directory_uri() . '/dist/block.css', array(), '2');
