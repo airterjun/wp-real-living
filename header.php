@@ -46,22 +46,14 @@ $use_new_header = get_post_meta(get_the_ID(), '_use_new_header', true);
 <body <?= body_class() ?> id="main-website-wrapper">
     <header class="main-header <?php echo $custom_class; ?>" id="main-header">
         <div class="inner">
-            <?php if($use_new_header) : ?>
                 <div class="round-button  primary-button button-partner">
-                    <a href="#">
+                    <a href="/contact/">
                         Partner with Us 
 
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 45 45"><path fill="#BA9D63" fill-rule="evenodd" d="M.86 0h43.31v43.32h-2.42V2.42H.86V0Z" clip-rule="evenodd" /><path fill="#BA9D63" fill-rule="evenodd" d="m.004 42.465 42.1-42.11 1.712 1.71-42.1 42.11-1.712-1.71Z" clip-rule="evenodd" /></svg>
                     </a>    
                 </div>
-            <?php else : ?>
-                <div class="timer">
-                    <div class="location">London Time</div>
-                    <div class="line"></div>
-                    <div class="time" id="time-ticker">00:00 GMT</div>
-                </div>
-
-            <?php endif; ?>
+       
 
             <a href="<?php echo get_option("siteurl"); ?>" class="logo" aria-label="We Are Real">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 52">

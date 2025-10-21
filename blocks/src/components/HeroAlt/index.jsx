@@ -132,12 +132,12 @@ const HeroBannerAlt = (props) => {
                   className="hero-banner-button button-white"
                   title="Manage button link"
                 />
-                <PrimaryButton
+                {/* <PrimaryButton
                   {...props}
                   className="hero-banner-button button-gold"
                   title="Manage button link"
                   set="buttonBook"
-                />
+                /> */}
               </div>
             </div>
           </div>

@@ -19083,10 +19083,6 @@ const HeroBannerAlt = props => {
   }, /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     className: "hero-banner-button button-white",
     title: "Manage button link"
-  })), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    className: "hero-banner-button button-gold",
-    title: "Manage button link",
-    set: "buttonBook"
   })))))), /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     set: "background"
   }, props, {

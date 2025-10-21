@@ -40,20 +40,20 @@ Program();
 
 Slider();
 
-function updateClock() {
-  let now = new Date();
-  let options = {
-    timeZone: "Europe/London",
-    hour12: false,
-    hour: "2-digit",
-    minute: "2-digit",
-  };
-  let londonTime =
-    new Intl.DateTimeFormat("en-GB", options).format(now) + " GMT";
+// function updateClock() {
+//   let now = new Date();
+//   let options = {
+//     timeZone: "Europe/London",
+//     hour12: false,
+//     hour: "2-digit",
+//     minute: "2-digit",
+//   };
+//   let londonTime =
+//     new Intl.DateTimeFormat("en-GB", options).format(now) + " GMT";
 
-  if (document.getElementById("time-ticker"))
-    document.getElementById("time-ticker").innerText = londonTime;
-}
+//   if (document.getElementById("time-ticker"))
+//     document.getElementById("time-ticker").innerText = londonTime;
+// }
 
-setInterval(updateClock, 1000);
-updateClock();
+// setInterval(updateClock, 1000);
+// updateClock();
