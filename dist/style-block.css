@@ -2132,7 +2132,7 @@
 }
 .full-width-banner-two-column {
   width: 100vw;
-  height: calc(367 / var(--base-size) * 100vw);
+  height: auto;
   position: relative;
   background-color: #16130d;
   border-top: 2.5px solid #7f6e41;
@@ -2149,11 +2149,13 @@
   color: #bc9f6c;
   position: relative;
   font-size: calc(35 / var(--base-size) * 100vw);
+  margin-top: calc(-5 / var(--base-size) * 100vw);
   font-weight: var(--font-extra);
 }
 @media only screen and (max-width: 879px) {
   .full-width-banner-two-column .title {
     padding: 0;
+    margin-top: 0;
     font-size: calc(37 / var(--base-size) * 100vw);
   }
 }
@@ -2168,7 +2170,7 @@
 }
 .full-width-banner-two-column figure {
   width: 100%;
-  height: calc(367 / var(--base-size) * 100vw);
+  height: calc(362 / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
   .full-width-banner-two-column figure {
@@ -2177,7 +2179,7 @@
 }
 .full-width-banner-two-column figure img {
   width: 100%;
-  height: calc(367 / var(--base-size) * 100vw);
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2197,10 +2199,10 @@
 }
 .full-width-banner-two-column .content-wrapper-detail {
   display: flex;
-  height: calc(367 / var(--base-size) * 100vw);
+  height: calc(362 / var(--base-size) * 100vw);
   flex-direction: column;
   justify-content: center;
-  padding: calc(79 / var(--base-size) * 100vw) calc(99 / var(--base-size) * 100vw);
+  padding: 0 calc(99 / var(--base-size) * 100vw);
 }
 @media only screen and (max-width: 879px) {
   .full-width-banner-two-column .content-wrapper-detail {

@@ -2,7 +2,7 @@
 
 .full-width-banner-two-column {
   width: 100vw;
-  height: vw(367);
+  height: auto;
   position: relative;
   background-color: #16130d;
   border-top: 2.5px solid #7f6e41;
@@ -18,10 +18,12 @@
     color: #bc9f6c;
     position: relative;
     font-size: vw(35);
+    margin-top: vw(-5);
     font-weight: var(--font-extra);
 
     @include mobile {
       padding: 0;
+      margin-top: 0;
       font-size: vw(37);
     }
   }
@@ -37,7 +39,7 @@
 
   figure {
     width: 100%;
-    height: vw(367);
+    height: vw(362);
 
     @include mobile {
       height: vw(329);
@@ -45,7 +47,7 @@
 
     img {
       width: 100%;
-      height: vw(367);
+      height: 100%;
       object-fit: cover;
 
       @include mobile {
@@ -64,10 +66,10 @@
 
     &-detail {
       display: flex;
-      height: vw(367);
+      height: vw(362);
       flex-direction: column;
       justify-content: center;
-      padding: vw(79) vw(99);
+      padding: 0 vw(99);
 
       @include mobile {
         height: auto !important;
