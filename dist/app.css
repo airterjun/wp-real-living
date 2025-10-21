@@ -582,7 +582,7 @@ header.menu-active .close-menu .line:last-child {
 .header-menu .menu-wrapper ul li {
   opacity: 0;
   overflow: hidden;
-  min-width: calc(400 / var(--base-size) * 100vw);
+  min-width: calc(450 / var(--base-size) * 100vw);
   position: relative;
   padding-left: calc(26 / var(--base-size) * 100vw);
   transform: translateY(calc(20 / var(--base-size) * 100vw));

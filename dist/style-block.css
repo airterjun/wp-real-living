@@ -2221,9 +2221,6 @@
     line-height: calc(23 / var(--base-size) * 100vw);
   }
 }
-.full-width-banner-two-column.investing-banner {
-  height: calc(423 / var(--base-size) * 100vw);
-}
 @media only screen and (max-width: 879px) {
   .full-width-banner-two-column.investing-banner {
     height: auto;
@@ -2245,6 +2242,10 @@
 }
 .full-width-banner-two-column.investing-banner .content-wrapper-detail {
   height: calc(423 / var(--base-size) * 100vw);
+  padding-left: calc(91 / var(--base-size) * 100vw);
+}
+.full-width-banner-two-column.investing-banner .content-wrapper-detail .title {
+  margin-top: calc(-3 / var(--base-size) * 100vw);
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/TitleWithLogo/style.scss ***!

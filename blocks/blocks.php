@@ -14,7 +14,7 @@ function website_enqueue_block_editor_assets()
         true
     );
 
-    wp_register_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css?v=8');
+    wp_register_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css?v=9');
 }
 
 function website_block_parser($source_block, $parsed_block)
@@ -168,10 +168,10 @@ add_action('enqueue_block_assets', function () {
         'nolsis-style',
         get_template_directory_uri() . '/dist/app.css',
         array(),
-        '4'
+        '5'
     );
 
-    wp_enqueue_style('custmom-b-admin-style', get_template_directory_uri() . '/dist/block.css', array(), '3');
-    wp_enqueue_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css', array(), '3');
+    wp_enqueue_style('custmom-b-admin-style', get_template_directory_uri() . '/dist/block.css', array(), '5');
+    wp_enqueue_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css', array(), '5');
 
 });

@@ -90,8 +90,6 @@
   }
 
   &.investing-banner {
-    height: vw(423);
-
     @include mobile {
       height: auto;
 
@@ -115,6 +113,11 @@
     .content-wrapper {
       &-detail {
         height: vw(423);
+        padding-left: vw(91);
+
+        .title {
+          margin-top: vw(-3);
+        }
       }
     }
   }
