@@ -172,6 +172,6 @@ add_action('enqueue_block_assets', function () {
     );
 
     wp_enqueue_style('custmom-b-admin-style', get_template_directory_uri() . '/dist/block.css', array(), '5');
-    wp_enqueue_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css', array(), '5');
+    wp_enqueue_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css', array(), '6');
 
 });
