@@ -2244,6 +2244,11 @@
   height: calc(423 / var(--base-size) * 100vw);
   padding-left: calc(91 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 879px) {
+  .full-width-banner-two-column.investing-banner .content-wrapper-detail {
+    padding-left: calc(21 / var(--base-size) * 100vw);
+  }
+}
 .full-width-banner-two-column.investing-banner .content-wrapper-detail .title {
   margin-top: calc(-3 / var(--base-size) * 100vw);
 }

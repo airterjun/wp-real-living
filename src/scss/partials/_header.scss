@@ -249,6 +249,7 @@ header {
 
       @include mobile {
         transform: none;
+        padding-right: vw(21);
         // transform: translateX(vw(40));
       }
 

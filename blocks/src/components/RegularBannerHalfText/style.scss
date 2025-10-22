@@ -115,6 +115,10 @@
         height: vw(423);
         padding-left: vw(91);
 
+        @include mobile {
+          padding-left: vw(21);
+        }
+
         .title {
           margin-top: vw(-3);
         }
