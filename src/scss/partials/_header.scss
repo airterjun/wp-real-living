@@ -249,6 +249,7 @@ header {
 
       @include mobile {
         transform: none;
+        width: 100vw;
         padding-right: vw(21);
         // transform: translateX(vw(40));
       }
@@ -262,7 +263,7 @@ header {
         transform: translateY(vw(20));
 
         @include mobile {
-          min-width: vw(340);
+          min-width: vw(300);
           padding-left: vw(21);
           transform: translateY(vw(20));
         }
