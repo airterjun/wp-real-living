@@ -131,8 +131,10 @@
   // border-bottom: none;
 
   .content-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   .content-wrapper-detail {

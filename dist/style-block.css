@@ -2257,9 +2257,11 @@
   margin-top: calc(-3 / var(--base-size) * 100vw);
 }
 
-.partner-banner-visiton-section .content-wrapper {
-  display: flex;
-  flex-direction: column-reverse;
+@media only screen and (max-width: 879px) {
+  .partner-banner-visiton-section .content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .partner-banner-visiton-section .content-wrapper-detail {
   margin-top: calc(-6 / var(--base-size) * 100vw);
