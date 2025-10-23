@@ -130,11 +130,34 @@
 .partner-banner-visiton-section {
   // border-bottom: none;
 
+  .content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .content-wrapper-detail {
     margin-top: vw(-6);
+    @include mobile {
+      margin-top: vw(2);
+      padding-bottom: vw(101);
+      // padding-top: vw(2);
+    }
 
     .title {
       color: #fff;
+
+      @include mobile {
+        font-size: vw(30);
+        line-height: vw(44);
+      }
+    }
+
+    .description {
+      @include mobile {
+        font-size: vw(18);
+        line-height: vw(23);
+        margin-top: vw(16);
+      }
     }
   }
 }
