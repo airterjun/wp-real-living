@@ -1,3 +1,4 @@
+import { createAttributes } from "../helper/BaseAttributes";
 import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
 import InputWrapper from "../helper/InputWrapper";
@@ -7,12 +8,12 @@ import { ImageSchema } from "../Schema/image";
 import { TextSchema } from "../Schema/text";
 import "./style.scss";
 
-const attributes = {
+const attributes = createAttributes({
   title: TextSchema,
   titleMobile: TextSchema,
   description: TextSchema,
   background: ImageSchema,
-};
+});
 
 const FeaturedText = (props) => {
   return (
@@ -28,6 +29,9 @@ const FeaturedText = (props) => {
             </InputWrapper>
             <InputWrapper label="Description">
               <Text set="description" {...props} tag="div" />
+            </InputWrapper>
+            <InputWrapper label="Section Class">
+              <Text set="section_class" {...props} tag="div" />
             </InputWrapper>
           </div>
         </BlockEditor>

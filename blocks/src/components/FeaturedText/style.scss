@@ -134,4 +134,11 @@
       }
     }
   }
+
+  &.partner-featured-text {
+    .title,
+    .desc {
+      max-width: unset;
+    }
+  }
 }
