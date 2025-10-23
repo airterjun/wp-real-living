@@ -140,6 +140,10 @@
 .banner-contact .content-a-b .primary-button a svg path {
   fill: #ba9d63;
 }
+
+.footer-partner-contact-block {
+  border-top: 0;
+}
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/FeaturedText/style.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************/
@@ -2251,6 +2255,13 @@
 }
 .full-width-banner-two-column.investing-banner .content-wrapper-detail .title {
   margin-top: calc(-3 / var(--base-size) * 100vw);
+}
+
+.partner-banner-visiton-section .content-wrapper-detail {
+  margin-top: calc(-6 / var(--base-size) * 100vw);
+}
+.partner-banner-visiton-section .content-wrapper-detail .title {
+  color: #fff;
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/TitleWithLogo/style.scss ***!

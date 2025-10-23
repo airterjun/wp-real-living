@@ -65,6 +65,9 @@ export default function (props) {
           <InputWrapper>
             <LinkEditor {...props} set="link" />
           </InputWrapper>
+          <InputWrapper label="Section Class">
+            <Text set="section_class" tag="div" {...props} />
+          </InputWrapper>
         </div>
         <div className="tab-item" data-name="dekstop">
           <InputWrapper label="Banner">
