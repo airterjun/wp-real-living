@@ -139,7 +139,8 @@
 
         @include mobile {
           padding-right: 0;
-          margin-top: vw(14);
+          margin-top: vw(11);
+          padding-left: vw(2);
           font-size: vw(21);
           line-height: vw(25);
           margin-bottom: vw(46);
