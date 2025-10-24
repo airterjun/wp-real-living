@@ -660,9 +660,9 @@
 }
 @media only screen and (max-width: 879px) {
   .hero-banner .content .h1 {
-    margin-bottom: calc(9 / var(--base-size) * 100vw);
+    margin-bottom: calc(12 / var(--base-size) * 100vw);
     font-size: calc(37 / var(--base-size) * 100vw);
-    line-height: calc(42 / var(--base-size) * 100vw);
+    line-height: calc(43 / var(--base-size) * 100vw);
   }
 }
 .hero-banner .content::before {
@@ -724,7 +724,7 @@
     margin-top: calc(11 / var(--base-size) * 100vw);
     padding-left: calc(2 / var(--base-size) * 100vw);
     font-size: calc(21 / var(--base-size) * 100vw);
-    line-height: calc(25 / var(--base-size) * 100vw);
+    line-height: calc(26 / var(--base-size) * 100vw);
     margin-bottom: calc(38 / var(--base-size) * 100vw);
   }
 }
@@ -742,7 +742,7 @@
 @media only screen and (max-width: 879px) {
   .hero-banner .content-a--inner .h1 {
     font-size: calc(37 / var(--base-size) * 100vw);
-    margin-bottom: calc(6 / var(--base-size) * 100vw);
+    margin-bottom: calc(9 / var(--base-size) * 100vw);
   }
 }
 .hero-banner .content-a--inner .content-a-b {
@@ -795,6 +795,9 @@
   }
 }
 @media only screen and (max-width: 879px) {
+  .hero-banner .content-a .primary-button {
+    margin-left: calc(3 / var(--base-size) * 100vw);
+  }
   .hero-banner .content-a .primary-button a {
     width: calc(228 / var(--base-size) * 100vw);
     height: calc(49 / var(--base-size) * 100vw);

@@ -64,9 +64,9 @@
         // font-size: vw(40);
         // line-height: vw(49);
         // letter-spacing: 0.02em;
-        margin-bottom: vw(9);
+        margin-bottom: vw(12);
         font-size: vw(37);
-        line-height: vw(42);
+        line-height: vw(43);
       }
     }
 
@@ -142,7 +142,7 @@
           margin-top: vw(11);
           padding-left: vw(2);
           font-size: vw(21);
-          line-height: vw(25);
+          line-height: vw(26);
           margin-bottom: vw(38);
         }
       }
@@ -159,7 +159,7 @@
 
           @include mobile {
             font-size: vw(37);
-            margin-bottom: vw(6);
+            margin-bottom: vw(9);
           }
         }
 
@@ -224,6 +224,7 @@
 
       .primary-button {
         @include mobile {
+          margin-left: vw(3);
           a {
             width: vw(228);
             height: vw(49);
