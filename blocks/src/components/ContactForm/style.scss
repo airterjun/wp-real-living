@@ -122,6 +122,9 @@
         background-color: transparent;
         letter-spacing: vw(0.08);
         color: rgba(#f7f7f7, 0.7);
+        appearance: auto;
+        -moz-appearance: auto;
+        -webkit-appearance: auto;
 
         @include mobile {
           padding-left: vw(13);

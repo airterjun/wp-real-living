@@ -167,9 +167,9 @@ add_action('enqueue_block_assets', function () {
         'nolsis-style',
         get_template_directory_uri() . '/dist/app.css',
         array(),
-        '10'
+        '2'
     );
 
-    wp_enqueue_style('custmom-b-admin-style', get_template_directory_uri() . '/dist/block.css', array(), '10');
-    wp_enqueue_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css', array(), '10');
+    wp_enqueue_style('custmom-b-admin-style', get_template_directory_uri() . '/dist/block.css', array(), '2');
+    wp_enqueue_style('custmom-b-style', get_template_directory_uri() . '/dist/style-block.css', array(), '2');
 });

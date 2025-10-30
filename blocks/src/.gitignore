@@ -1,2 +1,8 @@
 /pages/
+# Ignore everything inside components
+/components/*
+
+# But keep the helper folder and its contents
+!components/helper/
+!components/helper/**
 .DS_Store

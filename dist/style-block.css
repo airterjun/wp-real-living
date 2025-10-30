@@ -3213,6 +3213,9 @@
   background-color: transparent;
   letter-spacing: calc(0.08 / var(--base-size) * 100vw);
   color: rgba(247, 247, 247, 0.7);
+  appearance: auto;
+  -moz-appearance: auto;
+  -webkit-appearance: auto;
 }
 @media only screen and (max-width: 879px) {
   .contact-form .form-wrapper .input-wrapper:not(.button-submit) select {
