@@ -18,7 +18,7 @@
 
     <div class="footer-content-bottom">
         <div class="footer-content-bottom-a">
-            © Copyright 2025. Real Living
+            © 2025 All rights reserved.
         </div>
 
         <div class="footer-content-bottom-b">
