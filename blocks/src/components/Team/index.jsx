@@ -63,6 +63,11 @@ export default function (props) {
       const t8 = `card.${i}.text_8`;
       const thumb = `card.${i}.thumbnail`;
 
+      const sectionOwner = _.text_1
+        .replace(/\s+/g, "-")
+        .toLowerCase()
+        .toLowerCase();
+
       return (
         <div className="teams-cards-item">
           <div className="group section-1">
@@ -94,7 +99,7 @@ export default function (props) {
             </div>
           </div>
 
-          <div className="group section-3">
+          <div className={`group section-3 ${sectionOwner}`}>
             <Text {...props} set={t7} className="t-1" tag="div" />
             <Text {...props} set={t8} className="t-1" tag="div" />
           </div>

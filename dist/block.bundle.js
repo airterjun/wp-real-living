@@ -20010,6 +20010,7 @@ const attributes = {
     const t7 = `card.${i}.text_7`;
     const t8 = `card.${i}.text_8`;
     const thumb = `card.${i}.thumbnail`;
+    const sectionOwner = _.text_1.replace(/\s+/g, "-").toLowerCase().toLowerCase();
     return /*#__PURE__*/React.createElement("div", {
       className: "teams-cards-item"
     }, /*#__PURE__*/React.createElement("div", {
@@ -20061,7 +20062,7 @@ const attributes = {
       className: "t-1",
       tag: "div"
     })))), /*#__PURE__*/React.createElement("div", {
-      className: "group section-3"
+      className: `group section-3 ${sectionOwner}`
     }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: t7,
       className: "t-1",

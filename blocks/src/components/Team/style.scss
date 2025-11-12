@@ -547,6 +547,12 @@ $padding_content: vw(calc(var(--g-outer-padding) + $padding_inner));
               margin-bottom: 0;
             }
           }
+
+          &.alessio-boccaletti {
+            .t-1 {
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }

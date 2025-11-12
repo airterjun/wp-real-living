@@ -4479,6 +4479,9 @@
   .teams .teams-cards-item .section-3 .t-1:last-child {
     margin-bottom: 0;
   }
+  .teams .teams-cards-item .section-3.alessio-boccaletti .t-1 {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style-block.css.map*/
