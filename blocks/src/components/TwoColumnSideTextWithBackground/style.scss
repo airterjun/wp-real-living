@@ -95,4 +95,17 @@
       }
     }
   }
+
+  &.new-ui {
+    .content-inner {
+      @include mobile {
+        padding-top: vw(88);
+        padding-bottom: vw(92);
+
+        .title {
+          margin-bottom: vw(33);
+        }
+      }
+    }
+  }
 }

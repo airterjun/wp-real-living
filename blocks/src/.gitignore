@@ -5,4 +5,7 @@
 # But keep the helper folder and its contents
 !components/helper/
 !components/helper/**
+
+!components/schema/
+!components/schema/**
 .DS_Store

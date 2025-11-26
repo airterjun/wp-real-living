@@ -1,29 +1,21 @@
-import { getBaseModelPath, getNestedValue, setNestedValue } from "./Libs";
+import { CheckboxControl } from "@wordpress/components";
+import InputWrapper from "./InputWrapper";
+import { getModelValue, updateAttributesData } from "./Libs";
 const { ToggleControl } = wp.components;
 
 export default function CheckBox(props) {
-    const { attributes, label, setAttributes, set } = props
+  const { label, set } = props;
+  const getValue = getModelValue(set, props);
 
-    const getValue = getNestedValue(attributes, set)
-
-    const updateContentVal = newVal => {
-        const path = getBaseModelPath(set)
-        const copy = structuredClone(attributes)
-
-        setNestedValue(copy, set, newVal)
-
-        setAttributes({
-            [path]: copy[path]
-        })
-    }
-
-    return (
-        <ToggleControl
-            label={label}
-            checked={getValue}
-            onChange={(value) => {
-                updateContentVal(value)
-            }}
-        />
-    )
+  return (
+    <InputWrapper label="&nbsp;">
+      <CheckboxControl
+        label={label}
+        checked={getValue}
+        onChange={(val) => {
+          updateAttributesData(set, val, props);
+        }}
+      />
+    </InputWrapper>
+  );
 }

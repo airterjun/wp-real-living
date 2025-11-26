@@ -141,4 +141,48 @@
       max-width: unset;
     }
   }
+
+  &.new-dev-update {
+    @include mobile {
+      padding-top: vw(55);
+    }
+    .title {
+      font-size: vw(40);
+      line-height: vw(48);
+      padding-left: vw(359);
+      padding-bottom: vw(11);
+      letter-spacing: -0.008em;
+
+      @include mobile {
+        max-width: unset;
+        font-size: vw(32);
+        line-height: vw(38);
+        padding-left: vw(41);
+        padding-bottom: vw(22);
+      }
+    }
+
+    .desc {
+      font-size: vw(20);
+      max-width: unset;
+      line-height: vw(24);
+      padding-top: vw(35);
+      letter-spacing: 0.005em;
+
+      @include mobile {
+        font-size: vw(16);
+        line-height: vw(23);
+        padding-top: vw(20);
+        padding-bottom: vw(114);
+      }
+
+      .p {
+        margin-bottom: vw(16);
+
+        @include mobile {
+          margin-bottom: vw(10);
+        }
+      }
+    }
+  }
 }

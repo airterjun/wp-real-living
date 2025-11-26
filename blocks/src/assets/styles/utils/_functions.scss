@@ -1,60 +1,79 @@
 @use "sass:math";
 
 :root {
-   --base-size: 1920;
-   --mobile-browser: 876;
-   --wrapper-padding: 20;
-   --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+  --base-size: 1920;
+  --mobile-browser: 876;
+  --wrapper-padding: 20;
+  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 @mixin breakpoint($size) {
-   @media only screen and (max-width: #{$size}px) {
-      @content;
-   }
+  @media only screen and (max-width: #{$size}px) {
+    @content;
+  }
 }
 
-
 @mixin min-breakpoint($size) {
-   @media only screen and (min-width: #{$size}px) {
-      @content;
-   }
+  @media only screen and (min-width: #{$size}px) {
+    @content;
+  }
 }
 
 @mixin v-breakpoint($size) {
-   @media only screen and (max-height: #{$size}px) {
-      @content;
-   }
+  @media only screen and (max-height: #{$size}px) {
+    @content;
+  }
 }
-
 
 @mixin mobile() {
-   @include breakpoint(879) {
-      @content;
-   }
+  @include breakpoint(378) {
+    @content;
+  }
 }
-
 
 @include mobile() {
-   :root {
-      --base-size: 376;
-      --wrapper-padding: 20;
-   }
+  :root {
+    --base-size: 375;
+    --wrapper-padding: 20;
+  }
 }
 
-
-
 @mixin hover() {
-   @include min-breakpoint(879) {
-      &:hover {
-         @content;
-      }
-   }
+  @include min-breakpoint(879) {
+    &:hover {
+      @content;
+    }
+  }
 }
 
 @function verticalSize($size, $container) {
-   @return #{calc($size / $container * 100vh)};
+  @return #{calc($size / $container * 100vh)};
 }
 
 @function vw($sizeInPx) {
-   @return #{calc($sizeInPx / var(--base-size) * 100vw)};
+  @return #{calc($sizeInPx / var(--base-size) * 100vw)};
+}
+
+@mixin scroll-snap($direction: x) {
+  scroll-snap-type: $direction mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+
+  @if $direction ==x {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+  } @else if $direction ==y {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  & > * {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

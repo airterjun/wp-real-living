@@ -1,7 +1,8 @@
 import { createAttributes } from "../helper/BaseAttributes";
 import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
-import { getModelId, getNestedValue } from "../helper/Libs";
+import CheckBox from "../helper/Checkbox";
+import { getModelId, getModelValue, getNestedValue } from "../helper/Libs";
 import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
@@ -26,12 +27,22 @@ export const attributes = createAttributes({
     3
   ),
 
+  headerCTA: {
+    type: Boolean,
+    default: false,
+  },
+  headerCTALink: LinkSchmea,
+  headerCtaTitle: TextSchema,
   footerButton: LinkSchmea,
   footerTitle: TextSchema,
 });
 
 const VisionList = (props) => {
+  const { model } = props;
   const listItems = getNestedValue(props.attributes, getModelId("list", props));
+  const headerCTA = getModelValue("headerCTA", props);
+  const headerCTALink = getModelValue("headerCTALink", props);
+
   const listTemplate = () =>
     listItems.map((item, index) => {
       const title = `list.${index}.title`;
@@ -73,23 +84,37 @@ const VisionList = (props) => {
       <BlockEditor {...props}>
         <div className="tab-item active" data-name="dekstop">
           <LinkEditor {...props} set="footerButton" />
+          <CheckBox {...props} label="Header CTA?" set="headerCTA" />
         </div>
       </BlockEditor>
       <div className="vision-list-inner">
         <div className="header">
-          <div className="inner-block-wrapper">
-            <Text
-              {...props}
-              set="headerTitleLabel"
-              tag="div"
-              className="header-label"
-            />
-            <Text
-              {...props}
-              set="headerTitle"
-              tag="div"
-              className="header-title"
-            />
+          <div className={`inner-block-wrapper ${headerCTA ? "with-cta" : ""}`}>
+            <div className="content">
+              <Text
+                {...props}
+                set="headerTitleLabel"
+                tag="div"
+                className="header-label"
+              />
+              <Text
+                {...props}
+                set="headerTitle"
+                tag="div"
+                className="header-title"
+              />
+            </div>
+            {headerCTA && (
+              <div className="header-cta">
+                <Text {...props} set="headerCtaTitle" />
+                <div className="primary-button">
+                  <a href={headerCTALink ? headerCTALink.url : "#"}>
+                    {headerCTALink ? headerCTALink.title : "Book Now"}
+                    <IconArrow />
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="list-wrapper-outer">{listTemplate()}</div>

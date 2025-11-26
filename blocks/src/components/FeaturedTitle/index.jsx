@@ -1,9 +1,17 @@
+import { CheckboxControl } from "@wordpress/components";
+import { createAttributes } from "../helper/BaseAttributes";
 import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
 import InputWrapper from "../helper/InputWrapper";
-import { getModelId, getNestedValue } from "../helper/Libs";
+import {
+  getModelId,
+  getModelValue,
+  getNestedValue,
+  updateAttributesData,
+} from "../helper/Libs";
 import LinkEditor from "../helper/LinkEditor";
 import ListEditor from "../helper/ListEditor";
+import StyleClassEditor from "../helper/StyleClassEditor";
 import Text from "../helper/Text";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { ArraySchema } from "../Schema/array";
@@ -12,7 +20,7 @@ import { TextSchema, TextSchemaEmpty } from "../Schema/text";
 import IconArrow from "../Shared/IconArrow";
 import "./style.scss";
 
-export const attributes = {
+export const attributes = createAttributes({
   title: TextSchema,
   titleMobile: TextSchema,
   description: TextSchema,
@@ -23,24 +31,44 @@ export const attributes = {
       title: TextSchema,
       description: TextSchema,
       mobileTitle: TextSchemaEmpty,
+      withLink: {
+        type: Boolean,
+        default: false,
+      },
+      link: LinkSchmea,
     },
     {
       title: TextSchema,
       description: TextSchema,
       mobileTitle: TextSchemaEmpty,
+      withLink: {
+        type: Boolean,
+        default: false,
+      },
+      link: LinkSchmea,
     },
     {
       title: TextSchema,
       description: TextSchema,
       mobileTitle: TextSchemaEmpty,
+      withLink: {
+        type: Boolean,
+        default: false,
+      },
+      link: LinkSchmea,
     },
     {
       title: TextSchema,
       description: TextSchema,
       mobileTitle: TextSchemaEmpty,
+      withLink: {
+        type: Boolean,
+        default: false,
+      },
+      link: LinkSchmea,
     },
   ]),
-};
+});
 
 export default function (props) {
   const { type, disabledContent, disabledDescription } = props;
@@ -51,6 +79,9 @@ export default function (props) {
       const title = `list.${index}.title`;
       const desc = `list.${index}.description`;
       const titleMobile = `list.${index}.mobileTitle`;
+      const isLinkEnabled = getModelValue(`list.${index}.withLink`, props);
+      const link = getModelValue(`list.${index}.link`, props);
+
       return (
         <div className="card-item-a">
           <IconArrow />
@@ -73,6 +104,14 @@ export default function (props) {
               className={`card-item-a-a-b ${editor ? "" : "desktop"}`}
               tag="div"
             />
+            {isLinkEnabled && (
+              <div className="button-link">
+                <a href={link ? link.url : "#"}>
+                  <span>{link ? link.title : "See our requirements"}</span>
+                  <IconArrow />
+                </a>
+              </div>
+            )}
           </div>
         </div>
       );
@@ -95,17 +134,38 @@ export default function (props) {
     }
   };
 
-  const listTemplateEditor = (index, mobil) => {
+  const listTemplateEditor = (index, isMobile) => {
     const title = `list.${index}.title`;
     const desc = `list.${index}.description`;
     const titleMobile = `list.${index}.mobileTitle`;
+    const isLinkEnabled = getModelValue(`list.${index}.withLink`, props);
 
-    if (mobil) {
+    const linkEditorWrapper = () => {
+      return (
+        <>
+          <InputWrapper label="Add Link?">
+            <CheckboxControl
+              label="Add Link"
+              checked={isLinkEnabled}
+              onChange={(val) => {
+                updateAttributesData(`list.${index}.withLink`, val, props);
+              }}
+            />
+          </InputWrapper>
+          {isLinkEnabled && (
+            <LinkEditor {...props} set={`list.${index}.link`} />
+          )}
+        </>
+      );
+    };
+
+    if (isMobile) {
       return (
         <>
           <InputWrapper label="Title">
             <Text {...props} set={titleMobile} tag="div" />
           </InputWrapper>
+          {linkEditorWrapper()}
         </>
       );
     }
@@ -118,6 +178,7 @@ export default function (props) {
         <InputWrapper label="Description">
           <Text {...props} set={desc} tag="div" />
         </InputWrapper>
+        {linkEditorWrapper()}
       </>
     );
   };
@@ -157,6 +218,8 @@ export default function (props) {
               <LinkEditor {...props} set="link" />
             </>
           )}
+
+          <StyleClassEditor {...props} />
         </div>
         <div className="tab-item">
           {!disabledContent && (

@@ -60,7 +60,7 @@ const FeaturedText = (props) => {
               <Text set="section_class" {...props} tag="div" />
             </InputWrapper>
           </div>
-          <div className="tab-item active" data-name="dekstop">
+          <div className="tab-item" data-name="dekstop">
             <InputWrapper label="Title">
               <Text set="titleMobile" {...props} tag="div" />
             </InputWrapper>

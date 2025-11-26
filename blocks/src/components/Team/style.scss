@@ -528,6 +528,7 @@ $padding_content: vw(calc(var(--g-outer-padding) + $padding_inner));
 
       .section-3 {
         gap: vw(110);
+
         height: vw(257);
         padding: vw(50) $padding_content 0;
         grid-template-columns: 1fr 1fr;

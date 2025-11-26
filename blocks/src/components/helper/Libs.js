@@ -142,3 +142,22 @@ export const getMobileDescription = (props, originalText, mobileText) => {
 
   return getNestedValue(props.attributes, desktopModel);
 };
+
+export const updateAttributesData = (path, value, props) => {
+  if (path) {
+    const { attributes, setAttributes, model } = props;
+    const setId = model ? `${model}.${path}` : path;
+    const newAttr = structuredClone(attributes);
+    const newValue = setNestedValue(newAttr, setId, value);
+    const id = model ? model : path;
+
+    console.log("newValue", newValue);
+    console.log("newValue++", id);
+
+    setAttributes({
+      [id]: newValue[id],
+    });
+
+    console.log("attributes", attributes);
+  }
+};

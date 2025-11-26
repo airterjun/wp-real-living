@@ -24,5 +24,3 @@ pages.forEach((page) => {
     attributes: pageAttr.data,
   });
 });
-
-console.log("pages", pages);
