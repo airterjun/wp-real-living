@@ -4,6 +4,7 @@ import BlockWrapper from "../helper/BlockWrapper";
 import InputWrapper from "../helper/InputWrapper";
 import { getDataByKey } from "../helper/Libs";
 import Media from "../helper/Media";
+import ResponsiveContent from "../helper/ResponsiveContent";
 import Text from "../helper/Text";
 import { ImageSchema } from "../Schema/image";
 import { TextSchema } from "../Schema/text";
@@ -75,13 +76,12 @@ const FeaturedText = (props) => {
         <Text set="title" {...props} tag="div" className="title desktop" />
         <Text set="titleMobile" {...props} tag="div" className="title mobile" />
         <div className="content">
-          <Text
-            set="description"
+          <ResponsiveContent
             {...props}
-            tag="h2"
-            className="desc desktop"
+            set="description"
+            className="desc"
+            type="text"
           />
-          {descContent()}
           <Media {...props} set="background" className="parallax" />
         </div>
       </BlockWrapper>
