@@ -19,6 +19,8 @@ import { LinkSchmea } from "../Schema/linkSchema";
 import { TextSchema, TextSchemaEmpty } from "../Schema/text";
 import IconArrow from "../Shared/IconArrow";
 import "./style.scss";
+import ResponsiveContent from "../helper/ResponsiveContent";
+import { MultiDeviceSchema } from "../Schema/multiKeySchema";
 
 export const attributes = createAttributes({
   title: TextSchema,
@@ -29,7 +31,7 @@ export const attributes = createAttributes({
   list: ArraySchema([
     {
       title: TextSchema,
-      description: TextSchema,
+      ...MultiDeviceSchema("description", "text"),
       mobileTitle: TextSchemaEmpty,
       withLink: {
         type: Boolean,
@@ -39,7 +41,7 @@ export const attributes = createAttributes({
     },
     {
       title: TextSchema,
-      description: TextSchema,
+      ...MultiDeviceSchema("description", "text"),
       mobileTitle: TextSchemaEmpty,
       withLink: {
         type: Boolean,
@@ -49,7 +51,7 @@ export const attributes = createAttributes({
     },
     {
       title: TextSchema,
-      description: TextSchema,
+      ...MultiDeviceSchema("description", "text"),
       mobileTitle: TextSchemaEmpty,
       withLink: {
         type: Boolean,
@@ -59,7 +61,7 @@ export const attributes = createAttributes({
     },
     {
       title: TextSchema,
-      description: TextSchema,
+      ...MultiDeviceSchema("description", "text"),
       mobileTitle: TextSchemaEmpty,
       withLink: {
         type: Boolean,
@@ -98,11 +100,12 @@ export default function (props) {
               className="card-item-a-a-a mobile"
               tag="div"
             />
-            <Text
+
+            <ResponsiveContent
               {...props}
               set={desc}
-              className={`card-item-a-a-b ${editor ? "" : "desktop"}`}
-              tag="div"
+              type="text"
+              className="card-item-a-a-b"
             />
             {isLinkEnabled && (
               <div className="button-link">

@@ -18690,6 +18690,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
 /* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/FeaturedTitle/style.scss");
+/* harmony import */ var _helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../helper/ResponsiveContent */ "./blocks/src/components/helper/ResponsiveContent/index.jsx");
+/* harmony import */ var _Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../Schema/multiKeySchema */ "./blocks/src/components/Schema/multiKeySchema.jsx");
+
+
 
 
 
@@ -18716,7 +18720,7 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.create
   link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_14__.LinkSchmea,
   list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_13__.ArraySchema)([{
     title: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
+    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_19__.MultiDeviceSchema)("description", "text"),
     mobileTitle: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchemaEmpty,
     withLink: {
       type: Boolean,
@@ -18725,7 +18729,7 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.create
     link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_14__.LinkSchmea
   }, {
     title: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
+    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_19__.MultiDeviceSchema)("description", "text"),
     mobileTitle: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchemaEmpty,
     withLink: {
       type: Boolean,
@@ -18734,7 +18738,7 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.create
     link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_14__.LinkSchmea
   }, {
     title: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
+    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_19__.MultiDeviceSchema)("description", "text"),
     mobileTitle: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchemaEmpty,
     withLink: {
       type: Boolean,
@@ -18743,7 +18747,7 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.create
     link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_14__.LinkSchmea
   }, {
     title: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
-    description: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
+    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_19__.MultiDeviceSchema)("description", "text"),
     mobileTitle: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchemaEmpty,
     withLink: {
       type: Boolean,
@@ -18777,10 +18781,10 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.create
       set: titleMobile,
       className: "card-item-a-a-a mobile",
       tag: "div"
-    })), /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    })), /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_18__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: desc,
-      className: `card-item-a-a-b ${editor ? "" : "desktop"}`,
-      tag: "div"
+      type: "text",
+      className: "card-item-a-a-b"
     })), isLinkEnabled && /*#__PURE__*/React.createElement("div", {
       className: "button-link"
     }, /*#__PURE__*/React.createElement("a", {
