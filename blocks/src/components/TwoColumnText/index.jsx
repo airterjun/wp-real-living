@@ -8,6 +8,7 @@ import {
 } from "../helper/Libs";
 import ListEditor from "../helper/ListEditor";
 import Media from "../helper/Media";
+import ResponsiveContent from "../helper/ResponsiveContent";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
 import { ImageSchema } from "../Schema/image";
@@ -53,8 +54,19 @@ const TwoColumnText = (props) => {
             <IconArrow />
           </div>
           <div className="item-a-a">
-            <Text {...props} set={desc} tag="div" className="item-a-a-a" />
-            <Text {...props} set={title} tag="div" className="item-a-a-b" />
+            <ResponsiveContent
+              {...props}
+              className="item-a-a-a"
+              set={desc}
+              type="text"
+            />
+
+            <ResponsiveContent
+              {...props}
+              className="item-a-a-b"
+              set={title}
+              type="text"
+            />
           </div>
         </div>
       );
@@ -125,22 +137,13 @@ const TwoColumnText = (props) => {
       </div>
       <div className="content body">
         <div className="left">
-          <Text
-            tag="div"
-            set="description"
+          <ResponsiveContent
             {...props}
-            className="description desktop"
+            type="text"
+            set="description"
+            tag="div"
+            className="description"
           />
-          <div
-            className="description mobile"
-            dangerouslySetInnerHTML={{
-              __html: getMobileDescription(
-                props,
-                "description",
-                "description_mobile"
-              ),
-            }}
-          ></div>
         </div>
 
         <div className="right item">{items()}</div>
