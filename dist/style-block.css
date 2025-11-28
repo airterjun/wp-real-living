@@ -5303,7 +5303,14 @@
   }
 }
 .card-team-wrapper .header-banner figure {
+  width: 100vw;
   height: calc(272 / var(--base-size) * 100vw);
+}
+.card-team-wrapper .header-banner figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card-team-wrapper .header-banner .header-title {
   z-index: 9;
