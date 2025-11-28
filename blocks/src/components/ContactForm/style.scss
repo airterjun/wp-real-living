@@ -268,4 +268,18 @@
     margin-left: 0 !important;
     font-size: 13px;
   }
+
+  &.new-ui {
+    h2 {
+      font-size: vw(64);
+      line-height: vw(76);
+      transform: translateY(vw(-8));
+
+      @include mobile {
+        transform: none;
+        font-size: vw(36);
+        line-height: vw(43);
+      }
+    }
+  }
 }

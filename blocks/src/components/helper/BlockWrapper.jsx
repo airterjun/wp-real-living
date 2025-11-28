@@ -45,8 +45,11 @@ const BlockWrapper = (props) => {
         pannel.style.display = "block";
       };
 
+      const inputSectionId = () => {};
+
       return (
         <div className="button-edit-section">
+          <div className="button">#</div>
           <div
             className="button hide"
             onClick={() => {

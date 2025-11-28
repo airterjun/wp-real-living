@@ -139,7 +139,7 @@ export default function Media(props) {
                   />
                 </svg>
               </Button>
-              <div>{children}</div>
+              <div className="additional-button">{children}</div>
             </div>
           )}
         />

@@ -3,6 +3,7 @@ import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
 import InputWrapper from "../helper/InputWrapper";
 import { getDataByKey, getModelId, getNestedValue } from "../helper/Libs";
+import ListEditor from "../helper/ListEditor";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
 import { TextSchema } from "../Schema/text";
@@ -104,6 +105,7 @@ export default function (props) {
       <BlockWrapper {...props} className="two-grid-column-card-alt">
         <BlockEditor {...props}>
           <div className="tab-item active" data-name="dekstop">
+            <ListEditor {...props} set="" />
             <InputWrapper label="Room Type">
               <Text {...props} set="box1title" tag="div" />
             </InputWrapper>

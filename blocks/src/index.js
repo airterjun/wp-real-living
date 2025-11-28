@@ -3,6 +3,7 @@ const { registerBlockType } = wp.blocks;
 import pages from "./pages/**/*.jsx";
 
 pages.forEach((page) => {
+  console.log("page", page);
   const { pageAttr } = page;
   const name = pageAttr.name;
   const templateId = `nolsis/${name}`;

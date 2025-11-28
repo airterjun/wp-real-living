@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "@wordpress/element";
 import { v4 as uuidv4 } from "uuid";
+import StyleClassEditor from "./StyleClassEditor";
 
 const BlockEditor = (props) => {
-  const { edit, attributes, tabEditor, setAttributes } = props;
+  const { edit, tabs, tabEditor, setAttributes } = props;
 
   if (edit) {
     const id = uuidv4();
@@ -42,7 +43,7 @@ const BlockEditor = (props) => {
     };
 
     const buttonTab = () => {
-      if (tabEditor) {
+      if (tabEditor || tabs) {
         return (
           <div className="tab-buttons">
             <div
@@ -103,6 +104,23 @@ const BlockEditor = (props) => {
       offsetX.current = e.clientX - dragBox.offsetLeft;
       offsetY.current = e.clientY - dragBox.offsetTop;
     };
+
+    console.log("tabs", tabs);
+
+    const tabsEditor = () => {
+      if (tabs) {
+        if (tabs && tabs.length === 0) tabs[0] = <></>;
+
+        return tabs.map((tab, index) => (
+          <div className={`tab-item ${index === 0 ? "active" : ""}`}>
+            {tab} {index === 0 && <StyleClassEditor {...props} />}
+          </div>
+        ));
+      }
+
+      return null;
+    };
+
     return (
       <div className="block-editor-pannel-wrapper" ref={mainContainerWrapper}>
         <div className={`block-editor-pannel ${blockClass}`} ref={containerRef}>
@@ -124,6 +142,7 @@ const BlockEditor = (props) => {
           {buttonTab()}
           <div className="content-scroll" ref={contentRef}>
             {props.children}
+            {tabsEditor()}
           </div>
         </div>
       </div>

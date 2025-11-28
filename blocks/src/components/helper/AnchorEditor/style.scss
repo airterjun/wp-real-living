@@ -1,0 +1,28 @@
+@import "./../../../assets/styles/utils/functions";
+
+.anchor-editor {
+  z-index: 9;
+  gap: vw(10);
+  display: flex;
+  position: absolute;
+
+  .button {
+    gap: 6px;
+    display: flex;
+    cursor: pointer;
+    opacity: 0.3;
+    color: #000;
+    font-size: 14px;
+    border-radius: 8px;
+    align-items: center;
+    padding: 6px 10px;
+    position: relative;
+    background-color: #eeedf2;
+  }
+
+  .editor {
+    input {
+      background-color: transparent;
+    }
+  }
+}

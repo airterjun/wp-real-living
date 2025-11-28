@@ -28,6 +28,7 @@
   border: 1px solid rgba(#fff, 0.1);
 
   .button {
+    color: #000;
     font-size: 11px;
     text-transform: uppercase;
   }
@@ -81,6 +82,7 @@
     padding: 10px 20px;
 
     .button {
+      color: #fff;
       opacity: 0.5;
       cursor: pointer;
 
@@ -322,6 +324,38 @@
         text-transform: uppercase;
         background-color: #333;
       }
+    }
+  }
+}
+
+.button-delete-wrapper {
+  position: relative;
+
+  .button-delete {
+    top: 0;
+    right: 0;
+    opacity: 0;
+    display: flex;
+    width: vw(30);
+    cursor: pointer;
+    height: vw(30);
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    border-radius: vw(60);
+    background-color: red;
+
+    svg {
+      width: vw(20);
+      height: vw(20);
+    }
+  }
+
+  &:hover {
+    .button-delete {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }

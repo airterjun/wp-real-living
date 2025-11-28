@@ -143,21 +143,31 @@ export const getMobileDescription = (props, originalText, mobileText) => {
   return getNestedValue(props.attributes, desktopModel);
 };
 
-export const updateAttributesData = (path, value, props) => {
+export const updateAttributesData = (path, value, props, isArray) => {
   if (path) {
     const { attributes, setAttributes, model } = props;
     const setId = model ? `${model}.${path}` : path;
     const newAttr = structuredClone(attributes);
-    const newValue = setNestedValue(newAttr, setId, value);
+    let newValue = "";
+
+    if (isArray) {
+      const array = getNestedValue(newAttr, setId);
+      newValue = array.push(value);
+      newValue = setNestedValue(newAttr, setId, array);
+    } else {
+      newValue = setNestedValue(newAttr, setId, value);
+    }
     const id = model ? model : path;
+    setAttributes(newValue);
 
-    console.log("newValue", newValue);
-    console.log("newValue++", id);
-
-    setAttributes({
-      [id]: newValue[id],
-    });
-
-    console.log("attributes", attributes);
+    console.log("arr", attributes);
   }
+};
+
+export const toId = (text) => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
 };

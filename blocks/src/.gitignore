@@ -9,3 +9,5 @@
 !components/schema/
 !components/schema/**
 .DS_Store
+
+/dist

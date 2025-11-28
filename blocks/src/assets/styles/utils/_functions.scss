@@ -26,7 +26,7 @@
 }
 
 @mixin mobile() {
-  @include breakpoint(378) {
+  @include breakpoint(860) {
     @content;
   }
 }
