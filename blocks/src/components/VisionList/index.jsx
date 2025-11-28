@@ -88,7 +88,7 @@ const VisionList = (props) => {
         </div>
       </BlockEditor>
       <div className="vision-list-inner">
-        <div className="header">
+        <div className={`header ${headerCTA ? "has-header-cta" : ""}`}>
           <div className={`inner-block-wrapper ${headerCTA ? "with-cta" : ""}`}>
             <div className="content">
               <Text

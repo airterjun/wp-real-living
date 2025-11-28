@@ -21478,7 +21478,7 @@ const VisionList = props => {
   })))), /*#__PURE__*/React.createElement("div", {
     className: "vision-list-inner"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "header"
+    className: `header ${headerCTA ? "has-header-cta" : ""}`
   }, /*#__PURE__*/React.createElement("div", {
     className: `inner-block-wrapper ${headerCTA ? "with-cta" : ""}`
   }, /*#__PURE__*/React.createElement("div", {

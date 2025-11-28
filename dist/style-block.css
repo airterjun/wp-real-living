@@ -3185,6 +3185,10 @@
     height: calc(217 / var(--base-size) * 100vw);
     border-color: #7f6e41;
   }
+  .vision-list-inner .header.has-header-cta {
+    height: auto;
+    padding-bottom: calc(32 / var(--base-size) * 100vw);
+  }
 }
 .vision-list-inner .header .inner-block-wrapper {
   flex-direction: column;
@@ -3203,9 +3207,31 @@
   flex-direction: row;
   align-items: flex-end;
 }
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .header .inner-block-wrapper.with-cta {
+    display: block;
+  }
+}
 .vision-list-inner .header .inner-block-wrapper.with-cta .content {
   flex: 1 auto;
   padding: 0 calc(26 / var(--base-size) * 100vw) calc(15 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .header .inner-block-wrapper.with-cta .content {
+    height: calc(210 / var(--base-size) * 100vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: calc(23 / var(--base-size) * 100vw);
+    padding-bottom: calc(43 / var(--base-size) * 100vw);
+  }
+  .vision-list-inner .header .inner-block-wrapper.with-cta .content .header-label {
+    letter-spacing: -0.007em;
+  }
+  .vision-list-inner .header .inner-block-wrapper.with-cta .content .header-title {
+    margin-top: calc(4 / var(--base-size) * 100vw);
+    letter-spacing: -0.008em;
+  }
 }
 .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta {
   color: #fff;
@@ -3217,6 +3243,11 @@
   justify-content: center;
   background-color: #937d4d;
 }
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta {
+    height: calc(188 / var(--base-size) * 100vw);
+  }
+}
 .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta .cta-title {
   margin-top: calc(2 / var(--base-size) * 100vw);
   font-size: calc(24 / var(--base-size) * 100vw);
@@ -3225,6 +3256,13 @@
   letter-spacing: -0.005em;
   font-weight: var(--font-bold);
   transform: translateY(calc(1 / var(--base-size) * 100vw)) translateX(calc(-1 / var(--base-size) * 100vw));
+}
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta .cta-title {
+    font-size: calc(22 / var(--base-size) * 100vw);
+    line-height: calc(25 / var(--base-size) * 100vw);
+    margin-bottom: calc(19 / var(--base-size) * 100vw);
+  }
 }
 .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta .primary-button a {
   color: #fff;

@@ -24,6 +24,11 @@
       @include mobile {
         height: vw(217);
         border-color: #7f6e41;
+
+        &.has-header-cta {
+          height: auto;
+          padding-bottom: vw(32);
+        }
       }
 
       .inner-block-wrapper {
@@ -42,9 +47,31 @@
           flex-direction: row;
           align-items: flex-end;
 
+          @include mobile {
+            display: block;
+          }
+
           .content {
             flex: 1 auto;
             padding: 0 vw(26) vw(15);
+
+            @include mobile {
+              height: vw(210);
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              padding-left: vw(23);
+              padding-bottom: vw(43);
+
+              .header-label {
+                letter-spacing: -0.007em;
+              }
+
+              .header-title {
+                margin-top: vw(4);
+                letter-spacing: -0.008em;
+              }
+            }
           }
 
           .header-cta {
@@ -57,6 +84,10 @@
             justify-content: center;
             background-color: #937d4d;
 
+            @include mobile {
+              height: vw(188);
+            }
+
             .cta-title {
               margin-top: vw(2);
               font-size: vw(24);
@@ -65,6 +96,12 @@
               letter-spacing: -0.005em;
               font-weight: var(--font-bold);
               transform: translateY(vw(1)) translateX(vw(-1));
+
+              @include mobile {
+                font-size: vw(22);
+                line-height: vw(25);
+                margin-bottom: vw(19);
+              }
             }
 
             .primary-button {
