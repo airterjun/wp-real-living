@@ -5,9 +5,10 @@ import { TextSchema } from "../Schema/text";
 import { createAttributes } from "../helper/BaseAttributes";
 import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
+import CheckBox from "../helper/Checkbox";
 import ImageRender from "../helper/ImageRender";
 import InputWrapper from "../helper/InputWrapper";
-import { getMobileDescription } from "../helper/Libs";
+import { getMobileDescription, getModelValue } from "../helper/Libs";
 import LinkEditor from "../helper/LinkEditor";
 import Media from "../helper/Media";
 import Text from "../helper/Text";
@@ -29,9 +30,10 @@ export const attributes = createAttributes({
 
 export default function (props) {
   const { hideBanner } = props;
+  const isBannerHid = getModelValue("disabledBanner", props);
 
   const headerBanner = () => {
-    if (!hideBanner) {
+    if (!hideBanner && !isBannerHid) {
       return (
         <>
           <Media {...props} set="banner" className="parallax desktop" />
@@ -68,6 +70,8 @@ export default function (props) {
           <InputWrapper label="Section Class">
             <Text set="section_class" tag="div" {...props} />
           </InputWrapper>
+
+          <CheckBox {...props} set="disabledBanner" label="Disabled banner?" />
         </div>
         <div className="tab-item" data-name="dekstop">
           <InputWrapper label="Banner">

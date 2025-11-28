@@ -38,7 +38,6 @@ export const attributes = createAttributes({
 });
 
 const VisionList = (props) => {
-  const { model } = props;
   const listItems = getNestedValue(props.attributes, getModelId("list", props));
   const headerCTA = getModelValue("headerCTA", props);
   const headerCTALink = getModelValue("headerCTALink", props);
@@ -85,6 +84,7 @@ const VisionList = (props) => {
         <div className="tab-item active" data-name="dekstop">
           <LinkEditor {...props} set="footerButton" />
           <CheckBox {...props} label="Header CTA?" set="headerCTA" />
+          {headerCTA && <LinkEditor {...props} set="headerCTALink" />}
         </div>
       </BlockEditor>
       <div className="vision-list-inner">
@@ -106,7 +106,7 @@ const VisionList = (props) => {
             </div>
             {headerCTA && (
               <div className="header-cta">
-                <Text {...props} set="headerCtaTitle" />
+                <Text {...props} set="headerCtaTitle" className="cta-title" />
                 <div className="primary-button">
                   <a href={headerCTALink ? headerCTALink.url : "#"}>
                     {headerCTALink ? headerCTALink.title : "Book Now"}

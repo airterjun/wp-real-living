@@ -44,7 +44,7 @@
 
           .content {
             flex: 1 auto;
-            padding: vw(12) vw(26);
+            padding: 0 vw(26) vw(15);
           }
 
           .header-cta {
@@ -57,7 +57,7 @@
             justify-content: center;
             background-color: #937d4d;
 
-            p {
+            .cta-title {
               margin-top: vw(2);
               font-size: vw(24);
               line-height: vw(25);
