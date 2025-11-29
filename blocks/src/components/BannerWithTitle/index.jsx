@@ -3,13 +3,13 @@ import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
 import InputWrapper from "../helper/InputWrapper";
 import Media from "../helper/Media";
-import Text from "../helper/Text";
+import ResponsiveContent from "../helper/ResponsiveContent";
 import { ImageSchema } from "../Schema/image";
-import { TextSchema } from "../Schema/text";
+import { MultiDeviceSchema } from "../Schema/multiKeySchema";
 import "./style.scss";
 export const attributes = createAttributes({
   background: ImageSchema,
-  title: TextSchema,
+  ...MultiDeviceSchema("title", "text"),
 });
 
 const BannerWithtitle = (props) => {
@@ -22,7 +22,7 @@ const BannerWithtitle = (props) => {
           </InputWrapper>
         </div>
       </BlockEditor>
-      <Text {...props} set="title" className="title" />
+      <ResponsiveContent {...props} set="title" className="title" type="text" />
       <Media {...props} set="background" className="parallax" />
     </BlockWrapper>
   );
