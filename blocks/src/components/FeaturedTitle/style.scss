@@ -468,4 +468,44 @@
       }
     }
   }
+
+  &.new-ui-partner-page {
+    .title {
+      letter-spacing: -0.005em !important;
+      transform: translateX(vw(4));
+    }
+
+    .top-content {
+      margin-bottom: vw(44);
+    }
+    .columb-card {
+      max-width: unset;
+      width: vw(1188);
+      margin-left: vw(34);
+
+      .card-item {
+        gap: vw(42);
+        row-gap: vw(65);
+        margin-bottom: vw(60);
+
+        &-a {
+          max-width: unset !important;
+          padding-left: 0 !important;
+
+          &-a {
+            max-width: unset !important;
+
+            &-b {
+              letter-spacing: -0.001em;
+            }
+          }
+
+          svg {
+            margin-top: 0;
+            flex: 0 0 vw(42);
+          }
+        }
+      }
+    }
+  }
 }
