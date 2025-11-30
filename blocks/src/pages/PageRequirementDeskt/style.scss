@@ -1,109 +1,109 @@
 @import "./../../assets//styles/utils/functions";
 
 .requirement {
-    .two-grid-column-card {
-        padding: 0;
+  .two-grid-column-card {
+    padding: 0;
 
-        &::after,
-        &::before {
-            top: 0;
-            height: 100%;
-        }
-
-        .content {
-            .card-wrapper {
-                &-b {
-                    @include mobile {
-                        padding-bottom: vw(46);
-                        padding-right: vw(31) !important;
-                    }
-                }
-            }
-        }
+    &::after,
+    &::before {
+      top: 0;
+      height: 100%;
     }
 
-    .full-width-banner {
-        height: vw(423);
-        border-top: none;
+    .content {
+      .card-wrapper {
+        &-b {
+          @include mobile {
+            padding-bottom: vw(46);
+            padding-right: vw(31) !important;
+          }
+        }
+      }
+    }
+  }
+
+  .full-width-banner {
+    height: vw(423);
+    border-top: none;
+
+    @include mobile {
+      height: vw(329);
+    }
+
+    figure.desktop {
+      height: vw(423);
+    }
+  }
+
+  .featured-title {
+    @include mobile {
+      padding-top: vw(65);
+      padding-bottom: vw(94);
+    }
+
+    h2 {
+      margin-bottom: vw(26);
+
+      @include mobile {
+        margin-bottom: vw(25) !important;
+      }
+    }
+  }
+
+  .two-column-text {
+    @include mobile {
+      padding-bottom: vw(75);
+
+      .content {
+        border-top: 0;
+      }
+    }
+
+    .header {
+      .left {
+        @include mobile {
+          border-top: 2px solid #7a7a7a;
+        }
+      }
+
+      .title {
+        color: #091410;
+        font-size: vw(37);
+        padding-top: vw(33);
+        text-transform: none;
+        line-height: vw(37.47);
+        letter-spacing: 0.002em;
+        font-weight: var(--font-bold);
 
         @include mobile {
-            height: vw(329);
+          padding-top: vw(31);
+          font-size: vw(30);
+          line-height: vw(36);
+          color: #231e14;
         }
-
-        figure.desktop {
-            height: vw(423);
-        }
+      }
     }
 
-    .featured-title {
+    .body {
+      .left {
         @include mobile {
-            padding-top: vw(65);
-            padding-bottom: vw(94);
+          padding-bottom: vw(34);
+          padding-right: 0;
         }
 
-        h2 {
-            margin-bottom: vw(26);
-
-            @include mobile {
-                margin-bottom: vw(25) !important;
-            }
+        .description {
+          max-width: vw(510);
         }
+      }
     }
 
-    .two-column-text {
+    .decor {
+      &-2 {
         @include mobile {
-            padding-bottom: vw(75);
-
-            .content {
-                border-top: 0;
-            }
+          height: 100%;
+          max-height: vw(483);
         }
-
-        .header {
-            .left {
-                @include mobile {
-                    border-top: 2px solid #7A7A7A;
-                }
-            }
-
-            .title {
-                color: #091410;
-                font-size: vw(37);
-                padding-top: vw(33);
-                text-transform: none;
-                line-height: vw(37.47);
-                letter-spacing: 0.002em;
-                font-weight: var(--font-bold);
-
-                @include mobile {
-                    padding-top: vw(31);
-                    font-size: vw(30);
-                    line-height: vw(36);
-                    color: #231E14;
-                }
-            }
-        }
-
-        .body {
-            .left {
-                @include mobile {
-                    padding-bottom: vw(34);
-                    padding-right: 0;
-                }
-
-                .description {
-                    max-width: vw(510);
-                }
-            }
-        }
-
-        .decor {
-            &-2 {
-                @include mobile {
-                    height: 100%;
-                    max-height: vw(483);
-                }
-            }
-        }
+      }
     }
+  }
 }

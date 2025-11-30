@@ -21262,16 +21262,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _helper_BlockEditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/BlockEditor */ "./blocks/src/components/helper/BlockEditor.jsx");
 /* harmony import */ var _helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/BlockWrapper */ "./blocks/src/components/helper/BlockWrapper.jsx");
-/* harmony import */ var _helper_InputWrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/InputWrapper */ "./blocks/src/components/helper/InputWrapper.jsx");
-/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
-/* harmony import */ var _helper_ListEditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/ListEditor */ "./blocks/src/components/helper/ListEditor.jsx");
-/* harmony import */ var _helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../helper/ResponsiveContent */ "./blocks/src/components/helper/ResponsiveContent/index.jsx");
-/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
-/* harmony import */ var _Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Schema/multiKeySchema */ "./blocks/src/components/Schema/multiKeySchema.jsx");
-/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/TwoGridColumnCard/style.scss");
-
-
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/ResponsiveContent */ "./blocks/src/components/helper/ResponsiveContent/index.jsx");
+/* harmony import */ var _Schema_array__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Schema/array */ "./blocks/src/components/Schema/array.jsx");
+/* harmony import */ var _Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Schema/multiKeySchema */ "./blocks/src/components/Schema/multiKeySchema.jsx");
+/* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/TwoGridColumnCard/style.scss");
 
 
 
@@ -21283,13 +21279,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const attributes = {
-  list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_8__.ArraySchema)([{
-    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_9__.ResponsiveSchema)("title", "text"),
-    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_9__.ResponsiveSchema)("description", "text")
+  list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_6__.ArraySchema)([{
+    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_7__.ResponsiveSchema)("title", "text"),
+    ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_7__.ResponsiveSchema)("description", "text")
   }], 4)
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
-  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_5__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_5__.getModelId)("list", props));
+  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getModelId)("list", props));
   const template = index => {
     const keyTitle = `list.${index}.title`;
     const keyDesc = `list.${index}.description`;
@@ -21299,13 +21295,13 @@ const attributes = {
       className: "card-wrapper-a"
     }, /*#__PURE__*/React.createElement("div", {
       className: "icon"
-    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_10__["default"], null)), /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: keyTitle,
       tag: "h2",
       type: "text"
     }))), /*#__PURE__*/React.createElement("div", {
       className: "card-wrapper-b"
-    }, /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    }, /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: keyDesc,
       className: "description",
       type: "text"
@@ -21315,9 +21311,9 @@ const attributes = {
   const editorTemplate = index => {
     const keyTitle = `list.${index}.title`;
     const keyDesc = `list.${index}.description`;
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: keyTitle
-    })), /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    })), /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: keyDesc
     })));
   };

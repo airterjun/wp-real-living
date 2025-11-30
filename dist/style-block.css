@@ -2225,6 +2225,11 @@
 .two-grid-column-card.new-ui .content .card-wrapper-a h2 {
   font-weight: var(--font-extra);
 }
+@media only screen and (max-width: 860px) {
+  .two-grid-column-card.new-ui .content .card-wrapper-b {
+    letter-spacing: -0.002em;
+  }
+}
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerWithLabel/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
@@ -4715,7 +4720,7 @@
 }
 @media only screen and (max-width: 860px) {
   .requirement .two-column-text .header .left {
-    border-top: 2px solid #7A7A7A;
+    border-top: 2px solid #7a7a7a;
   }
 }
 .requirement .two-column-text .header .title {
@@ -4732,7 +4737,7 @@
     padding-top: calc(31 / var(--base-size) * 100vw);
     font-size: calc(30 / var(--base-size) * 100vw);
     line-height: calc(36 / var(--base-size) * 100vw);
-    color: #231E14;
+    color: #231e14;
   }
 }
 @media only screen and (max-width: 860px) {
