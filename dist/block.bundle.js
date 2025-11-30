@@ -18561,10 +18561,10 @@ const attributes = {
   }])
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
-  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_6__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_6__.getModelId)('list', props));
+  const listItems = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_6__.getNestedValue)(props.attributes, (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_6__.getModelId)("list", props));
   const mobileEditor = (index, mobile) => {
-    const title = `${mobile ? 'listMobile' : 'list'}.${index}.title`;
-    const desc = `${mobile ? 'listMobile' : 'list'}.${index}.description`;
+    const title = `${mobile ? "listMobile" : "list"}.${index}.title`;
+    const desc = `${mobile ? "listMobile" : "list"}.${index}.description`;
     return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
       label: "Title"
     }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
@@ -18577,7 +18577,7 @@ const attributes = {
       tag: "div"
     }))));
   };
-  const listEl = (listing = 'list') => listItems.map((_, index) => {
+  const listEl = (listing = "list") => listItems.map((_, index) => {
     const title = `${listing}.${index}.title`;
     const desc = `${listing}.${index}.description`;
     return /*#__PURE__*/React.createElement("div", {
@@ -18659,9 +18659,9 @@ const attributes = {
     className: "main-container columb-card"
   }, /*#__PURE__*/React.createElement("div", {
     className: "card-item desktop"
-  }, listEl()), !props.edit && /*#__PURE__*/React.createElement("div", {
+  }, listEl()), /*#__PURE__*/React.createElement("div", {
     className: "card-item mobile"
-  }, listEl('listMobile')), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_10__["default"], props)));
+  }, listEl("listMobile")), /*#__PURE__*/React.createElement(_PrimaryButton_PrimaryButton__WEBPACK_IMPORTED_MODULE_10__["default"], props)));
 }
 
 /***/ }),
