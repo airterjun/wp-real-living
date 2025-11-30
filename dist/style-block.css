@@ -4862,6 +4862,222 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/pages/TeamDetail/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --base-size: 1920;
+  --mobile-browser: 876;
+  --wrapper-padding: 20;
+  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media only screen and (max-width: 860px) {
+  :root {
+    --base-size: 375;
+    --wrapper-padding: 20;
+  }
+}
+.team-detail {
+  width: 100%;
+}
+.team-detail .wrapper {
+  border-left: calc(2 / var(--base-size) * 100vw) solid #7a7a7a;
+  margin-left: calc(344 / var(--base-size) * 100vw);
+}
+.team-detail .header {
+  height: calc(60 / var(--base-size) * 100vw);
+  border-bottom: calc(2 / var(--base-size) * 100vw) solid #7a7a7a;
+}
+.team-detail .header .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: calc(32 / var(--base-size) * 100vw);
+}
+.team-detail .header a {
+  display: flex;
+  gap: calc(12 / var(--base-size) * 100vw);
+  color: #846f4a;
+  font-size: calc(20 / var(--base-size) * 100vw);
+  padding-bottom: calc(2 / var(--base-size) * 100vw);
+  margin-top: calc(-2 / var(--base-size) * 100vw);
+  line-height: calc(25 / var(--base-size) * 100vw);
+  border-bottom: calc(1 / var(--base-size) * 100vw) solid #846f4a;
+}
+.team-detail .header a svg {
+  height: auto;
+  width: calc(11 / var(--base-size) * 100vw);
+  flex: 0 0 calc(11 / var(--base-size) * 100vw);
+  transform: rotate(270deg) translateX(calc(-1 / var(--base-size) * 100vw));
+}
+.team-detail .header a svg path {
+  fill: #846f4a;
+}
+.team-detail .featured {
+  color: #ffffff;
+  background-color: #231e14;
+}
+.team-detail .featured .wrapper {
+  display: grid;
+  grid-template-columns: 1fr calc(942 / var(--base-size) * 100vw);
+}
+.team-detail .featured .wrapper .content {
+  position: relative;
+  border-right: calc(2 / var(--base-size) * 100vw) solid #7a7a7a;
+}
+.team-detail .featured .wrapper .content::before {
+  content: "";
+  top: calc(144 / var(--base-size) * 100vw);
+  width: calc(320 / var(--base-size) * 100vw);
+  height: calc(2 / var(--base-size) * 100vw);
+  left: calc(-320 / var(--base-size) * 100vw);
+  position: absolute;
+  background-color: #7a7a7a;
+}
+.team-detail .featured .wrapper .content h1 {
+  display: flex;
+  height: calc(146 / var(--base-size) * 100vw);
+  font-size: calc(43 / var(--base-size) * 100vw);
+  margin-bottom: 0;
+  line-height: calc(42 / var(--base-size) * 100vw);
+  position: relative;
+  padding-left: calc(30 / var(--base-size) * 100vw);
+  align-items: flex-end;
+  padding-bottom: calc(19 / var(--base-size) * 100vw);
+  border-bottom: calc(2 / var(--base-size) * 100vw) solid #7a7a7a;
+}
+.team-detail .featured .wrapper .content h1::before {
+  top: 0;
+  content: "";
+  height: 100%;
+  left: calc(-37 / var(--base-size) * 100vw);
+  width: calc(37 / var(--base-size) * 100vw);
+  position: absolute;
+  background-color: #846f4a;
+}
+.team-detail .featured .wrapper .content .position {
+  height: calc(71 / var(--base-size) * 100vw);
+  display: flex;
+  color: #cecece;
+  font-size: calc(30 / var(--base-size) * 100vw);
+  line-height: calc(36 / var(--base-size) * 100vw);
+  font-style: italic;
+  padding-left: calc(28 / var(--base-size) * 100vw);
+  align-items: flex-end;
+  padding-bottom: calc(9 / var(--base-size) * 100vw);
+  font-weight: var(--font-medium);
+  border-bottom: calc(2 / var(--base-size) * 100vw) solid #7a7a7a;
+}
+.team-detail .featured .wrapper .content .detail {
+  font-size: calc(22 / var(--base-size) * 100vw);
+  padding-left: calc(29 / var(--base-size) * 100vw);
+  padding-top: calc(35 / var(--base-size) * 100vw);
+  line-height: calc(26 / var(--base-size) * 100vw);
+}
+.team-detail .featured .wrapper .parallax {
+  width: 100%;
+  height: calc(384 / var(--base-size) * 100vw);
+}
+.team-detail .featured .wrapper .parallax img {
+  width: 100%;
+  height: 100%;
+}
+.team-detail .key-features {
+  border-bottom: calc(2 / var(--base-size) * 100vw) solid #7a7a7a;
+}
+.team-detail .key-features .wrapper {
+  display: flex;
+  border-left: 0;
+  padding: calc(47 / var(--base-size) * 100vw) 0 calc(51 / var(--base-size) * 100vw);
+  padding-left: calc(32 / var(--base-size) * 100vw);
+}
+.team-detail .key-features .wrapper .group {
+  gap: calc(18 / var(--base-size) * 100vw);
+  display: flex;
+  color: #2b2211;
+  font-size: calc(20 / var(--base-size) * 100vw);
+  flex: 0 0 calc(363 / var(--base-size) * 100vw);
+  margin-right: calc(53 / var(--base-size) * 100vw);
+  line-height: calc(24 / var(--base-size) * 100vw);
+  font-weight: var(--font-semi-bold);
+}
+.team-detail .key-features .wrapper .group:nth-of-type(3) {
+  margin-left: calc(4 / var(--base-size) * 100vw);
+}
+.team-detail .key-features .wrapper .group .icon {
+  width: calc(44 / var(--base-size) * 100vw);
+  height: calc(41 / var(--base-size) * 100vw);
+  padding: calc(7 / var(--base-size) * 100vw);
+  flex: 0 0 calc(44 / var(--base-size) * 100vw);
+  transform: translateY(calc(5 / var(--base-size) * 100vw));
+  border: calc(1.6 / var(--base-size) * 100vw) solid #7a7a7a;
+}
+.team-detail .key-features .wrapper .group .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.team-detail .overview .wrapper:not(.mobile) {
+  gap: calc(110 / var(--base-size) * 100vw);
+  border-left: 0;
+  display: grid;
+  font-size: calc(18 / var(--base-size) * 100vw);
+  line-height: calc(25 / var(--base-size) * 100vw);
+  letter-spacing: -0.002em;
+  padding: calc(48 / var(--base-size) * 100vw) 0 calc(111 / var(--base-size) * 100vw) calc(32 / var(--base-size) * 100vw);
+  grid-template-columns: calc(544 / var(--base-size) * 100vw) calc(544 / var(--base-size) * 100vw);
+}
+.team-detail .navigation {
+  padding: calc(64 / var(--base-size) * 100vw) 0 calc(68 / var(--base-size) * 100vw);
+  background-color: #231e14;
+}
+.team-detail .navigation .inner {
+  margin: 0 auto;
+  display: flex;
+  width: calc(1348 / var(--base-size) * 100vw);
+  align-items: center;
+  justify-content: space-between;
+}
+.team-detail .navigation .inner .prev-next {
+  gap: calc(43 / var(--base-size) * 100vw);
+  display: flex;
+  align-items: center;
+}
+.team-detail .navigation .inner .prev-next .icon {
+  flex: 0 0 calc(34 / var(--base-size) * 100vw);
+  width: calc(34 / var(--base-size) * 100vw);
+}
+.team-detail .navigation .inner .prev-next .icon svg {
+  width: 100%;
+}
+.team-detail .navigation .inner .prev-next .name {
+  width: calc(361 / var(--base-size) * 100vw);
+  color: #ffffff;
+  font-size: calc(35 / var(--base-size) * 100vw);
+  line-height: calc(42 / var(--base-size) * 100vw);
+  padding-bottom: calc(15 / var(--base-size) * 100vw);
+  letter-spacing: -0.005em;
+  font-weight: var(--font-extra);
+  border-bottom: calc(2 / var(--base-size) * 100vw) solid #7a7a7a;
+}
+.team-detail .navigation .inner .prev-next .position {
+  font-style: italic;
+  color: #cecece;
+  font-size: calc(27 / var(--base-size) * 100vw);
+  line-height: calc(32 / var(--base-size) * 100vw);
+  padding-top: calc(30 / var(--base-size) * 100vw);
+  transform: translateY(calc(-5 / var(--base-size) * 100vw));
+}
+.team-detail .navigation .inner .prev-next.next {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.team-detail .navigation .inner .prev-next.next .icon {
+  transform: rotate(180deg) translateY(calc(4 / var(--base-size) * 100vw));
+}
+.team-detail .navigation .inner .prev-next.next .position {
+  padding-right: calc(9 / var(--base-size) * 100vw);
+}
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/Team/style.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************/

@@ -52,9 +52,11 @@ export default function (props) {
     <BlockWrapper {...props} className="banner-contact">
       <BlockEditor {...props} getTitle="title" tabEditor={true}>
         <div className="tab-item active" data-name="dekstop">
-          <InputWrapper label="Banner">
-            <Media {...props} set="banner" />
-          </InputWrapper>
+          {!isBannerHid && (
+            <InputWrapper label="Banner">
+              <Media {...props} set="banner" />
+            </InputWrapper>
+          )}
           <InputWrapper label="Background">
             <Media {...props} set="background" />
           </InputWrapper>
@@ -74,9 +76,11 @@ export default function (props) {
           <CheckBox {...props} set="disabledBanner" label="Disabled banner?" />
         </div>
         <div className="tab-item" data-name="dekstop">
-          <InputWrapper label="Banner">
-            <Media {...props} set="banner_mobile" className="input" />
-          </InputWrapper>
+          {!isBannerHid && (
+            <InputWrapper label="Banner">
+              <Media {...props} set="banner_mobile" className="input" />
+            </InputWrapper>
+          )}
           <InputWrapper label="Title">
             <Text set="title_mobile" tag="div" {...props} />
           </InputWrapper>

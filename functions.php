@@ -1,6 +1,29 @@
 <?php
+$cpt = array();
 
-include "blocks/blocks.php";
+
+$requires = [
+    "blocks/blocks.php",
+    "inc/custom-post-type.php",
+];
+
+
+foreach ($requires as $file) {
+    require_once $file;
+};
+
+
+
+
+$arg = array(
+    "slug" => "team",
+    "title" => "Team",
+    "name" => "Team",
+    'supports' => array('title', 'thumbnail', 'editor', 'page-attributes'),
+);
+
+
+array_push($cpt, $arg);
 
 add_action("init", function () {
     add_theme_support('post-thumbnails');
@@ -94,7 +117,6 @@ function my_custom_editor_styles()
 
     if (is_admin()) {
         wp_enqueue_style('admin-block-style', get_template_directory_uri() . '/dist/block.css');
-
     }
 }
 add_action('enqueue_block_assets', 'my_custom_editor_styles');
@@ -142,7 +164,8 @@ add_action('admin_enqueue_scripts', 'fix_media_library_conflict');
 
 
 
-function wp_add_ga4_tracking_code() {
+function wp_add_ga4_tracking_code()
+{
     // Dapatkan domain / host saat ini
     $current_host = $_SERVER['HTTP_HOST'];
 
@@ -157,23 +180,27 @@ function wp_add_ga4_tracking_code() {
     }
 
     // Kalau bukan localhost atau staging, load GA4
-    ?>
+?>
     <!-- Google Analytics 4 (only active on live site) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YKGKS6G0L"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2YKGKS6G0L');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-2YKGKS6G0L');
     </script>
-    <?php
+<?php
 }
 add_action('wp_head', 'wp_add_ga4_tracking_code');
 
 // Additional meta box for set new header on for new layout
 
 // Add meta box
-function wp_add_header_option_metabox() {
+function wp_add_header_option_metabox()
+{
     add_meta_box(
         'wp_header_option_metabox',        // ID
         'Header',                  // Title
@@ -186,24 +213,28 @@ function wp_add_header_option_metabox() {
 add_action('add_meta_boxes', 'wp_add_header_option_metabox');
 
 // Render meta box content
-function wp_render_header_option_metabox($post) {
+function wp_render_header_option_metabox($post)
+{
     $value = get_post_meta($post->ID, '_use_new_header', true);
     wp_nonce_field('wp_save_header_option', 'wp_header_option_nonce');
-    ?>
+?>
     <p>
         <label>
             <input type="checkbox" name="use_new_header" value="1" <?php checked($value, '1'); ?> />
             Use new header
         </label>
     </p>
-    <?php
+<?php
 }
 
 // Save meta box value
-function wp_save_header_option_metabox($post_id) {
+function wp_save_header_option_metabox($post_id)
+{
     // Verify nonce
-    if (!isset($_POST['wp_header_option_nonce']) || 
-        !wp_verify_nonce($_POST['wp_header_option_nonce'], 'wp_save_header_option')) {
+    if (
+        !isset($_POST['wp_header_option_nonce']) ||
+        !wp_verify_nonce($_POST['wp_header_option_nonce'], 'wp_save_header_option')
+    ) {
         return;
     }
 

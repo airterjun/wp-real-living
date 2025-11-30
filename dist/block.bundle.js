@@ -391,6 +391,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/pages/TeamDetail/style.scss":
+/*!************************************************!*\
+  !*** ./blocks/src/pages/TeamDetail/style.scss ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -17793,7 +17806,7 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_6__.create
   }), /*#__PURE__*/React.createElement("div", {
     className: "tab-item active",
     "data-name": "dekstop"
-  }, /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, !isBannerHid && /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_11__["default"], {
     label: "Banner"
   }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_14__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "banner"
@@ -17824,7 +17837,7 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_6__.create
   }))), /*#__PURE__*/React.createElement("div", {
     className: "tab-item",
     "data-name": "dekstop"
-  }, /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, !isBannerHid && /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_11__["default"], {
     label: "Banner"
   }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_14__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "banner_mobile",
@@ -20006,7 +20019,9 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_2__.create
   const teamsData = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getModelValue)("teams", props);
   const teams = () => teamsData.map((_, index) => {
     const members = () => _.members.map((members, j) => {
+      console.log("Group", _.title);
       const prefixId = `teams.${index}.members.${j}`;
+      console.log("prefixId", prefixId);
       return /*#__PURE__*/React.createElement("div", {
         className: "member"
       }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
@@ -22965,13 +22980,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/PageContact/index.jsx */ "./blocks/src/pages/PageContact/index.jsx");
 /* harmony import */ var _pages_PageRequirementDeskt_PageRequirementDeskt_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/PageRequirementDeskt/PageRequirementDeskt.jsx */ "./blocks/src/pages/PageRequirementDeskt/PageRequirementDeskt.jsx");
 /* harmony import */ var _pages_PartnerPage_PartnerPage_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/PartnerPage/PartnerPage.jsx */ "./blocks/src/pages/PartnerPage/PartnerPage.jsx");
-/* harmony import */ var _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/TeamPage/index.jsx */ "./blocks/src/pages/TeamPage/index.jsx");
-/* harmony import */ var _pages_TeamPageNew_index_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/TeamPageNew/index.jsx */ "./blocks/src/pages/TeamPageNew/index.jsx");
+/* harmony import */ var _pages_TeamDetail_index_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/TeamDetail/index.jsx */ "./blocks/src/pages/TeamDetail/index.jsx");
+/* harmony import */ var _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/TeamPage/index.jsx */ "./blocks/src/pages/TeamPage/index.jsx");
+/* harmony import */ var _pages_TeamPageNew_index_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/TeamPageNew/index.jsx */ "./blocks/src/pages/TeamPageNew/index.jsx");
 
 const {
   registerBlockType
 } = wp.blocks;
-         var pages = [_pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__, _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__, _pages_OxfordPage_index_jsx__WEBPACK_IMPORTED_MODULE_3__, _pages_OxfordPageNew_index_jsx__WEBPACK_IMPORTED_MODULE_4__, _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_5__, _pages_PageRequirementDeskt_PageRequirementDeskt_jsx__WEBPACK_IMPORTED_MODULE_6__, _pages_PartnerPage_PartnerPage_jsx__WEBPACK_IMPORTED_MODULE_7__, _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_8__, _pages_TeamPageNew_index_jsx__WEBPACK_IMPORTED_MODULE_9__];
+          var pages = [_pages_HomePage_index_jsx__WEBPACK_IMPORTED_MODULE_1__, _pages_NewsPage_index_jsx__WEBPACK_IMPORTED_MODULE_2__, _pages_OxfordPage_index_jsx__WEBPACK_IMPORTED_MODULE_3__, _pages_OxfordPageNew_index_jsx__WEBPACK_IMPORTED_MODULE_4__, _pages_PageContact_index_jsx__WEBPACK_IMPORTED_MODULE_5__, _pages_PageRequirementDeskt_PageRequirementDeskt_jsx__WEBPACK_IMPORTED_MODULE_6__, _pages_PartnerPage_PartnerPage_jsx__WEBPACK_IMPORTED_MODULE_7__, _pages_TeamDetail_index_jsx__WEBPACK_IMPORTED_MODULE_8__, _pages_TeamPage_index_jsx__WEBPACK_IMPORTED_MODULE_9__, _pages_TeamPageNew_index_jsx__WEBPACK_IMPORTED_MODULE_10__];
 pages.forEach(page => {
   console.log("page", page);
   const {
@@ -23542,6 +23558,198 @@ const pageAttr = {
     model: "section_5",
     section: "5",
     hideBanner: true
+  })));
+}
+
+/***/ }),
+
+/***/ "./blocks/src/pages/TeamDetail/index.jsx":
+/*!***********************************************!*\
+  !*** ./blocks/src/pages/TeamDetail/index.jsx ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   pageAttr: () => (/* binding */ pageAttr)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_BannerContact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/BannerContact */ "./blocks/src/components/BannerContact/index.jsx");
+/* harmony import */ var _components_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/helper/BlockWrapper */ "./blocks/src/components/helper/BlockWrapper.jsx");
+/* harmony import */ var _components_helper_Libs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _components_helper_Media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _components_helper_Text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/helper/Text */ "./blocks/src/components/helper/Text.jsx");
+/* harmony import */ var _components_RegularBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/RegularBanner */ "./blocks/src/components/RegularBanner/index.jsx");
+/* harmony import */ var _components_Schema_array__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/Schema/array */ "./blocks/src/components/Schema/array.jsx");
+/* harmony import */ var _components_Schema_image__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/Schema/image */ "./blocks/src/components/Schema/image.jsx");
+/* harmony import */ var _components_Schema_linkSchema__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
+/* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
+/* harmony import */ var _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/Schema/text */ "./blocks/src/components/Schema/text.jsx");
+/* harmony import */ var _components_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/pages/TeamDetail/style.scss");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const pageAttr = {
+  title: "Team Detail",
+  name: "team-detail",
+  data: {
+    name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
+    position: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
+    detail: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
+    profile: _components_Schema_image__WEBPACK_IMPORTED_MODULE_9__.ImageSchema,
+    features: (0,_components_Schema_array__WEBPACK_IMPORTED_MODULE_8__.ArraySchema)({
+      name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema
+    }, 3),
+    overview: (0,_components_Schema_array__WEBPACK_IMPORTED_MODULE_8__.ArraySchema)({
+      description: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema
+    }, 2),
+    navigation: (0,_components_Schema_array__WEBPACK_IMPORTED_MODULE_8__.ArraySchema)({
+      link: _components_Schema_linkSchema__WEBPACK_IMPORTED_MODULE_10__.LinkSchmea,
+      name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
+      position: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema
+    }, 2),
+    overviewMobile: _components_Schema_text__WEBPACK_IMPORTED_MODULE_12__.TextSchema,
+    b: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_11__.ObjectSchema)(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_7__.attributes),
+    c: (0,_components_Schema_object__WEBPACK_IMPORTED_MODULE_11__.ObjectSchema)(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__.attributes)
+  }
+};
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  const {
+    edit
+  } = props;
+  const features = (0,_components_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getModelValue)("features", props);
+  const description = (0,_components_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getModelValue)("overview", props);
+  const navigation = (0,_components_helper_Libs__WEBPACK_IMPORTED_MODULE_4__.getModelValue)("navigation", props);
+  const keyFeatures = () => features.map((_, index) => {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "group"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "icon"
+    }, /*#__PURE__*/React.createElement(_components_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_13__["default"], null)), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: `features.${index}.name`,
+      className: "title"
+    })));
+  });
+  const profileDescriptions = () => description.map((_, index) => {
+    return /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: `overview.${index}.description`,
+      className: "description"
+    }));
+  });
+  const teamNavigation = () => navigation.map((_, index) => {
+    if (edit) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: `prev-next ${index === 0 ? "prev" : "next"} `
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "icon"
+      }, /*#__PURE__*/React.createElement("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        "data-name": "Layer 2",
+        viewBox: "0 0 33.17 63.51"
+      }, /*#__PURE__*/React.createElement("path", {
+        fill: "none",
+        stroke: "#bc9f64",
+        "stroke-miterlimit": "10",
+        "stroke-width": "2",
+        d: "M32.46 62.8 1.41 31.75 32.46.71"
+      }))), /*#__PURE__*/React.createElement("div", {
+        className: "detail"
+      }, /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        set: `navigation.${index}.name`,
+        className: "name"
+      })), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        set: `navigation.${index}.position`,
+        className: "position"
+      }))));
+    }
+    return /*#__PURE__*/React.createElement("a", {
+      href: _.link?.ur,
+      className: `prev-next ${index === 0 ? "prev" : "next"} `
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "icon"
+    }, /*#__PURE__*/React.createElement("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      "data-name": "Layer 2",
+      viewBox: "0 0 33.17 63.51"
+    }, /*#__PURE__*/React.createElement("path", {
+      fill: "none",
+      stroke: "#bc9f64",
+      "stroke-miterlimit": "10",
+      "stroke-width": "2",
+      d: "M32.46 62.8 1.41 31.75 32.46.71"
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "detail"
+    }, /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: `navigation.${index}.name`,
+      className: "name"
+    })), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      set: `navigation.${index}.position`,
+      className: "position"
+    }))));
+  });
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    className: "team-detail"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "header"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/React.createElement(_components_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_13__["default"], null), "Back to Team"))), /*#__PURE__*/React.createElement("div", {
+    className: "featured"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "content"
+  }, /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "name",
+    tag: "h1"
+  })), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "position",
+    className: "position"
+  })), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "detail",
+    className: "detail"
+  }))), /*#__PURE__*/React.createElement(_components_helper_Media__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    set: "profile",
+    className: "parallax"
+  }, props)))), /*#__PURE__*/React.createElement("div", {
+    className: "key-features"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrapper"
+  }, keyFeatures())), /*#__PURE__*/React.createElement("div", {
+    className: "overview"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrapper desktop"
+  }, profileDescriptions()), /*#__PURE__*/React.createElement("div", {
+    className: "wrapper mobile"
+  }, /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "overviewMobile"
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "navigation"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "inner"
+  }, teamNavigation()))), /*#__PURE__*/React.createElement(_components_RegularBanner__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "b"
+  })), /*#__PURE__*/React.createElement(_components_BannerContact__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    model: "c"
   })));
 }
 
