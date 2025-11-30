@@ -181,4 +181,14 @@
       }
     }
   }
+
+  &.new-ui {
+    .content {
+      .card-wrapper-a {
+        h2 {
+          font-weight: var(--font-extra);
+        }
+      }
+    }
+  }
 }

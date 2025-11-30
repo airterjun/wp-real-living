@@ -4,7 +4,6 @@ import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
 import ListEditor from "../helper/ListEditor";
 import ResponsiveContent from "../helper/ResponsiveContent";
-import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
 import { ResponsiveSchema } from "../Schema/multiKeySchema";
 import IconArrow from "../Shared/IconArrow";
@@ -60,11 +59,13 @@ export default function (props) {
     );
   };
 
+  const tabs = [];
+
   return (
     <>
       <BlockWrapper {...props} className="two-grid-column-card">
-        <BlockEditor {...props}>
-          <div className="tab-item active" data-name="dekstop">
+        <BlockEditor {...props} tabs={tabs}>
+          {/* <div className="tab-item active" data-name="dekstop">
             <InputWrapper label="List">
               <ListEditor
                 set="list"
@@ -74,7 +75,7 @@ export default function (props) {
                 nested={true}
               />
             </InputWrapper>
-          </div>
+          </div> */}
         </BlockEditor>
 
         <div className="content">{grid()}</div>

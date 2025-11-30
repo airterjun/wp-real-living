@@ -2222,6 +2222,9 @@
     padding-right: calc(var(--g-padding-container) / var(--base-size) * 100vw);
   }
 }
+.two-grid-column-card.new-ui .content .card-wrapper-a h2 {
+  font-weight: var(--font-extra);
+}
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/BannerWithLabel/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
