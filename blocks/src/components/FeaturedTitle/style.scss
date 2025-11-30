@@ -473,6 +473,10 @@
     .title {
       letter-spacing: -0.005em !important;
       transform: translateX(vw(4));
+
+      @include mobile {
+        transform: none;
+      }
     }
 
     .top-content {
@@ -483,27 +487,72 @@
       width: vw(1188);
       margin-left: vw(34);
 
+      @include mobile {
+        width: 100%;
+        margin-left: 0;
+      }
+
       .card-item {
         gap: vw(42);
         row-gap: vw(65);
         margin-bottom: vw(60);
 
+        @include mobile {
+          margin-bottom: vw(36) !important;
+        }
+
         &-a {
           max-width: unset !important;
           padding-left: 0 !important;
-
           &-a {
             max-width: unset !important;
 
             &-b {
               letter-spacing: -0.001em;
+
+              @include mobile {
+                letter-spacing: 0;
+                font-size: vw(20);
+                margin-bottom: vw(2) !important;
+                line-height: vw(25) !important;
+              }
+            }
+
+            &-a {
+              @include mobile {
+                margin-bottom: vw(2) !important;
+              }
             }
           }
 
           svg {
             margin-top: 0;
             flex: 0 0 vw(42);
+
+            @include mobile {
+              width: vw(37);
+              height: vw(37);
+              flex: 0 0 vw(37);
+            }
           }
+        }
+      }
+    }
+
+    .text-top-button {
+      @include mobile {
+        padding: vw(6) vw(58) 0;
+      }
+    }
+
+    .primary-button {
+      @include mobile {
+        margin-top: vw(18);
+
+        a {
+          font-size: vw(21);
+          letter-spacing: -0.01em;
+          padding-bottom: vw(2);
         }
       }
     }

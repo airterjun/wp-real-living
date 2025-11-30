@@ -795,6 +795,11 @@
   letter-spacing: -0.005em !important;
   transform: translateX(calc(4 / var(--base-size) * 100vw));
 }
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .title {
+    transform: none;
+  }
+}
 .featured-title.new-ui-partner-page .top-content {
   margin-bottom: calc(44 / var(--base-size) * 100vw);
 }
@@ -803,10 +808,21 @@
   width: calc(1188 / var(--base-size) * 100vw);
   margin-left: calc(34 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .columb-card {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 .featured-title.new-ui-partner-page .columb-card .card-item {
   gap: calc(42 / var(--base-size) * 100vw);
   row-gap: calc(65 / var(--base-size) * 100vw);
   margin-bottom: calc(60 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .columb-card .card-item {
+    margin-bottom: calc(36 / var(--base-size) * 100vw) !important;
+  }
 }
 .featured-title.new-ui-partner-page .columb-card .card-item-a {
   max-width: unset !important;
@@ -818,9 +834,44 @@
 .featured-title.new-ui-partner-page .columb-card .card-item-a-a-b {
   letter-spacing: -0.001em;
 }
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .columb-card .card-item-a-a-b {
+    letter-spacing: 0;
+    font-size: calc(20 / var(--base-size) * 100vw);
+    margin-bottom: calc(2 / var(--base-size) * 100vw) !important;
+    line-height: calc(25 / var(--base-size) * 100vw) !important;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .columb-card .card-item-a-a-a {
+    margin-bottom: calc(2 / var(--base-size) * 100vw) !important;
+  }
+}
 .featured-title.new-ui-partner-page .columb-card .card-item-a svg {
   margin-top: 0;
   flex: 0 0 calc(42 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .columb-card .card-item-a svg {
+    width: calc(37 / var(--base-size) * 100vw);
+    height: calc(37 / var(--base-size) * 100vw);
+    flex: 0 0 calc(37 / var(--base-size) * 100vw);
+  }
+}
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .text-top-button {
+    padding: calc(6 / var(--base-size) * 100vw) calc(58 / var(--base-size) * 100vw) 0;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .primary-button {
+    margin-top: calc(18 / var(--base-size) * 100vw);
+  }
+  .featured-title.new-ui-partner-page .primary-button a {
+    font-size: calc(21 / var(--base-size) * 100vw);
+    letter-spacing: -0.01em;
+    padding-bottom: calc(2 / var(--base-size) * 100vw);
+  }
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/HeroBanner/style.scss ***!
