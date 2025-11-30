@@ -518,6 +518,14 @@
   height: calc(10 / var(--base-size) * 100vw);
   flex: 0 0 calc(10 / var(--base-size) * 100vw);
 }
+@media only screen and (max-width: 860px) {
+  .featured-title .main-container .card-item-a-a .button-link a svg {
+    width: calc(12 / var(--base-size) * 100vw);
+    height: calc(12 / var(--base-size) * 100vw);
+    flex: 0 0 calc(12 / var(--base-size) * 100vw);
+    transform: translateY(calc(8 / var(--base-size) * 100vw));
+  }
+}
 .featured-title .main-container .title {
   font-weight: var(--font-extra);
   font-size: calc(46 / var(--base-size) * 100vw);
@@ -837,14 +845,13 @@
 @media only screen and (max-width: 860px) {
   .featured-title.new-ui-partner-page .columb-card .card-item-a-a-b {
     letter-spacing: 0;
-    font-size: calc(20 / var(--base-size) * 100vw);
-    margin-bottom: calc(2 / var(--base-size) * 100vw) !important;
-    line-height: calc(25 / var(--base-size) * 100vw) !important;
+    line-height: calc(21 / var(--base-size) * 100vw) !important;
+    margin-bottom: calc(8 / var(--base-size) * 100vw) !important;
   }
 }
 @media only screen and (max-width: 860px) {
   .featured-title.new-ui-partner-page .columb-card .card-item-a-a-a {
-    margin-bottom: calc(2 / var(--base-size) * 100vw) !important;
+    margin-bottom: calc(7 / var(--base-size) * 100vw) !important;
   }
 }
 .featured-title.new-ui-partner-page .columb-card .card-item-a svg {
@@ -856,6 +863,19 @@
     width: calc(37 / var(--base-size) * 100vw);
     height: calc(37 / var(--base-size) * 100vw);
     flex: 0 0 calc(37 / var(--base-size) * 100vw);
+  }
+}
+.featured-title.new-ui-partner-page .columb-card .card-item-a:nth-of-type(2) .button-link {
+  display: none;
+}
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .columb-card .card-item-a:nth-of-type(2) .button-link {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .featured-title.new-ui-partner-page .columb-card .card-item-a:nth-of-type(3) .button-link {
+    display: none;
   }
 }
 @media only screen and (max-width: 860px) {
