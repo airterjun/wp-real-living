@@ -21303,12 +21303,14 @@ const attributes = {
       className: "icon"
     }, /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_11__["default"], null)), /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: keyTitle,
-      tag: "h2"
+      tag: "h2",
+      type: "text"
     }))), /*#__PURE__*/React.createElement("div", {
       className: "card-wrapper-b"
     }, /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_7__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: keyDesc,
-      className: "description"
+      className: "description",
+      type: "text"
     }))));
   };
   const grid = () => listItems.map((_, index) => template(index));

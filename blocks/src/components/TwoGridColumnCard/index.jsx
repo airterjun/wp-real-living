@@ -33,10 +33,15 @@ export default function (props) {
           <div className="icon">
             <IconArrow />
           </div>
-          <ResponsiveContent {...props} set={keyTitle} tag="h2" />
+          <ResponsiveContent {...props} set={keyTitle} tag="h2" type="text" />
         </div>
         <div className="card-wrapper-b">
-          <ResponsiveContent {...props} set={keyDesc} className="description" />
+          <ResponsiveContent
+            {...props}
+            set={keyDesc}
+            className="description"
+            type="text"
+          />
         </div>
       </div>
     );
