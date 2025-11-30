@@ -12,6 +12,7 @@ import { TextSchema } from "../Schema/text";
 import "./style.scss";
 import MediaInput from "../helper/MediaInput";
 import { createAttributes } from "../helper/BaseAttributes";
+import StyleClassEditor from "../helper/StyleClassEditor";
 
 export const attributes = createAttributes({
   background: ImageSchema,
@@ -58,14 +59,7 @@ const HeroBanner = (props) => {
             <InputWrapper label="Description">
               <Text set="text_2" {...props} tag="div" className="input" />
             </InputWrapper>
-            <InputWrapper label="Section Class">
-              <Text
-                set="section_class"
-                {...props}
-                tag="div"
-                className="input"
-              />
-            </InputWrapper>
+            <StyleClassEditor {...props} />
           </div>
           <div className="tab-item" data-name="mobile">
             <InputWrapper label="Background">

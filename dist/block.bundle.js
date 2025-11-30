@@ -19134,6 +19134,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/HeroBanner/style.scss");
 /* harmony import */ var _helper_MediaInput__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../helper/MediaInput */ "./blocks/src/components/helper/MediaInput.jsx");
 /* harmony import */ var _helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../helper/BaseAttributes */ "./blocks/src/components/helper/BaseAttributes.jsx");
+/* harmony import */ var _helper_StyleClassEditor__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../helper/StyleClassEditor */ "./blocks/src/components/helper/StyleClassEditor.jsx");
+
 
 
 
@@ -19203,14 +19205,7 @@ const HeroBanner = props => {
   }, props, {
     tag: "div",
     className: "input"
-  }))), /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    label: "Section Class"
-  }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    set: "section_class"
-  }, props, {
-    tag: "div",
-    className: "input"
-  })))), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement(_helper_StyleClassEditor__WEBPACK_IMPORTED_MODULE_16__["default"], props)), /*#__PURE__*/React.createElement("div", {
     className: "tab-item",
     "data-name": "mobile"
   }, /*#__PURE__*/React.createElement(_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__["default"], {

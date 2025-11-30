@@ -915,6 +915,12 @@
   grid-template-columns: calc(1125 / var(--base-size) * 100vw) 1fr;
   border-bottom: 2.6px solid var(--color-gold);
 }
+@media only screen and (max-width: 860px) {
+  .hero-banner.new-ui-pipeline-page .content-a-b {
+    margin-bottom: calc(41 / var(--base-size) * 100vw);
+    letter-spacing: -0.005em;
+  }
+}
 .hero-banner img {
   width: 100%;
   height: 100%;
