@@ -1,7 +1,5 @@
 import BlockEditor from "../helper/BlockEditor";
 import BlockWrapper from "../helper/BlockWrapper";
-import ButtonSlider from "../helper/ButtonSlider";
-import Controller from "../helper/Controller";
 import InputWrapper from "../helper/InputWrapper";
 import { getModelId, getNestedValue } from "../helper/Libs";
 import ListEditor from "../helper/ListEditor";
@@ -9,7 +7,6 @@ import ResponsiveContent from "../helper/ResponsiveContent";
 import Text from "../helper/Text";
 import { ArraySchema } from "../Schema/array";
 import { ResponsiveSchema } from "../Schema/multiKeySchema";
-import { TextSchema } from "../Schema/text";
 import IconArrow from "../Shared/IconArrow";
 import "./style.scss";
 const attributes = {
@@ -36,10 +33,10 @@ export default function (props) {
           <div className="icon">
             <IconArrow />
           </div>
-          <Text tag="h2" set={keyTitle} {...props} />
+          <ResponsiveContent {...props} set={keyTitle} tag="h2" />
         </div>
         <div className="card-wrapper-b">
-          <Text set={keyDesc} {...props} className="description" />
+          <ResponsiveContent {...props} set={keyDesc} className="description" />
         </div>
       </div>
     );
