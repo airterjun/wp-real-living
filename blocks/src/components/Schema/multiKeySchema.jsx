@@ -17,3 +17,7 @@ export const MultiDeviceSchema = (id, type, opt = []) => {
     [mobileSchema]: types[type],
   };
 };
+
+export const ResponsiveSchema = (...params) => {
+  return MultiDeviceSchema(params.id, params.type, params.opt);
+};

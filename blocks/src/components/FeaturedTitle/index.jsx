@@ -20,12 +20,12 @@ import { TextSchema, TextSchemaEmpty } from "../Schema/text";
 import IconArrow from "../Shared/IconArrow";
 import "./style.scss";
 import ResponsiveContent from "../helper/ResponsiveContent";
-import { MultiDeviceSchema } from "../Schema/multiKeySchema";
+import { MultiDeviceSchema, ResponsiveSchema } from "../Schema/multiKeySchema";
 
 export const attributes = createAttributes({
   title: TextSchema,
   titleMobile: TextSchema,
-  description: TextSchema,
+  ...ResponsiveSchema("description", "text"),
   textButton: TextSchema,
   link: LinkSchmea,
   list: ArraySchema([
@@ -256,11 +256,11 @@ export default function (props) {
         <Text className="title desktop" set="title" {...props} tag="h2" />
         <Text className="title mobile" set="titleMobile" {...props} tag="h2" />
         {!disabledDescription && (
-          <Text
-            className="description"
-            set="description"
+          <ResponsiveContent
             {...props}
-            tag="div"
+            set="description"
+            type="text"
+            className="description"
           />
         )}
       </div>

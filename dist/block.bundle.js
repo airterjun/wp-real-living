@@ -18723,7 +18723,7 @@ __webpack_require__.r(__webpack_exports__);
 const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.createAttributes)({
   title: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
   titleMobile: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
-  description: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
+  ...(0,_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_19__.ResponsiveSchema)("description", "text"),
   textButton: _Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
   link: _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_14__.LinkSchmea,
   list: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_13__.ArraySchema)([{
@@ -18912,11 +18912,10 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.create
     set: "titleMobile"
   }, props, {
     tag: "h2"
-  })), !disabledDescription && /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: "description",
-    set: "description"
-  }, props, {
-    tag: "div"
+  })), !disabledDescription && /*#__PURE__*/React.createElement(_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_18__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "description",
+    type: "text",
+    className: "description"
   }))), footerContent());
 }
 
@@ -19830,7 +19829,8 @@ const LinkSchmea = (0,_object__WEBPACK_IMPORTED_MODULE_0__.ObjectSchema)({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   MultiDeviceSchema: () => (/* binding */ MultiDeviceSchema)
+/* harmony export */   MultiDeviceSchema: () => (/* binding */ MultiDeviceSchema),
+/* harmony export */   ResponsiveSchema: () => (/* binding */ ResponsiveSchema)
 /* harmony export */ });
 /* harmony import */ var _array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./array */ "./blocks/src/components/Schema/array.jsx");
 /* harmony import */ var _image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image */ "./blocks/src/components/Schema/image.jsx");
@@ -19852,6 +19852,9 @@ const MultiDeviceSchema = (id, type, opt = []) => {
     [id]: types[type],
     [mobileSchema]: types[type]
   };
+};
+const ResponsiveSchema = (...params) => {
+  return MultiDeviceSchema(params.id, params.type, params.opt);
 };
 
 /***/ }),
