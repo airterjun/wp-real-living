@@ -9,8 +9,6 @@ export const ArraySchema = (items, total = -1) => {
       itemsList.push(transformJson(items));
     }
 
-    console.log("itemsList", itemsList);
-
     return {
       type: "array",
       default: itemsList,
