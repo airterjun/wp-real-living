@@ -23686,7 +23686,7 @@ const pageAttr = {
       }))));
     }
     return /*#__PURE__*/React.createElement("a", {
-      href: _.link?.ur,
+      href: _.link?.url,
       className: `prev-next ${index === 0 ? "prev" : "next"} `
     }, /*#__PURE__*/React.createElement("div", {
       className: "icon"
