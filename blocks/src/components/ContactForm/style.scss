@@ -66,13 +66,14 @@
 
   .form-wrapper {
     .input-wrapper:not(.button-submit) {
-      padding-top: vw(21);
-      padding-bottom: vw(11);
+      padding-top: vw(33);
+      padding-bottom: vw(9);
       border-bottom: 1px solid #937d4d;
       position: relative;
 
       @include mobile {
-        padding-top: vw(32);
+        padding-top: vw(28);
+        padding-bottom: vw(12);
       }
 
       &:first-child {
@@ -81,8 +82,12 @@
 
       &.textarea {
         padding: 0;
-        margin-top: vw(51);
+        margin-top: vw(67);
         border: 1px solid #937d4d;
+
+        @include mobile {
+          margin-top: vw(44);
+        }
       }
 
       input:not([type="submit"]) {
@@ -138,7 +143,7 @@
       textarea {
         width: 100%;
         border: none;
-        height: vw(179);
+        height: vw(173);
         font-size: vw(16);
         padding: vw(16) vw(20);
         color: rgba(#f7f7f7, 0.7);
@@ -168,7 +173,7 @@
       }
 
       .input-wrapper {
-        padding-top: vw(39) !important;
+        padding-top: vw(49) !important;
 
         @include mobile {
           padding-top: vw(28) !important;
@@ -248,6 +253,7 @@
         padding-right: vw(13);
         border: 1px solid #937d4d;
         letter-spacing: vw(-0.29);
+        font-family: var(--font-main);
 
         @include mobile {
           width: 100%;

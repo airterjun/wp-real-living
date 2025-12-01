@@ -4069,14 +4069,15 @@
   display: inline;
 }
 .contact-form .form-wrapper .input-wrapper:not(.button-submit) {
-  padding-top: calc(21 / var(--base-size) * 100vw);
-  padding-bottom: calc(11 / var(--base-size) * 100vw);
+  padding-top: calc(33 / var(--base-size) * 100vw);
+  padding-bottom: calc(9 / var(--base-size) * 100vw);
   border-bottom: 1px solid #937d4d;
   position: relative;
 }
 @media only screen and (max-width: 860px) {
   .contact-form .form-wrapper .input-wrapper:not(.button-submit) {
-    padding-top: calc(32 / var(--base-size) * 100vw);
+    padding-top: calc(28 / var(--base-size) * 100vw);
+    padding-bottom: calc(12 / var(--base-size) * 100vw);
   }
 }
 .contact-form .form-wrapper .input-wrapper:not(.button-submit):first-child {
@@ -4084,8 +4085,13 @@
 }
 .contact-form .form-wrapper .input-wrapper:not(.button-submit).textarea {
   padding: 0;
-  margin-top: calc(51 / var(--base-size) * 100vw);
+  margin-top: calc(67 / var(--base-size) * 100vw);
   border: 1px solid #937d4d;
+}
+@media only screen and (max-width: 860px) {
+  .contact-form .form-wrapper .input-wrapper:not(.button-submit).textarea {
+    margin-top: calc(44 / var(--base-size) * 100vw);
+  }
 }
 .contact-form .form-wrapper .input-wrapper:not(.button-submit) input:not([type=submit]) {
   width: 100%;
@@ -4140,7 +4146,7 @@
 .contact-form .form-wrapper .input-wrapper:not(.button-submit) textarea {
   width: 100%;
   border: none;
-  height: calc(179 / var(--base-size) * 100vw);
+  height: calc(173 / var(--base-size) * 100vw);
   font-size: calc(16 / var(--base-size) * 100vw);
   padding: calc(16 / var(--base-size) * 100vw) calc(20 / var(--base-size) * 100vw);
   color: rgba(247, 247, 247, 0.7);
@@ -4174,7 +4180,7 @@
   }
 }
 .contact-form .form-wrapper .input-group .input-wrapper {
-  padding-top: calc(39 / var(--base-size) * 100vw) !important;
+  padding-top: calc(49 / var(--base-size) * 100vw) !important;
 }
 @media only screen and (max-width: 860px) {
   .contact-form .form-wrapper .input-group .input-wrapper {
@@ -4247,6 +4253,7 @@
   padding-right: calc(13 / var(--base-size) * 100vw);
   border: 1px solid #937d4d;
   letter-spacing: calc(-0.29 / var(--base-size) * 100vw);
+  font-family: var(--font-main);
 }
 @media only screen and (max-width: 860px) {
   .contact-form .form-wrapper .button-submit input {
