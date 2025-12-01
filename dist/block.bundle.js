@@ -23728,7 +23728,7 @@ const pageAttr = {
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrapper"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "#"
+    href: "/team"
   }, /*#__PURE__*/React.createElement(_components_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_16__["default"], null), "Back to Team"))), /*#__PURE__*/React.createElement("div", {
     className: "featured"
   }, /*#__PURE__*/React.createElement("div", {
