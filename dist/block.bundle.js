@@ -22900,14 +22900,13 @@ __webpack_require__.r(__webpack_exports__);
     })));
   }
   if (type === "image") {
-    /*#__PURE__*/React.createElement(_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: set,
       className: `${className ? className : ""} desktop`
-    }));
-    /*#__PURE__*/React.createElement(_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    })), /*#__PURE__*/React.createElement(_Media__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       set: `${set}Mobile`,
       className: `${className ? className : ""} mobile`
-    }));
+    })));
   }
 }
 
@@ -23654,12 +23653,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_helper_InputWrapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/helper/InputWrapper */ "./blocks/src/components/helper/InputWrapper.jsx");
 /* harmony import */ var _components_helper_Libs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/helper/Libs */ "./blocks/src/components/helper/Libs.js");
 /* harmony import */ var _components_helper_LinkEditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/helper/LinkEditor */ "./blocks/src/components/helper/LinkEditor.jsx");
-/* harmony import */ var _components_helper_Media__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _components_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/helper/ResponsiveContent */ "./blocks/src/components/helper/ResponsiveContent/index.jsx");
 /* harmony import */ var _components_helper_Text__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/helper/Text */ "./blocks/src/components/helper/Text.jsx");
 /* harmony import */ var _components_RegularBanner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/RegularBanner */ "./blocks/src/components/RegularBanner/index.jsx");
 /* harmony import */ var _components_Schema_array__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/Schema/array */ "./blocks/src/components/Schema/array.jsx");
-/* harmony import */ var _components_Schema_image__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/Schema/image */ "./blocks/src/components/Schema/image.jsx");
-/* harmony import */ var _components_Schema_linkSchema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
+/* harmony import */ var _components_Schema_linkSchema__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
+/* harmony import */ var _components_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/Schema/multiKeySchema */ "./blocks/src/components/Schema/multiKeySchema.jsx");
 /* harmony import */ var _components_Schema_object__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/Schema/object */ "./blocks/src/components/Schema/object.jsx");
 /* harmony import */ var _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/Schema/text */ "./blocks/src/components/Schema/text.jsx");
 /* harmony import */ var _components_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
@@ -23689,7 +23688,7 @@ const pageAttr = {
     name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
     position: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
     detail: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
-    profile: _components_Schema_image__WEBPACK_IMPORTED_MODULE_12__.ImageSchema,
+    ...(0,_components_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_13__.MultiDeviceSchema)("profile", "image"),
     features: (0,_components_Schema_array__WEBPACK_IMPORTED_MODULE_11__.ArraySchema)({
       name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema
     }, 3),
@@ -23697,7 +23696,7 @@ const pageAttr = {
       description: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema
     }, 2),
     navigation: (0,_components_Schema_array__WEBPACK_IMPORTED_MODULE_11__.ArraySchema)({
-      link: _components_Schema_linkSchema__WEBPACK_IMPORTED_MODULE_13__.LinkSchmea,
+      link: _components_Schema_linkSchema__WEBPACK_IMPORTED_MODULE_12__.LinkSchmea,
       name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
       position: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema
     }, 2),
@@ -23814,10 +23813,11 @@ const pageAttr = {
   })), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "detail",
     className: "detail"
-  }))), /*#__PURE__*/React.createElement(_components_helper_Media__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }))), /*#__PURE__*/React.createElement(_components_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "profile",
+    type: "image",
     className: "parallax"
-  }, props)))), /*#__PURE__*/React.createElement("div", {
+  })))), /*#__PURE__*/React.createElement("div", {
     className: "key-features"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrapper"

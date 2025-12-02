@@ -24,15 +24,19 @@ export default function (props) {
   }
 
   if (type === "image") {
-    <Media
-      {...props}
-      set={set}
-      className={`${className ? className : ""} desktop`}
-    />;
-    <Media
-      {...props}
-      set={`${set}Mobile`}
-      className={`${className ? className : ""} mobile`}
-    />;
+    return (
+      <>
+        <Media
+          {...props}
+          set={set}
+          className={`${className ? className : ""} desktop`}
+        />
+        <Media
+          {...props}
+          set={`${set}Mobile`}
+          className={`${className ? className : ""} mobile`}
+        />
+      </>
+    );
   }
 }
