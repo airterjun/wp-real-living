@@ -36,7 +36,7 @@ export default function (props) {
   }
 
   return (
-    <a href={value} className={className}>
+    <a href={value?.url} className={className}>
       {props.children}
     </a>
   );

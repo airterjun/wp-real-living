@@ -22091,7 +22091,7 @@ __webpack_require__.r(__webpack_exports__);
     }))));
   }
   return /*#__PURE__*/React.createElement("a", {
-    href: value,
+    href: value?.url,
     className: className
   }, props.children);
 }
