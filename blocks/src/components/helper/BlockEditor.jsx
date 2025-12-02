@@ -105,8 +105,6 @@ const BlockEditor = (props) => {
       offsetY.current = e.clientY - dragBox.offsetTop;
     };
 
-    console.log("tabs", tabs);
-
     const tabsEditor = () => {
       if (tabs) {
         if (tabs && tabs.length === 0) tabs[0] = <></>;

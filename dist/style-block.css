@@ -5802,6 +5802,50 @@
     margin-bottom: 0;
   }
 }
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/helper/InlineLinkEditor/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.link-editor-wrapper {
+  position: relative;
+}
+.link-editor-wrapper .editor {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  padding: 10px;
+  height: 100vh;
+  position: fixed;
+  align-items: center;
+  z-index: 9999999999999;
+  justify-content: center;
+  background-color: rgba(17, 17, 17, 0.6);
+}
+.link-editor-wrapper .editor .click-area {
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.link-editor-wrapper .editor .input-wrapper {
+  z-index: 8;
+  width: 290px;
+  position: relative;
+}
+.link-editor-wrapper .editor .input-wrapper input,
+.link-editor-wrapper .editor .input-wrapper * {
+  border: none;
+}
+.link-editor-wrapper .editor .input-wrapper .block-editor-url-input__button-modal-line {
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+}
+.link-editor-wrapper .editor .input-wrapper .block-editor-url-input__button-modal-line .block-editor-url-input {
+  flex: 1 auto;
+}
 /*!******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/TeamCard/style.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************/
@@ -5958,7 +6002,6 @@
 .card-team-wrapper .teams-wrapper .team .members .member .detail {
   height: calc(189 / var(--base-size) * 100vw);
   color: #cecece;
-  overflow: hidden;
   position: relative;
   background-color: #231e14;
   border-top: calc(2 / var(--base-size) * 100vw) solid #937d4d;
