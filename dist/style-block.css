@@ -5190,11 +5190,17 @@
 }
 .team-detail .navigation .inner .prev-next .icon svg {
   width: 100%;
+  transition: transform 0.5s var(--cubic-bezier);
 }
 @media only screen and (max-width: 860px) {
   .team-detail .navigation .inner .prev-next .icon svg {
     width: calc(24 / var(--base-size) * 100vw);
     height: calc(44 / var(--base-size) * 100vw);
+  }
+}
+@media only screen and (min-width: 879px) {
+  .team-detail .navigation .inner .prev-next:hover .icon svg {
+    transform: translateX(calc(-10 / var(--base-size) * 100vw));
   }
 }
 .team-detail .navigation .inner .prev-next .name {
