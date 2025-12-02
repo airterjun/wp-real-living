@@ -153,9 +153,9 @@
 
               &::after {
                 left: 0;
-                bottom: 0;
                 width: 100%;
                 content: "";
+                bottom: vw(-1);
                 height: vw(1);
                 position: absolute;
                 background-color: #937d4d;
@@ -165,12 +165,20 @@
                 width: vw(10);
                 height: vw(10);
                 flex: 0 0 vw(10);
+                transform: translateY(vw(8));
+                transition: transform 0.5s var(--cubic-bezier);
 
                 @include mobile {
                   width: vw(12);
                   height: vw(12);
                   flex: 0 0 vw(12);
                   transform: translateY(vw(8));
+                }
+              }
+
+              @include hover {
+                svg {
+                  transform: translateX(vw(4)) translateY(vw(5));
                 }
               }
             }
