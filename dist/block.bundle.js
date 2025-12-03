@@ -23687,7 +23687,7 @@ const pageAttr = {
   data: {
     name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
     position: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
-    detail: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema,
+    ...(0,_components_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_13__.MultiDeviceSchema)("detail", "text"),
     ...(0,_components_Schema_multiKeySchema__WEBPACK_IMPORTED_MODULE_13__.MultiDeviceSchema)("profile", "image"),
     features: (0,_components_Schema_array__WEBPACK_IMPORTED_MODULE_11__.ArraySchema)({
       name: _components_Schema_text__WEBPACK_IMPORTED_MODULE_15__.TextSchema
@@ -23810,9 +23810,10 @@ const pageAttr = {
   })), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "position",
     className: "position"
-  })), /*#__PURE__*/React.createElement(_components_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    set: "detail",
-    className: "detail"
+  })), /*#__PURE__*/React.createElement(_components_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    type: "text",
+    className: "detail",
+    set: "detail"
   }))), /*#__PURE__*/React.createElement(_components_helper_ResponsiveContent__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     set: "profile",
     type: "image",

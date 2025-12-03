@@ -43,6 +43,7 @@
         .label {
           color: #937d4d;
           font-size: vw(28);
+          font-weight: var(--font-semi-bold);
 
           @include mobile {
             margin-bottom: vw(5);

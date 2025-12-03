@@ -2884,6 +2884,7 @@
 .featured-title-with-logo .main-container.top-content .content-wrapper .label {
   color: #937d4d;
   font-size: calc(28 / var(--base-size) * 100vw);
+  font-weight: var(--font-semi-bold);
 }
 @media only screen and (max-width: 860px) {
   .featured-title-with-logo .main-container.top-content .content-wrapper .label {
