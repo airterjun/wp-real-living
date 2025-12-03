@@ -1129,6 +1129,22 @@
     justify-content: center;
   }
 }
+@media only screen and (max-width: 860px) {
+  .hero-banner.new-ui-home-page .content {
+    padding-top: calc(52 / var(--base-size) * 100vw) !important;
+    padding-left: calc(18 / var(--base-size) * 100vw) !important;
+  }
+  .hero-banner.new-ui-home-page .content h1 {
+    line-height: calc(46 / var(--base-size) * 100vw);
+    font-size: calc(42 / var(--base-size) * 100vw);
+    margin-bottom: calc(30 / var(--base-size) * 100vw);
+  }
+  .hero-banner.new-ui-home-page .content .b1 {
+    font-size: calc(28 / var(--base-size) * 100vw);
+    line-height: calc(32 / var(--base-size) * 100vw);
+    margin-bottom: calc(33 / var(--base-size) * 100vw);
+  }
+}
 
 @media only screen and (max-width: 860px) {
   .hero-banner.new-ui-hero-banner .content {

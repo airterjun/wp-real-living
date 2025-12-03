@@ -243,6 +243,27 @@
       }
     }
   }
+
+  &.new-ui-home-page {
+    @include mobile {
+      .content {
+        padding-top: vw(52) !important;
+        padding-left: vw(18) !important;
+
+        h1 {
+          line-height: vw(46);
+          font-size: vw(42);
+          margin-bottom: vw(30);
+        }
+
+        .b1 {
+          font-size: vw(28);
+          line-height: vw(32);
+          margin-bottom: vw(33);
+        }
+      }
+    }
+  }
 }
 
 .hero-banner.new-ui-hero-banner {
