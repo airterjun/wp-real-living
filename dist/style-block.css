@@ -5990,6 +5990,7 @@
 }
 .card-team-wrapper .teams-wrapper .team .members .member {
   width: 100%;
+  cursor: pointer;
 }
 @media only screen and (max-width: 860px) {
   .card-team-wrapper .teams-wrapper .team .members .member {
@@ -6073,7 +6074,7 @@
 .card-team-wrapper .teams-wrapper .team .members .member .detail a {
   gap: calc(9 / var(--base-size) * 100vw);
   color: #bc9f64;
-  font-size: calc(15 / var(--base-size) * 100vw);
+  font-size: calc(16 / var(--base-size) * 100vw);
   line-height: calc(18 / var(--base-size) * 100vw);
   align-items: center;
   margin-left: calc(2 / var(--base-size) * 100vw);
@@ -6145,6 +6146,18 @@
   .card-team-wrapper .teams-wrapper .team .members .member .detail .footer .position {
     font-size: calc(19 / var(--base-size) * 100vw);
     line-height: calc(22 / var(--base-size) * 100vw);
+  }
+}
+@media only screen and (min-width: 879px) {
+  .card-team-wrapper .teams-wrapper .team .members .member:hover a {
+    color: #cecece;
+  }
+  .card-team-wrapper .teams-wrapper .team .members .member:hover a svg {
+    transform: rotate(45deg);
+  }
+  .card-team-wrapper .teams-wrapper .team .members .member:hover a::before {
+    transform-origin: left;
+    transform: scaleX(1);
   }
 }
 

@@ -9821,43 +9821,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
 const Navigation = lenis => {
-  const header = document.getElementById('main-header');
-  const burger = document.getElementById('burger');
-  const headerMenu = document.querySelector('.header-menu');
-  const menuList = headerMenu.querySelectorAll('li');
+  const header = document.getElementById("main-header");
+  const burger = document.getElementById("burger");
+  const headerMenu = document.querySelector(".header-menu");
+  const menuList = headerMenu.querySelectorAll("li");
   const tl = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
     paused: true
   });
   tl.to(headerMenu, {
-    clipPath: 'inset(0 0 0% 0)',
+    clipPath: "inset(0 0 0% 0)",
     duration: 1,
-    ease: 'power4.inOut'
+    ease: "power4.inOut"
   }).to(menuList, {
     y: 0,
     opacity: 1,
     duration: 1,
     stagger: 0.1,
-    ease: 'power4.out'
+    ease: "power4.out"
   });
-  burger.addEventListener('click', () => {
-    header.classList.toggle('menu-active');
-    if (burger.classList.contains('active')) {
+  burger.addEventListener("click", () => {
+    header.classList.toggle("menu-active");
+    if (burger.classList.contains("active")) {
       tl.reverse(1.5);
-      burger.classList.remove('active');
+      burger.classList.remove("active");
       return;
     }
-    burger.classList.add('active');
+    burger.classList.add("active");
     tl.play();
   });
 };
 const buttonScrollDowm = () => {
-  const heroBanner = document.querySelector('.hero-banner');
-  const primaryButtons = document.querySelectorAll('.primary-button a');
+  const heroBanner = document.querySelector(".hero-banner");
+  const primaryButtons = document.querySelectorAll(".primary-button a");
   if (primaryButtons) {
     primaryButtons.forEach(link => {
-      if (link.hash.includes('#')) {
-        console.log('link.href', link.hash);
-        link.addEventListener('click', e => {
+      if (link.hash.includes("#")) {
+        console.log("link.href", link.hash);
+        link.addEventListener("click", e => {
           e.preventDefault();
           const container = document.getElementById(link.hash.replace("#", ""));
           if (!container) return;
@@ -9869,16 +9869,31 @@ const buttonScrollDowm = () => {
   }
   if (!heroBanner) return;
   const rect = heroBanner.getBoundingClientRect();
-  const button = heroBanner.querySelector('.hero-banner-button a');
+  const button = heroBanner.querySelector(".hero-banner-button a");
   if (!button) return;
-  button.addEventListener('click', e => {
+  button.addEventListener("click", e => {
     e.preventDefault();
     window.lenis.scrollTo(rect.height);
   });
 };
-document.addEventListener('DOMContentLoaded', () => {
+
+// Navigation for card team
+
+const cardTeam = () => {
+  const members = document.querySelectorAll(".member");
+  if (members) {
+    members.forEach(member => {
+      member.addEventListener("click", () => {
+        const link = member.querySelector("a");
+        window.location.href = link.href;
+      });
+    });
+  }
+};
+document.addEventListener("DOMContentLoaded", () => {
   Navigation();
   buttonScrollDowm();
+  cardTeam();
 });
 
 /***/ }),
