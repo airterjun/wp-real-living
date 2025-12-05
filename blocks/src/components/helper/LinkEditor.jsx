@@ -7,7 +7,7 @@ import { URLInputButton } from "@wordpress/block-editor";
 
 import Text from "./Text";
 export default function LinkEditor(props) {
-  const { attributes, set, setAttributes, edit, model } = props;
+  const { attributes, set, setAttributes, edit, model, label } = props;
   const setId = model ? `${model}.${set}` : set;
 
   let link = getNestedValue(attributes, setId);
@@ -29,7 +29,7 @@ export default function LinkEditor(props) {
 
   if (edit) {
     return (
-      <InputWrapper label="Button">
+      <InputWrapper label={label ? label : "Button"}>
         <Text {...props} set={`${set}.title`} disabledFormat={true} />
         <URLInputButton
           url={link ? link.url : "#"}

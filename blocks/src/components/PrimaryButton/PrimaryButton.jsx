@@ -1,3 +1,4 @@
+import InlineLinkEditor from "../helper/InlineLinkEditor";
 import { getNestedValue } from "../helper/Libs";
 import IconArrow from "../Shared/IconArrow";
 import "./style.scss";
@@ -16,10 +17,10 @@ const PrimaryButton = (props) => {
       <div
         className={`primary-button ${(fill ? "button-fill" : "", buttonClass)}`}
       >
-        <a href={val?.url}>
+        <InlineLinkEditor set={id} {...props}>
           {val?.title || "Read More"}
           <IconArrow />
-        </a>
+        </InlineLinkEditor>
       </div>
     </>
   );

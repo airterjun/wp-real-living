@@ -28,7 +28,7 @@ export default function (props) {
                 setOpen(false);
               }}
             ></div>
-            <LinkEditor {...props} set={set} />
+            <LinkEditor {...props} set={set} label="Link Editor" />
           </div>
         )}
       </div>
