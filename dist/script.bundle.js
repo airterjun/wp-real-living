@@ -9859,6 +9859,7 @@ const buttonScrollDowm = () => {
         console.log("link.href", link.hash);
         link.addEventListener("click", e => {
           e.preventDefault();
+          console.log("cli");
           const container = document.getElementById(link.hash.replace("#", ""));
           if (!container) return;
           const rect = container.getBoundingClientRect();
@@ -9873,7 +9874,17 @@ const buttonScrollDowm = () => {
   if (!button) return;
   button.addEventListener("click", e => {
     e.preventDefault();
-    window.lenis.scrollTo(rect.height);
+    const container = document.getElementById(button.hash.replace("#", ""));
+    const header = document.querySelector("header");
+    const headerRect = header.getBoundingClientRect();
+    if (container) {
+      const rect = container.getBoundingClientRect();
+      window.lenis.scrollTo(container, {
+        offset: headerRect.height * -1
+      });
+    } else {
+      window.lenis.scrollTo(rect.height);
+    }
   });
 };
 
