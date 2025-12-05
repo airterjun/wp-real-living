@@ -21700,7 +21700,8 @@ const BlockWrapper = props => {
     edit,
     setAttributes,
     attributes,
-    model
+    model,
+    id
   } = props;
   let classStyle = "";
   if (props.className !== undefined) {
@@ -21784,7 +21785,8 @@ const BlockWrapper = props => {
     }, buttonEditor(), props.children);
   }
   return !isDisabled ? /*#__PURE__*/React.createElement("section", {
-    className: sectionClass
+    className: sectionClass,
+    id: id
   }, props.children) : /*#__PURE__*/React.createElement(React.Fragment, null);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlockWrapper);

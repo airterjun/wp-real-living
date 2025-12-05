@@ -3,7 +3,7 @@ import { getBaseModelPath, getNestedValue, setNestedValue } from "./Libs";
 import "./style/BlockEditor.scss";
 
 const BlockWrapper = (props) => {
-  const { edit, setAttributes, attributes, model } = props;
+  const { edit, setAttributes, attributes, model, id } = props;
   let classStyle = "";
 
   if (props.className !== undefined) {
@@ -121,7 +121,9 @@ const BlockWrapper = (props) => {
   }
 
   return !isDisabled ? (
-    <section className={sectionClass}>{props.children}</section>
+    <section className={sectionClass} id={id}>
+      {props.children}
+    </section>
   ) : (
     <></>
   );
