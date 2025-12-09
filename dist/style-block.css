@@ -4168,7 +4168,7 @@
   width: 100%;
   height: calc(17 / var(--base-size) * 100vw);
   padding-left: calc(9 / var(--base-size) * 100vw);
-  font-size: calc(16 / var(--base-size) * 100vw);
+  font-size: calc(18 / var(--base-size) * 100vw);
   letter-spacing: calc(0.08 / var(--base-size) * 100vw);
   color: rgba(247, 247, 247, 0.7);
 }
@@ -4218,7 +4218,7 @@
   width: 100%;
   border: none;
   height: calc(173 / var(--base-size) * 100vw);
-  font-size: calc(16 / var(--base-size) * 100vw);
+  font-size: calc(18 / var(--base-size) * 100vw);
   padding: calc(16 / var(--base-size) * 100vw) calc(20 / var(--base-size) * 100vw);
   color: rgba(247, 247, 247, 0.7);
   letter-spacing: calc(0.08 / var(--base-size) * 100vw);
