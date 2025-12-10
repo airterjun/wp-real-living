@@ -3463,8 +3463,19 @@
   border: calc(1 / var(--base-size) * 100vw) solid #fff;
   transform: translateX(calc(-7 / var(--base-size) * 100vw));
 }
+.vision-list-inner .header .inner-block-wrapper.with-cta .header-cta .primary-button a::before {
+  background-color: #fff;
+}
 .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta .primary-button a svg path {
   fill: #ffe2ae;
+}
+@media only screen and (min-width: 879px) {
+  .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta .primary-button a:hover {
+    color: #937d4d;
+  }
+  .vision-list-inner .header .inner-block-wrapper.with-cta .header-cta .primary-button a:hover svg path {
+    fill: #937d4d !important;
+  }
 }
 .vision-list-inner .header-label {
   font-size: calc(28 / var(--base-size) * 100vw);

@@ -117,9 +117,23 @@
                 border: vw(1) solid #fff;
                 transform: translateX(vw(-7));
 
+                &::before {
+                  background-color: #fff;
+                }
+
                 svg {
                   path {
                     fill: #ffe2ae;
+                  }
+                }
+
+                @include hover {
+                  color: #937d4d;
+
+                  svg {
+                    path {
+                      fill: #937d4d !important;
+                    }
                   }
                 }
               }
