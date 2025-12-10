@@ -18,7 +18,7 @@ export default function LinkEditor(props) {
     const copy = structuredClone(attributes);
 
     setNestedValue(copy, setId, {
-      title: link.title,
+      title: link && link.title,
       url: newVal ? newVal.url : "#",
     });
 

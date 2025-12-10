@@ -110,7 +110,7 @@ export default function (props) {
             {isLinkEnabled && (
               <div className="button-link">
                 <a href={link ? link.url : "#"}>
-                  <span>{link ? link.title : "See our requirements"}</span>
+                  <span>{link ? link?.title : "See our requirements"}</span>
                   <IconArrow />
                 </a>
               </div>

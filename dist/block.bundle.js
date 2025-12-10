@@ -18835,7 +18835,7 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_3__.create
       className: "button-link"
     }, /*#__PURE__*/React.createElement("a", {
       href: link ? link.url : "#"
-    }, /*#__PURE__*/React.createElement("span", null, link ? link.title : "See our requirements"), /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_16__["default"], null)))));
+    }, /*#__PURE__*/React.createElement("span", null, link ? link?.title : "See our requirements"), /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_16__["default"], null)))));
   });
   const footerContent = () => {
     if (!disabledContent) {
@@ -22400,7 +22400,7 @@ function LinkEditor(props) {
     const path = (0,_Libs__WEBPACK_IMPORTED_MODULE_3__.getBaseModelPath)(setId);
     const copy = structuredClone(attributes);
     (0,_Libs__WEBPACK_IMPORTED_MODULE_3__.setNestedValue)(copy, setId, {
-      title: link.title,
+      title: link && link.title,
       url: newVal ? newVal.url : "#"
     });
     setAttributes({
