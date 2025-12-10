@@ -21511,7 +21511,8 @@ const VisionList = props => {
   })), /*#__PURE__*/React.createElement("div", {
     className: "primary-button"
   }, /*#__PURE__*/React.createElement("a", {
-    href: headerCTALink ? headerCTALink.url : "#"
+    href: headerCTALink ? headerCTALink.url : "#",
+    target: "_blank"
   }, headerCTALink ? headerCTALink.title : "Book Now", /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_15__["default"], null)))))), /*#__PURE__*/React.createElement("div", {
     className: "list-wrapper-outer"
   }, listTemplate()), /*#__PURE__*/React.createElement("div", {

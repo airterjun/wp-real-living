@@ -108,7 +108,10 @@ const VisionList = (props) => {
               <div className="header-cta">
                 <Text {...props} set="headerCtaTitle" className="cta-title" />
                 <div className="primary-button">
-                  <a href={headerCTALink ? headerCTALink.url : "#"}>
+                  <a
+                    href={headerCTALink ? headerCTALink.url : "#"}
+                    target="_blank"
+                  >
                     {headerCTALink ? headerCTALink.title : "Book Now"}
                     <IconArrow />
                   </a>
