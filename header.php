@@ -17,43 +17,31 @@
 
 
     <title><?php the_title() ?></title>
-    <!-- <meta property="og:title" content="<?php the_title() ?>">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="description" content="<?php the_excerpt() ?>">
-    <meta property="og:description" content="<?php the_excerpt() ?>"> -->
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/pkj7fwh.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <?php
+    $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
 
-
-    <!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YKGKS6G0L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2YKGKS6G0L');
-</script>
-</head> -->
-
-<?php
-$custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
-
-$use_new_header = get_post_meta(get_the_ID(), '_use_new_header', true);
-?>
+    $use_new_header = get_post_meta(get_the_ID(), '_use_new_header', true);
+    ?>
 
 
 <body <?= body_class() ?> id="main-website-wrapper">
     <header class="main-header <?php echo $custom_class; ?>" id="main-header">
         <div class="inner">
-                <div class="round-button  primary-button button-partner">
-                    <a href="/contact/">
-                        Partner with Us 
+            <div class="round-button  primary-button button-partner">
+                <a href="/contact/">
+                    Partner with Us
 
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 45 45"><path fill="#BA9D63" fill-rule="evenodd" d="M.86 0h43.31v43.32h-2.42V2.42H.86V0Z" clip-rule="evenodd" /><path fill="#BA9D63" fill-rule="evenodd" d="m.004 42.465 42.1-42.11 1.712 1.71-42.1 42.11-1.712-1.71Z" clip-rule="evenodd" /></svg>
-                    </a>    
-                </div>
-       
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 45 45">
+                        <path fill="#BA9D63" fill-rule="evenodd" d="M.86 0h43.31v43.32h-2.42V2.42H.86V0Z" clip-rule="evenodd" />
+                        <path fill="#BA9D63" fill-rule="evenodd" d="m.004 42.465 42.1-42.11 1.712 1.71-42.1 42.11-1.712-1.71Z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
 
             <a href="<?php echo get_option("siteurl"); ?>" class="logo" aria-label="We Are Real">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 52">

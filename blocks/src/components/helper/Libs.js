@@ -151,14 +151,16 @@ export const updateAttributesData = (path, value, props, isArray) => {
     let newValue = "";
 
     if (isArray) {
-      const array = getNestedValue(newAttr, setId);
+      const array = getNestedValue(newAttr, setId) || [];
       newValue = array.push(value);
       newValue = setNestedValue(newAttr, setId, array);
     } else {
       newValue = setNestedValue(newAttr, setId, value);
     }
-    const id = model ? model : path;
     setAttributes(newValue);
+
+    console.log("newValue", newValue);
+    console.log("setId", setId);
 
     console.log("arr", attributes);
   }

@@ -325,6 +325,50 @@
           }
         }
       }
+
+      &.with-slider {
+        .inner-block-wrapper {
+          border: none;
+          gap: vw(21);
+          height: vw(278);
+          margin-top: vw(-2);
+
+          @include mobile {
+            height: vw(266);
+          }
+
+          .title {
+            font-size: vw(30);
+            line-height: vw(36);
+            margin-top: vw(-7);
+
+            @include mobile {
+              margin-top: vw(17);
+              font-size: vw(23);
+              line-height: vw(27);
+            }
+          }
+
+          .primary-button {
+            @include mobile {
+              display: flex;
+              justify-content: center;
+            }
+            a {
+              height: vw(55);
+              padding: 0 vw(29);
+              letter-spacing: 0.021em;
+
+              @include mobile {
+                height: vw(63);
+                width: vw(333);
+                letter-spacing: 0.041em;
+                padding: 0 vw(26);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

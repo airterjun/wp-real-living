@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/gsap/CSSPlugin.js":
@@ -8,6 +7,7 @@
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CSSPlugin: () => (/* binding */ CSSPlugin),
@@ -1598,6 +1598,7 @@ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(CSSPlugin);
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Observer: () => (/* binding */ Observer),
@@ -2318,6 +2319,7 @@ _getGSAP() && gsap.registerPlugin(Observer);
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ScrollTrigger: () => (/* binding */ ScrollTrigger),
@@ -5017,6 +5019,7 @@ _getGSAP() && gsap.registerPlugin(ScrollTrigger);
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Animation: () => (/* binding */ Animation),
@@ -9600,6 +9603,7 @@ var Power0 = _easeMap.Power0,
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Back: () => (/* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Back),
@@ -9645,6 +9649,7 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Program: () => (/* binding */ Program)
@@ -9747,38 +9752,13 @@ const Program = () => {
 
 /***/ }),
 
-/***/ "./src/js/Slider.js":
-/*!**************************!*\
-  !*** ./src/js/Slider.js ***!
-  \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Slider: () => (/* binding */ Slider)
-/* harmony export */ });
-const Slider = () => {
-  const swiperWrapper = document.querySelectorAll('.swiper');
-  if (swiperWrapper) {
-    swiperWrapper.forEach(s => {
-      new Swiper(s, {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
-      });
-    });
-  }
-};
-
-/***/ }),
-
 /***/ "./src/js/animation.js":
 /*!*****************************!*\
   !*** ./src/js/animation.js ***!
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Animation: () => (/* binding */ Animation)
@@ -9817,6 +9797,7 @@ class Animation {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
@@ -9909,12 +9890,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /***/ }),
 
+/***/ "./src/js/slider.js":
+/*!**************************!*\
+  !*** ./src/js/slider.js ***!
+  \**************************/
+/***/ (() => {
+
+const Slider = () => {
+  const swiperWrapper = document.querySelectorAll(".swiper");
+  if (swiperWrapper) {
+    swiperWrapper.forEach(s => {
+      const sliderNavItems = s.parentNode.querySelectorAll(".pagination-item");
+      sliderNavItems[0].classList.add("active");
+      const swiper = new Swiper(s, {
+        slidesPerView: "auto",
+        spaceBetween: 72,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            let bar = sliderNavItems[0];
+            bar = sliderNavItems[s.activeIndex].querySelector(".progress-bar");
+
+            // progressCircle.style.setProperty("--progress", 1 - progress);
+            // progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            bar.style.transform = `translateX(-${Math.ceil(time / 100)}%)`;
+          },
+          activeIndexChange() {
+            sliderNavItems.forEach(item => item.classList.remove("active"));
+            sliderNavItems[swiper.activeIndex].classList.add("active");
+          }
+        }
+      });
+    });
+  }
+};
+document.addEventListener("DOMContentLoaded", () => {
+  Slider();
+});
+
+/***/ }),
+
 /***/ "./node_modules/@studio-freight/lenis/dist/lenis.mjs":
 /*!***********************************************************!*\
   !*** ./node_modules/@studio-freight/lenis/dist/lenis.mjs ***!
   \***********************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Lenis)
@@ -9952,6 +9978,18 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}class Animate{advance(e){if(!
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -9982,8 +10020,9 @@ function t(t,e,i){return Math.max(t,Math.min(e,i))}class Animate{advance(e){if(!
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
@@ -9994,7 +10033,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/animation */ "./src/js/animation.js");
 /* harmony import */ var _js_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navigation */ "./src/js/navigation.js");
 /* harmony import */ var _js_ProgramSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/ProgramSection */ "./src/js/ProgramSection.js");
-/* harmony import */ var _js_Slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/Slider */ "./src/js/Slider.js");
+/* harmony import */ var _js_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/slider */ "./src/js/slider.js");
+/* harmony import */ var _js_slider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_slider__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -10027,7 +10067,6 @@ gsap__WEBPACK_IMPORTED_MODULE_4__["default"].ticker.lagSmoothing(0);
  */
 new _js_animation__WEBPACK_IMPORTED_MODULE_0__.Animation();
 (0,_js_ProgramSection__WEBPACK_IMPORTED_MODULE_2__.Program)();
-(0,_js_Slider__WEBPACK_IMPORTED_MODULE_3__.Slider)();
 
 // function updateClock() {
 //   let now = new Date();

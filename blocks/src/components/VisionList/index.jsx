@@ -12,6 +12,7 @@ import { ImageSchema } from "../Schema/image";
 import { LinkSchmea } from "../Schema/linkSchema";
 import { TextSchema } from "../Schema/text";
 import IconArrow from "../Shared/IconArrow";
+import SliderGallery from "../SliderGallery";
 import "./style.scss";
 
 export const attributes = createAttributes({
@@ -25,6 +26,13 @@ export const attributes = createAttributes({
       thumb: ImageSchema,
     },
     3
+  ),
+
+  slider: ArraySchema(
+    {
+      image: ImageSchema,
+    },
+    5
   ),
 
   headerCTA: {
@@ -122,7 +130,8 @@ const VisionList = (props) => {
         </div>
         <div className="list-wrapper-outer">{listTemplate()}</div>
 
-        <div className="footer-container">
+        <SliderGallery {...props} set="slider" />
+        <div className="footer-container with-slider">
           <div className="inner-block-wrapper">
             <Text {...props} className="title" set="footerTitle" tag="div" />
             <PrimaryButton {...props} set="footerButton" />

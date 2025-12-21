@@ -2,12 +2,18 @@ import { getNestedValue, updateAttributesData } from "./Libs";
 import { v4 as uuidv4 } from "uuid";
 
 export default function ButtonSlider(props) {
-  const { edit, attributes, set, model } = props;
+  const { edit, attributes, set, model, defaultItem } = props;
   const getDefault = getNestedValue(
     attributes,
     model ? `${model}.${set}` : set
   );
-  const newValue = getDefault[0];
+  let newValue = null;
+
+  if (getDefault) newValue = getDefault[0];
+
+  // Create new item
+  if (!getDefault && defaultItem) newValue = defaultItem;
+
   newValue.id = uuidv4();
 
   if (edit)

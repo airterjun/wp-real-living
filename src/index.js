@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { Animation } from "./js/animation";
 import "./js/navigation";
 import { Program } from "./js/ProgramSection";
-import { Slider } from "./js/Slider";
+import "./js/slider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,8 +37,6 @@ gsap.ticker.lagSmoothing(0);
 new Animation();
 
 Program();
-
-Slider();
 
 // function updateClock() {
 //   let now = new Date();

@@ -3331,6 +3331,106 @@
     margin-top: calc(3 / var(--base-size) * 100vw);
   }
 }
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/SliderGallery/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --base-size: 1920;
+  --mobile-browser: 876;
+  --wrapper-padding: 20;
+  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media only screen and (max-width: 860px) {
+  :root {
+    --base-size: 375;
+    --wrapper-padding: 20;
+  }
+}
+.slider-gallery {
+  margin-top: calc(130 / var(--base-size) * 100vw);
+  padding-bottom: calc(90 / var(--base-size) * 100vw);
+  border-bottom: 2px solid #bfbfbf;
+}
+@media only screen and (max-width: 860px) {
+  .slider-gallery {
+    margin: calc(57 / var(--base-size) * 100vw) 0 0;
+    padding-bottom: calc(55 / var(--base-size) * 100vw);
+  }
+}
+.slider-gallery .swiper {
+  position: relative;
+}
+.slider-gallery .swiper .swiper-slide {
+  opacity: 0.3;
+  width: calc(1099 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .slider-gallery .swiper .swiper-slide {
+    width: calc(337 / var(--base-size) * 100vw);
+  }
+}
+.slider-gallery .swiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.slider-gallery .swiper figure {
+  width: calc(1099 / var(--base-size) * 100vw);
+  height: calc(618 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .slider-gallery .swiper figure {
+    width: calc(337 / var(--base-size) * 100vw);
+    height: calc(189 / var(--base-size) * 100vw);
+  }
+}
+.slider-gallery .swiper figure img {
+  width: 100%;
+  height: 100%;
+}
+.slider-gallery .pagination {
+  gap: calc(15 / var(--base-size) * 100vw);
+  display: flex;
+  margin-top: calc(58 / var(--base-size) * 100vw);
+  justify-content: center;
+}
+@media only screen and (max-width: 860px) {
+  .slider-gallery .pagination {
+    gap: calc(11 / var(--base-size) * 100vw);
+    margin-top: calc(34 / var(--base-size) * 100vw);
+  }
+}
+.slider-gallery .pagination-item {
+  width: calc(10 / var(--base-size) * 100vw);
+  height: calc(10 / var(--base-size) * 100vw);
+  border-radius: calc(6 / var(--base-size) * 100vw);
+  transition: all 0.3s ease;
+  background-color: #edd5a9;
+}
+@media only screen and (max-width: 860px) {
+  .slider-gallery .pagination-item {
+    width: calc(9 / var(--base-size) * 100vw);
+    height: calc(9 / var(--base-size) * 100vw);
+  }
+}
+.slider-gallery .pagination-item.active {
+  width: calc(56 / var(--base-size) * 100vw);
+  flex: 0 0 calc(56 / var(--base-size) * 100vw);
+  overflow: hidden;
+  border-radius: calc(6 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .slider-gallery .pagination-item.active {
+    width: calc(56 / var(--base-size) * 100vw);
+    flex: 0 0 calc(56 / var(--base-size) * 100vw);
+  }
+}
+.slider-gallery .pagination-item.active .progress-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(30 / var(--base-size) * 100vw);
+  background-color: #ba9d63;
+  transform: translateX(-100%);
+}
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/src/components/VisionList/style.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
@@ -3650,6 +3750,48 @@
   .vision-list-inner .footer-container .inner-block-wrapper .primary-button a {
     width: 100%;
     justify-content: center;
+  }
+}
+.vision-list-inner .footer-container.with-slider .inner-block-wrapper {
+  border: none;
+  gap: calc(21 / var(--base-size) * 100vw);
+  height: calc(278 / var(--base-size) * 100vw);
+  margin-top: calc(-2 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .footer-container.with-slider .inner-block-wrapper {
+    height: calc(266 / var(--base-size) * 100vw);
+  }
+}
+.vision-list-inner .footer-container.with-slider .inner-block-wrapper .title {
+  font-size: calc(30 / var(--base-size) * 100vw);
+  line-height: calc(36 / var(--base-size) * 100vw);
+  margin-top: calc(-7 / var(--base-size) * 100vw);
+}
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .footer-container.with-slider .inner-block-wrapper .title {
+    margin-top: calc(17 / var(--base-size) * 100vw);
+    font-size: calc(23 / var(--base-size) * 100vw);
+    line-height: calc(27 / var(--base-size) * 100vw);
+  }
+}
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .footer-container.with-slider .inner-block-wrapper .primary-button {
+    display: flex;
+    justify-content: center;
+  }
+}
+.vision-list-inner .footer-container.with-slider .inner-block-wrapper .primary-button a {
+  height: calc(55 / var(--base-size) * 100vw);
+  padding: 0 calc(29 / var(--base-size) * 100vw);
+  letter-spacing: 0.021em;
+}
+@media only screen and (max-width: 860px) {
+  .vision-list-inner .footer-container.with-slider .inner-block-wrapper .primary-button a {
+    height: calc(63 / var(--base-size) * 100vw);
+    width: calc(333 / var(--base-size) * 100vw);
+    letter-spacing: 0.041em;
+    padding: 0 calc(26 / var(--base-size) * 100vw);
   }
 }
 /*!*************************************************************************************************************************************************************************************************************************************************************************************!*\

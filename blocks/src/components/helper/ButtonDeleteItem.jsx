@@ -1,13 +1,14 @@
-import { getNestedValue, updateAttributesData } from "./Libs";
+import { getModelValue, getNestedValue, updateAttributesData } from "./Libs";
 
 export default function (props) {
   const { edit, className, list, attributes, index } = props;
 
   const buttonDelete = () => {
     const deleteItem = () => {
-      const getList = structuredClone(getNestedValue(attributes, list));
-      getList.splice(index, 1);
+      const getList = structuredClone(getModelValue(list, props));
       console.log("getList", getList);
+      console.log("getList", list);
+      getList.splice(index, 1);
       updateAttributesData(list, getList, props);
       console.log("getList", attributes);
     };

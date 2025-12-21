@@ -222,6 +222,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/components/SliderGallery/style.scss":
+/*!********************************************************!*\
+  !*** ./blocks/src/components/SliderGallery/style.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./blocks/src/components/TeamCard/style.scss":
 /*!***************************************************!*\
   !*** ./blocks/src/components/TeamCard/style.scss ***!
@@ -19981,6 +19994,74 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./blocks/src/components/SliderGallery/index.jsx":
+/*!*******************************************************!*\
+  !*** ./blocks/src/components/SliderGallery/index.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/BlockWrapper */ "./blocks/src/components/helper/BlockWrapper.jsx");
+/* harmony import */ var _helper_ButtonDeleteItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/ButtonDeleteItem */ "./blocks/src/components/helper/ButtonDeleteItem.jsx");
+/* harmony import */ var _helper_InlineListEditor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/InlineListEditor */ "./blocks/src/components/helper/InlineListEditor/index.jsx");
+/* harmony import */ var _helper_Libs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helper/Libs */ "./blocks/src/components/helper/Libs.js");
+/* harmony import */ var _helper_Media__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helper/Media */ "./blocks/src/components/helper/Media.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/SliderGallery/style.scss");
+
+
+
+
+
+
+
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  const {
+    set,
+    attributes
+  } = props;
+  const slider = (0,_helper_Libs__WEBPACK_IMPORTED_MODULE_5__.getModelValue)(set, props);
+  console.log("slider", slider);
+  const defaultSliderData = {
+    image: {
+      url: ""
+    }
+  };
+  return /*#__PURE__*/React.createElement(_helper_BlockWrapper__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    className: "slider-gallery"
+  }), /*#__PURE__*/React.createElement("div", {
+    class: "swiper mySwiper"
+  }, /*#__PURE__*/React.createElement("div", {
+    class: "swiper-wrapper"
+  }, slider && slider.map((_, index) => /*#__PURE__*/React.createElement("div", {
+    class: "swiper-slide"
+  }, /*#__PURE__*/React.createElement(_helper_Media__WEBPACK_IMPORTED_MODULE_6__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: `${set}.${index}.image`,
+    className: "parallax"
+  }), /*#__PURE__*/React.createElement(_helper_ButtonDeleteItem__WEBPACK_IMPORTED_MODULE_3__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    index: index,
+    list: set
+  }))))))), /*#__PURE__*/React.createElement("div", {
+    className: "pagination"
+  }, slider && slider.map((_, index) => /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    class: "pagination-item"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "progress-bar"
+  }))))), /*#__PURE__*/React.createElement(_helper_InlineListEditor__WEBPACK_IMPORTED_MODULE_4__.InlineListEditor, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: set,
+    defaultItem: defaultSliderData
+  })));
+}
+
+/***/ }),
+
 /***/ "./blocks/src/components/TeamCard/index.jsx":
 /*!**************************************************!*\
   !*** ./blocks/src/components/TeamCard/index.jsx ***!
@@ -21403,7 +21484,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Schema_linkSchema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../Schema/linkSchema */ "./blocks/src/components/Schema/linkSchema.jsx");
 /* harmony import */ var _Schema_text__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../Schema/text */ "./blocks/src/components/Schema/text.jsx");
 /* harmony import */ var _Shared_IconArrow__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../Shared/IconArrow */ "./blocks/src/components/Shared/IconArrow.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/VisionList/style.scss");
+/* harmony import */ var _SliderGallery__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../SliderGallery */ "./blocks/src/components/SliderGallery/index.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/components/VisionList/style.scss");
+
 
 
 
@@ -21430,6 +21513,9 @@ const attributes = (0,_helper_BaseAttributes__WEBPACK_IMPORTED_MODULE_2__.create
     descriptionMobile: _Schema_text__WEBPACK_IMPORTED_MODULE_14__.TextSchema,
     thumb: _Schema_image__WEBPACK_IMPORTED_MODULE_12__.ImageSchema
   }, 3),
+  slider: (0,_Schema_array__WEBPACK_IMPORTED_MODULE_11__.ArraySchema)({
+    image: _Schema_image__WEBPACK_IMPORTED_MODULE_12__.ImageSchema
+  }, 5),
   headerCTA: {
     type: Boolean,
     default: false
@@ -21515,8 +21601,10 @@ const VisionList = props => {
     target: "_blank"
   }, headerCTALink ? headerCTALink.title : "Book Now", /*#__PURE__*/React.createElement(_Shared_IconArrow__WEBPACK_IMPORTED_MODULE_15__["default"], null)))))), /*#__PURE__*/React.createElement("div", {
     className: "list-wrapper-outer"
-  }, listTemplate()), /*#__PURE__*/React.createElement("div", {
-    className: "footer-container"
+  }, listTemplate()), /*#__PURE__*/React.createElement(_SliderGallery__WEBPACK_IMPORTED_MODULE_16__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    set: "slider"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "footer-container with-slider"
   }, /*#__PURE__*/React.createElement("div", {
     className: "inner-block-wrapper"
   }, /*#__PURE__*/React.createElement(_helper_Text__WEBPACK_IMPORTED_MODULE_9__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
@@ -21836,9 +21924,10 @@ __webpack_require__.r(__webpack_exports__);
   } = props;
   const buttonDelete = () => {
     const deleteItem = () => {
-      const getList = structuredClone((0,_Libs__WEBPACK_IMPORTED_MODULE_1__.getNestedValue)(attributes, list));
-      getList.splice(index, 1);
+      const getList = structuredClone((0,_Libs__WEBPACK_IMPORTED_MODULE_1__.getModelValue)(list, props));
       console.log("getList", getList);
+      console.log("getList", list);
+      getList.splice(index, 1);
       (0,_Libs__WEBPACK_IMPORTED_MODULE_1__.updateAttributesData)(list, getList, props);
       console.log("getList", attributes);
     };
@@ -21911,10 +22000,15 @@ function ButtonSlider(props) {
     edit,
     attributes,
     set,
-    model
+    model,
+    defaultItem
   } = props;
   const getDefault = (0,_Libs__WEBPACK_IMPORTED_MODULE_1__.getNestedValue)(attributes, model ? `${model}.${set}` : set);
-  const newValue = getDefault[0];
+  let newValue = null;
+  if (getDefault) newValue = getDefault[0];
+
+  // Create new item
+  if (!getDefault && defaultItem) newValue = defaultItem;
   newValue.id = (0,uuid__WEBPACK_IMPORTED_MODULE_2__["default"])();
   if (edit) return /*#__PURE__*/React.createElement("div", {
     onClick: () => {
@@ -22139,12 +22233,14 @@ __webpack_require__.r(__webpack_exports__);
 const InlineListEditor = props => {
   const {
     className,
-    set
+    set,
+    defaultItem
   } = props;
   return /*#__PURE__*/React.createElement("div", {
     className: className
   }, props.children, /*#__PURE__*/React.createElement(_ButtonSlider__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    set: set
+    set: set,
+    defaultItem: defaultItem
   })));
 };
 
@@ -22340,14 +22436,15 @@ const updateAttributesData = (path, value, props, isArray) => {
     const newAttr = structuredClone(attributes);
     let newValue = "";
     if (isArray) {
-      const array = getNestedValue(newAttr, setId);
+      const array = getNestedValue(newAttr, setId) || [];
       newValue = array.push(value);
       newValue = setNestedValue(newAttr, setId, array);
     } else {
       newValue = setNestedValue(newAttr, setId, value);
     }
-    const id = model ? model : path;
     setAttributes(newValue);
+    console.log("newValue", newValue);
+    console.log("setId", setId);
     console.log("arr", attributes);
   }
 };
