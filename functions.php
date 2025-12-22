@@ -44,7 +44,7 @@ INCLUDE SCRIPTS
 function website_style()
 {
 
-    wp_enqueue_script('app-script', get_template_directory_uri() . '/dist/script.bundle.js', array(), '1.0.2', true);
+    wp_enqueue_script('app-script', get_template_directory_uri() . '/dist/script.bundle.js', array(), '2.0.2', true);
 }
 
 
