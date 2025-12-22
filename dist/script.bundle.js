@@ -9925,6 +9925,14 @@ const Slider = () => {
           }
         }
       });
+      sliderNavItems.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          sliderNavItems.forEach(item => item.classList.remove("active", "selected"));
+          button.classList.add("selected");
+          swiper.autoplay.stop();
+          swiper.slideTo(index);
+        });
+      });
     });
   }
 };
