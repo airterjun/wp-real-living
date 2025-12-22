@@ -9,7 +9,7 @@ function website_enqueue_block_editor_assets()
     wp_enqueue_script('lodash');
     wp_enqueue_script(
         'nolsis-block',
-        get_template_directory_uri() . '/dist/block.bundle.js',
+        get_template_directory_uri() . '/dist/block.bundle.js?v=21112',
         array('wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-block-editor', 'lodash'),
         true
     );
