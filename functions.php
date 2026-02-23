@@ -256,3 +256,99 @@ function wp_save_header_option_metabox($post_id)
     }
 }
 add_action('save_post', 'wp_save_header_option_metabox');
+
+
+
+
+/**
+ * Contact Form 7 Spam Filter
+ * Optimized for Legal / Law Firm Website (Safe Version)
+ */
+
+add_filter('wpcf7_validate', 'cf7_legal_safe_spam_filter_v2', 20, 2);
+
+function cf7_legal_safe_spam_filter_v2($result, $tags)
+{
+
+    $submission = WPCF7_Submission::get_instance();
+    if (!$submission) {
+        return $result;
+    }
+
+    $posted_data = $submission->get_posted_data();
+    $content = strtolower(implode(' ', $posted_data));
+
+    /**
+     * STRICT SPAM KEYWORDS ONLY
+     */
+    $spam_pattern = '/
+        crm|
+        seo|
+        back\s?links?|
+        link\s?building|
+        guest\s?post|
+        domain\s?authority|
+        directory\s?submission|
+        sponsored\s?content|
+
+        digital\s?marketing\s?agency|
+        google\s?ads|
+        facebook\s?ads|
+        ppc|
+        marketing\s?automation|
+        email\s?marketing|
+        influencer\s?marketing|
+        affiliate\s?(program|partnership)|
+
+        saas\s?platform|
+        api\s?integration|
+        ai\s?automation|
+        chatbot\s?solution|
+        web\s?development\s?proposal|
+        website\s?redesign|
+
+        merchant\s?cash\s?advance|
+        business\s?loan|
+        unsecured\s?funding|
+        working\s?capital|
+        forex|
+        crypto|
+        binary\s?options|
+        high\s?yield|
+        offshore\s?investment|
+
+        dear\s+business\s+owner|
+        quick\s+question|
+        collaboration\s+opportunity|
+        partnership\s+proposal|
+        schedule\s+(a\s+)?15\s+(minute|minutes)\s+(call|meeting)|
+        guaranteed\s+results|
+        exclusive\s+offer|
+        limited\s+time\s+opportunity|
+        boost\s+your\s+revenue|
+        double\s+your\s+traffic
+    /ix';
+
+    if (preg_match($spam_pattern, $content)) {
+        $result->invalidate('', 'Spam detected.');
+        return $result;
+    }
+
+    /**
+     * BLOCK JIKA TERLALU BANYAK LINK
+     */
+    if (substr_count($content, 'http') > 1) {
+        $result->invalidate('', 'Too many links detected.');
+        return $result;
+    }
+
+    /**
+     * BLOCK HANYA JIKA ADA $$$ (jelas spam)
+     */
+    if (strpos($content, '$$$') !== false) {
+        $result->invalidate('', 'Suspicious content detected.');
+        return $result;
+    }
+
+    return $result;
+}
