@@ -352,19 +352,52 @@ function cf7_legal_safe_spam_filter_v2($result, $tags)
 
     return $result;
 }
+// ========================================
+// 🚀 OPTIMASI FINAL – JS + CSS PERFORMANCE
+// ========================================
 
 
-add_filter('script_loader_tag', function ($tag, $handle) {
+// 🔥 1. DEFER SEMUA JS (Frontend Only)
+add_filter('script_loader_tag', function ($tag, $handle, $src) {
+
     if (is_admin()) return $tag;
-    return str_replace(' src', ' defer src', $tag);
-}, 10, 2);
+
+    // Skip jQuery kalau takut conflict
+    if (strpos($handle, 'jquery') !== false) {
+        return $tag;
+    }
+
+    // Tambahkan defer jika belum ada
+    if (strpos($tag, 'defer') === false) {
+        $tag = str_replace('<script ', '<script defer ', $tag);
+    }
+
+    return $tag;
+}, 10, 3);
 
 
+
+// 🔥 2. LOAD SEMUA CSS ASYNC (Preload + Swap)
 add_filter('style_loader_tag', function ($html, $handle) {
+
     if (is_admin()) return $html;
-    return str_replace(
+
+    // Kalau ada style yg mau tetap blocking, taruh handle di sini
+    $exclude = [
+        // 'theme-style',
+    ];
+
+    if (in_array($handle, $exclude)) {
+        return $html;
+    }
+
+    $preload = str_replace(
         "rel='stylesheet'",
         "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"",
         $html
     );
+
+    $noscript = '<noscript>' . $html . '</noscript>';
+
+    return $preload . $noscript;
 }, 10, 2);
