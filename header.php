@@ -20,7 +20,7 @@
 
     <!-- <link rel="stylesheet" href="https://use.typekit.net/pkj7fwh.css" crossorigin> -->
 
-    <script>
+    <!-- <script>
         (function(d) {
             var config = {
                     kitId: 'pkj7fwh',
@@ -49,7 +49,7 @@
             };
             s.parentNode.insertBefore(tk, s)
         })(document);
-    </script>
+    </script> -->
 
     <?php
     $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
