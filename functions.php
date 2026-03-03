@@ -352,3 +352,19 @@ function cf7_legal_safe_spam_filter_v2($result, $tags)
 
     return $result;
 }
+
+
+add_filter('script_loader_tag', function ($tag, $handle) {
+    if (is_admin()) return $tag;
+    return str_replace(' src', ' defer src', $tag);
+}, 10, 2);
+
+
+add_filter('style_loader_tag', function ($html, $handle) {
+    if (is_admin()) return $html;
+    return str_replace(
+        "rel='stylesheet'",
+        "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"",
+        $html
+    );
+}, 10, 2);

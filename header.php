@@ -18,9 +18,8 @@
 
     <title><?php the_title() ?></title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/pkj7fwh.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/pkj7fwh.css" crossorigin>
+
     <?php
     $custom_class = get_post_meta(get_the_ID(), 'page_class_element', true);
 

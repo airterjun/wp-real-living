@@ -29,7 +29,8 @@
         </div>
     </div>
 </footer>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css?v=1.02' ?>" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/dist/app.css?v=1.2.1.11' ?>" />
 <?php wp_footer(); ?>
