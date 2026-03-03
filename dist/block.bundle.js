@@ -22704,17 +22704,11 @@ function Media(props) {
         src: videoUrl.default || videoUrl
       }));
     } else {
-      const image = (0,_Libs__WEBPACK_IMPORTED_MODULE_3__.getNestedValue)(attributes, modelSet);
-      if (!image) return null;
-      const sizes = image?.sizes || {};
-      const srcSet = Object.values(sizes).map(size => `${size.url} ${size.width}w`).join(", ");
       return /*#__PURE__*/React.createElement("img", {
-        src: image.url,
-        srcSet: srcSet,
-        sizes: "(max-width: 768px) 100vw, 50vw",
-        width: image.width,
-        height: image.height,
-        alt: image.alt || "",
+        src: getValue,
+        width: width,
+        height: height,
+        alt: "We Are Real",
         loading: "lazy",
         decoding: "async"
       });
