@@ -401,3 +401,12 @@ add_filter('style_loader_tag', function ($html, $handle) {
 
     return $preload . $noscript;
 }, 10, 2);
+
+
+add_action('wp_enqueue_scripts', function () {
+
+    if (!is_front_page()) {
+        wp_dequeue_style('wp-block-library');
+        wp_dequeue_style('wp-block-library-theme');
+    }
+}, 100);
