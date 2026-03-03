@@ -38,12 +38,24 @@ export default function Media(props) {
         </div>
       );
     } else {
+      const image = getNestedValue(attributes, modelSet);
+
+      if (!image) return null;
+
+      const sizes = image?.sizes || {};
+
+      const srcSet = Object.values(sizes)
+        .map((size) => `${size.url} ${size.width}w`)
+        .join(", ");
+
       return (
         <img
-          src={getValue}
-          width={width}
-          height={height}
-          alt="We Are Real"
+          src={image.url}
+          srcSet={srcSet}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          width={image.width}
+          height={image.height}
+          alt={image.alt || ""}
           loading="lazy"
           decoding="async"
         />
