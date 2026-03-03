@@ -9,6 +9,7 @@
     "prod": "webpack --mode production",
     "sync": "browser-sync start --proxy \"http://localhost/bv/\" --port 12345 --files \"**/*\"",
     "dev": "concurrently \"yarn webpack:watch\" \"yarn sync\"",
+    "build": "NODE_ENV=production wp-scripts build",
     "start": "yarn wp-scripts start & yarn dev"
   },
   "dependencies": {
