@@ -48,13 +48,16 @@ export default function Media(props) {
         .map((size) => `${size.url} ${size.width}w`)
         .join(", ");
 
+      const preferredSize =
+        sizes.large || sizes.medium_large || sizes.medium || image;
+
       return (
         <img
-          src={image.url}
+          src={preferredSize.url}
           srcSet={srcSet}
           sizes="(max-width: 768px) 100vw, 50vw"
-          width={image.width}
-          height={image.height}
+          width={preferredSize.width}
+          height={preferredSize.height}
           alt={image.alt || ""}
           loading="lazy"
           decoding="async"
