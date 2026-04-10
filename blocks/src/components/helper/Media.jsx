@@ -16,6 +16,8 @@ export default function Media(props) {
     mobile,
     model,
     children,
+    parallax,
+    useBackground,
   } = props;
 
   const modelSet = model ? `${model}.${set}` : set;
@@ -50,6 +52,10 @@ export default function Media(props) {
 
       const preferredSize =
         sizes.large || sizes.medium_large || sizes.medium || image;
+
+      if (parallax && useBackground) {
+        return <div style={{ "backround-url": preferredSize.size }}></div>;
+      }
 
       return (
         <img
