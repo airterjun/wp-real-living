@@ -28,7 +28,8 @@
             --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
             --g-border: 2.6px solid var(--color-gold);
             --g-padding-container: 84;
-            --g-outer-padding: 330 --font-main: "proxima-nova", sans-serif;
+            --g-outer-padding: 330;
+            --font-main: "proxima-nova", sans-serif;
             --font-secondary: "neue-haas-grotesk-display", sans-serif;
             --font-medium: 500;
             --font-semi-bold: 600;
