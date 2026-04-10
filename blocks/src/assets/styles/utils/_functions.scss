@@ -1,12 +1,5 @@
 @use "sass:math";
 
-:root {
-  --base-size: 1920;
-  --mobile-browser: 876;
-  --wrapper-padding: 20;
-  --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
-}
-
 @mixin breakpoint($size) {
   @media only screen and (max-width: #{$size}px) {
     @content;

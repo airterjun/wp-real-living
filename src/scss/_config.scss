@@ -5,33 +5,22 @@ $innerContainer: 1200;
 
 $mobileBreakPoint: 870;
 
-$ease: 0.3s cubic-bezier(.5, 0, .25, 1);
-$transition : 0.7s cubic-bezier(1, 0, .25, 1);
+$ease: 0.3s cubic-bezier(0.5, 0, 0.25, 1);
+$transition: 0.7s cubic-bezier(1, 0, 0.25, 1);
 
 $mobilePadding: 21px;
 
-
-
-:root {
-    --g-border: 2.6px solid var(--color-gold);
-    --g-padding-container: 84;
-    --g-outer-padding: 330
-}
-
 @function size($size) {
-    @return #{calc($size / $container * 100vw)}
+  @return #{calc($size / $container * 100vw)};
 }
-
 
 @function sizeinner($size) {
-    @return #{calc($size / $innerContainer * 100%)}
+  @return #{calc($size / $innerContainer * 100%)};
 }
 
+$cubic-bezier: cubic-bezier(0.19, 1, 0.22, 0.95);
+$cubic-bezier-2: cubic-bezier(0.7, 0, 0.2, 1);
 
-
-$cubic-bezier: cubic-bezier(.19, 1, .22, .95);
-$cubic-bezier-2: cubic-bezier(.7, 0, .2, 1);
-
-@import "config/color";
-@import 'config/fonts';
+// @import "config/color";
+@import "config/fonts";
 @import "config/global";

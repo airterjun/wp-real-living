@@ -15,6 +15,40 @@
 
     <?php wp_head(); ?>
 
+    <style>
+        :root {
+            --color-gold: #7F6E41;
+            --color-dark: #231E14;
+            --header-size: 95.6;
+            --color-green: #93ea4e;
+            --mobile-outer-padding: 20;
+            --base-size: 1920;
+            --mobile-browser: 876;
+            --wrapper-padding: 20;
+            --cubic-bezier: cubic-bezier(0.87, 0, 0.13, 1);
+            --g-border: 2.6px solid var(--color-gold);
+            --g-padding-container: 84;
+            --g-outer-padding: 330 --font-main: "proxima-nova", sans-serif;
+            --font-secondary: "neue-haas-grotesk-display", sans-serif;
+            --font-medium: 500;
+            --font-semi-bold: 600;
+            --font-bold: 700;
+            --font-extra: 800;
+        }
+
+        @media only screen and (max-width: 850px) {
+            :root {
+                --header-size: 52;
+                --g-padding-container: 20;
+            }
+        }
+
+        #main-website-wrapper {
+            .editor-note {
+                font-family: var(--font-main);
+            }
+        }
+    </style>
 
     <title><?php the_title() ?></title>
 
