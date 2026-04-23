@@ -6,6 +6,7 @@ $requires = [
     "blocks/blocks.php",
     "inc/custom-post-type.php",
     "inc/CF7/mail-template.php",
+    "inc/CF7/cf-data-submissions.php",
 ];
 
 
