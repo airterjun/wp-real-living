@@ -248,7 +248,7 @@ function cf7cmt_settings_page()
 
                 <!-- Test Email Section -->
                 <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-radius:6px;padding:20px;margin-top:30px;max-width:600px;">
-                        <h2 style="margin-top:0;">Send Test Email</h2>
+                        <h2 style="margin-top:0;">Send Test Email +++</h2>
                         <form method="post">
                                 <?php wp_nonce_field('cf7cmt_test_email_nonce', 'cf7cmt_test_nonce'); ?>
                                 <table class="form-table" style="margin-top:0;">
