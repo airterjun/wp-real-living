@@ -1,10 +1,19 @@
 <?php
-function bb_create_email_submission_table()
+
+/**
+ * =========================
+ * CREATE TABLE (THEME SAFE)
+ * =========================
+ */
+add_action('after_setup_theme', 'bb_create_email_submission_table_once');
+
+function bb_create_email_submission_table_once()
 {
+        if (get_option('bb_email_table_created')) return;
+
         global $wpdb;
 
         $table_name = $wpdb->prefix . 'bb_email_submissions';
-
         $charset_collate = $wpdb->get_charset_collate();
 
         $sql = "CREATE TABLE $table_name (
@@ -21,56 +30,123 @@ function bb_create_email_submission_table()
 
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql);
+
+        update_option('bb_email_table_created', 1);
 }
 
-register_activation_hook(__FILE__, 'bb_create_email_submission_table');
 
-
-add_filter('wp_mail', 'bb_capture_all_wp_emails');
-
-function bb_capture_all_wp_emails($args)
+/**
+ * =========================
+ * PARSE HTML → CLEAN TEXT
+ * =========================
+ */
+function bb_extract_clean_email_content($html)
 {
-        global $wpdb;
+        libxml_use_internal_errors(true);
 
-        $table_name = $wpdb->prefix . 'bb_email_submissions';
+        $dom = new DOMDocument();
+        $dom->loadHTML('<?xml encoding="utf-8" ?>' . $html);
 
-        // ambil data dasar
-        $to      = is_array($args['to']) ? implode(',', $args['to']) : $args['to'];
-        $subject = $args['subject'];
-        $message = $args['message'];
-        $headers = $args['headers'];
+        $xpath = new DOMXPath($dom);
 
-        // extract sender email dari header
-        $sender_email = '';
-        if (!empty($headers)) {
-                if (is_array($headers)) {
-                        foreach ($headers as $header) {
-                                if (stripos($header, 'From:') !== false) {
-                                        $sender_email = trim(str_replace('From:', '', $header));
-                                }
+        $output = '';
+
+        // ambil semua <p>
+        $paragraphs = $xpath->query('//p');
+
+        if ($paragraphs->length > 0) {
+                foreach ($paragraphs as $p) {
+                        $text = trim($p->textContent);
+                        if (!empty($text)) {
+                                $output .= esc_html($text) . '<br/><br/>';
                         }
-                } else {
-                        if (stripos($headers, 'From:') !== false) {
-                                preg_match('/From:\s*(.*)/i', $headers, $matches);
-                                $sender_email = isset($matches[1]) ? trim($matches[1]) : '';
+                }
+        } else {
+                // fallback: ambil semua <div>
+                $divs = $xpath->query('//div');
+                foreach ($divs as $div) {
+                        $text = trim($div->textContent);
+                        if (!empty($text)) {
+                                $output .= esc_html($text) . '<br/><br/>';
                         }
                 }
         }
 
-        // insert ke DB
-        $wpdb->insert($table_name, [
-                'submitted_at' => current_time('mysql'),
-                'form_id'      => 0, // unknown/global
-                'form_title'   => 'WP Mail',
-                'subject'      => $subject,
-                'sender_email' => $sender_email,
-                'sender_name'  => '',
-                'email_html'   => $message,
-        ]);
-
-        return $args;
+        return $output;
 }
 
+
+/**
+ * =========================
+ * CF7 CAPTURE ONLY
+ * =========================
+ */
+add_action('wpcf7_mail_sent', 'bb_capture_cf7_submission');
+
+function bb_capture_cf7_submission($contact_form)
+{
+        global $wpdb;
+
+        $submission = WPCF7_Submission::get_instance();
+        if (!$submission) return;
+
+        $posted_data = $submission->get_posted_data();
+
+        $form_id = $contact_form->id();
+        $form_title = $contact_form->title();
+
+        $mail = $contact_form->prop('mail');
+
+        // replace tag → jadi HTML final
+        $subject = wpcf7_mail_replace_tags($mail['subject']);
+        $body    = wpcf7_mail_replace_tags($mail['body'], false);
+
+        // parse jadi clean text
+        $clean_html = bb_extract_clean_email_content($body);
+
+        /**
+         * =========================
+         * FLEXIBLE FIELD DETECTION
+         * =========================
+         */
+
+        // EMAIL
+        $sender_email = '';
+        foreach (['email', 'your_email'] as $field) {
+                if (!empty($posted_data[$field])) {
+                        $sender_email = sanitize_email($posted_data[$field]);
+                        break;
+                }
+        }
+
+        // NAME
+        $sender_name = '';
+        foreach (['name', 'your_name', 'full_name'] as $field) {
+                if (!empty($posted_data[$field])) {
+                        $sender_name = sanitize_text_field($posted_data[$field]);
+                        break;
+                }
+        }
+
+        $table_name = $wpdb->prefix . 'bb_email_submissions';
+
+        $wpdb->insert($table_name, [
+                'submitted_at' => current_time('mysql'),
+                'form_id'      => $form_id,
+                'form_title'   => $form_title,
+                'subject'      => $subject,
+                'sender_email' => $sender_email,
+                'sender_name'  => $sender_name,
+                'email_html'   => $clean_html,
+        ]);
+}
+
+
+/**
+ * =========================
+ * ADMIN MENU
+ * =========================
+ */
 add_action('admin_menu', function () {
         add_menu_page(
                 'BB Email Submission',
@@ -84,6 +160,11 @@ add_action('admin_menu', function () {
 });
 
 
+/**
+ * =========================
+ * ADMIN PAGE
+ * =========================
+ */
 function bb_email_submission_page()
 {
         global $wpdb;
@@ -92,17 +173,18 @@ function bb_email_submission_page()
         $results = $wpdb->get_results("SELECT * FROM $table_name ORDER BY submitted_at DESC");
 
         echo '<div class="wrap"><h1>BB Email Submissions</h1>';
+
         echo '<table class="widefat fixed striped">';
         echo '<thead>
-            <tr>
-                <th>Date</th>
-                <th>Form</th>
-                <th>Subject</th>
-                <th>Sender</th>
-                <th>Email</th>
-                <th>Action</th>
-            </tr>
-          </thead><tbody>';
+        <tr>
+            <th>Date</th>
+            <th>Form</th>
+            <th>Subject</th>
+            <th>Sender</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead><tbody>';
 
         foreach ($results as $row) {
                 echo '<tr>';
@@ -117,15 +199,21 @@ function bb_email_submission_page()
 
         echo '</tbody></table>';
 
-        // detail view
+        /**
+         * DETAIL VIEW
+         */
         if (isset($_GET['view'])) {
                 $id = intval($_GET['view']);
-                $item = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id));
+                $item = $wpdb->get_row(
+                        $wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id)
+                );
 
                 if ($item) {
                         echo '<h2 style="margin-top:40px;">Email Detail</h2>';
                         echo '<div style="background:#fff;padding:20px;border:1px solid #ddd;">';
-                        echo $item->email_html; // render HTML langsung
+
+                        echo $item->email_html; // sudah clean & aman
+
                         echo '</div>';
                 }
         }
