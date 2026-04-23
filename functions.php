@@ -152,13 +152,13 @@ function fix_media_library_conflict()
         return;
     }
 
-    wp_enqueue_script(
-        'fix-media-library-conflict',
-        get_template_directory_uri() . '/dist/noConflict.bundle.js',
-        ['jquery'], // Dependensi
-        '1.0.0',
-        true
-    );
+    // wp_enqueue_script(
+    //     'fix-media-library-conflict',
+    //     get_template_directory_uri() . '/dist/noConflict.bundle.js',
+    //     ['jquery'], // Dependensi
+    //     '1.0.0',
+    //     true
+    // );
 }
 add_action('admin_enqueue_scripts', 'fix_media_library_conflict');
 
