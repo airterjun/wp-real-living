@@ -75,7 +75,6 @@ function bb_extract_clean_email_content($html)
         return $output;
 }
 
-
 /**
  * =========================
  * CF7 CAPTURE ONLY
@@ -112,7 +111,7 @@ function bb_capture_cf7_submission($contact_form)
 
         // EMAIL
         $sender_email = '';
-        foreach (['email', 'your_email'] as $field) {
+        foreach (['email', 'your-email'] as $field) {
                 if (!empty($posted_data[$field])) {
                         $sender_email = sanitize_email($posted_data[$field]);
                         break;
@@ -121,7 +120,7 @@ function bb_capture_cf7_submission($contact_form)
 
         // NAME
         $sender_name = '';
-        foreach (['name', 'your_name', 'full_name'] as $field) {
+        foreach (['name', 'your-name', 'full-name'] as $field) {
                 if (!empty($posted_data[$field])) {
                         $sender_name = sanitize_text_field($posted_data[$field]);
                         break;
