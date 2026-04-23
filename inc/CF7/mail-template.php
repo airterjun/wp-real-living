@@ -412,7 +412,7 @@ add_action('admin_init', function () {
 
                 // 🔥 REDIRECT DENGAN QUERY
                 $redirect_url = add_query_arg(
-                        ['page' => 'bb-mail-template', 'test' => $status],
+                        ['page' => 'bb-mail-template', 'test2' => $status],
                         admin_url('admin.php')
                 );
 
