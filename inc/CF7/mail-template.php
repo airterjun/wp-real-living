@@ -386,15 +386,37 @@ function cf7cmt_send_mail(array $data): bool
         return wp_mail($user_email, $subject, $message, $headers);
 }
 
-// Handle test email
+
 add_action('admin_init', function () {
+
         if (
                 isset($_POST['cf7cmt_send_test'], $_POST['cf7cmt_test_email']) &&
                 check_admin_referer('cf7cmt_test_email_nonce', 'cf7cmt_test_nonce')
         ) {
-                $new_test = sanitize_email($_POST['cf7cmt_test_email']);
-                if (is_email($new_test)) {
-                        update_option('cf7cmt_test_email', $new_test);
+
+                $test_email = sanitize_email($_POST['cf7cmt_test_email']);
+                $status = 'error';
+
+                if (is_email($test_email)) {
+
+                        update_option('cf7cmt_test_email', $test_email);
+
+                        $sent = cf7cmt_send_mail([
+                                'email'     => $test_email,
+                                'full_name' => 'Test User',
+                                'ticket_id' => cf7cmt_generate_ticket_id()
+                        ]);
+
+                        $status = $sent ? 'success' : 'error';
                 }
+
+                // 🔥 REDIRECT DENGAN QUERY
+                $redirect_url = add_query_arg(
+                        ['page' => 'bb-mail-template', 'test' => $status],
+                        admin_url('admin.php')
+                );
+
+                wp_redirect($redirect_url);
+                exit;
         }
 }, 5);
