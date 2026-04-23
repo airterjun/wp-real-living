@@ -407,7 +407,7 @@ add_action('admin_init', function () {
                                 'ticket_id' => cf7cmt_generate_ticket_id()
                         ]);
 
-                        $status = $sent ? 'success' : 'error';
+                        $status = $sent ? 'success' . $test_email : 'error' . $test_email;
                 }
 
                 // 🔥 REDIRECT DENGAN QUERY
